@@ -1,4 +1,4 @@
-# project
+# BT4103-Capstone
 
 ## Project setup
 ```
