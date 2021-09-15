@@ -11,14 +11,10 @@
   <div class="userType">
     <h6>Please select your role:</h6>
     <div class="button-group">
-      <UserTypeButton label="Traffic Engineers" icon="briefcase"/>
-      <UserTypeButton label="Traffic Engineers" icon="cone-striped"/>
-      <UserTypeButton label="Traffic Engineers" icon="stoplights"/>
-      <UserTypeButton label="Traffic Engineers" icon="tools"/>
-      <UserTypeButton label="Consultants" icon="file-earmark-text"/>
-      <UserTypeButton label="Consultants" icon="chat-dots"/>
-      <UserTypeButton label="General Public" icon="people"/>
-      <UserTypeButton label="Admin" icon="lock"/>
+      <UserTypeButton label="Traffic Engineers" icon="briefcase" link="/search"/>
+      <UserTypeButton label="Consultants" icon="chat-dots" link="/search"/>
+      <UserTypeButton label="General Public" icon="people" link="/search"/>
+      <UserTypeButton label="Admin" icon="lock" link="/login"/>
     </div>
   </div>
   </div>
@@ -39,16 +35,17 @@ export default {
 .button-group {
   display: flex;
   justify-content: space-around;
+  padding: 0 15%
 }
 .userType {
   background-color: #FAFAFA;
-  height: 50%;
+  height: 55%;
   position:relative;
   z-index: 1;
 }
 .header {
   background-color: #E0E0E0;
-  height: 50%;
+  height: 45%;
   position:relative;
 }
 .headerText {
@@ -58,16 +55,17 @@ h5 {
   margin-top: 1rem;
 }
 h6 {
-  padding: 1.5rem;
-  text-align: center
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.25rem
 }
 .road {
   height:55vh;
   width: 110vw;
-  transform: rotate(345deg);
+  transform: rotate(350deg);
   z-index: 0;
   position: absolute;
-  top: 30vh;
+  top: 25vh;
 }
 .mascot {
   height: 30vh;
