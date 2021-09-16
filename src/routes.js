@@ -2,6 +2,7 @@ import { createRouter,createWebHistory } from 'vue-router'
 import Home from "./screens/Home.vue";
 import Login from "./screens/AdminLogin.vue"
 import Search from "./screens/Search.vue"
+import Results from "./screens/Results.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -18,7 +19,12 @@ const router = createRouter({
       path: "/search",
       component: Search,
       //props: true,
-    },/*
+    },
+    {
+      path: "/results",
+      component: Results
+    },
+    /*
     { path: '/:pathMatch(.*)',
       component: NotFound 
     },
