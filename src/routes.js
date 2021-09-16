@@ -1,6 +1,7 @@
 import { createRouter,createWebHistory } from 'vue-router'
 import Home from "./screens/Home.vue";
 import Login from "./screens/AdminLogin.vue"
+import Search from "./screens/Search.vue"
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,11 +14,11 @@ const router = createRouter({
       path: "/login",
       component: Login
     },
-    /*{
+    {
       path: "/search",
       component: Search,
-      props: true,
-    },
+      //props: true,
+    },/*
     { path: '/:pathMatch(.*)',
       component: NotFound 
     },

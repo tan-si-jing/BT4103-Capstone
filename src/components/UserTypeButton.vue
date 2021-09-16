@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link to="/login">
+    <router-link :to=link>
     <button type="button" class="btn btn-outline-dark" style="button">
       <i :class="['bi-' + icon]" style="font-size: 4rem"></i>
     </button>
@@ -14,7 +14,8 @@ export default {
   name: 'UserTypeButton',
   props: {
     label: String,
-    icon: String
+    icon: String,
+    link: String
   }
 }
 </script>
