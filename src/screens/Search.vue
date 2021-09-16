@@ -1,5 +1,5 @@
 <template>
-  <div style="height:100vh; overflow: hidden;">
+  <div style="height:100vh; overflow: hidden; position:relative">
   <div class="header">
     <div class="center">
     <div class="pages">
@@ -60,11 +60,11 @@ export default {
 }
 .road {
   height:19vh;
-  width:101vw;
+  width:102vw;
   transform: rotate(-2deg);
   position: absolute;
   top: 40%;
-  left:-1%;
+  left: -0.5%;
   z-index:1;
 }
 .mascot {
