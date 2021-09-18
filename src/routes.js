@@ -3,6 +3,7 @@ import Home from "./screens/Home.vue";
 import Login from "./screens/AdminLogin.vue"
 import Search from "./screens/Search.vue"
 import Results from "./screens/Results.vue"
+import SpecificResults from './screens/SpecificResults.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -24,6 +25,10 @@ const router = createRouter({
       path: "/results",
       component: Results
     },
+    {
+      path: "/specific-results",
+      component: SpecificResults 
+    }
     /*
     { path: '/:pathMatch(.*)',
       component: NotFound 
