@@ -2,22 +2,22 @@
   <div class="wrapper">
     <p class="header">Results</p>
     <div class="container">
-      <ResultsTable></ResultsTable>
+      <SuperElevationTable></SuperElevationTable>   
     </div>
-
-
-  <img :src="road" class="road" />
-  <img :src="mascot" class="mascot" />
-</div>
+  </div>
+  <div>
+    <img :src="mascot" class="mascot" />
+    <img :src="road" class="road" />
+  </div>
 </template>
 
 <script>
-import ResultsTable from "./ResultsTable.vue"
+import SuperElevation from "./SuperElevation.vue"
 
 export default {
 name: "Results",
 components: {
-  "ResultsTable": ResultsTable
+  "SuperElevationTable": SuperElevation
 },
 props: {},
 data() {
@@ -69,7 +69,7 @@ data() {
 .mascot {
   max-width: 15%;
   position: absolute;
-  right: 4%;
+  right: 10%;
   bottom: 10%;
   transform: rotateY(180deg);
   z-index: 2;
