@@ -1,9 +1,11 @@
 import { createRouter,createWebHistory } from 'vue-router'
 import Home from "./screens/Home.vue";
 import Login from "./screens/AdminLogin.vue"
+import Dashboard from "./screens/Dashboard.vue"
 import Search from "./screens/Search.vue"
 import Results from "./screens/Results.vue"
 import SpecificResults from './screens/SpecificResults.vue'
+import { auth } from './firebase.js'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,7 +16,12 @@ const router = createRouter({
     },
     {
       path: "/login",
-      component: Login
+      component: Login,
+    },
+    {
+      path: "/dashboard",
+      meta:{ authRequired: true },
+      component: Dashboard,
     },
     {
       path: "/search",
@@ -60,5 +67,22 @@ router.beforeEach((to, from, next) => {
     }
   } else next()
 })*/
+
+/* to disable viewing of dashboard if admin is not logged in*/
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.authRequired)) {
+    auth.onAuthStateChanged(function (user) {
+      if (!user) {
+        next({
+          path: '/login',
+        });
+      } else {
+        next();
+      }
+    })
+  } else {
+    next();
+  }
+});
 
 export default router;

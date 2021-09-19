@@ -4,13 +4,13 @@
       <p class="header">Admin Login</p>
 
       <form @submit.prevent="login()" style="padding:0 12.5%">
-        <p class="parameter">Username:</p>
+        <p class="parameter">Email Address:</p>
         <div class="inputField">
           <input
-            type="text"
-            name="username"
-            id="username"
-            v-model="username"
+            type="email"
+            name="email"
+            id="email"
+            v-model="email"
             required
           />
         </div>
@@ -39,29 +39,42 @@
 </template>
 
 <script>
+import { auth } from "../firebase.js";
+
 export default {
   name: "AdminLogin",
   props: {},
   data() {
     return {
-      username: "",
+      email: "",
       password: "",
-      authuser: "user1",
-      authpassword: "12345",
       road: require("../assets/road.png"),
       mascot: require("../assets/mascot.png"),
     };
   },
   methods: {
     login() {
-      if (this.username != this.authuser) {
-        alert("Incorrect username. Please check your username and try again.");
-      } else if (this.password != this.authpassword) {
-        alert("Incorrect password. Please check your password and try again.");
-      } else {
-        console.log("Login successful");
-        //this.$router.replace({ name: "Analytics" });
-      }
+      auth
+        .signInWithEmailAndPassword(this.email, this.password)
+        .then(() => {
+            this.$router.replace({ path: "/dashboard" });
+            console.log("Login");
+        })
+        .catch((error) => {
+          if (error.code == "auth/invalid-email") {
+            alert(
+              "The email you entered is invalid. Please check your email and try again."
+            );
+          } else if (error.code == "auth/user-not-found") {
+            alert(
+              "The email you entered does not appear to belong to an account. Please check your email and try again."
+            );
+          } else if (error.code == "auth/wrong-password") {
+            alert(
+              "Incorrect password. Please check your password and try again."
+            );
+          }
+        });
     },
   },
 };
