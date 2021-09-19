@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import SuperElevation from "./SuperElevation.vue"
+import SuperElevation from "./Dynamic-SpecificSearch.vue"
 
 export default {
 name: "Results",
@@ -46,14 +46,16 @@ data() {
   right: 0px;
   bottom: 0px;
   left: 0px;
+  /**width: 1500px;*/
 }
 .header {
   font-size: 5vh;
   margin: 2% 60% 0% 0%;
   text-align:center
 }
+
 .container {
-  padding: 3% 11% 10%;
+  padding: 3% 0% 0%;
 }
 
 

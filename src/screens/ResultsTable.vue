@@ -44,7 +44,7 @@
       </table>
 </template>
 
-<style>
+<style scoped>
 table {
   width: 70vw;
   height: 60vh;
