@@ -3,6 +3,10 @@ import Home from "./screens/Home.vue";
 import Login from "./screens/AdminLogin.vue"
 import Dashboard from "./screens/Dashboard.vue"
 import Search from "./screens/Search.vue"
+import Search2 from "./screens/Search2.vue"
+import Search3 from "./screens/Search3.vue"
+import Search4 from "./screens/Search4.vue"
+import Search5 from "./screens/Search5.vue"
 import Results from "./screens/Results.vue"
 import SpecificResults from './screens/SpecificResults.vue'
 import { auth } from './firebase.js'
@@ -26,6 +30,26 @@ const router = createRouter({
     {
       path: "/search",
       component: Search,
+      //props: true,
+    },
+    {
+      path: "/search2",
+      component: Search2,
+      //props: true,
+    },
+    {
+      path: "/search3",
+      component: Search3,
+      //props: true,
+    },
+    {
+      path: "/search4",
+      component: Search4,
+      //props: true,
+    },
+    {
+      path: "/search5",
+      component: Search5,
       //props: true,
     },
     {

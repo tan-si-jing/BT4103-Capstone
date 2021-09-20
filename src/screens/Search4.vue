@@ -10,7 +10,7 @@
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
     <div class="question">
-      <h5>Are you looking for a <u>specific section</u> or a <u>step-by-step</u> guide to road designing </h5>
+      <h5>Are you working on Undivided (x-lane) Road, Slip Road or Dual (x-lane) Road? Please select below. </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="storeRoadType('SpecificSection');displayRoad()"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadType('StepbyStep');displayRoad()"/>
+      <SearchParamButton text="Test"/>
+      <SearchParamButton text="Test"/>
     </div>
   </div>
   </div>
@@ -37,18 +37,14 @@ export default {
   },
   data() {
     return{
-      purpose: '',
       roadType: '',
     }
-  },
-methods:{
-  storeRoadType(text){
-    this.roadType = text;
-  },
+  }
+/*methods:{
   displayRoad(){
     console.log(this.roadType)
   }
-}
+}*/
 }
 </script>
 
@@ -98,25 +94,5 @@ methods:{
 .pages {
     display: flex;
     margin: 3% 0
-}
-
-
-button {
-  height: 3.5rem;
-  width: 20vw;
-  border-radius: 1rem;
-  background-color: #40AAAD;
-  color: white;
-  box-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.2);
-  border: none;
-}
-button:hover {
-  background-color: white;
-  color: black;
-  border: none;
-}
-h6 {
-  padding-top: 0.5rem;
-  text-align:center
 }
 </style>
