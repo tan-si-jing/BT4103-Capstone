@@ -4,13 +4,13 @@
     <div class="center">
     <div class="pages">
         <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="false"/>
-        <PageCircle num="3" v-bind:isActive="false"/>
-        <PageCircle num="4" v-bind:isActive="false"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
+        <PageCircle num="3" v-bind:isActive="true"/>
+        <PageCircle num="4" v-bind:isActive="true"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
     <div class="question">
-      <h5>Are you working on Undivided (x-lane) Road, Slip Road or Dual (x-lane) Road? Please select below. </h5>
+      <h5>What is the <u>design speed</u> (km/h) of the road you're working on? </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,8 +18,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Test"/>
-      <SearchParamButton text="Test"/>
+      <SearchParamButton text="40" @click="storeDesignSpeed('40');displayDesignSpeed()"/>
+      <SearchParamButton text="50" @click="storeDesignSpeed('50');displayDesignSpeed()"/>
+      <SearchParamButton text="60" @click="storeDesignSpeed('60');displayDesignSpeed()"/>
+      <SearchParamButton text="70" @click="storeDesignSpeed('70');displayDesignSpeed()"/>
+      <SearchParamButton text="80" @click="storeDesignSpeed('80');displayDesignSpeed()"/>
+      <SearchParamButton text="90" @click="storeDesignSpeed('90');displayDesignSpeed()"/>
     </div>
   </div>
   </div>
@@ -37,14 +41,21 @@ export default {
   },
   data() {
     return{
+      roadDesign: '',
+      roadClass:'',
       roadType: '',
+      designSpeed: '',
     }
-  }
-/*methods:{
-  displayRoad(){
-    console.log(this.roadType)
-  }
-}*/
+  },
+methods:{
+  storeDesignSpeed(text){
+    this.designSpeed = text;
+    this.$router.push('Search5')
+  },
+  displayDesignSpeed(){
+    console.log(this.designSpeed)
+  },
+}
 }
 </script>
 

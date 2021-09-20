@@ -4,13 +4,13 @@
     <div class="center">
     <div class="pages">
         <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="false"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
         <PageCircle num="3" v-bind:isActive="false"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
     <div class="question">
-      <h5>Are you working on Undivided (x-lane) Road, Slip Road or Dual (x-lane) Road? Please select below. </h5>
+      <h5>What <u>class of road</u> are you working on?</h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,8 +18,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Test"/>
-      <SearchParamButton text="Test"/>
+      <SearchParamButton text="1-Expressways"  @click="storeRoadClass('1');displayRoadClass()"/>
+      <SearchParamButton text="1A-Semi Expressway"  @click="storeRoadClass('1A');displayRoadClass()"/>
+      <SearchParamButton text="2-Major Arterial"  @click="storeRoadClass('2');displayRoadClass()"/>
+      <SearchParamButton text="3-Minor Arterial"  @click="storeRoadClass('3');displayRoadClass()"/>
+      <SearchParamButton text="4-Primary Access"  @click="storeRoadClass('4');displayRoadClass()"/>
+      <SearchParamButton text="5-Local Access"  @click="storeRoadClass('5');displayRoadClass()"/>
     </div>
   </div>
   </div>
@@ -37,14 +41,19 @@ export default {
   },
   data() {
     return{
-      roadType: '',
+      roadDesign: '',
+      roadClass:'',
     }
-  }
-/*methods:{
-  displayRoad(){
-    console.log(this.roadType)
-  }
-}*/
+  },
+methods:{
+  storeRoadClass(text){
+    this.roadClass = text;
+    this.$router.push('Search3')
+  },
+  displayRoadClass(){
+    console.log(this.roadClass)
+  },
+}
 }
 </script>
 

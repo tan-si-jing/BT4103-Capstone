@@ -4,13 +4,13 @@
     <div class="center">
     <div class="pages">
         <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="false"/>
-        <PageCircle num="3" v-bind:isActive="false"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
+        <PageCircle num="3" v-bind:isActive="true"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
     <div class="question">
-      <h5>Are you working on Undivided (x-lane) Road, Slip Road or Dual (x-lane) Road? Please select below. </h5>
+      <h5>Are you working on <u>Undivided (x-lane) Road</u>, <u>Slip Road</u> or <u>Dual (x-lane) Road</u>? Please select below. </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,8 +18,9 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Test"/>
-      <SearchParamButton text="Test"/>
+      <SearchParamButton text="Undivided (x-lane) Road" @click="storeRoadType('UndividedRoad');displayRoadType()"/>
+      <SearchParamButton text="Slip Road" @click="storeRoadType('SlipRoad');displayRoadType()"/>
+      <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('DualRoad');displayRoadType()"/>
     </div>
   </div>
   </div>
@@ -37,14 +38,20 @@ export default {
   },
   data() {
     return{
+      roadDesign: '',
+      roadClass:'',
       roadType: '',
     }
-  }
-/*methods:{
-  displayRoad(){
+  },
+methods:{
+  storeRoadType(text){
+    this.roadType = text;
+    this.$router.push('Search4')
+  },
+  displayRoadType(){
     console.log(this.roadType)
-  }
-}*/
+  },
+}
 }
 </script>
 

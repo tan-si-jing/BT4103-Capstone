@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="storeRoadType('SpecificSection');displayRoad()"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadType('StepbyStep');displayRoad()"/>
+      <SearchParamButton text="Specific Section" @click="storeRoadDesign('SpecificSection');displayRoad()"/>
+      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
     </div>
   </div>
   </div>
@@ -38,15 +38,16 @@ export default {
   data() {
     return{
       purpose: '',
-      roadType: '',
+      roadDesign: '',
     }
   },
 methods:{
-  storeRoadType(text){
-    this.roadType = text;
+  storeRoadDesign(text){
+    this.roadDesign = text;
+    this.$router.push('Search2')
   },
   displayRoad(){
-    console.log(this.roadType)
+    console.log(this.roadDesign)
   }
 }
 }
@@ -100,23 +101,4 @@ methods:{
     margin: 3% 0
 }
 
-
-button {
-  height: 3.5rem;
-  width: 20vw;
-  border-radius: 1rem;
-  background-color: #40AAAD;
-  color: white;
-  box-shadow: 1.5px 1.5px 3px rgba(0, 0, 0, 0.2);
-  border: none;
-}
-button:hover {
-  background-color: white;
-  color: black;
-  border: none;
-}
-h6 {
-  padding-top: 0.5rem;
-  text-align:center
-}
 </style>
