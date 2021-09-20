@@ -4,13 +4,13 @@
     <div class="center">
     <div class="pages">
         <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="false"/>
-        <PageCircle num="3" v-bind:isActive="false"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
+        <PageCircle num="3" v-bind:isActive="true"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
     <div class="question">
-      <h5>Are you looking for a <u>specific section</u> or a <u>step-by-step</u> guide to road designing </h5>
+      <h5>Are you working on <u>Undivided (x-lane) Road</u>, <u>Slip Road</u> or <u>Dual (x-lane) Road</u>? Please select below. </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,8 +18,9 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="storeRoadDesign('SpecificSection');displayRoad()"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
+      <SearchParamButton text="Undivided (x-lane) Road" @click="storeRoadType('UndividedRoad');displayRoadType()"/>
+      <SearchParamButton text="Slip Road" @click="storeRoadType('SlipRoad');displayRoadType()"/>
+      <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('DualRoad');displayRoadType()"/>
     </div>
   </div>
   </div>
@@ -37,18 +38,19 @@ export default {
   },
   data() {
     return{
-      purpose: '',
       roadDesign: '',
+      roadClass:'',
+      roadType: '',
     }
   },
 methods:{
-  storeRoadDesign(text){
-    this.roadDesign = text;
-    this.$router.push('Search2')
+  storeRoadType(text){
+    this.roadType = text;
+    this.$router.push('Search4')
   },
-  displayRoad(){
-    console.log(this.roadDesign)
-  }
+  displayRoadType(){
+    console.log(this.roadType)
+  },
 }
 }
 </script>
@@ -100,5 +102,4 @@ methods:{
     display: flex;
     margin: 3% 0
 }
-
 </style>

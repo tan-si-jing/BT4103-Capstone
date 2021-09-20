@@ -4,13 +4,13 @@
     <div class="center">
     <div class="pages">
         <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="false"/>
-        <PageCircle num="3" v-bind:isActive="false"/>
-        <PageCircle num="4" v-bind:isActive="false"/>
-        <PageCircle num="5" v-bind:isActive="false"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
+        <PageCircle num="3" v-bind:isActive="true"/>
+        <PageCircle num="4" v-bind:isActive="true"/>
+        <PageCircle num="5" v-bind:isActive="true"/>
     </div>
     <div class="question">
-      <h5>Are you looking for a <u>specific section</u> or a <u>step-by-step</u> guide to road designing </h5>
+      <h5>Is there <u>gradient change</u> or <u>curvature change</u> at/near junctions? </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="storeRoadDesign('SpecificSection');displayRoad()"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
+      <SearchParamButton text="Yes" @click="storeChange('Yes');displayChange()"/>
+      <SearchParamButton text="No" @click="storeChange('No');displayChange()"/>
     </div>
   </div>
   </div>
@@ -37,18 +37,20 @@ export default {
   },
   data() {
     return{
-      purpose: '',
       roadDesign: '',
+      roadClass:'',
+      roadType: '',
+      designSpeed: '',
+      grad_curv_change:'',
     }
   },
 methods:{
-  storeRoadDesign(text){
-    this.roadDesign = text;
-    this.$router.push('Search2')
+  storeChange(text){
+    this.grad_curv_change = text;
   },
-  displayRoad(){
-    console.log(this.roadDesign)
-  }
+  displayChange(){
+    console.log(this.grad_curv_change)
+  },
 }
 }
 </script>
@@ -100,5 +102,4 @@ methods:{
     display: flex;
     margin: 3% 0
 }
-
 </style>

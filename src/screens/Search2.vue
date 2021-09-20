@@ -4,13 +4,13 @@
     <div class="center">
     <div class="pages">
         <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="false"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
         <PageCircle num="3" v-bind:isActive="false"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
     <div class="question">
-      <h5>Are you looking for a <u>specific section</u> or a <u>step-by-step</u> guide to road designing </h5>
+      <h5>What <u>class of road</u> are you working on?</h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,8 +18,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="storeRoadDesign('SpecificSection');displayRoad()"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
+      <SearchParamButton text="1-Expressways"  @click="storeRoadClass('1');displayRoadClass()"/>
+      <SearchParamButton text="1A-Semi Expressway"  @click="storeRoadClass('1A');displayRoadClass()"/>
+      <SearchParamButton text="2-Major Arterial"  @click="storeRoadClass('2');displayRoadClass()"/>
+      <SearchParamButton text="3-Minor Arterial"  @click="storeRoadClass('3');displayRoadClass()"/>
+      <SearchParamButton text="4-Primary Access"  @click="storeRoadClass('4');displayRoadClass()"/>
+      <SearchParamButton text="5-Local Access"  @click="storeRoadClass('5');displayRoadClass()"/>
     </div>
   </div>
   </div>
@@ -37,18 +41,18 @@ export default {
   },
   data() {
     return{
-      purpose: '',
       roadDesign: '',
+      roadClass:'',
     }
   },
 methods:{
-  storeRoadDesign(text){
-    this.roadDesign = text;
-    this.$router.push('Search2')
+  storeRoadClass(text){
+    this.roadClass = text;
+    this.$router.push('Search3')
   },
-  displayRoad(){
-    console.log(this.roadDesign)
-  }
+  displayRoadClass(){
+    console.log(this.roadClass)
+  },
 }
 }
 </script>
@@ -100,5 +104,4 @@ methods:{
     display: flex;
     margin: 3% 0
 }
-
 </style>

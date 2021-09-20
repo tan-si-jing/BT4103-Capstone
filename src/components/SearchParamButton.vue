@@ -1,10 +1,8 @@
 <template>
   <div>
-    <router-link to="/search">
     <button type="button" class="btn btn-outline-dark" style="button">
       {{text}}
     </button>
-    </router-link>
   </div>
 </template>
 
@@ -37,3 +35,4 @@ h6 {
   text-align:center
 }
 </style>
+//router-link to="/search"/router-link
