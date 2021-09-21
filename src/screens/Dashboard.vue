@@ -11,23 +11,22 @@
         <!-- row 1 -->
         <div class="graphFirstRow">
           <div class="summary">
-            <p style="font-size: 8vw;"> {{ this.numVisits }} </p>
-            <p style="font-size: 125%; letter-spacing: 0.2rem;"> VISITS TODAY </p>
+            <SummaryData/>
           </div>
-          <div class="donutChart">
+          <div>
             <canvas id="donut-chart"></canvas>
           </div>
-          <div class="lineChart">
+          <div>
             <canvas id="line-chart"></canvas>
           </div>
         </div>
         <!-- row 2 -->
         <div class="graphSecondRow">
-          <div class="barGraph">
+          <div>
             <canvas id="bar-chart"></canvas>
           </div>
-          <div class="guideTable">5</div>
-          <div class="specificTable">6</div>
+          <div>5</div>
+          <div>6</div>
         </div>
 
       </div>
@@ -40,6 +39,7 @@
 <script>
 import { Chart, registerables } from 'chart.js';
 import LogoutButton from '../components/LogoutButton.vue';
+import SummaryData from '../components/graphs/SummaryData.vue';
 import donutChartData from '../components/graphs/DonutChartData.js';
 import lineChartData from '../components/graphs/LineChartData.js';
 import barChartData from '../components/graphs/BarChartData.js';
@@ -49,10 +49,10 @@ export default {
   name: "Dashboard",
   components: {
     LogoutButton,
+    SummaryData,
   },
   data() {
     return {
-      numVisits: 0,
       donutChartData: donutChartData,
       lineChartData: lineChartData,
       barChartData: barChartData,
@@ -122,20 +122,18 @@ export default {
   margin-bottom: 2rem;
   height: 400px;
 }
+.graphSecondRow {
+  display: grid;
+  grid-template-columns: 22% 45% 30%;
+  grid-gap: 1.5%;
+  margin-bottom: 1rem;
+  height: 350px;
+}
 .summary {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
   text-align: center;
-  font-weight: bold;
-  color: black;
   word-break: break-word;
-}
-.graphSecondRow {
-  display: grid;
-  grid-template-columns: 22% 40% 35%;
-  grid-gap: 1.5%;
-  margin-bottom: 1rem;
-  height: 350px;
 }
 </style>

@@ -22,15 +22,18 @@ export const donutChartData = {
       title: {
         display: true,
         text: 'User Type Breakdown',
+        color: '#263238',
         align: 'start',
         font: {
           family: "'IBM Plex Sans', sans-serif",
-          size: 18
+          size: 18,
+          weight: 'normal'
         }
       },
       subtitle: {
         display: true,
         text: 'In Total',
+        color: 'rgba(0, 0, 0, 0.4)',
         align: 'start',
         font: {
           family: "'IBM Plex Sans', sans-serif",
