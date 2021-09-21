@@ -108,6 +108,7 @@ export default {
   margin-bottom: 1.5rem;
 }
 .graphFirstRow > div, .graphSecondRow > div {
+  display: flex;
   background-color: #ffffff;
   border-radius: 1rem;
   box-shadow: inset 0px 3px 4px rgba(176,190,197,0.8),
@@ -133,7 +134,7 @@ export default {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-evenly;
+  align-content: center;
   text-align: center;
-  word-break: break-word;
 }
 </style>
