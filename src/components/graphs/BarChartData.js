@@ -1,19 +1,19 @@
 export const barChartData = {
   type: "bar",
   data: {
-    labels: ["Guide", "Specific"],
+    labels: ["Specific", "Guide"],
     datasets: [
       {
         label: "Traffic Engineers",
-        data: [30, 40],
+        data: [40, 30],
         backgroundColor: '#40aaad'
       }, {
         label: "Consultants",
-        data: [25, 4],
+        data: [4, 25],
         backgroundColor: '#f5a732'
       }, {
         label: "General Public",
-        data: [10, 0],
+        data: [0, 10],
         backgroundColor: '#9fa4a7'
       }
     ]
@@ -40,15 +40,18 @@ export const barChartData = {
       title: {
         display: true,
         text: 'Comparison of Search Options',
+        color: '#263238',
         align: 'start',
         font: {
           family: "'IBM Plex Sans', sans-serif",
-          size: 18
+          size: 18,
+          weight: 'normal'
         }
       },
       subtitle: {
         display: true,
-        text: 'Guide vs Specific',
+        text: 'Specific vs Guide',
+        color: 'rgba(0, 0, 0, 0.4)',
         align: 'start',
         font: {
           family: "'IBM Plex Sans', sans-serif",
