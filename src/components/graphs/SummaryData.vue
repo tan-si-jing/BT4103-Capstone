@@ -25,7 +25,7 @@ export default {
   font-size: 8vw;
 }
 .description {
-  font-size: 125%;
+  font-size: 1.5vw;
   letter-spacing: 0.2rem;
   color: #4f4f4f;
 }
