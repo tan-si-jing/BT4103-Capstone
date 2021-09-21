@@ -30,17 +30,14 @@ import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
 
 export default {
-  name: 'SearchParams',
+  name: 'search5',
+  props: ['roadDesign','roadClass','roadType','designSpeed'],
   components: {
     PageCircle,
     SearchParamButton
   },
   data() {
     return{
-      roadDesign: '',
-      roadClass:'',
-      roadType: '',
-      designSpeed: '',
       grad_curv_change:'',
     }
   },
@@ -49,6 +46,10 @@ methods:{
     this.grad_curv_change = text;
   },
   displayChange(){
+    console.log(this.roadDesign)
+    console.log(this.roadClass)
+    console.log(this.roadType)
+    console.log(this.designSpeed)
     console.log(this.grad_curv_change)
   },
 }

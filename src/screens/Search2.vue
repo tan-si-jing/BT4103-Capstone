@@ -34,23 +34,24 @@ import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
 
 export default {
-  name: 'SearchParams',
+  name: 'search2',
+  props: ['roadDesign'],
   components: {
     PageCircle,
     SearchParamButton
   },
   data() {
     return{
-      roadDesign: '',
       roadClass:'',
     }
   },
 methods:{
   storeRoadClass(text){
     this.roadClass = text;
-    this.$router.push('Search3')
+    this.$router.push({name: 'search3',params:{roadDesign:this.roadDesign,roadClass:this.roadClass}})
   },
   displayRoadClass(){
+    console.log(this.roadDesign)
     console.log(this.roadClass)
   },
 }

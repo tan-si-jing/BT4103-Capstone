@@ -18,7 +18,7 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="storeRoadDesign('SpecificSection');displayRoad()"/>
+      <SearchParamButton text="Specific Section"/>
       <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
     </div>
   </div>
@@ -30,7 +30,7 @@ import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
 
 export default {
-  name: 'SearchParams',
+  name: 'search',
   components: {
     PageCircle,
     SearchParamButton
@@ -44,7 +44,7 @@ export default {
 methods:{
   storeRoadDesign(text){
     this.roadDesign = text;
-    this.$router.push('Search2')
+    this.$router.push({name:'search2',params:{roadDesign:this.roadDesign}})
   },
   displayRoad(){
     console.log(this.roadDesign)
