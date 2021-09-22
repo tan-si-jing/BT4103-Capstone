@@ -3,14 +3,11 @@
   <div class="header">
     <div class="center">
     <div class="pages">
-        <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="false"/>
-        <PageCircle num="3" v-bind:isActive="false"/>
-        <PageCircle num="4" v-bind:isActive="false"/>
-        <PageCircle num="5" v-bind:isActive="false"/>
+        <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-1)"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
     </div>
     <div class="question">
-      <h5>Are you looking for a <u>specific section</u> or a <u>step-by-step</u> guide to road designing </h5>
+      <h5 style="text-align:center">Which Section are you looking for? </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,32 +15,24 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="this.$router.push({name:'searchspecific'})"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
+      <h5><a style ="padding:75px;"></a><input type="text" v-model="params" placeholder="Search"></h5>
     </div>
   </div>
   </div>
 </template>
 
 <script>
-import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
 
 export default {
-  name: 'search',
+  name: 'search2',
+  props: ['roadDesign'],
   components: {
     PageCircle,
-    SearchParamButton
   },
   data() {
     return{
-      choice:{
-        roadDesign: "",
-        roadClass: "",
-        roadType: "",
-        designSpeed: "",
-        grad_curv_change:""
-      }
+      params:"",
     }
   },
 methods:{
@@ -62,14 +51,15 @@ methods:{
     storedChoice[input] = value
     this.saveStorage(storedChoice)
   },
-  
-  storeRoadDesign(text){
-    this.updateChoice('roadDesign',text);
-    this.$router.push({name:'search2'})
+
+  storeRoadClass(text){
+    this.updateChoice('roadClass',text);
+    this.$router.push({name: 'search3'})
   },
-  displayRoad(){
+  displayRoadClass(){
     console.log(this.choice.roadDesign)
-  }
+    console.log(this.choice.roadClass)
+  },
 },
 created(){
   const storedChoice = this.openStorage()
@@ -130,5 +120,4 @@ created(){
     display: flex;
     margin: 3% 0
 }
-
 </style>
