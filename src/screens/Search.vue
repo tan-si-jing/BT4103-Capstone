@@ -37,17 +37,47 @@ export default {
   },
   data() {
     return{
-      purpose: '',
-      roadDesign: '',
+      choice:{
+        roadDesign: "",
+        roadClass: "",
+        roadType: "",
+        designSpeed: "",
+        grad_curv_change:""
+      }
     }
   },
 methods:{
+  openStorage(){
+    return JSON.parse(localStorage.getItem('choice'))
+  },
+  saveStorage(form){
+    localStorage.setItem('choice',JSON.stringify(form))
+  },
+  updateChoice(input,value){
+    this.choice[input] = value
+
+    let storedChoice = this.openStorage()
+    if(!storedChoice) storedChoice = {}
+
+    storedChoice[input] = value
+    this.saveStorage(storedChoice)
+  },
+  
   storeRoadDesign(text){
-    this.roadDesign = text;
-    this.$router.push({name:'search2',params:{roadDesign:this.roadDesign}})
+    this.updateChoice('roadDesign',text);
+    this.$router.push({name:'search2'})
   },
   displayRoad(){
-    console.log(this.roadDesign)
+    console.log(this.choice.roadDesign)
+  }
+},
+created(){
+  const storedChoice = this.openStorage()
+  if (storedChoice){
+    this.choice = {
+      ...this.choice,
+      ...storedChoice
+    }
   }
 }
 }

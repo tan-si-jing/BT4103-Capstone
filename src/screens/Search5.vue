@@ -42,16 +42,41 @@ export default {
     }
   },
 methods:{
+  openStorage(){
+    return JSON.parse(localStorage.getItem('choice'))
+  },
+  saveStorage(form){
+    localStorage.setItem('choice',JSON.stringify(form))
+  },
+  updateChoice(input,value){
+    this.choice[input] = value
+
+    let storedChoice = this.openStorage()
+    if(!storedChoice) storedChoice = {}
+
+    storedChoice[input] = value
+    this.saveStorage(storedChoice)
+  },
+
   storeChange(text){
-    this.grad_curv_change = text;
+    this.updateChoice('grad_curv_change',text)
   },
   displayChange(){
-    console.log(this.roadDesign)
-    console.log(this.roadClass)
-    console.log(this.roadType)
-    console.log(this.designSpeed)
-    console.log(this.grad_curv_change)
+    console.log(this.choice.roadDesign)
+    console.log(this.choice.roadClass)
+    console.log(this.choice.roadType)
+    console.log(this.choice.designSpeed)
+    console.log(this.choice.grad_curv_change)
   },
+},
+created(){
+  const storedChoice = this.openStorage()
+  if (storedChoice){
+    this.choice = {
+      ...this.choice,
+      ...storedChoice
+    }
+  }
 }
 }
 </script>

@@ -46,19 +46,41 @@ export default {
     }
   },
 methods:{
+  openStorage(){
+    return JSON.parse(localStorage.getItem('choice'))
+  },
+  saveStorage(form){
+    localStorage.setItem('choice',JSON.stringify(form))
+  },
+  updateChoice(input,value){
+    this.choice[input] = value
+
+    let storedChoice = this.openStorage()
+    if(!storedChoice) storedChoice = {}
+
+    storedChoice[input] = value
+    this.saveStorage(storedChoice)
+  },
+
   storeDesignSpeed(text){
-    this.designSpeed = text;
-    this.$router.push({name:'search5',params:{roadDesign:this.roadDesign,
-                                              roadClass:this.roadClass,
-                                              roadType:this.roadType,
-                                              designSpeed:this.designSpeed}})
+    this.updateChoice('designSpeed',text)
+    this.$router.push({name:'search5'})
   },
   displayDesignSpeed(){
-    console.log(this.roadDesign)
-    console.log(this.roadClass)
-    console.log(this.roadType)
-    console.log(this.designSpeed)
+    console.log(this.choice.roadDesign)
+    console.log(this.choice.roadClass)
+    console.log(this.choice.roadType)
+    console.log(this.choice.designSpeed)
   },
+},
+created(){
+  const storedChoice = this.openStorage()
+  if (storedChoice){
+    this.choice = {
+      ...this.choice,
+      ...storedChoice
+    }
+  }
 }
 }
 </script>

@@ -42,18 +42,49 @@ export default {
   },
   data() {
     return{
-      roadClass:'',
+      choice:{
+        roadDesign: "",
+        roadClass: "",
+        roadType: "",
+        designSpeed: "",
+        grad_curv_change:""
+      }
     }
   },
 methods:{
+  openStorage(){
+    return JSON.parse(localStorage.getItem('choice'))
+  },
+  saveStorage(form){
+    localStorage.setItem('choice',JSON.stringify(form))
+  },
+  updateChoice(input,value){
+    this.choice[input] = value
+
+    let storedChoice = this.openStorage()
+    if(!storedChoice) storedChoice = {}
+
+    storedChoice[input] = value
+    this.saveStorage(storedChoice)
+  },
+
   storeRoadClass(text){
-    this.roadClass = text;
-    this.$router.push({name: 'search3',params:{roadDesign:this.roadDesign,roadClass:this.roadClass}})
+    this.updateChoice('roadClass',text);
+    this.$router.push({name: 'search3'})
   },
   displayRoadClass(){
-    console.log(this.roadDesign)
-    console.log(this.roadClass)
+    console.log(this.choice.roadDesign)
+    console.log(this.choice.roadClass)
   },
+},
+created(){
+  const storedChoice = this.openStorage()
+  if (storedChoice){
+    this.choice = {
+      ...this.choice,
+      ...storedChoice
+    }
+  }
 }
 }
 </script>
