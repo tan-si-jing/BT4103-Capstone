@@ -3,8 +3,8 @@
   <div class="header">
     <div class="center">
     <div class="pages">
-        <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="true"/>
+        <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-2)"/>
+        <PageCircle num="2" v-bind:isActive="true" @click="$router.go(-1)"/>
         <PageCircle num="3" v-bind:isActive="true"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
