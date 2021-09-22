@@ -7,6 +7,7 @@ import Search2 from "./screens/Search2.vue"
 import Search3 from "./screens/Search3.vue"
 import Search4 from "./screens/Search4.vue"
 import Search5 from "./screens/Search5.vue"
+import SearchSpecific from "./screens/SearchSpecific.vue"
 import Results from "./screens/Results.vue"
 import SpecificResults from './screens/SpecificResults.vue'
 import { auth } from './firebase.js'
@@ -31,6 +32,12 @@ const router = createRouter({
       name: 'search',
       path: "/search",
       component: Search,
+      props: true,
+    },
+    {
+      name: 'searchspecific',
+      path: "/searchspecific",
+      component: SearchSpecific,
       props: true,
     },
     {
