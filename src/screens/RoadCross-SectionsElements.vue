@@ -9,13 +9,13 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <h2><b>10.5 ROAD CROSS-SECTIONS AND ELEMENTS</b></h2>
-              <h3 style="padding-top:10px"><b>10.5.1 General</b></h3>
+              <p><b>10.5 ROAD CROSS-SECTIONS AND ELEMENTS</b></p>
+              <p style="padding-top:20px"><b>10.5.1 General</b></p>
                 <p>The details of the cross-section elements such as lane width, centre median width, paved shoulder, services verge, 
                     footpath, drain and landscaping, etc. shall be in accordance with the Authority’s Drawings and the Standard Details 
                     of Road Elements.</p>
                 
-              <h3 style="padding-top:10px"><b>10.5.6 Sidetable, Drain, Footpath and Divider</b></h3>
+              <p style="padding-top:20px"><b>10.5.6 Sidetable, Drain, Footpath and Divider</b></p>
                 <p>a) Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
                     other categories of road. The services verge and landscaping shall be turfed and sloped as shown in the Standard 
                     Details of Road Elements.</p>
@@ -107,12 +107,13 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin: 5% 5% -8%;
+  margin: 2% 5% -8%;
   font-size:20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:10px;
+    margin-bottom:50px;
     font-size:16px;
 }
 
@@ -132,6 +133,10 @@ tbody tr:last-child td{
 
 #link{
   font-weight:bold;
+}
+
+p{
+  font-size:20px;
 }
 </style>
 

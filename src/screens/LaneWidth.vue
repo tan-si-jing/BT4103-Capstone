@@ -9,8 +9,8 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <h2>10.5.2 Lane Width</h2>
-                <h3 style="padding-top:10px"><b>10.5.2.1 Main Carriageway</b></h3>
+                <p><b class="tab1">10.5.2</b><b> Lane Width</b></p>
+                <p style="padding-top:20px"><b class="tab2">10.5.2.1</b><b>Main Carriageway</b></p>
                     <p>The typical lane width for a major road is 3.2m and the absolute minimum shall be 3m if there are constraints. 
                         In addition,</p>
                     <p>a) For lane adjacent to kerb, an additional width of 0.3m shall be provided.</p>
@@ -21,11 +21,11 @@
                     <div class="img-container">
                         <img src="../assets/Table10-12.png">
                     </div>
-                    <br>Notes:
+                    Notes:
                     <p>1 Typical lane width for an expressway is 3.5m.</p>
-                    <p>2 Actual lane width to be determined in consultation with Land Transport Authority</p>
+                    <p>2 Actual lane width to be determined in consultation with Land Transport Authority</p><br>
 
-                <h3 style="padding-top:10px"><b>10.5.2.2 Ramp or Loop</b></h3>
+                <p style="padding-top:20px"><b class="tab2">10.5.2.2</b><b>Ramp or Loop</b></p>
                     <p>The minimum lane width for ramp or loop is 3.7m per lane. The total width of the ramp or loop shall include the 
                         paved shoulder width specified in Clause 10.5.4. However, consideration shall be given to widen the lane width 
                         for the swept path of a heavy vehicle (refer to Figure 10.1).</p>
@@ -33,7 +33,7 @@
                         <img src="../assets/Figure10-1.png">
                     </div>
 
-                <h3 style="padding-top:10px"><b>10.5.2.4.3</b></h3>
+                <p style="padding-top:20px"><b>10.5.2.4.3</b></p>
                     <p>For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
                         (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
                         the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
@@ -41,10 +41,10 @@
                     <div class="img-container2">
                         <img src="../assets/Table10-13.png">
                     </div>
-                    <br>Note:
-                    <p>Additional 0.3m lane width shall be added next to parapet/ barrier</p>
+                    Note:
+                    <p>Additional 0.3m lane width shall be added next to parapet/ barrier</p><br>
 
-                <h3 style="padding-top:10px"><b>10.5.2.3 Turning Lane</b></h3>
+                <p style="padding-top:20px"><b class="tab2">10.5.2.3</b><b>Turning Lane</b></p>
                     <p>The turning lane at the intersection is to provide storage space for turning vehicle so as not to impede the main 
                         traffic flow (refer to Figure 10.11). The desirable minimum width of the turning lane shall be 3.5m and absolute 
                         minimum width shall be 3m. The turning lane shall be 70m long or sufficiently long to store the likely number of 
@@ -52,16 +52,16 @@
                         the transition. </p>
                     <p>To accommodate traffic lights, the desirable minimum and absolute minimum width of the centre divider at a junction 
                         separating the right turning lane from the opposing traffic flow shall be 1.3m and 1.0m respectively.</p>
-                    <div class="img-container">
+                    <div class="img-container" style="margin-bottom:50px;">
                         <img src="../assets/Figure10-11.png">
                     </div>
                 
-                <h3 style="padding-top:10px"><b>10.5.4 Paved Shoulder </b></h3>
-                    <p><b>10.5.4.1</b> The width of the paved shoulder shall be as shown in Table 10.14. </p>
+                <p style="padding-top:20px"><b class="tab1">10.5.4</b><b>Paved Shoulder </b></p>
+                    <p><b class="tab2">10.5.4.1</b> The width of the paved shoulder shall be as shown in Table 10.14. </p>
                     <div class="img-container2">
                         <img src="../assets/Table10-14.png">
                     </div>
-                    <br>Note:
+                    Note:
                     <p>1 1.0m in tunnel</p>
                     <p>2 Only applicable to viaduct, tunnel and associated depressed road. Paved shoulder is not required on flyover, underpass 
                         and associated depressed road.</p>
@@ -154,6 +154,7 @@ tbody tr:last-child td{
 .grid-item {
     padding: 10px;
     font-size:16px;
+    margin-bottom:60px;
 }
 
 .grid-container .inner-grid-container {
@@ -177,11 +178,18 @@ tbody tr:last-child td{
 .img-container{
     width: 500px;
     height: 350px;
+    margin-left: 5.8em; 
+    margin-top: 30px;
+
 }
 
 .img-container2{
     width: 500px;
     height: 200px;
+    margin-left: 5.8em; 
+    margin-top: 30px;
+    margin-bottom:30px;
+
 }
 
 /* Resize images to standardise size */
@@ -189,5 +197,17 @@ tbody tr:last-child td{
     max-width: 100%;
     height: auto;
 }
+
+p {
+  font-size:20px;
+}
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
+}
+
 </style>
 

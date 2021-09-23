@@ -9,21 +9,21 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <h2>10.7.1 Lateral Clearance</h2>
-                <h3 style="padding-top:10px"><b>10.7.1.1</b></h3>
+                <p><b class="tab1">10.7.1</b><b>Lateral Clearance</b></p>
+                <p style="padding-top:20px"><b>10.7.1.1</b></p>
                     <p>Minimum lateral clearance from the edge of road pavement (both at centre median and side table) to any adjacent 
                         structure is shown in Table 10.17 unless otherwise specified in the Standard Details of Road Elements.</p>
                     <div class="img-container">
                         <img src="../assets/Table10-17.png">
                     </div>
-                    <br>Notes:
+                    Notes:
                     <p>1 If no Vehicular Impact Guardrail is installed. Applicable to both centre median and sidetable.</p>
                     <p>2 Where Vehicular Impact Guardrail is installed.</p>
 
-                <h3 style="padding-top:10px"><b>10.7.1.2</b></h3>
+                <p style="padding-top:20px"><b>10.7.1.2</b></p>
                     <p>For an elevated road structure, the minimum lateral clearance between the edge of the road structure and any other structures shall be 3m.</p>
 
-                <h3 style="padding-top:10px"><b>10.5.11.5</b></h3>
+                <p style="padding-top:20px"><b>10.5.11.5</b></p>
                     <p>Directional sign shall generally be sited on the side next to the slow lane and clearly visible to the driver. It shall be 
                         noted that in some cases (e.g.for a major right turning movement, or for very wide road) it may be appropriate to site sign 
                         on the median if it is wide enough. The minimum lateral clearance from the edge of the vehicular impact guardrail to the 
@@ -114,6 +114,7 @@ tbody tr:last-child td{
 .grid-item {
     padding: 10px;
     font-size:16px;
+    margin-bottom:60px;
 }
 
 .grid-container .inner-grid-container {
@@ -137,6 +138,8 @@ tbody tr:last-child td{
 .img-container{
     width: 500px;
     height: 300px;
+    margin-left: 5.8em; 
+    margin-top: 30px;
 }
 
 /* Resize images to standardise size */
@@ -144,5 +147,16 @@ tbody tr:last-child td{
     max-width: 100%;
     height: auto;
 }
+p {
+  font-size:20px;
+}
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
+}
+
 </style>
 

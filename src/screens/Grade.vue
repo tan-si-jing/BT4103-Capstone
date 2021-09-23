@@ -9,8 +9,8 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <h2><b>10.4.3 Vertical Alignment</b></h2>
-              <h3 style="padding-top:10px"><b>10.4.3.1.1 Main Carriageway</b></h3>
+              <p><b class="tab1">10.4.3</b><b >Vertical Alignment</b></p>
+              <p style="padding-top:20px"><b class="tab3">10.4.3.1.1</b><b>Main Carriageway</b></p>
                 <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
                 <div class="img-container">
                     <img src="../assets/Table10-9.png">
@@ -21,7 +21,7 @@
                 <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
                 <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
 
-              <h3 style="padding-top:10px"><b>10.4.3.1.2 Interchange Ramp/Loop and Slip Road</b></h3>
+              <p style="padding-top:20px"><b class="tab3">10.4.3.1.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
                 <div class="img-container">
                     <img src="../assets/Table10-10.png">
                 </div>                
@@ -100,12 +100,13 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin:5% 5% -8%;
-  font-size:20px;
+  margin: 5% 5% -8%;
+  font-size: 20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:10px;
+    margin-bottom:60px;
     font-size:16px;
 }
 
@@ -126,16 +127,33 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-</style>
-<style>
+
 .img-container{
     width: 500px;
     height: 150px;
+    margin-left: 5.8em; 
+    margin-top: 30px;
+    margin-bottom:30px;
 }
 
 /* Resize images to standardise size */
 .img-container img{
     width: 100%;
     height: auto;
+}
+
+p {
+  font-size:20px;
+}
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
+}
+
+.tab3 {
+  margin-right: 1em
 }
 </style>
