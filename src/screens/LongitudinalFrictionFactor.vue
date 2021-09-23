@@ -2,29 +2,17 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">2 &nbsp; Grade</td>
+          <td scope="header">3 &nbsp; Longitudinal Friction Factor</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-              <h2><b>10.4.3 Vertical Alignment</b></h2>
-              <h3 style="padding-top:10px"><b>10.4.3.1.1 Main Carriageway</b></h3>
-                <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
+              <h2><b>Longitudinal Friction Factor given Design Speed</b></h2>
                 <div class="img-container">
-                    <img src="../assets/Table10-9.png">
-                </div>
-                <br>Notes:
-                <p>1) Minimum gradient for all roads is 0.4%.</p>
-                <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
-                <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
-                <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
-
-              <h3 style="padding-top:10px"><b>10.4.3.1.2 Interchange Ramp/Loop and Slip Road</b></h3>
-                <div class="img-container">
-                    <img src="../assets/Table10-10.png">
-                </div>                
+                    <img src="../assets/Table10-4.png">
+                </div>               
             </div>
           </td>
           </tr>
@@ -44,15 +32,13 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.4.3
+                  <br>CDC Chapter 10 / Section 10.4.2.2.1
                 </div>   
                 
                 <div class="grid-item">
                   <span id = "link">Link to Chapter/ Section</span>
                    <br>
-                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.3.1.1 (page 209)</a>
-                  <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.2 (page 210)</a>
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203">CDC 10.4.2.2.1, Table 10.4 (page 203)</a>
                 </div>   
               </div>
             </div>      
@@ -90,7 +76,7 @@ tbody tr{
 tbody tr:last-child td{ 
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
-    height: 23vh;
+    height: 20vh;
 }
 
 .content{

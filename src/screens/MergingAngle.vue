@@ -2,29 +2,19 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">2 &nbsp; Grade</td>
+          <td scope="header">7 &nbsp; Merging Angle</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-              <h2><b>10.4.3 Vertical Alignment</b></h2>
-              <h3 style="padding-top:10px"><b>10.4.3.1.1 Main Carriageway</b></h3>
-                <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-                <div class="img-container">
-                    <img src="../assets/Table10-9.png">
-                </div>
-                <br>Notes:
-                <p>1) Minimum gradient for all roads is 0.4%.</p>
-                <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
-                <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
-                <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
-
-              <h3 style="padding-top:10px"><b>10.4.3.1.2 Interchange Ramp/Loop and Slip Road</b></h3>
-                <div class="img-container">
-                    <img src="../assets/Table10-10.png">
-                </div>                
+                <h3 style="padding-top:10px"><b>10.5.2.4.1</b></h3>
+                    <p>Slip road is provided to permit left-turning vehicle to bypass the intersection. The desirable merging angle for 
+                        left turn slip road shall be 70o and absolute minimum merging angle shall be 50o as shown in Figure 10.12. </p>
+                    <div class="img-container">
+                        <img src="../assets/Figure10-12.png">
+                    </div>
             </div>
           </td>
           </tr>
@@ -44,16 +34,16 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.4.3
+                  <br>CDC Chapter 10 / Section 10.5.2.4.1
                 </div>   
                 
                 <div class="grid-item">
                   <span id = "link">Link to Chapter/ Section</span>
-                   <br>
-                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.3.1.1 (page 209)</a>
                   <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.2 (page 210)</a>
-                </div>   
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=213">CDC 10.5.2.4.1 (page 213)</a>
+                  <br>
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236">CDC Figure 10.12 (page 236)</a>
+                  </div>   
               </div>
             </div>      
           </td>
@@ -126,16 +116,16 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-</style>
-<style>
+
 .img-container{
     width: 500px;
-    height: 150px;
+    height: 250px;
 }
 
 /* Resize images to standardise size */
 .img-container img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 </style>
+

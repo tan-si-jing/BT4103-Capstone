@@ -2,29 +2,21 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">2 &nbsp; Grade</td>
+          <td scope="header">5 &nbsp; Crossfall</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-              <h2><b>10.4.3 Vertical Alignment</b></h2>
-              <h3 style="padding-top:10px"><b>10.4.3.1.1 Main Carriageway</b></h3>
-                <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-                <div class="img-container">
-                    <img src="../assets/Table10-9.png">
-                </div>
-                <br>Notes:
-                <p>1) Minimum gradient for all roads is 0.4%.</p>
-                <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
-                <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
-                <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
-
-              <h3 style="padding-top:10px"><b>10.4.3.1.2 Interchange Ramp/Loop and Slip Road</b></h3>
-                <div class="img-container">
-                    <img src="../assets/Table10-10.png">
-                </div>                
+                <h3 style="padding-top:10px"><b>10.2.2</b></h3>
+                    <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
+                <h3 style="padding-top:10px"><b>10.4.2.4 Crossfall of Carriageway</b></h3>    
+                    <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
+                        to the side drain and the design requirements shall be as shown in Table 10.6.</p>
+                    <div class="img-container">
+                        <img src="../assets/Table10-6.png">
+                    </div>
             </div>
           </td>
           </tr>
@@ -44,15 +36,15 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.4.3
+                  <br>CDC Chapter 10 / Section 10.2.2, 10.4.2.4
                 </div>   
                 
                 <div class="grid-item">
                   <span id = "link">Link to Chapter/ Section</span>
-                   <br>
-                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.3.1.1 (page 209)</a>
                   <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.2 (page 210)</a>
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=199">CDC 10.2.2 (page 199)</a>
+                  <br>
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207">CDC 10.4.2.4 (page 207)</a>
                 </div>   
               </div>
             </div>      
