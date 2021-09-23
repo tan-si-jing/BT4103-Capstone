@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <h2><b>Side Friction Factor given Design Speed</b></h2>
+              <p><b>Side Friction Factor given Design Speed</b></p>
                 <div class="img-container">
                     <img src="../assets/Table10-7.png">
                 </div>               
@@ -88,12 +88,13 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin:5% 5% -8%;
+  margin: 5% 5% -8%;
   font-size:20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:10px;
+    margin-bottom:60px;
     font-size:16px;
 }
 
@@ -114,16 +115,26 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-</style>
-<style>
 .img-container{
     width: 500px;
     height: 150px;
+    margin-left: 5.8em; 
 }
 
 /* Resize images to standardise size */
 .img-container img{
     width: 100%;
     height: auto;
+}
+
+p {
+  font-size:20px;
+}
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
 }
 </style>

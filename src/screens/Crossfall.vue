@@ -9,9 +9,9 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <h3 style="padding-top:10px"><b>10.2.2</b></h3>
-                    <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
-                <h3 style="padding-top:10px"><b>10.4.2.4 Crossfall of Carriageway</b></h3>    
+                <p><b class="tab1">10.2.2</b></p>
+                <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
+                <p style="padding-top:20px"><b class="tab2">10.4.2.4</b><b>Crossfall of Carriageway</b></p>    
                     <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
                         to the side drain and the design requirements shall be as shown in Table 10.6.</p>
                     <div class="img-container">
@@ -92,12 +92,13 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin:5% 5% -8%;
-  font-size:20px;
+  margin: 5% 5% -8%;
+  font-size: 20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:10px;
+    margin-bottom:60px;
     font-size:16px;
 }
 
@@ -118,11 +119,13 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-</style>
-<style>
+
 .img-container{
     width: 500px;
     height: 150px;
+    margin-left: 5.8em; 
+    margin-top: 30px;
+    margin-bottom:50px;
 }
 
 /* Resize images to standardise size */
@@ -130,4 +133,16 @@ tbody tr:last-child td{
     width: 100%;
     height: auto;
 }
+
+p {
+  font-size:20px;
+}
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
+}
+
 </style>

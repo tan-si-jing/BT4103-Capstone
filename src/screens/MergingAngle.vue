@@ -9,11 +9,11 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <h3 style="padding-top:10px"><b>10.5.2.4.1</b></h3>
+                <p><b>10.5.2.4.1</b></p>
                     <p>Slip road is provided to permit left-turning vehicle to bypass the intersection. The desirable merging angle for 
-                        left turn slip road shall be 70o and absolute minimum merging angle shall be 50o as shown in Figure 10.12. </p>
+                        left turn slip road shall be 70o and absolute minimum merging angle shall be 50o as shown in Figure 10.12.</p>
                     <div class="img-container">
-                        <img src="../assets/Figure10-12.png">
+                        <img src="../assets/Table10-8.png">
                     </div>
             </div>
           </td>
@@ -90,12 +90,13 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin:5% 5% -8%;
+  margin: 5% 5% -8%;
   font-size:20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:10px;
+    margin-bottom:60px;
     font-size:16px;
 }
 
@@ -116,16 +117,29 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-
 .img-container{
     width: 500px;
-    height: 250px;
+    height: 150px;
+    margin-left: 5.8em; 
+    margin-top: 30px;
+    margin-bottom:60px;
 }
 
 /* Resize images to standardise size */
 .img-container img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
+}
+
+p {
+  font-size:20px;
+}
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
 }
 </style>
 

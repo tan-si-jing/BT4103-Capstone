@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <h3 style="padding-top:10px"><b>10.4.2.6 Corner Radius</b></h3>
+                <p><b class="tab2">10.4.2.6</b><b> Corner Radius</b></p>
                     <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
                         shall not be less than the values as shown in Table 10.8.</p>
                     <div class="img-container">
@@ -88,12 +88,13 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin:5% 5% -8%;
+  margin: 5% 5% -8%;
   font-size:20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:10px;
+    margin-bottom:60px;
     font-size:16px;
 }
 
@@ -114,16 +115,28 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-</style>
-<style>
 .img-container{
     width: 500px;
     height: 150px;
+    margin-left: 5.8em; 
+    margin-top: 30px;
+    margin-bottom:70px;
 }
 
 /* Resize images to standardise size */
 .img-container img{
     width: 100%;
     height: auto;
+}
+
+p {
+  font-size:20px;
+}
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
 }
 </style>
