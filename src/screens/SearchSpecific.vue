@@ -3,14 +3,11 @@
   <div class="header">
     <div class="center">
     <div class="pages">
-        <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-4)"/>
-        <PageCircle num="2" v-bind:isActive="true" @click="$router.go(-3)"/>
-        <PageCircle num="3" v-bind:isActive="true" @click="$router.go(-2)"/>
-        <PageCircle num="4" v-bind:isActive="true" @click="$router.go(-1)"/>
-        <PageCircle num="5" v-bind:isActive="true"/>
+        <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-1)"/>
+        <PageCircle num="2" v-bind:isActive="true"/>
     </div>
     <div class="question">
-      <h5>Is there <u>gradient change</u> or <u>curvature change</u> at/near junctions? </h5>
+      <h5 style="text-align:center">Which Section are you looking for? </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -18,27 +15,24 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Yes" @click="storeChange('Yes');displayChange()"/>
-      <SearchParamButton text="No" @click="storeChange('No');displayChange()"/>
+      <h5><a style ="padding:75px;"></a><input type="text" v-model="params" placeholder="Search"></h5>
     </div>
   </div>
   </div>
 </template>
 
 <script>
-import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
 
 export default {
-  name: 'search5',
-  props: ['roadDesign','roadClass','roadType','designSpeed'],
+  name: 'search2',
+  props: ['roadDesign'],
   components: {
     PageCircle,
-    SearchParamButton
   },
   data() {
     return{
-      grad_curv_change:'',
+      params:"",
     }
   },
 methods:{
@@ -58,15 +52,13 @@ methods:{
     this.saveStorage(storedChoice)
   },
 
-  storeChange(text){
-    this.updateChoice('grad_curv_change',text)
+  storeRoadClass(text){
+    this.updateChoice('roadClass',text);
+    this.$router.push({name: 'search3'})
   },
-  displayChange(){
+  displayRoadClass(){
     console.log(this.choice.roadDesign)
     console.log(this.choice.roadClass)
-    console.log(this.choice.roadType)
-    console.log(this.choice.designSpeed)
-    console.log(this.choice.grad_curv_change)
   },
 },
 created(){

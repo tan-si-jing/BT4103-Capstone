@@ -1,10 +1,8 @@
 <template>
   <div>
-    <router-link to="/search">
     <button type="button" class="btn btn-outline-dark" v-bind:style="[isActive ? active : inactive]">
       {{num}}
     </button>
-    </router-link>
   </div>
 </template>
 

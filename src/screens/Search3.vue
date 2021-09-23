@@ -3,8 +3,8 @@
   <div class="header">
     <div class="center">
     <div class="pages">
-        <PageCircle num="1" v-bind:isActive="true"/>
-        <PageCircle num="2" v-bind:isActive="true"/>
+        <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-2)"/>
+        <PageCircle num="2" v-bind:isActive="true" @click="$router.go(-1)"/>
         <PageCircle num="3" v-bind:isActive="true"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
@@ -31,26 +31,52 @@ import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
 
 export default {
-  name: 'SearchParams',
+  name: 'search3',
+  props: ['roadDesign','roadClass'],
   components: {
     PageCircle,
     SearchParamButton
   },
   data() {
     return{
-      roadDesign: '',
-      roadClass:'',
       roadType: '',
     }
   },
 methods:{
+  openStorage(){
+    return JSON.parse(localStorage.getItem('choice'))
+  },
+  saveStorage(form){
+    localStorage.setItem('choice',JSON.stringify(form))
+  },
+  updateChoice(input,value){
+    this.choice[input] = value
+
+    let storedChoice = this.openStorage()
+    if(!storedChoice) storedChoice = {}
+
+    storedChoice[input] = value
+    this.saveStorage(storedChoice)
+  },
+
   storeRoadType(text){
-    this.roadType = text;
-    this.$router.push('Search4')
+    this.updateChoice('roadType',text)
+    this.$router.push({name:'search4'})
   },
   displayRoadType(){
-    console.log(this.roadType)
+    console.log(this.choice.roadDesign)
+    console.log(this.choice.roadClass)
+    console.log(this.choice.roadType)
   },
+},
+created(){
+  const storedChoice = this.openStorage()
+  if (storedChoice){
+    this.choice = {
+      ...this.choice,
+      ...storedChoice
+    }
+  }
 }
 }
 </script>

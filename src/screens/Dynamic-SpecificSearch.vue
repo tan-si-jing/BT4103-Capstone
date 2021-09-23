@@ -29,11 +29,13 @@
                         <div class='text'>
                             {{cdc.Text}}
                         </div>
+                        <br>
                         <div class='image'>
-                            <img :src="cdc.Image">
+                            <img :src="cdc.Image" style='zoom: 1.2'>
                         </div>
                     </div>
                 </div>
+                <br>
             </li>
         </ul>
         <table class="manual">
@@ -136,7 +138,7 @@ export default {
     box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     padding: 40px;
-    font-size:22px;
+    font-size:20px;
 }
 
 ul {
@@ -159,6 +161,16 @@ ul {
     width: 100%;
     align-items: right;
 }
+
+.image {
+    display: flex;
+    justify-content:center;
+}
+/** 
+img {
+    width: 50%;
+}
+*/
 
 button {
     width: 300px;
