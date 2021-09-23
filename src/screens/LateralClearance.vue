@@ -114,7 +114,7 @@ tbody tr:last-child td{
 .grid-item {
     padding: 10px;
     font-size:16px;
-    margin-bottom:60px;
+    margin-bottom:50px;
 }
 
 .grid-container .inner-grid-container {
