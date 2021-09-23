@@ -10,10 +10,20 @@ import Search5 from "./screens/Search5.vue"
 import Results from "./screens/Results.vue"
 import SpecificResults from './screens/SpecificResults.vue'
 import { auth } from './firebase.js'
+import RoadCSElems from './screens/Road Cross-Sections and Elements.vue'
+import Grade from './screens/Grade.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    {
+      path: "/grade",
+      component: Grade,
+    },
+    {
+      path: "/roadcselems",
+      component: RoadCSElems,
+    },
     {
       path: "/",
       component: Home,
