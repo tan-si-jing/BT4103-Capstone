@@ -25,7 +25,7 @@
     <div class="container">
       <LaneWidth></LaneWidth>
     </div>
-    <div class="container">
+    <div class="lastContainer">
       <LateralClearance></LateralClearance>
     </div>
 
@@ -91,8 +91,8 @@ data() {
   margin: 2% 60% 0% 0%;
   text-align:center
 }
-.container {
-  padding: 3% 11% 10%;
+.lastContainer {
+  margin-bottom: 10%;
 }
 
 
