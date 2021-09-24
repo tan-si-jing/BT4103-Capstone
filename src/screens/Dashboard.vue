@@ -26,7 +26,9 @@
           <div>
             <canvas id="bar-chart"></canvas>
           </div>
-          <div>5</div>
+          <div>
+            <SpecificTable/>
+          </div>
         </div>
         <!-- row 3 -->
         <div class="graphThirdRow">
@@ -57,7 +59,7 @@ import SummaryData from '../components/graphs/SummaryData.vue';
 import donutChartData from '../components/graphs/DonutChartData.js';
 import lineChartData from '../components/graphs/LineChartData.js';
 import barChartData from '../components/graphs/BarChartData.js';
-// add table chart here
+import SpecificTable from '../components/graphs/SpecificTable.vue';
 import roadClassData from '../components/graphs/RoadClassData.js';
 import roadTypeData from '../components/graphs/RoadTypeData.js';
 import designSpeedData from '../components/graphs/DesignSpeedData.js';
@@ -69,6 +71,7 @@ export default {
   components: {
     LogoutButton,
     SummaryData,
+    SpecificTable
   },
   data() {
     return {
@@ -82,13 +85,13 @@ export default {
     };
   },
   mounted() {
-    const chart1 = document.getElementById('donut-chart');
-    const chart2 = document.getElementById('line-chart');
-    const chart3 = document.getElementById('bar-chart');
-    const chart4 = document.getElementById('roadclass-chart');
-    const chart5 = document.getElementById('roadtype-chart');
-    const chart6 = document.getElementById('designspeed-chart');
-    const chart7 = document.getElementById('changejunction-chart');
+    const chart1 = document.getElementById('donut-chart').getContext("2d", {alpha: false});
+    const chart2 = document.getElementById('line-chart').getContext("2d", {alpha: false});
+    const chart3 = document.getElementById('bar-chart').getContext("2d", {alpha: false});
+    const chart4 = document.getElementById('roadclass-chart').getContext("2d", {alpha: false});
+    const chart5 = document.getElementById('roadtype-chart').getContext("2d", {alpha: false});
+    const chart6 = document.getElementById('designspeed-chart').getContext("2d", {alpha: false});
+    const chart7 = document.getElementById('changejunction-chart').getContext("2d", {alpha: false});
     new Chart(chart1, this.donutChartData);
     new Chart(chart2, this.lineChartData);
     new Chart(chart3, this.barChartData);
@@ -96,7 +99,6 @@ export default {
     new Chart(chart5, this.roadTypeData);
     new Chart(chart6, this.designSpeedData);
     new Chart(chart7, this.changeJunctionData);
-    
   }
 };
 </script>
@@ -170,10 +172,9 @@ export default {
   height: 375px;
 }
 .summary {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  align-content: center;
-  text-align: center;
+  display: grid;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
