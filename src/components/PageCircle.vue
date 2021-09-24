@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="button" class="btn btn-outline-dark" v-bind:style="[isActive ? active : inactive]">
+    <button type="button" class="btn btn-outline-dark" :disabled=!isActive v-bind:style="[isActive ? active : inactive]">
       {{num}}
     </button>
   </div>

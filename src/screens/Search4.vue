@@ -25,6 +25,9 @@
       <SearchParamButton text="80" @click="storeDesignSpeed('80');displayDesignSpeed()"/>
       <SearchParamButton text="90" @click="storeDesignSpeed('90');displayDesignSpeed()"/>
     </div>
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
+      <i class="bi bi-arrow-left"></i>
+    </button>
   </div>
   </div>
 </template>
@@ -86,15 +89,30 @@ created(){
 </script>
 
 <style scoped>
+#back {
+  position:absolute;
+  width:fit-content;
+  height:fit-content;
+  font-size: 1.5rem;
+  top:85%;
+  left:5%;
+  box-shadow:none;
+  border:none;
+}
 .button-group {
   display: flex;
   justify-content: space-around;
-  padding: 0 15%
+  padding: 0 15%;
+  flex-wrap: wrap;
+  row-gap: 1em;
 }
 .options {
   background-color: #FAFAFA;
   height: 55%;
-  padding-top:10%
+  align-items: center;
+  padding-top:5%;
+  display: flex;
+  justify-content: space-around;
 }
 .header {
   background-color: #E0E0E0;

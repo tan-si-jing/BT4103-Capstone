@@ -1,23 +1,44 @@
 <template>
   <div style="height:100vh; overflow: hidden; position:relative">
-  <div class="header">
-    <div class="center">
-    <div class="pages">
-        <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-1)"/>
-        <PageCircle num="2" v-bind:isActive="true"/>
+    <div class="header">
+      <div class="center">
+      <div class="pages">
+          <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-1)"/>
+          <PageCircle num="2" v-bind:isActive="true"/>
+      </div>
+      <div class="question">
+        <h5 style="text-align:center">Which section are you looking for? </h5>
+      </div>
+      </div>
+      <img src="../assets/mascot.png" class="mascot"/>
+      <img src="../assets/road.png" class="road"/>
     </div>
-    <div class="question">
-      <h5 style="text-align:center">Which Section are you looking for? </h5>
+    <div class="options">
+      <div class="input-group mx-auto" style="width: 55%;">
+        <select class="form-select">
+          <option value="Road Cross-Sections and Elements">Road Cross-Sections and Elements</option>
+          <option value="Grade">Grade</option>
+          <option value="Longitudinal Friction Factor">Longitudinal Friction Factor</option>
+          <option value="Side Friction Factor">Side Friction Factor</option>
+          <option value="Crossfall">Crossfall</option>
+          <option value="Corner Radius">Corner Radius</option>
+          <option value="Merging Angle">Merging Angle</option>
+          <option value="Lane Width">Lane Width</option>
+          <option value="Lateral Clearance">Lateral Clearance</option>
+          <option value="Super-elevation">Super-elevation</option>
+          <option value="Sight Distance">Sight Distance</option>
+          <option value="Curve Length">Curve Length</option>
+          <option value="Horizontal Alignment">Horizontal Alignment</option>
+          <option value="Vertical Alignment">Vertical Alignment</option>
+          <option value="Slip-road/ Traffic Island">Slip-road/ Traffic Island</option>
+          <option value="Combination of Horizontal & Vertical Alignment">Combination of Horizontal & Vertical Alignment</option>
+        </select>
+        <button class="btn btn-outline-secondary w-25" type="button">Search</button>
+      </div>
+      <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
+        <i class="bi bi-arrow-left"></i>
+      </button>
     </div>
-    </div>
-    <img src="../assets/mascot.png" class="mascot"/>
-    <img src="../assets/road.png" class="road"/>
-  </div>
-  <div class="options">
-    <div class="button-group">
-      <h5><a style ="padding:75px;"></a><input type="text" v-model="params" placeholder="Search"></h5>
-    </div>
-  </div>
   </div>
 </template>
 
@@ -74,15 +95,23 @@ created(){
 </script>
 
 <style scoped>
-.button-group {
-  display: flex;
-  justify-content: space-around;
-  padding: 0 15%
+#back {
+  position:absolute;
+  width:fit-content;
+  height:fit-content;
+  font-size: 1.5rem;
+  top:85%;
+  left:5%;
+  box-shadow:none;
+  border:none;
 }
 .options {
   background-color: #FAFAFA;
   height: 55%;
-  padding-top:10%
+  align-items: center;
+  padding-top:5%;
+  display: flex;
+  justify-content: space-around;
 }
 .header {
   background-color: #E0E0E0;
