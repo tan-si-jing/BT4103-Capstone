@@ -18,9 +18,9 @@
                     </div>
 
                 <p style="padding-top:3%"><b class="tab3">10.4.2.2.2</b><b>Intermediate Sight Distance</b></p>
-                    <p>a) Intermediate sight distance is equal to 2 times stopping sight distance. <br>
-                    b) Intermediate sight distance is only applicable to undivided 2-lane road. <br>
-                    c) Where intermediate sight distance is unachievable because of site constraint, 
+                    <p>a) Intermediate sight distance is equal to 2 times stopping sight distance. </p>
+                    <p>b) Intermediate sight distance is only applicable to undivided 2-lane road. </p>
+                    <p>c) Where intermediate sight distance is unachievable because of site constraint, 
                     the stopping sight distance shall be used and the appropriate control measures to 
                     prohibit overtaking shall be introduced.</p>
 

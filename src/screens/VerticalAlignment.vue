@@ -13,10 +13,10 @@
                 <p> A vertical curve shall be provided when there is a change in road gradient by using symmetrical simple parabolic curve.</p>
 
                 <p style="padding-top:3%"><b class="tab3">10.4.3.2.1</b><b>Crest Curve</b></p>
-                <p> The minimum length of a crest curve in metre shall be the greater of:<br>
-                a) 0.6 times of the design speed (in km/h); or <br>
-                b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) <br>
-                c) the desirable curve length can be derived from the following formulae: -</p>
+                <p> The minimum length of a crest curve in metre shall be the greater of:</p>
+                <p>a) 0.6 times of the design speed (in km/h); or </p>
+                <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
+                <p>c) the desirable curve length can be derived from the following formulae: -</p>
                 <p style="margin-left:5.5em; font-size:18px;"> Crest Vertical Curve for Stopping Sight Distance</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.3.2.1.png">
@@ -26,11 +26,11 @@
                     </div>
 
                 <p style="padding-top:3%"><b class="tab3">10.4.3.2.2</b><b>Sag Curve</b></p>
-                <p> The minimum length of a sag curve in metre shall be the greater of: - <br>
-                a) 0.6 times of the design speed (in km/h); or <br>
-                b) curve length needed to provide for riding comfort (refer to Figure 10.9); or <br>
-                c) curve length needed to provide headlight sight distance (refer to Figure 10.10) <br>
-                d) the desirable curve length can be derived from the following formulae: - </p>
+                <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
+                <p>a) 0.6 times of the design speed (in km/h); or </p>
+                <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
+                <p>c) curve length needed to provide headlight sight distance (refer to Figure 10.10) </p>
+                <p>d) the desirable curve length can be derived from the following formulae: - </p>
                 <p style="margin-left:5.5em; font-size:18px;"> Crest Vertical Curve for Stopping Sight Distance</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.3.2.2.png">
@@ -53,12 +53,12 @@
                     </div>
 
                 <p style="padding-top:3%"><b class="tab2">10.4.1.2</b><b>Vertical Alignment</b></p>
-                <p>There are several general controls that shall be considered when designing the vertical alignment: - <br>
-                a) a smooth grade line with gradual changes shall be used instead of a line with numerous breaks and short lengths of grades; <br>
-                b) grade through intersection shall not exceed 3% to avoid adverse effect to turning movement and ensure effective surface drainage; <br>
-                c) a sag vertical curve or a flat section is desirable in advance of any channelization at an intersection and ramp take-off at an 
-                interchange, in order to provide sufficient sight distance; and <br>
-                d) in providing sag vertical curves, one long vertical curve is more desirable and broken-back grade line shall be avoided. </p>
+                <p>There are several general controls that shall be considered when designing the vertical alignment: - </p>
+                <p>a) a smooth grade line with gradual changes shall be used instead of a line with numerous breaks and short lengths of grades; </p>
+                <p>b) grade through intersection shall not exceed 3% to avoid adverse effect to turning movement and ensure effective surface drainage; </p>
+                <p>c) a sag vertical curve or a flat section is desirable in advance of any channelization at an intersection and ramp take-off at an 
+                interchange, in order to provide sufficient sight distance; and </p>
+                <p>d) in providing sag vertical curves, one long vertical curve is more desirable and broken-back grade line shall be avoided. </p>
 
             </div>
           </td>
