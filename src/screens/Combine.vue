@@ -10,13 +10,13 @@
           <td scope="row">
             <div class="content">
                 <p><b class="tab2">10.4.1.3</b><b>Combination of Horizontal & Vertical Alignment</b></p>
-                <p>To avoid undesirable effect of poor combination of vertical and horizontal curve, the following principles shall be observed: - <br> 
-                a) the tangent point for both vertical and horizontal curve shall coincide; <br>
-                b) when condition (a) cannot be met, the vertical curve shall be completely within the horizontal curve and have common mid-point. 
-                If the mid-point is unable to coincide, the distance between the midpoint of both curves shall be less than 0.25 times the length of the horizontal curve; <br>
-                c) sharp horizontal curvature shall not be introduced near the top of a crest vertical curve, or near the bottom of a sag vertical curve; <br>
-                d) the zero crossfall point within super-elevation development length shall not coincide with the bottom of a sag vertical curve; and <br>
-                e) both horizontal and vertical curves shall be kept as long as possible and where both are present, they shall not be 
+                <p>To avoid undesirable effect of poor combination of vertical and horizontal curve, the following principles shall be observed: -</p>
+                <p>a) the tangent point for both vertical and horizontal curve shall coincide; </p>
+                <p>b) when condition (a) cannot be met, the vertical curve shall be completely within the horizontal curve and have common mid-point. 
+                If the mid-point is unable to coincide, the distance between the midpoint of both curves shall be less than 0.25 times the length of the horizontal curve; </p>
+                <p>c) sharp horizontal curvature shall not be introduced near the top of a crest vertical curve, or near the bottom of a sag vertical curve; </p>
+                <p>d) the zero crossfall point within super-elevation development length shall not coincide with the bottom of a sag vertical curve; and </p>
+                <p>e) both horizontal and vertical curves shall be kept as long as possible and where both are present, they shall not be 
                 considered separately.</p>
             </div>
           </td>

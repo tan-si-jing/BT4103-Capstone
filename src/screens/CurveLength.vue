@@ -10,10 +10,10 @@
           <td scope="row">
             <div class="content">
                 <p><b class="tab3">10.4.3.2.1</b><b>Crest Curve</b></p>
-                <p> The minimum length of a crest curve in metre shall be the greater of:<br>
-                a) 0.6 times of the design speed (in km/h); or <br>
-                b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) <br>
-                c) the desirable curve length can be derived from the following formulae: -</p>
+                <p> The minimum length of a crest curve in metre shall be the greater of:</p>
+                <p>a) 0.6 times of the design speed (in km/h); or </p>
+                <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
+                <p>c) the desirable curve length can be derived from the following formulae: -</p>
                 <p style="margin-left:5.5em; font-size:18px;"> Crest Vertical Curve for Stopping Sight Distance</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.3.2.1.png">
@@ -23,11 +23,11 @@
                     </div>
 
                 <p style="padding-top:3%"><b class="tab3">10.4.3.2.2</b><b>Sag Curve</b></p>
-                <p> The minimum length of a sag curve in metre shall be the greater of: - <br>
-                a) 0.6 times of the design speed (in km/h); or <br>
-                b) curve length needed to provide for riding comfort (refer to Figure 10.9); or <br>
-                c) curve length needed to provide headlight sight distance (refer to Figure 10.10) <br>
-                d) the desirable curve length can be derived from the following formulae: - </p>
+                <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
+                <p>a) 0.6 times of the design speed (in km/h); or </p>
+                <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
+                <p>c) curve length needed to provide headlight sight distance (refer to Figure 10.10) </p>
+                <p>d) the desirable curve length can be derived from the following formulae: - </p>
                 <p style="margin-left:5.5em; font-size:18px;"> Crest Vertical Curve for Stopping Sight Distance</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.3.2.2.png">
