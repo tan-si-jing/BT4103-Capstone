@@ -20,6 +20,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
+      name: "level2results",
       path: "/level2results",
       component: Level2Results,
     },

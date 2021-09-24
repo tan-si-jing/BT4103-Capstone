@@ -64,6 +64,7 @@ methods:{
   storeChange(text){
     this.updateChoice('grad_curv_change',text);
     this.displayChange();
+   this.$router.push({name: 'level2results'})
   },
   displayChange(){
     console.log(this.choice.role)
