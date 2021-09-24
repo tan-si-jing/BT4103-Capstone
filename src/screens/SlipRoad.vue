@@ -2,7 +2,7 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">15 &nbsp; Slip-road/ Traffic Island</td>
+          <td scope="header">15 &nbsp; Traffic Island</td>
           </tr>
         </thead>
         <tbody>
