@@ -1,14 +1,8 @@
 <template>
   <div class="wrapper">
     <p class="header">Results</p>
-    <div class="container">
-      <HorizontalAlignment></HorizontalAlignment>
-    </div>
-    <div class="Container">
-      <VerticalAlignment></VerticalAlignment>
-    </div>
     <div class="lastContainer">
-      <SlipRoad></SlipRoad>
+      <Combine></Combine>
     </div>
 
   <img :src="road" class="road" />
@@ -17,16 +11,12 @@
 </template>
 
 <script>
-import HorizontalAlignment from "./HorizontalAlignment.vue"
-import VerticalAlignment from "./VerticalAlignment.vue"
-import SlipRoad from "./SlipRoad.vue"
+import Combine from "./Combine.vue"
 
 export default {
-name: "Level4Results",
+name: "Level5Results",
 components: {
-  "HorizontalAlignment" : HorizontalAlignment,
-  "VerticalAlignment" : VerticalAlignment,
-  "SlipRoad" : SlipRoad
+  "Combine" : Combine
 },
 props: {},
 data() {
