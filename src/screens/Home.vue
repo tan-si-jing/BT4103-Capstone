@@ -11,9 +11,9 @@
   <div class="userType">
     <h6>Please select your role:</h6>
     <div class="button-group">
-      <UserTypeButton label="Traffic Engineers" icon="briefcase" link="/search"/>
-      <UserTypeButton label="Consultants" icon="chat-dots" link="/search"/>
-      <UserTypeButton label="General Public" icon="people" link="/search"/>
+      <UserTypeButton label="Traffic Engineers" icon="briefcase" @click="updateChoice('role','Traffic Engineer')" link="/search"/>
+      <UserTypeButton label="Consultants" icon="chat-dots"  @click="updateChoice('role','Consultants')" link="/search"/>
+      <UserTypeButton label="General Public" icon="people"  @click="updateChoice('role','General Public')" link="/search"/>
       <UserTypeButton label="Admin" icon="lock" link="/login"/>
     </div>
   </div>
@@ -27,7 +27,45 @@ export default {
   name: 'Home',
   components: {
     UserTypeButton
+  },
+  data() {
+    return{
+      choice:{
+        role: "",
+        roadDesign: "",
+        roadClass: "",
+        roadType: "",
+        designSpeed: "",
+        grad_curv_change:""
+      }
+    }
+  },
+  methods:{
+  openStorage(){
+    return JSON.parse(localStorage.getItem('choice'))
+  },
+  saveStorage(form){
+    localStorage.setItem('choice',JSON.stringify(form))
+  },
+  updateChoice(input,value){
+    this.choice[input] = value
+
+    let storedChoice = this.openStorage()
+    if(!storedChoice) storedChoice = {}
+
+    storedChoice[input] = value
+    this.saveStorage(storedChoice)
+  },
+  },
+  created(){
+  const storedChoice = this.openStorage()
+  if (storedChoice){
+    this.choice = {
+      ...this.choice,
+      ...storedChoice
+    }
   }
+}
 }
 </script>
 
