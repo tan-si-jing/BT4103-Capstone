@@ -9,7 +9,34 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.2.3</b><b>Horizontal Curve</b></p>
+                <p><b class="tab2">10.4.1.1</b><b>Horizontal Alignment</b></p> 
+                <p> There are several general controls that shall be considered when designing the horizontal alignment. </p>
+                <p>a) Where it becomes necessary to introduce curve of lower standard than the design requirement, 
+                the respective design speed between the successive geometric elements shall not differ by more than 10km/h; </p>
+                <p>b) Where the radius of a curve is below the design requirement, additional lane width shall be provided to accommodate heavy 
+                vehicle (refer to Figure 10.1) off-tracking within the curve; </p>
+                <p>c) Curve shall be sufficiently long to avoid the appearance of a kink. Curve shall be at least 150m long for a central angle of 5°, 
+                and the minimum length shall be increased by 30m for each degree decrease in the central angle; </p>
+                <p>d) Opening for vehicle turning at centre median along horizontal curve shall not be provided if the intersection 
+                sight distance is not achievable; and </p>
+                <p>e) on a horizontal curve, there shall be no obstruction i.e. longitudinal barrier, tree, shrub, embankment, 
+                other structure or building that restrict the driver’s sight distance. If the required sight distance cannot be achieved, 
+                then lane widening shall be provided. </p>
+                <div class="img-container">
+                    <img src="../assets/Figure10.1.png">
+                </div>
+
+                <p style="padding-top:3%"><b class="tab1">10.4.2</b><b>Horizontal Alignment</b></p>
+
+                <p style="padding-top:3%"><b class="tab2">10.4.2.1</b><b>Design Speed</b></p>
+
+                <p style="padding-top:3%"><b class="tab3">10.4.2.1.1</b><b>Main Carriageway</b></p>
+                <p> The geometric design requirement of road shall be as follows: - </p>
+                <div class="img-container3">
+                    <img src="../assets/Table10.2.png">
+                </div>  
+
+                <p style="padding-top:3%"><b class="tab2">10.4.2.3</b><b>Horizontal Curve</b></p>
                 <p> The various types of horizontal curve used are as shown in Figure 10.4</p>
                     <div class="img-container">
                         <img src="../assets/Figure10.4.png">
@@ -57,32 +84,9 @@
                         <img src="../assets/10.4.2.3.5.png">
                     </div>
                 
-                <p style="padding-top:3%"><b class="tab1">10.4.2</b><b>Horizontal Alignment</b></p>
 
-                <p style="padding-top:3%"><b class="tab2">10.4.2.1</b><b>Design Speed</b></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.1.1</b><b>Main Carriageway</b></p>
-                <p> The geometric design requirement of road shall be as follows: - </p>
-                <div class="img-container3">
-                    <img src="../assets/Table10.2.png">
-                </div> 
 
-                <p style="padding-top:3%"><b class="tab2">10.4.1.1</b><b>Horizontal Alignment</b></p> 
-                <p> There are several general controls that shall be considered when designing the horizontal alignment. </p>
-                <p>a) Where it becomes necessary to introduce curve of lower standard than the design requirement, 
-                the respective design speed between the successive geometric elements shall not differ by more than 10km/h; </p>
-                <p>b) Where the radius of a curve is below the design requirement, additional lane width shall be provided to accommodate heavy 
-                vehicle (refer to Figure 10.1) off-tracking within the curve; </p>
-                <p>c) Curve shall be sufficiently long to avoid the appearance of a kink. Curve shall be at least 150m long for a central angle of 5°, 
-                and the minimum length shall be increased by 30m for each degree decrease in the central angle; </p>
-                <p>d) Opening for vehicle turning at centre median along horizontal curve shall not be provided if the intersection 
-                sight distance is not achievable; and </p>
-                <p>e) on a horizontal curve, there shall be no obstruction i.e. longitudinal barrier, tree, shrub, embankment, 
-                other structure or building that restrict the driver’s sight distance. If the required sight distance cannot be achieved, 
-                then lane widening shall be provided. </p>
-                <div class="img-container">
-                    <img src="../assets/Figure10.1.png">
-                </div> 
 
                         
             </div>
@@ -104,11 +108,17 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / <br>Section 10.4.2.3, <br> 10.4.2.1, <br>10.4.1.1
+                  <br>CDC Chapter 10 / <br>10.4.1.1, <br> 10.4.2.1.1, <br>10.4.2.3
                 </div>   
                 
                 <div class="grid-item">
                   <span id = "link">Link to Chapter/ Section</span>
+                  <br>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=200">CDC 10.4.1.1 (page 200)</a>
+                  <br>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=225">CDC Figure 10.1 (page 225)</a>
+                  <br>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=202">CDC 10.4.2.1.1 (page 202)</a>
                   <br>
                    <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205">CDC 10.4.2.3-10.4.2.3.2 (page 205)</a>
                   <br>
@@ -118,7 +128,7 @@
                   <br>
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229">CDC Figure 10.4 (page 228)</a>
                   <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=227">CDC Figure 10.1 (page 225)</a>
+
                   </div>   
               </div>
             </div>      

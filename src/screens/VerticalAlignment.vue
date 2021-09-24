@@ -9,8 +9,26 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.3.2</b><b>Types of Vertical Curve</b></p>
+                <p><b class="tab2">10.4.1.2</b><b>Vertical Alignment</b></p>
+                <p>There are several general controls that shall be considered when designing the vertical alignment: - </p>
+                <p>a) a smooth grade line with gradual changes shall be used instead of a line with numerous breaks and short lengths of grades; </p>
+                <p>b) grade through intersection shall not exceed 3% to avoid adverse effect to turning movement and ensure effective surface drainage; </p>
+                <p>c) a sag vertical curve or a flat section is desirable in advance of any channelization at an intersection and ramp take-off at an 
+                interchange, in order to provide sufficient sight distance; and </p>
+                <p>d) in providing sag vertical curves, one long vertical curve is more desirable and broken-back grade line shall be avoided. </p>
+                
+                <p style="padding-top:3%"><b class="tab2">10.4.3.2</b><b>Types of Vertical Curve</b></p>
                 <p> A vertical curve shall be provided when there is a change in road gradient by using symmetrical simple parabolic curve.</p>
+
+                <p style="padding-top:3%"><b class="tab3">10.4.3.1.3</b><b>Critical Length of Grade</b></p>
+                <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
+                  Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
+                    <div class="img-container3">
+                        <img src="../assets/Table10.11.png">
+                    </div>
+                    <div class="img-container">
+                        <img src="../assets/Figure10.7.png">
+                    </div>
 
                 <p style="padding-top:3%"><b class="tab3">10.4.3.2.1</b><b>Crest Curve</b></p>
                 <p> The minimum length of a crest curve in metre shall be the greater of:</p>
@@ -42,23 +60,9 @@
                         <img src="../assets/Figure10.10.png">
                     </div>
                 
-                <p style="padding-top:3%"><b class="tab3">10.4.3.1.3</b><b>Critical Length of Grade</b></p>
-                <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
-                  Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
-                    <div class="img-container3">
-                        <img src="../assets/Table10.11.png">
-                    </div>
-                    <div class="img-container">
-                        <img src="../assets/Figure10.7.png">
-                    </div>
 
-                <p style="padding-top:3%"><b class="tab2">10.4.1.2</b><b>Vertical Alignment</b></p>
-                <p>There are several general controls that shall be considered when designing the vertical alignment: - </p>
-                <p>a) a smooth grade line with gradual changes shall be used instead of a line with numerous breaks and short lengths of grades; </p>
-                <p>b) grade through intersection shall not exceed 3% to avoid adverse effect to turning movement and ensure effective surface drainage; </p>
-                <p>c) a sag vertical curve or a flat section is desirable in advance of any channelization at an intersection and ramp take-off at an 
-                interchange, in order to provide sufficient sight distance; and </p>
-                <p>d) in providing sag vertical curves, one long vertical curve is more desirable and broken-back grade line shall be avoided. </p>
+
+
 
             </div>
           </td>
@@ -79,11 +83,17 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / <br>Section 10.4.3.2, <br> 10.4.3.1.3, <br>10.4.1.2
+                  <br>CDC Chapter 10 / <br>Section 10.4.1.2, <br> 10.4.3.1.3, <br> 10.4.3.2
                 </div>   
                 
                 <div class="grid-item">
                   <span id = "link">Link to Chapter/ Section</span>
+                  <br>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=201">CDC 10.4.1.2 (page 201)</a>
+                  <br>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.3 (page 210)</a>
+                  <br>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229">CDC Figure 10.7 (page 231)</a>
                   <br>
                    <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.2-10.4.3.2.1 (page 210)</a>
                   <br>
@@ -94,10 +104,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=233">CDC Figure 10.9 (page 233)</a>
                   <br>
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234">CDC Figure 10.10 (page 234)</a>
-                  <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.3 (page 210)</a>
-                  <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229">CDC Figure 10.7 (page 231)</a>
+
                   </div>   
               </div>
             </div>      
