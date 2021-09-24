@@ -17,9 +17,17 @@ export default {
 </script>
 
 <style scoped>
+* {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
 .summary {
   font-weight: bold;
   color: black;
+  text-align: center;
 }
 .figure {
   font-size: 8vw;
