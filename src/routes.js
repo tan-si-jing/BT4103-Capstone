@@ -13,6 +13,7 @@ import SpecificResults from './screens/SpecificResults.vue'
 import { auth } from './firebase.js'
 import Level2Results from './screens/Level2Results.vue'
 import Level3Results from './screens/Level3Results.vue'
+import Level4Results from './screens/Level4Results.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -24,6 +25,10 @@ const router = createRouter({
     {
       path: "/level3results",
       component: Level3Results,
+    },
+    {
+      path: "/level4results",
+      component: Level4Results,
     },
     {
       path: "/",

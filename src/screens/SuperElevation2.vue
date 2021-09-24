@@ -33,7 +33,7 @@
                       development length shall be introduced on the tangent approach and one third on the curve.</p>
                 
                 <p style="padding-top:3%"><b>10.4.2.5.5</b></p>
-                    <p><b>10.5.4.1</b> The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
+                    <p><b class="tab2">10.5.4.1</b> The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
                     the Figure 10.6. </p>
                     <div class="img-container">
                         <img src="../assets/Figure10.6.png">
