@@ -85,7 +85,7 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.5.2.1, 10.5.2.2, 10.5.2.4.3, 10.5.2.3, 10.5.4.1
+                  <br>CDC Chapter 10 / <br>Section 10.5.2.1, <br>10.5.2.2, <br>10.5.2.4.3, <br>10.5.2.3, <br>10.5.4.1
                 </div>   
                 
                 <div class="grid-item">
@@ -147,14 +147,14 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin:5% 5% -8%;
+  margin: 5% 5% -8%;
   font-size:20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:1%;
+    margin-bottom:10%;
     font-size:16px;
-    margin-bottom:50px;
 }
 
 .grid-container .inner-grid-container {
@@ -179,7 +179,7 @@ tbody tr:last-child td{
     width: 500px;
     height: 350px;
     margin-left: 5.8em; 
-    margin-top: 30px;
+    margin-top: 5%;
 
 }
 
@@ -187,8 +187,8 @@ tbody tr:last-child td{
     width: 500px;
     height: 200px;
     margin-left: 5.8em; 
-    margin-top: 30px;
-    margin-bottom:30px;
+    margin-top: 5%;
+    margin-bottom:5%;
 
 }
 
