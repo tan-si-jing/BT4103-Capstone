@@ -1,36 +1,28 @@
-export const barChartData = {
+export const roadClassData = {
   type: "bar",
   data: {
-    labels: ["Specific", "Guide"],
+    labels: ["Expressway", "Semi Expressway", "Major Arterial",
+              "Minor Arterial", "Primary Access", "Local Access"],
     datasets: [
       {
-        label: "Traffic Engineers",
-        data: [40, 30],
-        backgroundColor: '#40aaad'
-      }, {
-        label: "Consultants",
-        data: [4, 25],
-        backgroundColor: '#f5a732'
-      }, {
-        label: "General Public",
-        data: [0, 10],
-        backgroundColor: '#9fa4a7'
+        label: "No. Searches",
+        data: [40, 50, 60, 70, 80, 90],
+        backgroundColor: [
+          '#407fad'
+        ]
       }
     ]
   },
   options: {
     maintainAspectRatio: false,
-    indexAxis: 'y',
     scales: {
       y: {
         beginAtZero: true,
-        stacked: true,
         grid: {
           display: false
         }
       },
       x: {
-        stacked: true,
         grid: {
           display: false
         }
@@ -39,7 +31,7 @@ export const barChartData = {
     plugins: {
       title: {
         display: true,
-        text: 'Comparison of Search Options',
+        text: 'Search Distribution for Road Classification',
         color: '#263238',
         align: 'start',
         font: {
@@ -50,7 +42,7 @@ export const barChartData = {
       },
       subtitle: {
         display: true,
-        text: 'Specific vs Guide',
+        text: 'Guide',
         color: 'rgba(0, 0, 0, 0.4)',
         align: 'start',
         font: {
@@ -58,15 +50,14 @@ export const barChartData = {
           size: 14
         },
         padding: {
-          bottom: 30
+          bottom: 40
         }
       },
       legend: {
-        position: 'bottom',
-        align: 'start'
+        display: false
       }
     }
   }
 };
 
-export default barChartData;
+export default roadClassData;
