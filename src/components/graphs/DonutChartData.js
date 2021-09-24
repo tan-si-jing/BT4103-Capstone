@@ -16,6 +16,7 @@ export const donutChartData = {
     ]
   },
   options: {
+    responsive: true,
     maintainAspectRatio: false,
     cutout: 80,
     plugins: {
