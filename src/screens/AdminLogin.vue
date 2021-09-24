@@ -145,6 +145,8 @@ button {
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 0.75rem 2rem;
+  width: 30%;
+  height: 50%;
 }
 button:active {
   opacity: 0.6;
