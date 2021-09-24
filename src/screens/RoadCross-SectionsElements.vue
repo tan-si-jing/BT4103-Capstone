@@ -10,12 +10,12 @@
           <td scope="row">
             <div class="content">
               <p><b>10.5 ROAD CROSS-SECTIONS AND ELEMENTS</b></p>
-              <p style="padding-top:20px"><b>10.5.1 General</b></p>
+              <p style="padding-top:3%"><b>10.5.1 General</b></p>
                 <p>The details of the cross-section elements such as lane width, centre median width, paved shoulder, services verge, 
                     footpath, drain and landscaping, etc. shall be in accordance with the Authority’s Drawings and the Standard Details 
                     of Road Elements.</p>
                 
-              <p style="padding-top:20px"><b>10.5.6 Sidetable, Drain, Footpath and Divider</b></p>
+              <p style="padding-top:3%"><b>10.5.6 Sidetable, Drain, Footpath and Divider</b></p>
                 <p>a) Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
                     other categories of road. The services verge and landscaping shall be turfed and sloped as shown in the Standard 
                     Details of Road Elements.</p>
@@ -49,7 +49,7 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.5
+                  <br>CDC Chapter 10 / <br>Section 10.5
                 </div>   
                 
                 <div class="grid-item">
@@ -106,14 +106,15 @@ tbody tr:last-child td{
   text-align: justify;
 }
 
+
 .grid-container{
-  margin: 2% 5% -8%;
+  margin: 5% 5% -8%;
   font-size:20px;
 }
 
 .grid-item {
-    padding-top:10px;
-    margin-bottom:50px;
+    padding-top:1%;
+    margin-bottom:10%;
     font-size:16px;
 }
 

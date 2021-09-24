@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p style="padding-top:20px"><b>Longitudinal Friction Factor given Design Speed</b></p>
+              <p style="padding-top:3%"><b>Longitudinal Friction Factor given Design Speed</b></p>
                 <div class="img-container">
                     <img src="../assets/Table10-4.png">
                 </div>               
@@ -32,7 +32,7 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.4.2.2.1
+                  <br>CDC Chapter 10 / <br>Section 10.4.2.2.1
                 </div>   
                 
                 <div class="grid-item">
@@ -87,12 +87,12 @@ tbody tr:last-child td{
 
 .grid-container{
   margin: 5% 5% -8%;
-  font-size: 20px;
+  font-size:20px;
 }
 
 .grid-item {
-    padding-top:10px;
-    margin-bottom:60px;
+    padding-top:1%;
+    margin-bottom:10%;
     font-size:16px;
 }
 

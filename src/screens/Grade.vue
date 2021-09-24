@@ -10,9 +10,9 @@
           <td scope="row">
             <div class="content">
               <p><b class="tab1">10.4.3</b><b >Vertical Alignment</b></p>
-              <p style="padding-top:20px"><b class="tab3">10.4.3.1.1</b><b>Main Carriageway</b></p>
+              <p style="padding-top:2%"><b class="tab3">10.4.3.1.1</b><b>Main Carriageway</b></p>
                 <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-                <div class="img-container">
+                <div class="img-container2">
                     <img src="../assets/Table10-9.png">
                 </div>
                 <br>Notes:
@@ -21,7 +21,7 @@
                 <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
                 <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
 
-              <p style="padding-top:20px"><b class="tab3">10.4.3.1.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
+              <p style="padding-top:3%"><b class="tab3">10.4.3.1.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
                 <div class="img-container">
                     <img src="../assets/Table10-10.png">
                 </div>                
@@ -44,7 +44,7 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.4.3
+                  <br>CDC Chapter 10 / <br>Section 10.4.3
                 </div>   
                 
                 <div class="grid-item">
@@ -101,12 +101,12 @@ tbody tr:last-child td{
 
 .grid-container{
   margin: 5% 5% -8%;
-  font-size: 20px;
+  font-size:20px;
 }
 
 .grid-item {
-    padding-top:10px;
-    margin-bottom:60px;
+    padding-top:1%;
+    margin-bottom:10%;
     font-size:16px;
 }
 
@@ -132,9 +132,17 @@ tbody tr:last-child td{
     width: 500px;
     height: 150px;
     margin-left: 5.8em; 
-    margin-top: 30px;
-    margin-bottom:30px;
+    margin-top: 5%;
 }
+
+.img-container2{
+    width: 500px;
+    height: 150px;
+    margin-left: 5.8em; 
+    margin-top: 5%;
+
+}
+
 
 /* Resize images to standardise size */
 .img-container img{

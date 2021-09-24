@@ -34,7 +34,7 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.4.2.6
+                  <br>CDC Chapter 10 / <br>Section 10.4.2.6
                 </div>   
                 
                 <div class="grid-item">
@@ -93,8 +93,8 @@ tbody tr:last-child td{
 }
 
 .grid-item {
-    padding-top:10px;
-    margin-bottom:60px;
+    padding-top:1%;
+    margin-bottom:10%;
     font-size:16px;
 }
 
@@ -119,8 +119,8 @@ tbody tr:last-child td{
     width: 500px;
     height: 150px;
     margin-left: 5.8em; 
-    margin-top: 30px;
-    margin-bottom:70px;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 /* Resize images to standardise size */

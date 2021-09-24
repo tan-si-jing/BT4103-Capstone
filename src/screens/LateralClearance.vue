@@ -10,7 +10,7 @@
           <td scope="row">
             <div class="content">
                 <p><b class="tab1">10.7.1</b><b>Lateral Clearance</b></p>
-                <p style="padding-top:20px"><b>10.7.1.1</b></p>
+                <p style="padding-top:3%"><b>10.7.1.1</b></p>
                     <p>Minimum lateral clearance from the edge of road pavement (both at centre median and side table) to any adjacent 
                         structure is shown in Table 10.17 unless otherwise specified in the Standard Details of Road Elements.</p>
                     <div class="img-container">
@@ -20,10 +20,10 @@
                     <p>1 If no Vehicular Impact Guardrail is installed. Applicable to both centre median and sidetable.</p>
                     <p>2 Where Vehicular Impact Guardrail is installed.</p>
 
-                <p style="padding-top:20px"><b>10.7.1.2</b></p>
+                <p style="padding-top:3%"><b>10.7.1.2</b></p>
                     <p>For an elevated road structure, the minimum lateral clearance between the edge of the road structure and any other structures shall be 3m.</p>
 
-                <p style="padding-top:20px"><b>10.5.11.5</b></p>
+                <p style="padding-top:3%"><b>10.5.11.5</b></p>
                     <p>Directional sign shall generally be sited on the side next to the slow lane and clearly visible to the driver. It shall be 
                         noted that in some cases (e.g.for a major right turning movement, or for very wide road) it may be appropriate to site sign 
                         on the median if it is wide enough. The minimum lateral clearance from the edge of the vehicular impact guardrail to the 
@@ -49,7 +49,7 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.7.1.1, 10.7.1.2, 10.5.11.5
+                  <br>CDC Chapter 10 / <br>Section 10.7.1.1, <br>10.7.1.2, <br>10.5.11.5
                 </div>   
                 
                 <div class="grid-item">
@@ -107,14 +107,14 @@ tbody tr:last-child td{
 }
 
 .grid-container{
-  margin:5% 5% -8%;
+  margin: 5% 5% -8%;
   font-size:20px;
 }
 
 .grid-item {
-    padding: 10px;
+    padding-top:1%;
+    margin-bottom:10%;
     font-size:16px;
-    margin-bottom:50px;
 }
 
 .grid-container .inner-grid-container {
@@ -139,7 +139,7 @@ tbody tr:last-child td{
     width: 500px;
     height: 300px;
     margin-left: 5.8em; 
-    margin-top: 30px;
+    margin-top: 5%;
 }
 
 /* Resize images to standardise size */
