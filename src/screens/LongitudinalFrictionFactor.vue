@@ -115,12 +115,13 @@ tbody tr:last-child td{
 }
 
 .img-container{
-    width: 500px;
-    height: 150px;
+    width: 600px;
+    height: auto;
     margin-left: 5.8em; 
-    margin-top: 30px;
-    margin-bottom:30px;
+    margin-top: 5%;
+    margin-bottom:5%;
 }
+
 
 /* Resize images to standardise size */
 .img-container img{

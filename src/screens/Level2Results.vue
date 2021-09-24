@@ -56,7 +56,7 @@ components: {
   "CornerRadius": CornerRadius,
   "MergingAngle": MergingAngle,
   "LaneWidth": LaneWidth,
-  "LateralClearance": LateralClearance
+  "LateralClearance": LateralClearance,
 },
 props: {},
 data() {

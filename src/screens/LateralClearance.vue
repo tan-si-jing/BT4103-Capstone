@@ -136,15 +136,18 @@ tbody tr:last-child td{
 }
 
 .img-container{
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: auto;
     margin-left: 5.8em; 
     margin-top: 5%;
+    margin-bottom:5%;
 }
+
 
 /* Resize images to standardise size */
 .img-container img{
     max-width: 100%;
+    width:500px;
     height: auto;
 }
 p {

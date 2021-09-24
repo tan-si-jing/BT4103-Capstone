@@ -12,10 +12,12 @@
               <p><b class="tab1">10.4.3</b><b >Vertical Alignment</b></p>
               <p style="padding-top:2%"><b class="tab3">10.4.3.1.1</b><b>Main Carriageway</b></p>
                 <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-                <div class="img-container2">
+                <div class="img-container">
                     <img src="../assets/Table10-9.png">
                 </div>
-                <br>Notes:
+                <br>
+                <br>
+                Notes:
                 <p>1) Minimum gradient for all roads is 0.4%.</p>
                 <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
                 <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
@@ -133,14 +135,6 @@ tbody tr:last-child td{
     height: 150px;
     margin-left: 5.8em; 
     margin-top: 5%;
-}
-
-.img-container2{
-    width: 500px;
-    height: 150px;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-
 }
 
 
