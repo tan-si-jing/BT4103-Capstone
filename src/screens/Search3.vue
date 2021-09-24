@@ -18,9 +18,9 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Undivided (x-lane) Road" @click="storeRoadType('UndividedRoad');displayRoadType()"/>
-      <SearchParamButton text="Slip Road" @click="storeRoadType('SlipRoad');displayRoadType()"/>
-      <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('DualRoad');displayRoadType()"/>
+      <SearchParamButton text="Undivided (x-lane) Road" @click="storeRoadType('UndividedRoad');"/>
+      <SearchParamButton text="Slip Road" @click="storeRoadType('SlipRoad');"/>
+      <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('DualRoad');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>
@@ -64,9 +64,11 @@ methods:{
 
   storeRoadType(text){
     this.updateChoice('roadType',text)
+    this.displayRoadType();
     this.$router.push({name:'search4'})
   },
   displayRoadType(){
+    console.log(this.choice.role)
     console.log(this.choice.roadDesign)
     console.log(this.choice.roadClass)
     console.log(this.choice.roadType)

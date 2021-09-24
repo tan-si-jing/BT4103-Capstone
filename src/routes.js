@@ -36,6 +36,7 @@ const router = createRouter({
       component: Level5Results,
     },
     {
+      name:"home",
       path: "/",
       component: Home,
     },

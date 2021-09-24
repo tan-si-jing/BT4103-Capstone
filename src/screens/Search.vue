@@ -19,9 +19,9 @@
   <div class="options">
     <div class="button-group">
       <SearchParamButton text="Specific Section" @click="this.$router.push({name:'searchspecific'})"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
+      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');"/>
     </div>
-    <button id="back" type="button" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i></button>
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)"><i class="bi bi-arrow-left"></i></button>
   </div>
   </div>
 </template>
@@ -39,6 +39,7 @@ export default {
   data() {
     return{
       choice:{
+        role: "",
         roadDesign: "",
         roadClass: "",
         roadType: "",
@@ -66,9 +67,11 @@ methods:{
   
   storeRoadDesign(text){
     this.updateChoice('roadDesign',text);
+    this.displayRoad();
     this.$router.push({name:'search2'})
   },
   displayRoad(){
+    console.log(this.choice.role)
     console.log(this.choice.roadDesign)
   }
 },

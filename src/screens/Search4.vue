@@ -18,12 +18,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="40" @click="storeDesignSpeed('40');displayDesignSpeed()"/>
-      <SearchParamButton text="50" @click="storeDesignSpeed('50');displayDesignSpeed()"/>
-      <SearchParamButton text="60" @click="storeDesignSpeed('60');displayDesignSpeed()"/>
-      <SearchParamButton text="70" @click="storeDesignSpeed('70');displayDesignSpeed()"/>
-      <SearchParamButton text="80" @click="storeDesignSpeed('80');displayDesignSpeed()"/>
-      <SearchParamButton text="90" @click="storeDesignSpeed('90');displayDesignSpeed()"/>
+      <SearchParamButton text="40" @click="storeDesignSpeed('40');"/>
+      <SearchParamButton text="50" @click="storeDesignSpeed('50');"/>
+      <SearchParamButton text="60" @click="storeDesignSpeed('60');"/>
+      <SearchParamButton text="70" @click="storeDesignSpeed('70');"/>
+      <SearchParamButton text="80" @click="storeDesignSpeed('80');"/>
+      <SearchParamButton text="90" @click="storeDesignSpeed('90');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>
@@ -67,9 +67,11 @@ methods:{
 
   storeDesignSpeed(text){
     this.updateChoice('designSpeed',text)
+    this.displayDesignSpeed();
     this.$router.push({name:'search5'})
   },
   displayDesignSpeed(){
+    console.log(this.choice.role)
     console.log(this.choice.roadDesign)
     console.log(this.choice.roadClass)
     console.log(this.choice.roadType)
