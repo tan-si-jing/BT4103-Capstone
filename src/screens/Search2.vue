@@ -18,12 +18,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="1 - Expressways"  @click="storeRoadClass('1');displayRoadClass()"/>
-      <SearchParamButton text="1A - Semi Expressway"  @click="storeRoadClass('1A');displayRoadClass()"/>
-      <SearchParamButton text="2 - Major Arterial"  @click="storeRoadClass('2');displayRoadClass()"/>
-      <SearchParamButton text="3 - Minor Arterial"  @click="storeRoadClass('3');displayRoadClass()"/>
-      <SearchParamButton text="4 - Primary Access"  @click="storeRoadClass('4');displayRoadClass()"/>
-      <SearchParamButton text="5 - Local Access"  @click="storeRoadClass('5');displayRoadClass()"/>
+      <SearchParamButton text="1 - Expressways"  @click="storeRoadClass('1');"/>
+      <SearchParamButton text="1A - Semi Expressway"  @click="storeRoadClass('1A');"/>
+      <SearchParamButton text="2 - Major Arterial"  @click="storeRoadClass('2');"/>
+      <SearchParamButton text="3 - Minor Arterial"  @click="storeRoadClass('3');"/>
+      <SearchParamButton text="4 - Primary Access"  @click="storeRoadClass('4');"/>
+      <SearchParamButton text="5 - Local Access"  @click="storeRoadClass('5');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>
@@ -46,11 +46,13 @@ export default {
   data() {
     return{
       choice:{
+        role: "",
         roadDesign: "",
         roadClass: "",
         roadType: "",
         designSpeed: "",
-        grad_curv_change:""
+        grad_curv_change:"",
+        specific_param:"",
       }
     }
   },
@@ -73,9 +75,11 @@ export default {
 
     storeRoadClass(text){
       this.updateChoice('roadClass',text);
+      this.displayRoadClass();
       this.$router.push({name: 'search3'})
     },
     displayRoadClass(){
+      console.log(this.choice.role)
       console.log(this.choice.roadDesign)
       console.log(this.choice.roadClass)
     },

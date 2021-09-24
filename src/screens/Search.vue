@@ -18,10 +18,10 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="this.$router.push({name:'searchspecific'})"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');displayRoad()"/>
+      <SearchParamButton text="Specific Section" @click="this.updateChoice('roadDesign','Specific');this.displayRoad(); this.$router.push({name:'searchspecific'})"/>
+      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('StepbyStep');"/>
     </div>
-    <button id="back" type="button" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i></button>
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)"><i class="bi bi-arrow-left"></i></button>
   </div>
   </div>
 </template>
@@ -39,11 +39,13 @@ export default {
   data() {
     return{
       choice:{
+        role: "",
         roadDesign: "",
         roadClass: "",
         roadType: "",
         designSpeed: "",
-        grad_curv_change:""
+        grad_curv_change:"",
+        specific_param:"",
       }
     }
   },
@@ -66,9 +68,11 @@ methods:{
   
   storeRoadDesign(text){
     this.updateChoice('roadDesign',text);
+    this.displayRoad();
     this.$router.push({name:'search2'})
   },
   displayRoad(){
+    console.log(this.choice.role)
     console.log(this.choice.roadDesign)
   }
 },

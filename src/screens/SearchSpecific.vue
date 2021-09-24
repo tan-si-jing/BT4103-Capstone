@@ -15,7 +15,7 @@
     </div>
     <div class="options">
       <div class="input-group mx-auto" style="width: 55%;">
-        <select class="form-select">
+        <select class="form-select" @change="changeValue($event)">
           <option value="Road Cross-Sections and Elements">Road Cross-Sections and Elements</option>
           <option value="Grade">Grade</option>
           <option value="Longitudinal Friction Factor">Longitudinal Friction Factor</option>
@@ -33,7 +33,7 @@
           <option value="Slip-road/ Traffic Island">Slip-road/ Traffic Island</option>
           <option value="Combination of Horizontal & Vertical Alignment">Combination of Horizontal & Vertical Alignment</option>
         </select>
-        <button class="btn btn-outline-secondary w-25" type="button">Search</button>
+        <button class="btn btn-outline-secondary w-25" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
       </div>
       <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
         <i class="bi bi-arrow-left"></i>
@@ -53,10 +53,15 @@ export default {
   },
   data() {
     return{
-      params:"",
+      specific_param:"",
     }
   },
 methods:{
+  changeValue(event){
+    this.specific_param = event.target.value;
+    console.log(event.target.value);
+  },
+
   openStorage(){
     return JSON.parse(localStorage.getItem('choice'))
   },
@@ -73,13 +78,14 @@ methods:{
     this.saveStorage(storedChoice)
   },
 
-  storeRoadClass(text){
-    this.updateChoice('roadClass',text);
-    this.$router.push({name: 'search3'})
+  storeSpecParam(text){
+    this.updateChoice('specific_param',text);
+    this.displayParam();
+    this.$router.push({name:'specific_results'})
   },
-  displayRoadClass(){
+  displayParam(){
     console.log(this.choice.roadDesign)
-    console.log(this.choice.roadClass)
+    console.log(this.choice.specific_param)
   },
 },
 created(){

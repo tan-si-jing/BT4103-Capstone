@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Yes" @click="storeChange('Yes');displayChange()"/>
-      <SearchParamButton text="No" @click="storeChange('No');displayChange()"/>
+      <SearchParamButton text="Yes" @click="storeChange('Yes');"/>
+      <SearchParamButton text="No" @click="storeChange('No');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>
@@ -62,9 +62,12 @@ methods:{
   },
 
   storeChange(text){
-    this.updateChoice('grad_curv_change',text)
+    this.updateChoice('grad_curv_change',text);
+    this.displayChange();
+   this.$router.push({name: 'level2results'})
   },
   displayChange(){
+    console.log(this.choice.role)
     console.log(this.choice.roadDesign)
     console.log(this.choice.roadClass)
     console.log(this.choice.roadType)
