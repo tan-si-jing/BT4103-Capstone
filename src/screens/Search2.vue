@@ -51,7 +51,8 @@ export default {
         roadClass: "",
         roadType: "",
         designSpeed: "",
-        grad_curv_change:""
+        grad_curv_change:"",
+        specific_param:"",
       }
     }
   },

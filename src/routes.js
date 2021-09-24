@@ -90,6 +90,7 @@ const router = createRouter({
       component: Results
     },
     {
+      name: "specific_results",
       path: "/specific-results",
       component: SpecificResults 
     }
