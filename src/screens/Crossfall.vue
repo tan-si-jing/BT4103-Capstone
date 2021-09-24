@@ -11,7 +11,7 @@
             <div class="content">
                 <p><b class="tab1">10.2.2</b></p>
                 <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
-                <p style="padding-top:20px"><b class="tab2">10.4.2.4</b><b>Crossfall of Carriageway</b></p>    
+                <p style="padding-top:3%"><b class="tab2">10.4.2.4</b><b>Crossfall of Carriageway</b></p>    
                     <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
                         to the side drain and the design requirements shall be as shown in Table 10.6.</p>
                     <div class="img-container">
@@ -36,7 +36,7 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / Section 10.2.2, 10.4.2.4
+                  <br>CDC Chapter 10 / <br>Section 10.2.2, <br>10.4.2.4
                 </div>   
                 
                 <div class="grid-item">
@@ -93,12 +93,12 @@ tbody tr:last-child td{
 
 .grid-container{
   margin: 5% 5% -8%;
-  font-size: 20px;
+  font-size:20px;
 }
 
 .grid-item {
-    padding-top:10px;
-    margin-bottom:60px;
+    padding-top:1%;
+    margin-bottom:10%;
     font-size:16px;
 }
 
@@ -124,8 +124,8 @@ tbody tr:last-child td{
     width: 500px;
     height: 150px;
     margin-left: 5.8em; 
-    margin-top: 30px;
-    margin-bottom:50px;
+    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 /* Resize images to standardise size */
