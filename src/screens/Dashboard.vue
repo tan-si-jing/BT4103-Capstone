@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="dashboard">
+
       <!-- header -->
       <div class="header">
         <h1 style="font-size: 2rem; color: #4f4f4f;"> Analytics Dashboard </h1>
@@ -26,9 +27,22 @@
             <canvas id="bar-chart"></canvas>
           </div>
           <div>5</div>
-          <div>6</div>
         </div>
-
+        <!-- row 3 -->
+        <div class="graphThirdRow">
+          <div>
+            <canvas id="roadclass-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="roadtype-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="designspeed-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="changejunction-chart"></canvas>
+          </div>
+        </div>
       </div>
       
     </div>
@@ -43,6 +57,11 @@ import SummaryData from '../components/graphs/SummaryData.vue';
 import donutChartData from '../components/graphs/DonutChartData.js';
 import lineChartData from '../components/graphs/LineChartData.js';
 import barChartData from '../components/graphs/BarChartData.js';
+// add table chart here
+import roadClassData from '../components/graphs/RoadClassData.js';
+import roadTypeData from '../components/graphs/RoadTypeData.js';
+import designSpeedData from '../components/graphs/DesignSpeedData.js';
+import changeJunctionData from '../components/graphs/ChangeJunctionData.js';
 Chart.register(...registerables);
 
 export default {
@@ -53,18 +72,31 @@ export default {
   },
   data() {
     return {
-      donutChartData: donutChartData,
-      lineChartData: lineChartData,
-      barChartData: barChartData,
+      donutChartData,
+      lineChartData,
+      barChartData,
+      roadClassData,
+      roadTypeData,
+      designSpeedData,
+      changeJunctionData
     };
   },
   mounted() {
     const chart1 = document.getElementById('donut-chart');
-    new Chart(chart1, this.donutChartData);
     const chart2 = document.getElementById('line-chart');
-    new Chart(chart2, this.lineChartData);
     const chart3 = document.getElementById('bar-chart');
+    const chart4 = document.getElementById('roadclass-chart');
+    const chart5 = document.getElementById('roadtype-chart');
+    const chart6 = document.getElementById('designspeed-chart');
+    const chart7 = document.getElementById('changejunction-chart');
+    new Chart(chart1, this.donutChartData);
+    new Chart(chart2, this.lineChartData);
     new Chart(chart3, this.barChartData);
+    new Chart(chart4, this.roadClassData);
+    new Chart(chart5, this.roadTypeData);
+    new Chart(chart6, this.designSpeedData);
+    new Chart(chart7, this.changeJunctionData);
+    
   }
 };
 </script>
@@ -107,7 +139,7 @@ export default {
   align-items: center;
   margin-bottom: 1.5rem;
 }
-.graphFirstRow > div, .graphSecondRow > div {
+.graphFirstRow > div, .graphSecondRow > div, .graphThirdRow > div {
   display: flex;
   background-color: #ffffff;
   border-radius: 1rem;
@@ -125,10 +157,17 @@ export default {
 }
 .graphSecondRow {
   display: grid;
-  grid-template-columns: 22% 45% 30%;
+  grid-template-columns: 42% 56%;
+  grid-gap: 2%;
+  margin-bottom: 2rem;
+  height: 350px;
+}
+.graphThirdRow {
+  display: grid;
+  grid-template-columns: 30% 20% 28% 17.5%;
   grid-gap: 1.5%;
   margin-bottom: 1rem;
-  height: 350px;
+  height: 375px;
 }
 .summary {
   display: flex;
