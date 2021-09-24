@@ -18,7 +18,7 @@
                     <p>c) Consideration shall also be given to widen the lane further for swept path and other safety requirements on 
                         sharp horizontal curve.</p>
                     <p>The recommended desirable lane width shall be as shown in Table 10.12.</p>
-                    <div class="img-container">
+                    <div class="img-container3">
                         <img src="../assets/Table10-12.png">
                     </div>
                     Notes:
@@ -38,7 +38,7 @@
                         (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
                         the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
                         roads are shown in Table 10.13:</p>
-                    <div class="img-container">
+                    <div class="img-container3">
                         <img src="../assets/Table10-13.png">
                     </div>
                     Notes:
@@ -58,7 +58,7 @@
                 
                 <p style="padding-top:3%"><b class="tab1">10.5.4</b><b>Paved Shoulder </b></p>
                     <p><b class="tab2">10.5.4.1</b> The width of the paved shoulder shall be as shown in Table 10.14. </p>
-                    <div class="img-container">
+                    <div class="img-container3">
                         <img src="../assets/Table10-14.png">
                     </div>
                     Notes:
@@ -182,11 +182,22 @@ tbody tr:last-child td{
     margin-top: 5%;
     margin-bottom:5%;
 }
-
+.img-container3{
+    width: 600px;
+    height: auto;
+    margin-left: 5.8em; 
+    margin-top: 5%;
+    margin-bottom:5%;
+}
 
 /* Resize images to standardise size */
 .img-container img{
     max-width: 100%;
+    height: auto;
+}
+.img-container3 img{
+    max-width: 100%;
+    width: 500px;
     height: auto;
 }
 

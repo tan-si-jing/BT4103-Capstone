@@ -11,9 +11,9 @@
             <div class="content">
                 <p><b>10.5.2.4.1</b></p>
                     <p>Slip road is provided to permit left-turning vehicle to bypass the intersection. The desirable merging angle for 
-                        left turn slip road shall be 70o and absolute minimum merging angle shall be 50o as shown in Figure 10.12.</p>
+                        left turn slip road shall be 70&#176; and absolute minimum merging angle shall be 50&#176; as shown in Figure 10.12.</p>
                     <div class="img-container">
-                        <img src="../assets/Table10-8.png">
+                        <img src="../assets/Figure10.12.png">
                     </div>
             </div>
           </td>
@@ -119,11 +119,11 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 .img-container{
-    width: 500px;
-    height: 150px;
+    width: 600px;
+    height: auto;
     margin-left: 5.8em; 
-    margin-top: 30px;
-    margin-bottom:60px;
+    margin-top: 5%;
+    margin-bottom:5%;
 }
 
 /* Resize images to standardise size */

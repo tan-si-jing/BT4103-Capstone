@@ -2,31 +2,25 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">2 &nbsp; Grade</td>
+          <td scope="header">15 &nbsp; Slip-road/ Traffic Island</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-              <p><b class="tab1">10.4.3</b><b >Vertical Alignment</b></p>
-              <p style="padding-top:2%"><b class="tab3">10.4.3.1.1</b><b>Main Carriageway</b></p>
-                <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-                <div class="img-container">
-                    <img src="../assets/Table10-9.png">
-                </div>
-                <br>
-                <br>
-                Notes:
-                <p>1) Minimum gradient for all roads is 0.4%.</p>
-                <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
-                <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
-                <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
+                <p><b class="tab1">10.5.3</b><b>Traffic Island</b></p>
 
-              <p style="padding-top:3%"><b class="tab3">10.4.3.1.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
-                <div class="img-container">
-                    <img src="../assets/Table10-10.png">
-                </div>                
+                <p style="padding-top:3%"><b>10.5.3.1</b></p>
+                <p> The desirable minimum dimension and the approach nose of the traffic island shall be as shown in the Figure 10.12. </p>
+                    <div class="img-container">
+                        <img src="../assets/Figure10.12.png">
+                    </div> 
+
+                 <p style="padding-top:3%"><b>10.5.3.2</b></p>
+                 <p>Where there is a high concentration of pedestrian at the road intersection adjacent to school, shopping centre, hospital, food centre, the dimension 
+                     of the traffic island shall be increased based on 0.3&#13217; standing place per person. The number of pedestrians shall include those who are waiting 
+                     to cross the road at the island before the start of the pedestrian crossing signal.</p>
             </div>
           </td>
           </tr>
@@ -46,16 +40,16 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / <br>Section 10.4.3
+                  <br>CDC Chapter 10 / <br>Section 10.5.3
                 </div>   
                 
                 <div class="grid-item">
                   <span id = "link">Link to Chapter/ Section</span>
-                   <br>
-                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.3.1.1 (page 209)</a>
                   <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.2 (page 210)</a>
-                </div>   
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214">CDC 10.5.3 (page 214)</a>
+                  <br>
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236">CDC Figure 10.12 (page 236)</a>
+                  </div>   
               </div>
             </div>      
           </td>
@@ -92,7 +86,7 @@ tbody tr{
 tbody tr:last-child td{ 
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
-    height: 23vh;
+    height: 31vh;
 }
 
 .content{
@@ -131,16 +125,44 @@ tbody tr:last-child td{
 }
 
 .img-container{
-    width: 500px;
-    height: 150px;
+    width: 600px;
+    height: auto;
     margin-left: 5.8em; 
     margin-top: 5%;
+    margin-bottom:10%;
 }
 
+.img-container2{
+    width: 600px;
+    height: auto;
+    margin-left: 5.8em; 
+    margin-top: 5%;
+    margin-bottom:10%;
+}
+
+.img-container3{
+    width: 600px;
+    height: auto;
+    margin-left: 5.8em; 
+    margin-top: 5%;
+    margin-bottom:5%;
+}
 
 /* Resize images to standardise size */
 .img-container img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-container2 img{
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+}
+
+.img-container3 img{
+    max-width: 100%;
+    width: 500px;
     height: auto;
 }
 
