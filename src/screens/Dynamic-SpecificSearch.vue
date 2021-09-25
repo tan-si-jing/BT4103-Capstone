@@ -26,9 +26,7 @@
                         <b>{{cdc.chapterID}}</b>  
                     </div>
                     <div class='text-image'>
-                        <div class='text'>
-                            {{cdc.Text}}
-                        </div>
+                        <div class='text' v-html="cdc.Text"></div>
                         <br>
                         <div class='image'>
                             <img :src="cdc.Image" style='zoom: 1.2'>
@@ -95,7 +93,7 @@ export default {
                     var element_to_find = this.order[i];
                     console.log(element_to_find);
                     var index = this.sorted_order.indexOf(element_to_find);
-                    //this.cdc_array[index].Text = this.cdc_array[index].Text.replaceAll("\\n", "\n");
+                    this.cdc_array[index].Text = this.cdc_array[index].Text.replaceAll("\\n", "<p>");
                     this.final_array.push(this.cdc_array[index]);
                     result;
                 }
