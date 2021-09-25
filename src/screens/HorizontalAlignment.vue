@@ -83,12 +83,7 @@
                     <div class="img-container2">
                         <img src="../assets/10.4.2.3.5.png">
                     </div>
-                
-
-
-
-
-                        
+       
             </div>
           </td>
           </tr>
@@ -158,6 +153,7 @@ table {
     border-top-right-radius: 15px;
     font-size:22px;
     text-indent:1.5%;
+     vertical-align: middle;
 }
 tbody tr{
     background-color: #ffffff;
