@@ -70,6 +70,7 @@ table {
     border-top-right-radius: 15px;
     font-size:22px;
     text-indent:1.5%;
+     vertical-align: middle;
 }
 tbody tr{
     background-color: #ffffff;
