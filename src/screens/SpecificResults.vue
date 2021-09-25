@@ -66,7 +66,7 @@ data() {
   max-width: 15%;
   position: absolute;
   right: 4%;
-  bottom: 1.5%;
+  bottom: 2%;
   transform: rotateY(180deg);
   z-index: 2;
 }
