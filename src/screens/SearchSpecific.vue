@@ -26,7 +26,7 @@
           <option value="Merging Angle">Merging Angle</option>
           <option value="Lane Width">Lane Width</option>
           <option value="Lateral Clearance">Lateral Clearance</option>
-          <option value="Super-elevation">Super-elevation</option>
+          <option value="Super-Elevation">Super-elevation</option>
           <option value="Sight Distance">Sight Distance</option>
           <option value="Curve Length">Curve Length</option>
           <option value="Horizontal Alignment">Horizontal Alignment</option>
