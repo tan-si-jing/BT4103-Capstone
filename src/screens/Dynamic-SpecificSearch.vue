@@ -135,10 +135,11 @@ export default {
 
 #specific-results {
     background-color: #ffffff;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 40px;
     font-size:20px;
+    margin-bottom: 12%;
 }
 
 ul {
@@ -173,24 +174,25 @@ img {
 */
 
 button {
-    width: 300px;
+    width: 280px;
     margin: 20 auto;
     display: inline;
     padding: 30;
     height: 80px;
     background: #273B8C;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     font-style: normal;
     font-weight: normal;
     color: #FFFFFF;
-    font-size:22px;
+    font-size:26px;
 }
 
 .action_btn {
     width: 100%;
     display: flex;
-    gap: 30px;
+    gap: 60px;
+    margin-bottom:15px;
     flex-direction: row;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <p class="header">Results</p>
+    <div>
     <div class="container">
       <SuperElevation2></SuperElevation2>
     </div>
@@ -10,7 +11,7 @@
     <div class="lastContainer">
       <CurveLength></CurveLength>
     </div>
-
+    </div>
   <img :src="road" class="road" />
   <img :src="mascot" class="mascot" />
 </div>
@@ -70,6 +71,7 @@ data() {
 /** road image */
 .road {
   max-width: 100%;
+  width:100%;
   position: relative;
   bottom: 0;
   z-index: 1;

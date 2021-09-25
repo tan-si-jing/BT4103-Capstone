@@ -155,6 +155,7 @@ button:active {
 /** road image */
 .road {
   max-width: 100%;
+  width:100%;
   position: absolute;
   bottom: 0;
   z-index: 1;
