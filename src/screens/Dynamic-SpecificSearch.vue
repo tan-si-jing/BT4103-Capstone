@@ -137,7 +137,7 @@ export default {
     border-radius: 20px;
     padding: 40px;
     font-size:20px;
-    margin-bottom: 12%;
+    margin-bottom:12%;
 }
 
 ul {
