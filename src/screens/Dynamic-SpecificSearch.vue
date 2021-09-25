@@ -1,23 +1,23 @@
 <template>
     <div>
         <div class="action_btn">
-            <button v-for='param in level_1_parameter' :key='param.Name'>{{param.Name}}</button>
+            <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
         </div>
         <br>
         <div class="action_btn">
-            <button v-for='param in level_2_parameter' :key='param.Name'>{{param.Name}}</button>
+            <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
         </div>
         <br>
         <div class="action_btn">
-            <button v-for='param in level_3_parameter' :key='param.Name'>{{param.Name}}</button>
+            <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
         </div>
         <br>
         <div class="action_btn">
-            <button v-for='param in level_4_parameter' :key='param.Name'>{{param.Name}}</button>
+            <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
         </div>
         <br>
     </div>
-    <h3><b>{{this.choice}}</b></h3>
+    <h3><b>{{this.choice2}}</b></h3>
     <div id = "specific-results">
         <ul>
             <li v-for="cdc in final_array" :key="cdc.chapterID">
@@ -51,10 +51,15 @@
             </tr>
         </table>
     </div>
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
+      <i class="bi bi-arrow-left"></i>
+    </button>
 </template>
 
 <script>
 import database from '../firebase.js'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 export default {
     data() {
@@ -68,13 +73,67 @@ export default {
             level_2_parameter : [],
             level_3_parameter : [],
             level_4_parameter : [],
-            choice : ''
+            choice2 : '',
+            specific_param:""
         } 
     },
 
     methods : {
+        openStorage(){
+            return JSON.parse(localStorage.getItem('choice'))
+        },
+        saveStorage(form){
+            localStorage.setItem('choice',JSON.stringify(form))
+        },
+        updateChoice(input,value){
+            this.choice[input].push(value)
+            let storedChoice = this.openStorage()
+            if(!storedChoice) {
+                storedChoice = {}
+                storedChoice[input] = []
+            }
+            storedChoice[input].push(value)
+            while (this.choice[input].length > 5) {
+                this.choice[input].shift()
+            }
+            while (storedChoice.length > 5) {
+                storedChoice[input].shift()
+            }
+            this.saveStorage(storedChoice)
+            var myparam = database.collection('search_parameters').doc("H1uwnxYevFozEeNv7SiY");
+            myparam.update({
+                [value]: firebase.firestore.FieldValue.increment(1)
+            }).then(res => {
+                this.specific_param = this.choice.specific_param.at(-1);
+                window.location.reload();
+                res;
+            });
+        },
+
+        storeSpecParam(text){
+            this.updateChoice('specific_param',text)
+/** 
+            this.specific_param = this.choice.specific_param.at(-1);
+            window.location.reload();
+*/
+        },
+        
+        goBack() {
+            if (this.choice.specific_param.length > 1) {
+                this.choice.specific_param.pop();
+            }
+            let storedChoice = this.openStorage();
+            if (storedChoice.specific_param.length > 1) {
+                storedChoice.specific_param.pop();
+                this.saveStorage(storedChoice);
+                window.location.reload();
+            } else {
+                this.$router.go(-1);
+            }
+        },
+
         display:function(parameter){
-            this.choice = parameter;
+            this.choice2 = parameter;
             database.collection('data_cdc').doc(parameter).get().then(querySnapshot => {
                 var temp_order = querySnapshot.data().Order;
                 this.order = temp_order.split(" ");                
@@ -91,7 +150,6 @@ export default {
             }).then(result => {
                 for (let i = 0; i < this.sorted_order.length; i++) {
                     var element_to_find = this.order[i];
-                    console.log(element_to_find);
                     var index = this.sorted_order.indexOf(element_to_find);
                     this.cdc_array[index].Text = this.cdc_array[index].Text.replaceAll("\\n", "<p>");
                     this.final_array.push(this.cdc_array[index]);
@@ -115,11 +173,22 @@ export default {
                 })
             });
         },
+
+
     },
     mounted() {
-        this.display('Horizontal Alignment');
+        this.display(this.specific_param);
+    },
+    created(){
+        const storedChoice = this.openStorage();
+        if (storedChoice){
+            this.choice = {
+            ...this.choice,
+            ...storedChoice
+            }
+        }
+        this.specific_param = String(this.choice.specific_param.at(-1));
     }
-
 }
 </script>
 
@@ -138,6 +207,14 @@ export default {
     padding: 40px;
     font-size:20px;
     margin-bottom:12%;
+}
+
+#back {
+  width:fit-content;
+  height:fit-content;
+  font-size: 1.5rem;
+  box-shadow:none;
+  border:none;
 }
 
 ul {

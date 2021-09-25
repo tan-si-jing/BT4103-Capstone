@@ -16,6 +16,7 @@
     <div class="options">
       <div class="input-group mx-auto" style="width: 55%;">
         <select class="form-select" @change="changeValue($event)">
+          <option disabled selected value> -- Choose your section from the drop down list -- </option>
           <option value="Road Cross-Sections and Elements">Road Cross-Sections and Elements</option>
           <option value="Grade">Grade</option>
           <option value="Longitudinal Friction Factor">Longitudinal Friction Factor</option>
@@ -30,7 +31,7 @@
           <option value="Curve Length">Curve Length</option>
           <option value="Horizontal Alignment">Horizontal Alignment</option>
           <option value="Vertical Alignment">Vertical Alignment</option>
-          <option value="Slip-road/ Traffic Island">Slip-road/ Traffic Island</option>
+          <option value="Slip-road Traffic Island">Slip-road/ Traffic Island</option>
           <option value="Combination of Horizontal & Vertical Alignment">Combination of Horizontal & Vertical Alignment</option>
         </select>
         <button class="btn btn-outline-secondary w-25" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
@@ -44,6 +45,9 @@
 
 <script>
 import PageCircle from '../components/PageCircle.vue'
+import database from '../firebase.js'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 export default {
   name: 'search2',
@@ -69,13 +73,24 @@ methods:{
     localStorage.setItem('choice',JSON.stringify(form))
   },
   updateChoice(input,value){
-    this.choice[input] = value
+    this.choice[input] = []
+    this.choice[input].push(value)
 
     let storedChoice = this.openStorage()
     if(!storedChoice) storedChoice = {}
 
-    storedChoice[input] = value
+    storedChoice[input] = []
+    storedChoice[input].push(value)
     this.saveStorage(storedChoice)
+    //Analytics
+    var myparam = database.collection('search_parameters').doc("H1uwnxYevFozEeNv7SiY");
+    myparam.update({
+        [value]: firebase.firestore.FieldValue.increment(1)
+    }).then(res => {
+        this.specific_param = this.choice.specific_param.at(-1);
+        window.location.reload();
+        res;
+    });
   },
 
   storeSpecParam(text){
@@ -85,7 +100,7 @@ methods:{
   },
   displayParam(){
     console.log(this.choice.roadDesign)
-    console.log(this.choice.specific_param)
+    console.log(this.choice.specific_param[0])
   },
 },
 created(){
