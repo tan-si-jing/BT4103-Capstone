@@ -2,22 +2,20 @@
   <div class="wrapper">
     <p class="header">Results</p>
     <div class="container">
-      <SuperElevationTable></SuperElevationTable>   
+      <DynamicTable></DynamicTable>   
     </div>
-  </div>
-  <div>
-    <img :src="mascot" class="mascot" />
     <img :src="road" class="road" />
+    <img :src="mascot" class="mascot" />
   </div>
 </template>
 
 <script>
-import SuperElevation from "./Dynamic-SpecificSearch.vue"
+import DynamicTable from "./Dynamic-SpecificSearch.vue"
 
 export default {
 name: "Results",
 components: {
-  "SuperElevationTable": SuperElevation
+  "DynamicTable": DynamicTable
 },
 props: {},
 data() {
@@ -46,23 +44,19 @@ data() {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  /**width: 1500px;*/
 }
+
+
 .header {
   font-size: 5vh;
   margin: 2% 60% 0% 0%;
   text-align:center
 }
 
-.container {
-  padding: 3% 0% 0%;
-}
-
-
-
 /** road image */
 .road {
   max-width: 100%;
+  width:100%;
   position: relative;
   bottom: 0;
   z-index: 1;
@@ -71,9 +65,10 @@ data() {
 .mascot {
   max-width: 15%;
   position: absolute;
-  right: 10%;
-  bottom: 10%;
+  right: 4%;
+  bottom: 1.5%;
   transform: rotateY(180deg);
   z-index: 2;
 }
+
 </style>

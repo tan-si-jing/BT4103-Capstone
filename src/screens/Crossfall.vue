@@ -66,6 +66,7 @@ table {
     margin-right: auto;
     margin-bottom: auto;
 }
+
 .table thead td {
     background-color: #273B8C;
     color: white;
