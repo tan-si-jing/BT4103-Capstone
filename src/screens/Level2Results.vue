@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <p class="header">Results</p>
+    <div>
     <div class="container">
       <RoadCSElem></RoadCSElem>
     </div>
@@ -28,7 +29,7 @@
     <div class="lastContainer">
       <LateralClearance></LateralClearance>
     </div>
-
+</div>
   <img :src="road" class="road" />
   <img :src="mascot" class="mascot" />
 </div>
@@ -100,6 +101,7 @@ data() {
 /** road image */
 .road {
   max-width: 100%;
+  width:100%;
   position: relative;
   bottom: 0;
   z-index: 1;
