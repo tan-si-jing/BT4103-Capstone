@@ -18,7 +18,7 @@
             <canvas id="donut-chart"></canvas>
           </div>
           <div>
-            <canvas id="line-chart"></canvas>
+            1
           </div>
         </div>
         <!-- row 2 -->
@@ -57,7 +57,7 @@ import { Chart, registerables } from 'chart.js';
 import LogoutButton from '../components/LogoutButton.vue';
 import SummaryData from '../components/graphs/SummaryData.vue';
 import donutChartData from '../components/graphs/DonutChartData.js';
-import lineChartData from '../components/graphs/LineChartData.js';
+//import lineChartData from '../components/graphs/LineChartData.js';
 import barChartData from '../components/graphs/BarChartData.js';
 import SpecificTable from '../components/graphs/SpecificTable.vue';
 import roadClassData from '../components/graphs/RoadClassData.js';
@@ -76,7 +76,7 @@ export default {
   data() {
     return {
       donutChartData,
-      lineChartData,
+      //lineChartData,
       barChartData,
       roadClassData,
       roadTypeData,
@@ -86,14 +86,14 @@ export default {
   },
   mounted() {
     const chart1 = document.getElementById('donut-chart').getContext("2d", {alpha: false});
-    const chart2 = document.getElementById('line-chart').getContext("2d", {alpha: false});
+    //const chart2 = document.getElementById('line-chart').getContext("2d", {alpha: false});
     const chart3 = document.getElementById('bar-chart').getContext("2d", {alpha: false});
     const chart4 = document.getElementById('roadclass-chart').getContext("2d", {alpha: false});
     const chart5 = document.getElementById('roadtype-chart').getContext("2d", {alpha: false});
     const chart6 = document.getElementById('designspeed-chart').getContext("2d", {alpha: false});
     const chart7 = document.getElementById('changejunction-chart').getContext("2d", {alpha: false});
     new Chart(chart1, this.donutChartData);
-    new Chart(chart2, this.lineChartData);
+    //new Chart(chart2, this.lineChartData);
     new Chart(chart3, this.barChartData);
     new Chart(chart4, this.roadClassData);
     new Chart(chart5, this.roadTypeData);
