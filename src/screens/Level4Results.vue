@@ -11,8 +11,13 @@
     <div class="lastContainer">
       <SlipRoad></SlipRoad>
     </div>
+    <div class="pages">
+        <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
+        <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
+        <PageCircle2 num="3" v-bind:isActive="true"/>
+        <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
     </div>
-
+    </div>
   <img :src="road" class="road" />
   <img :src="mascot" class="mascot" />
 </div>
@@ -22,15 +27,30 @@
 import HorizontalAlignment from "./HorizontalAlignment.vue"
 import VerticalAlignment from "./VerticalAlignment.vue"
 import SlipRoad from "./SlipRoad.vue"
+import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
 name: "Level4Results",
 components: {
   "HorizontalAlignment" : HorizontalAlignment,
   "VerticalAlignment" : VerticalAlignment,
-  "SlipRoad" : SlipRoad
+  "SlipRoad" : SlipRoad,
+  "PageCircle2": PageCircle2
 },
 props: {},
+
+methods: {
+  level2() {
+    this.$router.push({path: "/level2results"})
+  },
+  level3() {
+    this.$router.push({path: "/level3results"})
+  },
+  level5() {
+    this.$router.push({path: "/level5results"})
+  }
+},
+
 data() {
   return {
     road: require("../assets/road.png"),
@@ -63,11 +83,16 @@ data() {
   margin: 2% 60% 0% 0%;
   text-align:center
 }
+
 .lastContainer {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
-
+.pages {
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: center;
+}
 
 /** road image */
 .road {

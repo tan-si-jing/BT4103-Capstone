@@ -29,6 +29,12 @@
     <div class="lastContainer">
       <LateralClearance></LateralClearance>
     </div>
+    <div class="pages">
+        <PageCircle2 num="1" v-bind:isActive="true"/>
+        <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
+        <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
+        <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
+    </div>
 </div>
   <img :src="road" class="road" />
   <img :src="mascot" class="mascot" />
@@ -45,6 +51,7 @@ import CornerRadius from "./CornerRadius.vue"
 import MergingAngle from "./MergingAngle.vue"
 import LaneWidth from "./LaneWidth.vue"
 import LateralClearance from "./LateralClearance.vue"
+import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
 name: "Level2Results",
@@ -58,8 +65,21 @@ components: {
   "MergingAngle": MergingAngle,
   "LaneWidth": LaneWidth,
   "LateralClearance": LateralClearance,
+  "PageCircle2": PageCircle2
 },
 props: {},
+
+methods: {
+  level3() {
+    this.$router.push({path: "/level3results"})
+  },
+  level4() {
+    this.$router.push({path: "/level4results"})
+  },
+  level5() {
+    this.$router.push({path: "/level5results"})
+  }
+},
 data() {
   return {
     road: require("../assets/road.png"),
@@ -93,10 +113,14 @@ data() {
   text-align:center
 }
 .lastContainer {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
-
+.pages {
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: center;
+}
 
 /** road image */
 .road {

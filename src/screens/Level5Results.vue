@@ -5,8 +5,13 @@
     <div class="lastContainer">
       <Combine></Combine>
     </div>
+    <div class="pages">
+        <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
+        <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
+        <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
+        <PageCircle2 num="4" v-bind:isActive="true"/>
     </div>
-
+    </div>
   <img :src="road" class="road" />
   <img :src="mascot" class="mascot" />
 </div>
@@ -14,13 +19,28 @@
 
 <script>
 import Combine from "./Combine.vue"
+import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
 name: "Level5Results",
 components: {
-  "Combine" : Combine
+  "Combine" : Combine,
+  "PageCircle2": PageCircle2
 },
 props: {},
+
+methods: {
+  level2() {
+    this.$router.push({path: "/level2results"})
+  },
+  level3() {
+    this.$router.push({path: "/level3results"})
+  },
+  level4() {
+    this.$router.push({path: "/level4results"})
+  }
+},
+
 data() {
   return {
     road: require("../assets/road.png"),
@@ -53,11 +73,16 @@ data() {
   margin: 2% 60% 0% 0%;
   text-align:center
 }
+
 .lastContainer {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
-
+.pages {
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: center;
+}
 
 /** road image */
 .road {
