@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.1.3</b><b>Combination of Horizontal & Vertical Alignment</b></p>
+                <p><b class="tab2">16.1</b><b>Combination of Horizontal & Vertical Alignment</b></p>
                 <p>To avoid undesirable effect of poor combination of vertical and horizontal curve, the following principles shall be observed: -</p>
                 <p>a) the tangent point for both vertical and horizontal curve shall coincide; </p>
                 <p>b) when condition (a) cannot be met, the vertical curve shall be completely within the horizontal curve and have common mid-point. 
@@ -18,10 +18,14 @@
                 <p>d) the zero crossfall point within super-elevation development length shall not coincide with the bottom of a sag vertical curve; and </p>
                 <p>e) both horizontal and vertical curves shall be kept as long as possible and where both are present, they shall not be 
                 considered separately.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=201">
+                  CDC 10.4.1.3 - Combination of Horizontal & Vertical Alignment (page 201)</a></p>
             </div>
+
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -48,7 +52,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -89,8 +93,9 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -119,48 +124,7 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-
-.img-container{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
-}
-
-.img-container2{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
-}
-
-.img-container3{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:5%;
-}
-
-/* Resize images to standardise size */
-.img-container img{
-    max-width: 100%;
-    height: auto;
-}
-
-.img-container2 img{
-    max-width: 100%;
-    width: 400px;
-    height: auto;
-}
-
-.img-container3 img{
-    max-width: 100%;
-    width: 500px;
-    height: auto;
-}
+*/
 
 p {
   font-size:20px;
