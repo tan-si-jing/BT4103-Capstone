@@ -2,38 +2,49 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">10 &nbsp; Super-elevation</td>
+          <td scope="header">10 &nbsp; Super-Elevation</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.2.5</b><b>  Super-elevation</b></p>
-                <p style="padding-top:3%"><b>10.4.2.5.1</b></p>
+                <p><b class="tab2">10.1</b><b></b></p>
                 <p> The desirable super-elevation can be derived from the following equation:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.5.1.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207">
+                  CDC 10.4.2.5.1 (page 207)</a></p>
 
-                <p style="padding-top:3%"><b>10.4.2.5.2</b></p>
+                <p style="padding-top:3%"><b class="tab2">10.2</b><b></b></p>
                     <p>In cases where the negative or positive super-elevation derived is lower than the desirable crossfall, the desirable super-elevation shall be 
                       pegged at the crossfall as shown in Table 10.6 to slope towards the inner radius of the carriageway.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
+                  CDC 10.4.2.5.2 (page 208)</a></p>
 
-                <p style="padding-top:3%"><b>10.4.2.5.3</b></p>
+                <p style="padding-top:3%"><b class="tab2">10.3</b><b></b></p>
                     <p>For rotation of pavement to attain super-elevation, the length required to develop the 
                       super-elevation shall satisfy the larger value obtained from the following two formulae:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.5.3.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
+                  CDC 10.4.2.5.3 (page 208)</a></p>
 
-                <p style="padding-top:3%"><b>10.4.2.5.4</b></p>
+                <p style="padding-top:3%"><b class="tab2">10.4</b><b></b></p>
                     <p>Where transition curve is provided, super-elevation shall be effected along the l
                       ength of the curve. For simple circular curve, about two-third of the super-elevation 
                       development length shall be introduced on the tangent approach and one third on the curve.</p>
-                
-                <p style="padding-top:3%"><b>10.4.2.5.5</b></p>
-                    <p><b class="tab2">10.5.4.1</b> The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
+                  CDC 10.4.2.5.4 (page 208)</a></p>
+
+                <p style="padding-top:3%"><b class="tab2">10.5</b><b></b></p>
+                    <p>The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
                     the Figure 10.6. </p>
                     <div class="img-container">
                         <img src="../assets/Figure10.6.png">
@@ -41,11 +52,18 @@
                     <div class="img-container">
                         <img src="../assets/Figure10.5.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
+                  CDC 10.4.2.5.5 (page 208)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=230">
+                  CDC Figure 10.6 (page 230)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229">
+                  CDC Figure 10.5 (page 229)</a></p>
                         
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -78,7 +96,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -119,7 +137,10 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
+
+/*
 
 .grid-container{
   margin: 5% 5% -8%;
@@ -149,32 +170,32 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
+*/
 
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
-    margin-bottom:10%;
+    margin-bottom:3%;
 }
 
 .img-container2{
-    width: 600px;
+    width: 50%;
     height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
+    margin-left: 3em; 
+    margin-top: 2%;
+    margin-bottom:3%;
 }
 
 /* Resize images to standardise size */
 .img-container2 img{
-    max-width: 100%;
-    width: 400px;
+    width: 100%;
     height: auto;
 }
 
 .img-container img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 

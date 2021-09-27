@@ -9,18 +9,24 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab3">10.4.3.2.1</b><b>Crest Curve</b></p>
+                <p><b class="tab3">12.1</b><b>Crest Curve</b></p>
                 <p> The minimum length of a crest curve in metre shall be the greater of:</p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
                 <p>c) the desirable curve length can be derived from the following formulae: -</p>
-                <p style="margin-left:5.5em; font-size:18px;"> Crest Vertical Curve for Stopping Sight Distance</p>
+                <p style="margin-left:3em"> Crest Vertical Curve for Stopping Sight Distance</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.3.2.1.png">
                     </div>
                     <div class="img-container">
                         <img src="../assets/Figure10.8.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">
+                  CDC 10.4.3.2.1 - Crest Curve (page 210)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=232">
+                  CDC Figure 10.8 (page 232)</a></p>
+
 
                 <p style="padding-top:3%"><b class="tab3">10.4.3.2.2</b><b>Sag Curve</b></p>
                 <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
@@ -28,7 +34,7 @@
                 <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
                 <p>c) curve length needed to provide headlight sight distance (refer to Figure 10.10) </p>
                 <p>d) the desirable curve length can be derived from the following formulae: - </p>
-                <p style="margin-left:5.5em; font-size:18px;"> Crest Vertical Curve for Stopping Sight Distance</p>
+                <p style="margin-left:3em"> Crest Vertical Curve for Stopping Sight Distance</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.3.2.2.png">
                     </div> 
@@ -38,11 +44,18 @@
                     <div class="img-container">
                         <img src="../assets/Figure10.10.png">
                     </div>
- 
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=211">
+                  CDC 10.4.3.2.2 - Sag Curve (page 211)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=233">
+                  CDC Figure 10.9 (page 233)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234">
+                  CDC Figure 10.10 (page 234)</a></p>
+
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -77,7 +90,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -118,8 +131,9 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -148,46 +162,32 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
+*/
 
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
-    margin-bottom:10%;
+    margin-bottom:3%;
 }
 
 .img-container2{
-    width: 600px;
+    width: 50%;
     height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
-}
-
-.img-container3{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:5%;
+    margin-left: 3em; 
+    margin-top: 2%;
+    margin-bottom:3%;
 }
 
 /* Resize images to standardise size */
 .img-container img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .img-container2 img{
-    max-width: 100%;
-    width: 400px;
-    height: auto;
-}
-
-.img-container3 img{
-    max-width: 100%;
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 
