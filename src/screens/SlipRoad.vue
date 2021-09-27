@@ -9,22 +9,28 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab1">10.5.3</b><b>Traffic Island</b></p>
-
-                <p style="padding-top:3%"><b>10.5.3.1</b></p>
+                <p><b class="tab2">15.1</b><b></b></p>
                 <p> The desirable minimum dimension and the approach nose of the traffic island shall be as shown in the Figure 10.12. </p>
                     <div class="img-container">
                         <img src="../assets/Figure10.12.png">
                     </div> 
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214">
+                  CDC 10.5.3.1 (page 214)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236">
+                  CDC Figure 10.12 (page 236)</a></p>
 
-                 <p style="padding-top:3%"><b>10.5.3.2</b></p>
+                 <p style="padding-top:3%"><b class="tab2">15.2</b><b></b></p>
                  <p>Where there is a high concentration of pedestrian at the road intersection adjacent to school, shopping centre, hospital, food centre, the dimension 
                      of the traffic island shall be increased based on 0.3&#13217; standing place per person. The number of pedestrians shall include those who are waiting 
                      to cross the road at the island before the start of the pedestrian crossing signal.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214">
+                  CDC 10.5.3.2 (page 214)</a></p>
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -53,7 +59,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -94,8 +100,10 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
 
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -124,46 +132,18 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-
+*/
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
-}
-
-.img-container2{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
-}
-
-.img-container3{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
     margin-bottom:5%;
 }
 
 /* Resize images to standardise size */
 .img-container img{
-    max-width: 100%;
-    height: auto;
-}
-
-.img-container2 img{
-    max-width: 100%;
-    width: 400px;
-    height: auto;
-}
-
-.img-container3 img{
-    max-width: 100%;
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 

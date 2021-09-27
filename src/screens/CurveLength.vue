@@ -28,7 +28,7 @@
                   CDC Figure 10.8 (page 232)</a></p>
 
 
-                <p style="padding-top:3%"><b class="tab3">10.4.3.2.2</b><b>Sag Curve</b></p>
+                <p style="padding-top:3%"><b class="tab3">12.2</b><b>Sag Curve</b></p>
                 <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>

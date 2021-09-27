@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">9.1.1</b><b></b></p>
+                <p><b class="tab2">9.1</b><b></b></p>
                     <p>Minimum lateral clearance from the edge of road pavement (both at centre median and side table) to any adjacent 
                         structure is shown in Table 10.17 unless otherwise specified in the Standard Details of Road Elements.</p>
                     <div class="img-container">
@@ -22,13 +22,13 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=222">
                   CDC 10.7.1.1 (page 222)</a></p>
 
-                <p style="padding-top:3%"><b>9.1.2</b></p>
+                <p style="padding-top:3%"><b>9.2</b></p>
                     <p>For an elevated road structure, the minimum lateral clearance between the edge of the road structure and any other structures shall be 3m.</p>
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=223">
                   CDC 10.7.1.2 (page 223)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">9.2</b><b></b></p>
+                <p style="padding-top:3%"><b class="tab2">9.3</b><b></b></p>
                     <p>Directional sign shall generally be sited on the side next to the slow lane and clearly visible to the driver. It shall be 
                         noted that in some cases (e.g.for a major right turning movement, or for very wide road) it may be appropriate to site sign 
                         on the median if it is wide enough. The minimum lateral clearance from the edge of the vehicular impact guardrail to the 
