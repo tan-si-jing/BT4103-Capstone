@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.1.1</b><b>Horizontal Alignment</b></p> 
+                <p><b class="tab2">13.1</b><b>Horizontal Alignment</b></p> 
                 <p> There are several general controls that shall be considered when designing the horizontal alignment. </p>
                 <p>a) Where it becomes necessary to introduce curve of lower standard than the design requirement, 
                 the respective design speed between the successive geometric elements shall not differ by more than 10km/h; </p>
@@ -25,28 +25,41 @@
                 <div class="img-container">
                     <img src="../assets/Figure10.1.png">
                 </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=200">
+                  CDC 10.4.1.1 - Horizontal Alignment (page 200)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=225">
+                  CDC Figure 10.1 (page 225)</a></p>
 
-                <p style="padding-top:3%"><b class="tab1">10.4.2</b><b>Horizontal Alignment</b></p>
-
-                <p style="padding-top:3%"><b class="tab2">10.4.2.1</b><b>Design Speed</b></p>
-
-                <p style="padding-top:3%"><b class="tab3">10.4.2.1.1</b><b>Main Carriageway</b></p>
+                <p style="padding-top:3%"><b class="tab2">13.2</b><b>Main Carriageway</b></p>
                 <p> The geometric design requirement of road shall be as follows: - </p>
-                <div class="img-container3">
+                <div class="img-container">
                     <img src="../assets/Table10.2.png">
                 </div>  
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=202">
+                  CDC 10.4.2.1.1 - Main Carriageway (page 202)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">10.4.2.3</b><b>Horizontal Curve</b></p>
+                <p style="padding-top:3%"><b class="tab2">13.3</b><b>Horizontal Curve</b></p>
                 <p> The various types of horizontal curve used are as shown in Figure 10.4</p>
                     <div class="img-container">
                         <img src="../assets/Figure10.4.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205">
+                  CDC 10.4.2.3 - Horizontal Curve (page 205)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=228">
+                  CDC Figure 10.4 (page 228)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.3.1</b><b>Simple Curve</b></p>
+                
+                <p style="padding-top:3%"><b class="tab2">13.3</b><b>Simple Curve</b></p>
                     <p>This is an arc of constant radius which achieves the desirable deflection without using a transition curve. 
                         This type of curve shall be used whenever possible.</p>
+                  <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205">
+                  CDC 10.4.2.3.1 - Simple Curve (page 205)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.3.2</b><b>Compound Curve</b></p>
+                <p style="padding-top:3%"><b class="tab2">13.4</b><b>Compound Curve</b></p>
                     <p>A compound curve consists of two or more curves with deflections in the same direction immediately 
                         adjacent to each other. In general, the use eof compound curve is not favoured. Where it is necessary, 
                         the following guidelines shall be applied: - </p>
@@ -55,8 +68,11 @@
                         desirably be within 10km/h of each other. </p>
                         <p>c) on main road, the ratio of the radius of the flatter curve to the sharper curve shall not exceed 1.5:1; and </p>
                         <p>d) at junction intersection and ramp, the ratio of the radius of the flatter curve to the sharper curve can be up to 2:1</p>
+                  <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205">
+                  CDC 10.4.2.3.2 - Compound Curve (page 205)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.3.3</b><b>Reverse Curve</b></p>
+                <p style="padding-top:3%"><b class="tab2">13.5</b><b>Reverse Curve</b></p>
                     <p>A reverse curve consists of two curves of deflections in the opposite direction which are 
                         joined by a relatively short tangent distance. Reverse curve shall not be used unless there is sufficient 
                         distance between the curves to introduce full super-elevation of the two curves. In general, the use of 
@@ -65,15 +81,21 @@
                         <p>b) up to 50% of the transition may be placed in the curve; and </p>
                         <p>c) where it is not possible to provide the minimum tangent distance in (a), the radius of each curve shall not be 
                         less than minimum radius of V&#178;/127 f, where V is the design speed in km/h and f is the side friction factor.</p>
-                
-                <p style="padding-top:3%"><b class="tab3">10.4.2.3.4</b><b>Broken-back Curve</b></p>
+                  <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=206">
+                  CDC 10.4.2.3.3 - Reverse Curve (page 206)</a></p>
+
+                <p style="padding-top:3%"><b class="tab2">13.6</b><b>Broken-back Curve</b></p>
                     <p>Broken-back curve consists of two curves with deflections in the same direction that is joined by a short tangent 
                         distance. In general, the use of broken-back curve is not favoured. Where it is necessary, the length of tangent 
                         in metre shall not be less than 3 times the design speed in km/h. Where such a minimum length of tangent cannot be obtained, 
                         the alignment shall be changed, either to increase the straight section, or eliminate it entirely by the use of a compound curve, 
                         or transition curve between the two curves.</p>
-                
-                <p style="padding-top:3%"><b class="tab3">10.4.2.3.5</b><b>Transition Curve</b></p>
+                  <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=206">
+                  CDC 10.4.2.3.4 - Broken-back Curve (page 206)</a></p>
+
+                <p style="padding-top:3%"><b class="tab2">13.7</b><b>Transition Curve</b></p>
                 <p>Transition curve is normally used to join a straight line to a circular curve, although it may be omitted when large 
                     radius curve is used. The most frequently used form of transition is the clothoid which curvature changes at a uniform 
                     rate along the curve. The following design requirements shall be adopted:</p>
@@ -83,11 +105,14 @@
                     <div class="img-container2">
                         <img src="../assets/10.4.2.3.5.png">
                     </div>
+                  <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=206">
+                  CDC 10.4.2.3.5 - Transition Curve (page 206)</a></p>
        
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -128,7 +153,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -169,8 +194,9 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -199,30 +225,24 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-
+*/
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
-    margin-bottom:10%;
+    margin-bottom:3%;
 }
 
 .img-container2{
-    width: 600px;
+    width: 50%;
     height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
+    margin-left: 3em; 
+    margin-top: 2%;
+    margin-bottom:3%;
 }
 
-.img-container3{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:5%;
-}
+
 
 /* Resize images to standardise size */
 .img-container img{
@@ -231,14 +251,7 @@ tbody tr:last-child td{
 }
 
 .img-container2 img{
-    max-width: 100%;
-    width: 400px;
-    height: auto;
-}
-
-.img-container3 img{
-    max-width: 100%;
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 

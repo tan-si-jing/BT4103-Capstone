@@ -9,26 +9,37 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.1.2</b><b>Vertical Alignment</b></p>
+                <p><b class="tab2">14.1</b><b>Vertical Alignment</b></p>
                 <p>There are several general controls that shall be considered when designing the vertical alignment: - </p>
                 <p>a) a smooth grade line with gradual changes shall be used instead of a line with numerous breaks and short lengths of grades; </p>
                 <p>b) grade through intersection shall not exceed 3% to avoid adverse effect to turning movement and ensure effective surface drainage; </p>
                 <p>c) a sag vertical curve or a flat section is desirable in advance of any channelization at an intersection and ramp take-off at an 
                 interchange, in order to provide sufficient sight distance; and </p>
                 <p>d) in providing sag vertical curves, one long vertical curve is more desirable and broken-back grade line shall be avoided. </p>
-                
-                <p style="padding-top:3%"><b class="tab2">10.4.3.2</b><b>Types of Vertical Curve</b></p>
-                <p> A vertical curve shall be provided when there is a change in road gradient by using symmetrical simple parabolic curve.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=201">
+                  CDC 10.4.1.2 - Vertical Alignment (page 201)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.3.1.3</b><b>Critical Length of Grade</b></p>
+                <p style="padding-top:3%"><b class="tab2">14.2</b><b>Critical Length of Grade</b></p>
                 <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
                   Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
-                    <div class="img-container3">
+                    <div class="img-container">
                         <img src="../assets/Table10.11.png">
                     </div>
                     <div class="img-container">
                         <img src="../assets/Figure10.7.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">
+                  CDC 10.4.3.1.3 - Critical Length of Grade (page 210)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=231">
+                  CDC Figure 10.7 (page 231)</a></p>
+
+                <p style="padding-top:3%"><b class="tab2">14.3</b><b>Types of Vertical Curve</b></p>
+                <p> A vertical curve shall be provided when there is a change in road gradient by using symmetrical simple parabolic curve.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">
+                  CDC 10.4.3.2 - Types of Vertical Curve (page 210)</a></p>
 
                 <p style="padding-top:3%"><b class="tab3">10.4.3.2.1</b><b>Crest Curve</b></p>
                 <p> The minimum length of a crest curve in metre shall be the greater of:</p>
@@ -42,6 +53,12 @@
                     <div class="img-container">
                         <img src="../assets/Figure10.8.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">
+                  CDC 10.4.3.2.1 - Crest Curve (page 210)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=232">
+                  CDC Figure 10.8 (page 232)</a></p>
+
 
                 <p style="padding-top:3%"><b class="tab3">10.4.3.2.2</b><b>Sag Curve</b></p>
                 <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
@@ -59,15 +76,18 @@
                     <div class="img-container">
                         <img src="../assets/Figure10.10.png">
                     </div>
-                
-
-
-
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=211">
+                  CDC 10.4.3.2.2 - Sag Curve (page 211)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=233">
+                  CDC Figure 10.9 (page 233)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234">
+                  CDC Figure 10.10 (page 234)</a></p>
 
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -109,7 +129,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -150,8 +170,10 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
 
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -180,48 +202,35 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
-
+*/
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
-    margin-bottom:10%;
+    margin-bottom:3%;
 }
 
 .img-container2{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
+    width: 50%;
+    margin-left: 3em; 
+    margin-top: 2%;
+    margin-bottom:3%;
 }
 
-.img-container3{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:5%;
-}
+
 
 /* Resize images to standardise size */
 .img-container img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .img-container2 img{
-    max-width: 100%;
-    width: 400px;
+    width: 100%;
     height: auto;
 }
 
-.img-container3 img{
-    max-width: 100%;
-    width: 500px;
-    height: auto;
-}
 
 p {
   font-size:20px;
