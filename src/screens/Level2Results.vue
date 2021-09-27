@@ -29,6 +29,7 @@
     <div class="lastContainer">
       <LateralClearance></LateralClearance>
     </div>
+    
     <div class="pages">
         <PageCircle2 num="1" v-bind:isActive="true"/>
         <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
@@ -36,6 +37,8 @@
         <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
     </div>
 </div>
+
+  <button id="back" type="button" class="btn btn-outline-secondary" @click="back"><i class="bi bi-arrow-left"></i></button>
   <img :src="road" class="road" />
   <img :src="mascot" class="mascot" />
 </div>
@@ -78,6 +81,9 @@ methods: {
   },
   level5() {
     this.$router.push({path: "/level5results"})
+  },
+  back() {
+    this.$router.push({path: "/search5"})
   }
 },
 data() {
@@ -118,8 +124,18 @@ data() {
 
 .pages {
     display: flex;
-    margin-bottom: 5%;
+    /*margin-bottom: 5%;*/
     justify-content: center;
+}
+
+
+#back {
+  font-size: 1.5rem;
+  box-shadow:none;
+  border:none;
+  margin-bottom:2%;
+  margin-right:80%;
+  padding:0.4% 0.8%;
 }
 
 /** road image */
