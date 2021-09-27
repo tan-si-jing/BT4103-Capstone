@@ -9,16 +9,19 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.2.6</b><b> Corner Radius</b></p>
+                <p><b class="tab2">6.1</b><b> Corner Radius</b></p>
                     <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
                         shall not be less than the values as shown in Table 10.8.</p>
                     <div class="img-container">
                         <img src="../assets/Table10-8.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">
+                  CDC 10.4.2.6 - Corner Radius (page 209)</a></p>
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -45,7 +48,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -70,7 +73,7 @@ table {
     border-top-right-radius: 15px;
     font-size:22px;
     text-indent:1.5%;
-     vertical-align: middle;
+    vertical-align: middle;
 }
 tbody tr{
     background-color: #ffffff;
@@ -86,8 +89,9 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -116,18 +120,20 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
+*/
+
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
+    margin-bottom:3%;
 }
 
 
 /* Resize images to standardise size */
 .img-container img{
-    max-width: 100%;
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 

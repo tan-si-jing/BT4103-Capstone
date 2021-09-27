@@ -9,18 +9,25 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab1">10.2.2</b></p>
+                <p><b class="tab2">5.1</b></p>
                 <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
-                <p style="padding-top:3%"><b class="tab2">10.4.2.4</b><b>Crossfall of Carriageway</b></p>    
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=199">
+                  CDC 10.2.2 (page 199)</a></p>
+
+                <p style="padding-top:3%"><b class="tab2">5.2</b><b>Crossfall of Carriageway</b></p>    
                     <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
                         to the side drain and the design requirements shall be as shown in Table 10.6.</p>
                     <div class="img-container">
                         <img src="../assets/Table10-6.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207">
+                  CDC 10.4.2.4 - Crossfall of Carriageway (page 207)</a></p>
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -49,7 +56,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -91,8 +98,9 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -120,19 +128,19 @@ tbody tr:last-child td{
 
 #link{
   font-weight:bold;
-}
+}*/
 
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
+    margin-bottom:3%;
 }
 
 /* Resize images to standardise size */
 .img-container img{
-    max-width: 100%;
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 

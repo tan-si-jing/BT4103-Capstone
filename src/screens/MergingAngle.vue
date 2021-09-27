@@ -9,16 +9,21 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b>10.5.2.4.1</b></p>
+                <p><b>7.1</b></p>
                     <p>Slip road is provided to permit left-turning vehicle to bypass the intersection. The desirable merging angle for 
                         left turn slip road shall be 70&#176; and absolute minimum merging angle shall be 50&#176; as shown in Figure 10.12.</p>
                     <div class="img-container">
                         <img src="../assets/Figure10.12.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=213">
+                  CDC 10.5.2.4.1 (page 213)</a>, 
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236">
+                  CDC Figure 10.12 (page 236)</a></p>
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -47,7 +52,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -88,9 +93,10 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
 
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -118,11 +124,11 @@ tbody tr:last-child td{
 
 #link{
   font-weight:bold;
-}
+}*/
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
     margin-bottom:5%;
 }
