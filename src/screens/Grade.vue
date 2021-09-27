@@ -9,8 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p><b class="tab1">10.4.3</b><b >Vertical Alignment</b></p>
-              <p style="padding-top:2%"><b class="tab3">10.4.3.1.1</b><b>Main Carriageway</b></p>
+              <p><b class="tab2">2.1</b><b>Main Carriageway</b></p>
                 <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
                 <div class="img-container">
                     <img src="../assets/Table10-9.png">
@@ -22,15 +21,21 @@
                 <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
                 <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
                 <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">
+                  CDC 10.4.3.1.1 - Main Carriageway (page 209)</a></p>
 
-              <p style="padding-top:3%"><b class="tab3">10.4.3.1.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
-                <div class="img-container">
+              <p style="padding-top:3%"><b class="tab2">2.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
+                <div class="img-container3">
                     <img src="../assets/Table10-10.png">
                 </div>                
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">
+                  CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a></p>
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -59,7 +64,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -100,8 +105,10 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
+  /*max-width:70vw;*/
 }
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -129,18 +136,30 @@ tbody tr:last-child td{
 
 #link{
   font-weight:bold;
-}
+}*/
 
 .img-container{
-    width: 500px;
-    height: 150px;
-    margin-left: 5.8em; 
+    max-width:80%;
+    height: auto;
+    margin-left: 3em; 
     margin-top: 5%;
 }
 
+.img-container3{
+    max-width:80%;
+    height: auto;
+    margin-left: 3em; 
+    margin-top: 5%;
+    margin-bottom:3%;
+}
 
 /* Resize images to standardise size */
 .img-container img{
+    width: 100%;
+    height: auto;
+}
+
+.img-container3 img{
     width: 100%;
     height: auto;
 }

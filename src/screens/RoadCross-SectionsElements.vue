@@ -9,13 +9,15 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p><b>10.5 ROAD CROSS-SECTIONS AND ELEMENTS</b></p>
-              <p style="padding-top:3%"><b>10.5.1 General</b></p>
+              <p><b class="tab2">1.1</b><b>General</b></p>
                 <p>The details of the cross-section elements such as lane width, centre median width, paved shoulder, services verge, 
                     footpath, drain and landscaping, etc. shall be in accordance with the Authority’s Drawings and the Standard Details 
                     of Road Elements.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212">
+                  CDC 10.5.1 - General (page 212)</a></p>
                 
-              <p style="padding-top:3%"><b>10.5.6 Sidetable, Drain, Footpath and Divider</b></p>
+              <p style="padding-top:3%"><b class="tab2">1.2</b><b>Sidetable, Drain, Footpath and Divider</b></p>
                 <p>a) Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
                     other categories of road. The services verge and landscaping shall be turfed and sloped as shown in the Standard 
                     Details of Road Elements.</p>
@@ -29,10 +31,13 @@
                     accordance with Building and Construction Authority (BCA)’s Code of Accessibility.</p>  
                 <p>e) Footpath shall be higher than adjacent kerb as shown in the Standard Details of Road Elements. All footpaths 
                     exposed to weather shall be designed with falls and gradient to discharge water to the drains.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=215">
+                  CDC 10.5.6 - Sidetable, Train, Footpath and Divider (page 215)</a></p>
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -64,7 +69,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -101,6 +106,7 @@ tbody tr:last-child td{
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
     height: 26vh;
+    padding-bottom:5%;
 }
 
 .content{
@@ -109,7 +115,7 @@ tbody tr:last-child td{
   text-align: justify;
 }
 
-
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -137,10 +143,22 @@ tbody tr:last-child td{
 
 #link{
   font-weight:bold;
-}
+}*/
 
 p{
   font-size:20px;
+}
+
+.tab1 {
+ margin-right: 2.5em
+}
+
+.tab2 {
+ margin-right: 1.7em
+}
+
+.tab3 {
+  margin-right: 1em
 }
 </style>
 
