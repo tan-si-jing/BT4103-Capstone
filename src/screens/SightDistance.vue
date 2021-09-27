@@ -9,30 +9,37 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.4.2.2</b><b>Sight Distance</b></p>
-
-                <p style="padding-top:3%"><b class="tab3">10.4.2.2.1</b><b>Stopping Sight Distance</b></p>
+                <p><b class="tab2">11.1</b><b>Stopping Sight Distance</b></p>
                 <p> The minimum stopping sight distance for various road gradient shall be determined by the following formula:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.2.1.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203">
+                  CDC 10.4.2.2.1 - Stopping Sight Distance (page 203)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.2.2</b><b>Intermediate Sight Distance</b></p>
+                <p style="padding-top:3%"><b class="tab3">11.2</b><b>Intermediate Sight Distance</b></p>
                     <p>a) Intermediate sight distance is equal to 2 times stopping sight distance. </p>
                     <p>b) Intermediate sight distance is only applicable to undivided 2-lane road. </p>
                     <p>c) Where intermediate sight distance is unachievable because of site constraint, 
                     the stopping sight distance shall be used and the appropriate control measures to 
                     prohibit overtaking shall be introduced.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203">
+                  CDC 10.4.2.2.2 - Intermediate Sight Distance (page 203)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.2.3</b><b>Overtaking Sight Distance</b></p>
+                <p style="padding-top:3%"><b class="tab3">11.3</b><b>Overtaking Sight Distance</b></p>
                     <p>The following sight distances are to be considered in the design. If overtaking sight distance 
                         for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
-                    <div class="img-container3">
+                    <div class="img-container">
                         <img src="../assets/Table10.5.png">
                     </div>
-                    <p>Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p><br>
+                    <p>Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204">
+                  CDC 10.4.2.2.3 - Overtaking Sight Distance (page 204)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.2.4</b><b>Intersection Sight Distance</b></p>
+                <p style="padding-top:3%"><b class="tab3">11.4</b><b>Intersection Sight Distance</b></p>
                     <p>The desirable intersection sight distance at unsignalised junction can be derived 
                         from the following formula and to be read in conjunction with Figure 10.2.</p>
                     <div class="img-container2">
@@ -41,8 +48,13 @@
                     <div class="img-container">
                         <img src="../assets/Figure10.2.png">
                     </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204">
+                  CDC 10.4.2.2.4 - Intersection Sight Distance (page 204)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=226">
+                  CDC Figure 10.2 (page 226)</a></p>
                 
-                <p style="padding-top:3%"><b class="tab3">10.4.2.2.5</b><b>Sight Distance on Horizontal Curve</b></p>
+                <p style="padding-top:3%"><b class="tab3">11.5</b><b>Sight Distance on Horizontal Curve</b></p>
                     <p>On a horizontal curve where the obstruction on the inside of the curve cannot be removed, 
                         offset distance to the obstruction shall be provided. 
                         The offset distance can be derived from the following formula and shall be read in conjunction with Figure 10.3.</p>
@@ -52,11 +64,16 @@
                     <div class="img-container">
                         <img src="../assets/Figure10.3.png">
                     </div>
-                        
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205">
+                  CDC 10.4.2.2.5 - Sight Distance on Horizontal Curve (page 205)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=227">
+                  CDC Figure 10.3 (page 226)</a></p>
+                       
             </div>
           </td>
           </tr>
-          <tr>
+          <!--tr>
           <td scope="row"></td>
           </tr>
           <tr>
@@ -91,7 +108,7 @@
               </div>
             </div>      
           </td>
-          </tr>
+          </tr-->
         </tbody>
       </table>
 </template>
@@ -132,8 +149,10 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+  padding-bottom:5%;
 }
 
+/*
 .grid-container{
   margin: 5% 5% -8%;
   font-size:20px;
@@ -162,46 +181,32 @@ tbody tr:last-child td{
 #link{
   font-weight:bold;
 }
+*/
 
 .img-container{
-    width: 600px;
+    width: 80%;
     height: auto;
-    margin-left: 5.8em; 
+    margin-left: 3em; 
     margin-top: 5%;
-    margin-bottom:10%;
+    margin-bottom:3%;
 }
 
 .img-container2{
-    width: 600px;
+    width: 50%;
     height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:10%;
-}
-
-.img-container3{
-    width: 600px;
-    height: auto;
-    margin-left: 5.8em; 
-    margin-top: 5%;
-    margin-bottom:5%;
+    margin-left: 3em; 
+    margin-top: 2%;
+    margin-bottom:3%;
 }
 
 /* Resize images to standardise size */
 .img-container img{
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .img-container2 img{
-    max-width: 100%;
-    width: 400px;
-    height: auto;
-}
-
-.img-container3 img{
-    max-width: 100%;
-    width: 500px;
+    width: 100%;
     height: auto;
 }
 
