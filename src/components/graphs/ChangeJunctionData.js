@@ -5,7 +5,7 @@ export const changeJunctionData = {
     datasets: [
       {
         label: "No. Searches",
-        data: [40, 50],
+        data: [0, 0],
         backgroundColor: [
           '#6b7473'
         ]

@@ -5,7 +5,7 @@ export const designSpeedData = {
     datasets: [
       {
         label: "No. Searches",
-        data: [40, 50, 60, 70, 80, 90],
+        data: [0, 0, 0, 0, 0, 0],
         backgroundColor: [
           '#1e6a59'
         ]
