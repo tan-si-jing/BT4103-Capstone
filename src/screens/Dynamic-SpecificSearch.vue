@@ -1,32 +1,32 @@
 <template>
     <div id = "entire-content">
         <div id = "buttons">
-            <p>Currently Viewing</p> 
+            <p>Currently Viewing : </p> 
             <div class="action_btn">
                 <button id='current_btn'>{{this.choice2}}</button>
             </div>
-            <div class="arrow">
+            <div class="arrow" v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
-            <p>Other Relevant Results</p>
+            <p v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>Other Relevant Results : </p>
             <div class="action_btn" v-show='level_4_parameter.length != 0'>
                 <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <br v-show='level_4_parameter.length != 0'>
+            <!--br v-show='level_4_parameter.length != 0'-->
             <div class="arrow" v-show='level_4_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
             <div class="action_btn" v-show='level_3_parameter.length != 0'>
                 <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <br v-show='level_3_parameter.length != 0'>
+            <!--br v-show='level_3_parameter.length != 0'-->
             <div class="arrow" v-show='level_3_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
             <div class="action_btn" v-show='level_2_parameter.length != 0'>
                 <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <br v-show='level_2_parameter.length != 0'>
+            <!--br v-show='level_2_parameter.length != 0'-->
             <div class="arrow" v-show='level_2_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
@@ -252,11 +252,19 @@ export default {
 }
 
 #back {
-  width:fit-content;
-  height:fit-content;
-  font-size: 1.5rem;
-  box-shadow:none;
-  border:none;
+    width:fit-content;
+    height:fit-content;
+    font-size: 1.5rem;
+    box-shadow:none;
+    border:none;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #273B8C;
 }
 
 ul {
