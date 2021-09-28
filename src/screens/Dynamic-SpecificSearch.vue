@@ -21,6 +21,16 @@
     <div id = "specific-results">
         <ul>
             <li v-for="cdc in final_array" :key="cdc.chapterID">
+                <p><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
+                <p v-html="cdc.Text"></p>
+                <div class='image'>
+                    <img :src="cdc.Image" style='zoom: 1.2'>
+                </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a v-bind:href="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}} {{cdc.Page}}</a>
+                </p>
+            </li>                        
+            <!--li v-for="cdc in final_array" :key="cdc.chapterID">
                 <div class='chapter-text-image'>
                     <div class='chapter'>
                         <b>{{cdc.chapterID}}</b>  
@@ -34,9 +44,9 @@
                     </div>
                 </div>
                 <br>
-            </li>
+            </li-->
         </ul>
-        <table class="manual">
+        <!--table class="manual">
             <tr>
                 <th>Content</th>
                 <th>Manual</th>
@@ -49,7 +59,7 @@
                 <td>{{cdc.chapterID}}: {{cdc.Chapter}}</td>
                 <td style="word-break:break-all;"><a v-bind:href="cdc.Link">{{cdc.Link}}</a></td>
             </tr>
-        </table>
+        </table-->
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
       <i class="bi bi-arrow-left"></i>
@@ -290,5 +300,10 @@ td {
 #link{
   font-weight:bold;
 }
+
+.tab2 {
+ margin-right: 1.7em
+}
+
 </style>
 
