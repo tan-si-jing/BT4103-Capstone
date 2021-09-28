@@ -13,21 +13,21 @@
                 <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
             <!--br v-show='level_4_parameter.length != 0'-->
-            <div class="arrow" v-show='level_4_parameter.length != 0'>
+            <div class="arrow" v-show='level_4_parameter.length != 0 && (level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
                 <i class="bi bi-arrow-up"></i>
             </div>
             <div class="action_btn" v-show='level_3_parameter.length != 0'>
                 <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
             <!--br v-show='level_3_parameter.length != 0'-->
-            <div class="arrow" v-show='level_3_parameter.length != 0'>
+            <div class="arrow" v-show='level_3_parameter.length != 0 && (level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
                 <i class="bi bi-arrow-up"></i>
             </div>
             <div class="action_btn" v-show='level_2_parameter.length != 0'>
                 <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
             <!--br v-show='level_2_parameter.length != 0'-->
-            <div class="arrow" v-show='level_2_parameter.length != 0'>
+            <div class="arrow" v-show='level_2_parameter.length != 0 && level_1_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
             <div class="action_btn" v-show='level_1_parameter.length != 0'>
@@ -266,7 +266,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: #273B8C;
 }
 
@@ -311,14 +311,14 @@ button {
     margin: 20 auto;
     display: inline;
     padding: 30;
-    height: 80px;
+    height: 50px;
     background: #273B8C;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border-radius: 15px;
     font-style: normal;
     font-weight: normal;
     color: #FFFFFF;
-    font-size:26px;
+    font-size:15px;
 }
 
 .action_btn {
