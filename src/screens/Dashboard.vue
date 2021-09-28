@@ -202,9 +202,9 @@ export default {
 .graphThirdRow {
   display: grid;
   grid-template-columns: 49% 49%;
-  grid-gap: 1.5%;
+  grid-gap: 2%;
   margin-bottom: 1rem;
-  height: 375px;
+  height: 350px;
 }
 .summary {
   display: grid;
