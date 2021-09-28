@@ -1,56 +1,85 @@
 <template>
-    <div>
-        <div class="action_btn">
-            <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+    <div id = "entire-content">
+        <div id = "buttons">
+            <p>Currently Viewing : </p> 
+            <div class="action_btn">
+                <button id='current_btn'>{{this.choice2}}</button>
+            </div>
+            <div class="arrow" v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>
+                <i class="bi bi-arrow-up"></i>
+            </div>
+            <p v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>Other Relevant Results : </p>
+            <div class="action_btn" v-show='level_4_parameter.length != 0'>
+                <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
+            <!--br v-show='level_4_parameter.length != 0'-->
+            <div class="arrow" v-show='level_4_parameter.length != 0 && (level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
+                <i class="bi bi-arrow-up"></i>
+            </div>
+            <div class="action_btn" v-show='level_3_parameter.length != 0'>
+                <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
+            <!--br v-show='level_3_parameter.length != 0'-->
+            <div class="arrow" v-show='level_3_parameter.length != 0 && (level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
+                <i class="bi bi-arrow-up"></i>
+            </div>
+            <div class="action_btn" v-show='level_2_parameter.length != 0'>
+                <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
+            <!--br v-show='level_2_parameter.length != 0'-->
+            <div class="arrow" v-show='level_2_parameter.length != 0 && level_1_parameter.length != 0'>
+                <i class="bi bi-arrow-up"></i>
+            </div>
+            <div class="action_btn" v-show='level_1_parameter.length != 0'>
+                <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
         </div>
-        <br>
-        <div class="action_btn">
-            <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
-        </div>
-        <br>
-        <div class="action_btn">
-            <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
-        </div>
-        <br>
-        <div class="action_btn">
-            <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
-        </div>
-        <br>
-    </div>
-    <h3><b>{{this.choice2}}</b></h3>
-    <div id = "specific-results">
-        <ul>
-            <li v-for="cdc in final_array" :key="cdc.chapterID">
-                <div class='chapter-text-image'>
-                    <div class='chapter'>
-                        <b>{{cdc.chapterID}}</b>  
+        <!--h3><b>{{this.choice2}}</b></h3-->
+        <div id = "specific-results">
+            <ul>
+                <li v-for="cdc in final_array" :key="cdc.chapterID">
+                    <p><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
+                    <p v-html="cdc.Text"></p>
+                    <div class='image'>
+                        <img :src="cdc.Image" style='zoom: 1.2'>
                     </div>
-                    <div class='text-image'>
-                        <div class='text' v-html="cdc.Text"></div>
-                        <br>
-                        <div class='image'>
-                            <img :src="cdc.Image" style='zoom: 1.2'>
+                    <p style="font-size: 16px;"> Referenced from:
+                    <a v-bind:href="cdc.Link" target="_blank">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
+                    </p>
+                </li>                        
+                <!--li v-for="cdc in final_array" :key="cdc.chapterID">
+                    <div class='chapter-text-image'>
+                        <div class='chapter'>
+                            <b>{{cdc.chapterID}}</b>  
+                        </div>
+                        <div class='text-image'>
+                            <div class='text' v-html="cdc.Text"></div>
+                            <br>
+                            <div class='image'>
+                                <img :src="cdc.Image" style='zoom: 1.2'>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
-            </li>
-        </ul>
-        <table class="manual">
-            <tr>
-                <th>Content</th>
-                <th>Manual</th>
-                <th>Chapter/ Section</th>
-                <th>Link to Chapter/ Section</th>
-            </tr>
-            <tr v-for='cdc in final_array' :key="cdc.chapterID">
-                <td>{{cdc.Content}}</td>
-                <td>{{cdc.Manual}}</td>
-                <td>{{cdc.chapterID}}: {{cdc.Chapter}}</td>
-                <td style="word-break:break-all;"><a v-bind:href="cdc.Link">{{cdc.Link}}</a></td>
-            </tr>
-        </table>
+                    <br>
+                </li-->
+            </ul>
+            <!--table class="manual">
+                <tr>
+                    <th>Content</th>
+                    <th>Manual</th>
+                    <th>Chapter/ Section</th>
+                    <th>Link to Chapter/ Section</th>
+                </tr>
+                <tr v-for='cdc in final_array' :key="cdc.chapterID">
+                    <td>{{cdc.Content}}</td>
+                    <td>{{cdc.Manual}}</td>
+                    <td>{{cdc.chapterID}}: {{cdc.Chapter}}</td>
+                    <td style="word-break:break-all;"><a v-bind:href="cdc.Link">{{cdc.Link}}</a></td>
+                </tr>
+            </table-->
+        </div>
     </div>
+    
     <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
       <i class="bi bi-arrow-left"></i>
     </button>
@@ -200,27 +229,51 @@ export default {
   font-family: "Roboto", sans-serif;
 }
 
+#entire-content {
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+}
+
+#buttons {
+    position:sticky;
+    top: 30px;
+    height: 20vh;
+    width: 20%;
+}
+
 #specific-results {
+    width: 80%;
+    align-items: left;    
     background-color: #ffffff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 40px;
     font-size:20px;
     margin-bottom:12%;
+    justify-content:center;
 }
 
 #back {
-  width:fit-content;
-  height:fit-content;
-  font-size: 1.5rem;
-  box-shadow:none;
-  border:none;
+    width:fit-content;
+    height:fit-content;
+    font-size: 1.5rem;
+    box-shadow:none;
+    border:none;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #273B8C;
 }
 
 ul {
     list-style-type: none;
 }
-
+/** 
 .chapter-text-image {
     display: flex;
     flex-direction: row;
@@ -237,7 +290,7 @@ ul {
     width: 100%;
     align-items: right;
 }
-
+*/
 .image {
     display: flex;
     justify-content:center;
@@ -247,28 +300,33 @@ img {
     width: 50%;
 }
 */
+#current_btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  background: gold;    
+}
 
 button {
-    width: 280px;
+    width: 200px;
     margin: 20 auto;
     display: inline;
     padding: 30;
-    height: 80px;
+    height: 50px;
     background: #273B8C;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border-radius: 15px;
     font-style: normal;
     font-weight: normal;
     color: #FFFFFF;
-    font-size:26px;
+    font-size:15px;
 }
 
 .action_btn {
     width: 100%;
     display: flex;
-    gap: 60px;
+/*    gap: 60px; */
     margin-bottom:15px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -290,5 +348,10 @@ td {
 #link{
   font-weight:bold;
 }
+
+.tab2 {
+ margin-right: 1.7em
+}
+
 </style>
 
