@@ -236,6 +236,9 @@ export default {
 }
 
 #buttons {
+    position:sticky;
+    top: 30px;
+    height: 100vh;
     width: 20%;
 }
 
