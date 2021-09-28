@@ -4,19 +4,18 @@
             <div class="action_btn" v-show='level_4_parameter.length != 0'>
                 <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <br>
+            <br v-show='level_4_parameter.length != 0'>
             <div class="action_btn" v-show='level_3_parameter.length != 0'>
                 <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <br>
+            <br v-show='level_3_parameter.length != 0'>
             <div class="action_btn" v-show='level_2_parameter.length != 0'>
                 <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <br>
+            <br v-show='level_2_parameter.length != 0'>
             <div class="action_btn" v-show='level_1_parameter.length != 0'>
                 <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <br>
         </div>
         <!--h3><b>{{this.choice2}}</b></h3-->
         <div id = "specific-results">
