@@ -12,7 +12,7 @@
     <h6>Please select your role:</h6>
     <div class="button-group">
       <UserTypeButton label="Traffic Engineers" icon="briefcase" @click="updateChoice('role','engineer')" link="/search"/>
-      <UserTypeButton label="Consultants" icon="chat-dots"  @click="updateChoice('role','consultants')" link="/search"/>
+      <UserTypeButton label="Consultants" icon="chat-dots"  @click="updateChoice('role','consultant')" link="/search"/>
       <UserTypeButton label="General Public" icon="people"  @click="updateChoice('role','public')" link="/search"/>
       <UserTypeButton label="Admin" icon="lock" link="/login"/>
     </div>
