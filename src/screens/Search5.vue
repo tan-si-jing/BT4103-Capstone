@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Yes" @click="storeChange('changeJunctionYes');updateFirebase()"/>
-      <SearchParamButton text="No" @click="storeChange('changeJunctionNo');updateFirebase()"/>
+      <SearchParamButton text="Yes" @click="storeChange('changeJunctionYes')"/>
+      <SearchParamButton text="No" @click="storeChange('changeJunctionNo')"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>
@@ -56,7 +56,6 @@ methods:{
   },
   updateChoice(input,value){
     this.choice[input] = value
-
     let storedChoice = this.openStorage()
     if(!storedChoice) storedChoice = {}
 
@@ -65,9 +64,11 @@ methods:{
   },
 
   storeChange(text){
+    this.grad_curv_change= text
     this.updateChoice('grad_curv_change',text);
     this.displayChange();
-   this.$router.push({name: 'level2results'})
+    this.updateFirebase();
+    this.$router.push({name: 'level2results'})
   },
   displayChange(){
     console.log(this.choice.role)
