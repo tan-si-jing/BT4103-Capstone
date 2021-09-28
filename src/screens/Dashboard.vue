@@ -27,21 +27,21 @@
             <SpecificTable/>
           </div>
           <div>
-            <canvas id="roadtype-chart"></canvas>
+            <canvas id="roadclass-chart"></canvas>
           </div>
-          <div>
-            <canvas id="changejunction-chart"></canvas>
-          </div>
+          
         </div>
         <!-- row 3 -->
         <div class="graphThirdRow">
           <div>
-            <canvas id="roadclass-chart"></canvas>
+            <canvas id="roadtype-chart"></canvas>
           </div>
           <div>
             <canvas id="designspeed-chart"></canvas>
           </div>
-          
+          <div>
+            <canvas id="changejunction-chart"></canvas>
+          </div>
         </div>
       </div>
       
@@ -207,14 +207,14 @@ export default {
 }
 .graphSecondRow {
   display: grid;
-  grid-template-columns: 49% 24% 23%;
+  grid-template-columns: 49% 49%;
   grid-gap: 2%;
   margin-bottom: 2rem;
   height: 350px;
 }
 .graphThirdRow {
   display: grid;
-  grid-template-columns: 49% 49%;
+  grid-template-columns: 30% 43% 23%;
   grid-gap: 2%;
   margin-bottom: 1rem;
   height: 350px;
