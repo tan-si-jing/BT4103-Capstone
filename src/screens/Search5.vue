@@ -44,7 +44,7 @@ export default {
   },
   data() {
     return{
-      grad_curv_change:'',
+      gradcurvchange:'',
     }
   },
 methods:{
@@ -64,8 +64,8 @@ methods:{
   },
 
   storeChange(text){
-    this.grad_curv_change= text
-    this.updateChoice('grad_curv_change',text);
+    this.gradcurvchange= text
+    this.updateChoice('gradcurvchange',text);
     this.displayChange();
     this.updateFirebase();
     this.$router.push({name: 'level2results'})
@@ -76,7 +76,7 @@ methods:{
     console.log(this.choice.roadClass)
     console.log(this.choice.roadType)
     console.log(this.choice.designSpeed)
-    console.log(this.choice.grad_curv_change)
+    console.log(this.choice.gradcurvchange)
   },
   updateFirebase(){
     //update parameters to firebase
@@ -86,7 +86,7 @@ methods:{
       [this.choice.roadClass]: firebase.firestore.FieldValue.increment(1),
       [this.choice.roadType]: firebase.firestore.FieldValue.increment(1),
       [this.choice.designSpeed]: firebase.firestore.FieldValue.increment(1),
-      [this.choice.grad_curve_change]: firebase.firestore.FieldValue.increment(1)
+      [this.choice.gradcurvchange]: firebase.firestore.FieldValue.increment(1)
     })
   },
 },
