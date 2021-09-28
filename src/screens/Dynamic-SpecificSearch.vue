@@ -1,66 +1,69 @@
 <template>
-    <div>
-        <div class="action_btn">
-            <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+    <div id = "entire-content">
+        <div id = "buttons">
+            <div class="action_btn" v-show='level_4_parameter.length != 0'>
+                <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
+            <br>
+            <div class="action_btn" v-show='level_3_parameter.length != 0'>
+                <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
+            <br>
+            <div class="action_btn" v-show='level_2_parameter.length != 0'>
+                <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
+            <br>
+            <div class="action_btn" v-show='level_1_parameter.length != 0'>
+                <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
+            </div>
+            <br>
         </div>
-        <br>
-        <div class="action_btn">
-            <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
-        </div>
-        <br>
-        <div class="action_btn">
-            <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
-        </div>
-        <br>
-        <div class="action_btn">
-            <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
-        </div>
-        <br>
-    </div>
-    <h3><b>{{this.choice2}}</b></h3>
-    <div id = "specific-results">
-        <ul>
-            <li v-for="cdc in final_array" :key="cdc.chapterID">
-                <p><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
-                <p v-html="cdc.Text"></p>
-                <div class='image'>
-                    <img :src="cdc.Image" style='zoom: 1.2'>
-                </div>
-                <p style="font-size: 16px;"> Referenced from:
-                  <a v-bind:href="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}} {{cdc.Page}}</a>
-                </p>
-            </li>                        
-            <!--li v-for="cdc in final_array" :key="cdc.chapterID">
-                <div class='chapter-text-image'>
-                    <div class='chapter'>
-                        <b>{{cdc.chapterID}}</b>  
+        <!--h3><b>{{this.choice2}}</b></h3-->
+        <div id = "specific-results">
+            <ul>
+                <li v-for="cdc in final_array" :key="cdc.chapterID">
+                    <p><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
+                    <p v-html="cdc.Text"></p>
+                    <div class='image'>
+                        <img :src="cdc.Image" style='zoom: 1'>
                     </div>
-                    <div class='text-image'>
-                        <div class='text' v-html="cdc.Text"></div>
-                        <br>
-                        <div class='image'>
-                            <img :src="cdc.Image" style='zoom: 1.2'>
+                    <p style="font-size: 16px;"> Referenced from:
+                    <a v-bind:href="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
+                    </p>
+                </li>                        
+                <!--li v-for="cdc in final_array" :key="cdc.chapterID">
+                    <div class='chapter-text-image'>
+                        <div class='chapter'>
+                            <b>{{cdc.chapterID}}</b>  
+                        </div>
+                        <div class='text-image'>
+                            <div class='text' v-html="cdc.Text"></div>
+                            <br>
+                            <div class='image'>
+                                <img :src="cdc.Image" style='zoom: 1.2'>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <br>
-            </li-->
-        </ul>
-        <!--table class="manual">
-            <tr>
-                <th>Content</th>
-                <th>Manual</th>
-                <th>Chapter/ Section</th>
-                <th>Link to Chapter/ Section</th>
-            </tr>
-            <tr v-for='cdc in final_array' :key="cdc.chapterID">
-                <td>{{cdc.Content}}</td>
-                <td>{{cdc.Manual}}</td>
-                <td>{{cdc.chapterID}}: {{cdc.Chapter}}</td>
-                <td style="word-break:break-all;"><a v-bind:href="cdc.Link">{{cdc.Link}}</a></td>
-            </tr>
-        </table-->
+                    <br>
+                </li-->
+            </ul>
+            <!--table class="manual">
+                <tr>
+                    <th>Content</th>
+                    <th>Manual</th>
+                    <th>Chapter/ Section</th>
+                    <th>Link to Chapter/ Section</th>
+                </tr>
+                <tr v-for='cdc in final_array' :key="cdc.chapterID">
+                    <td>{{cdc.Content}}</td>
+                    <td>{{cdc.Manual}}</td>
+                    <td>{{cdc.chapterID}}: {{cdc.Chapter}}</td>
+                    <td style="word-break:break-all;"><a v-bind:href="cdc.Link">{{cdc.Link}}</a></td>
+                </tr>
+            </table-->
+        </div>
     </div>
+    
     <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
       <i class="bi bi-arrow-left"></i>
     </button>
@@ -210,13 +213,26 @@ export default {
   font-family: "Roboto", sans-serif;
 }
 
+#entire-content {
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+}
+
+#buttons {
+    width: 20%;
+}
+
 #specific-results {
+    width: 80%;
+    align-items: left;    
     background-color: #ffffff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     padding: 40px;
     font-size:20px;
     margin-bottom:12%;
+    justify-content:center;
 }
 
 #back {
@@ -230,7 +246,7 @@ export default {
 ul {
     list-style-type: none;
 }
-
+/** 
 .chapter-text-image {
     display: flex;
     flex-direction: row;
@@ -247,7 +263,7 @@ ul {
     width: 100%;
     align-items: right;
 }
-
+*/
 .image {
     display: flex;
     justify-content:center;
@@ -259,7 +275,7 @@ img {
 */
 
 button {
-    width: 280px;
+    width: 200px;
     margin: 20 auto;
     display: inline;
     padding: 30;
@@ -276,9 +292,9 @@ button {
 .action_btn {
     width: 100%;
     display: flex;
-    gap: 60px;
+/*    gap: 60px; */
     margin-bottom:15px;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

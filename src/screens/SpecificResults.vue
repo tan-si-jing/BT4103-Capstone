@@ -45,7 +45,9 @@ data() {
   bottom: 0px;
   left: 0px;
 }
-
+.container {
+  width: 80vw;
+}
 
 .header {
   font-size: 5vh;
