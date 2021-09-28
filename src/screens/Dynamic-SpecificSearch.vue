@@ -41,10 +41,10 @@
                     <p><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
                     <p v-html="cdc.Text"></p>
                     <div class='image'>
-                        <img :src="cdc.Image" style='zoom: 1'>
+                        <img :src="cdc.Image" style='zoom: 1.2'>
                     </div>
                     <p style="font-size: 16px;"> Referenced from:
-                    <a v-bind:href="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
+                    <a v-bind:href="cdc.Link" target="_blank">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
                     </p>
                 </li>                        
                 <!--li v-for="cdc in final_array" :key="cdc.chapterID">
@@ -238,7 +238,7 @@ export default {
 #buttons {
     position:sticky;
     top: 30px;
-    height: 100vh;
+    height: 20vh;
     width: 20%;
 }
 
