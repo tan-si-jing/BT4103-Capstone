@@ -144,7 +144,7 @@ button {
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 0.75rem 2rem;
+  padding: 5px;
   width: 30%;
   height: 50%;
 }
