@@ -5,15 +5,15 @@ export const barChartData = {
     datasets: [
       {
         label: "Traffic Engineers",
-        data: [40, 30],
+        data: [0, 0],
         backgroundColor: '#40aaad'
       }, {
         label: "Consultants",
-        data: [4, 25],
+        data: [0, 0],
         backgroundColor: '#f5a732'
       }, {
         label: "General Public",
-        data: [0, 10],
+        data: [0, 0],
         backgroundColor: '#9fa4a7'
       }
     ]

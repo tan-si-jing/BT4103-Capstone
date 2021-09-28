@@ -85,11 +85,24 @@ export default {
     };
   },
   methods: {
-    getValues: function(roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart) {
+    getValues: function(donutChart, barChart, roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart) {
       database.collection('search_parameters')
               .doc(this.docID)
               .get()
               .then(querySnapShot => {
+                // donut chart - user type breakdown
+                donutChart.data.datasets[0].data[0] = querySnapShot.data().engineerSpecific + querySnapShot.data().engineerGuide;
+                donutChart.data.datasets[0].data[1] = querySnapShot.data().consultantSpecific + querySnapShot.data().consultantGuide;
+                donutChart.data.datasets[0].data[2] = querySnapShot.data().publicSpecific + querySnapShot.data().publicGuide;
+                donutChart.update();
+                // bar chart - comparison of search options
+                barChart.data.datasets[0].data[0] = querySnapShot.data().engineerSpecific;
+                barChart.data.datasets[0].data[1] = querySnapShot.data().engineerGuide;
+                barChart.data.datasets[1].data[0] = querySnapShot.data().consultantSpecific;
+                barChart.data.datasets[1].data[1] = querySnapShot.data().consultantGuide;
+                barChart.data.datasets[2].data[0] = querySnapShot.data().publicSpecific;
+                barChart.data.datasets[2].data[1] = querySnapShot.data().publicGuide;
+                barChart.update();
                 // road classification
                 roadClassChart.data.datasets[0].data[0] = querySnapShot.data().expressway;
                 roadClassChart.data.datasets[0].data[1] = querySnapShot.data().semiExpressway;
@@ -126,14 +139,14 @@ export default {
     const chart4 = document.getElementById('roadtype-chart').getContext("2d", {alpha: false});
     const chart5 = document.getElementById('designspeed-chart').getContext("2d", {alpha: false});
     const chart6 = document.getElementById('changejunction-chart').getContext("2d", {alpha: false});
-    new Chart(chart1, this.donutChartData);
-    new Chart(chart2, this.barChartData);
+    var donutChart = new Chart(chart1, this.donutChartData);
+    var barChart = new Chart(chart2, this.barChartData);
     var roadClassChart = new Chart(chart3, this.roadClassData);
     var roadTypeChart = new Chart(chart4, this.roadTypeData);
     var designSpeedChart = new Chart(chart5, this.designSpeedData);
     var changeJunctionChart = new Chart(chart6, this.changeJunctionData);
     // firebase
-    this.getValues(roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart);
+    this.getValues(donutChart, barChart, roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart);
   }
 };
 </script>
