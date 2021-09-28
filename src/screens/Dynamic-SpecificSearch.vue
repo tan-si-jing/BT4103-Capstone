@@ -1,6 +1,10 @@
 <template>
     <div id = "entire-content">
         <div id = "buttons">
+            <div class="action_btn">
+                <button id='current_btn'>{{this.choice2}}</button>
+            </div>
+            <br>
             <div class="action_btn" v-show='level_4_parameter.length != 0'>
                 <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
@@ -272,6 +276,11 @@ img {
     width: 50%;
 }
 */
+#current_btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  background: gold;    
+}
 
 button {
     width: 200px;

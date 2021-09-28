@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <p class="header">Results</p>
+    <p class="header">Specific Results Page</p>
     <div class="container">
       <DynamicTable></DynamicTable>   
     </div>
