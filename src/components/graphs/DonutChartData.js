@@ -5,7 +5,7 @@ export const donutChartData = {
     datasets: [
       {
         label: "Number of Users",
-        data: [5, 2, 1],
+        data: [0, 0, 0],
         backgroundColor: [
           '#40aaad',
           '#f5a732',
