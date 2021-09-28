@@ -1,7 +1,7 @@
 <template>
   <div class="summary">
     <p class="figure"> {{ this.numVisits }} </p>
-    <p class="description"> NO. OF VISITS </p>
+    <p class="description"> VISITS IN TOTAL </p>
   </div>
 </template>
 
