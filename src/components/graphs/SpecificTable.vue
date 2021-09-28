@@ -30,7 +30,6 @@ export default {
       CornerRad: 0,
       Crossfall: 0,
       CurveLength: 0,
-      DesignSpeed: 0,
       Grade: 0,
       HAlignment: 0,
       LaneWidth: 0,
@@ -56,7 +55,6 @@ export default {
                 this.CornerRad = querySnapShot.data()[ 'Corner Radius' ]
                 this.Crossfall = querySnapShot.data()[ 'Crossfall' ]
                 this.CurveLength = querySnapShot.data()[ 'Curve Length' ]
-                this.DesignSpeed = querySnapShot.data()[ 'Design Speed' ]
                 this.Grade = querySnapShot.data()[ 'Grade' ]
                 this.HAlignment = querySnapShot.data()[ 'Horizontal Alignment' ]
                 this.LaneWidth = querySnapShot.data()[ 'Lane Width' ]
@@ -76,7 +74,6 @@ export default {
         {name: "Corner Radius", value: this.CornerRad},
         {name: "Crossfall", value: this.Crossfall},
         {name: "Curve Length", value: this.CurveLength},
-        {name: "Design Speed", value: this.DesignSpeed},
         {name: "Grade", value: this.Grade},
         {name: "Horizontal Alignment", value: this.HAlignment},
         {name: "Lane Width", value: this.LaneWidth},
