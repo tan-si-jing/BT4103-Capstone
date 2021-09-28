@@ -1,22 +1,35 @@
 <template>
     <div id = "entire-content">
         <div id = "buttons">
+            <p>Currently Viewing</p> 
             <div class="action_btn">
                 <button id='current_btn'>{{this.choice2}}</button>
             </div>
-            <br>
+            <div class="arrow">
+                <i class="bi bi-arrow-up"></i>
+            </div>
+            <p>Other Relevant Results</p>
             <div class="action_btn" v-show='level_4_parameter.length != 0'>
                 <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
             <br v-show='level_4_parameter.length != 0'>
+            <div class="arrow" v-show='level_4_parameter.length != 0'>
+                <i class="bi bi-arrow-up"></i>
+            </div>
             <div class="action_btn" v-show='level_3_parameter.length != 0'>
                 <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
             <br v-show='level_3_parameter.length != 0'>
+            <div class="arrow" v-show='level_3_parameter.length != 0'>
+                <i class="bi bi-arrow-up"></i>
+            </div>
             <div class="action_btn" v-show='level_2_parameter.length != 0'>
                 <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
             <br v-show='level_2_parameter.length != 0'>
+            <div class="arrow" v-show='level_2_parameter.length != 0'>
+                <i class="bi bi-arrow-up"></i>
+            </div>
             <div class="action_btn" v-show='level_1_parameter.length != 0'>
                 <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
