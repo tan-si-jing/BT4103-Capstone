@@ -18,16 +18,19 @@
             <canvas id="donut-chart"></canvas>
           </div>
           <div>
-            1
+            <canvas id="bar-chart"></canvas>
           </div>
         </div>
         <!-- row 2 -->
         <div class="graphSecondRow">
           <div>
-            <canvas id="bar-chart"></canvas>
+            <SpecificTable/>
           </div>
           <div>
-            <SpecificTable/>
+            <canvas id="roadtype-chart"></canvas>
+          </div>
+          <div>
+            <canvas id="changejunction-chart"></canvas>
           </div>
         </div>
         <!-- row 3 -->
@@ -36,14 +39,9 @@
             <canvas id="roadclass-chart"></canvas>
           </div>
           <div>
-            <canvas id="roadtype-chart"></canvas>
-          </div>
-          <div>
             <canvas id="designspeed-chart"></canvas>
           </div>
-          <div>
-            <canvas id="changejunction-chart"></canvas>
-          </div>
+          
         </div>
       </div>
       
@@ -196,14 +194,14 @@ export default {
 }
 .graphSecondRow {
   display: grid;
-  grid-template-columns: 42% 56%;
+  grid-template-columns: 49% 24% 23%;
   grid-gap: 2%;
   margin-bottom: 2rem;
   height: 350px;
 }
 .graphThirdRow {
   display: grid;
-  grid-template-columns: 30% 20% 28% 17.5%;
+  grid-template-columns: 49% 49%;
   grid-gap: 1.5%;
   margin-bottom: 1rem;
   height: 375px;
