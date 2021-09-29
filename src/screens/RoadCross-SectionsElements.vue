@@ -16,7 +16,7 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
                   CDC 10.5.1 - General (page 212)</a></p>
-                
+
               <p style="padding-top:3%"><b class="tab2">1.2</b><b>Sidetable, Drain, Footpath and Divider</b></p>
                 <p>a) Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
                     other categories of road. The services verge and landscaping shall be turfed and sloped as shown in the Standard 
@@ -34,6 +34,111 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=215" target='_blank'>
                   CDC 10.5.6 - Sidetable, Train, Footpath and Divider (page 215)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.1</b><b>Kerbs</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER1.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=2" target="_blank">
+                  SDRE Chapter 3 - 1 (page 2)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.2</b><b>Kerbs Painting (1 of 2)</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER2.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=3" target="_blank">
+                  SDRE Chapter 3 - 2 (page 3)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.3</b><b>Kerbs Painting (2 of 2)</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER3.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=4" target="_blank">
+                  SDRE Chapter 3 - 3 (page 4)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.4</b><b>Civic District Kerb - Type C1, C2, C3 & C4</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER4.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=5" target="_blank">
+                  SDRE Chapter 3 - 4 (page 5)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.5</b><b>Footpath Ramp - Type 1 Pedestrian Crossing Points</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER5.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=6" target="_blank">
+                  SDRE Chapter 3 - 5 (page 6)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.6</b><b>Footpath Ramp - Type 2 Pedestrian Crossing Points</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER6.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=7" target="_blank">
+                  SDRE Chapter 3 - 6 (page 7)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.7</b><b>Footpath Ramp - Traffic Island</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER7.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=8" target="_blank">
+                  SDRE Chapter 3 - 7 (page 8)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.8</b><b>Footpath Ramp - Side Road</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER8.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=9" target="_blank">
+                  SDRE Chapter 3 - 8 (page 9)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.9</b><b>Footpath Ramp - Driveway</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER9.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=10" target="_blank">
+                  SDRE Chapter 3 - 9 (page 10)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.10</b><b>Footpath Ramp - Footpath Beside Open Drain</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER10.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=11" target="_blank">
+                  SDRE Chapter 3 - 10 (page 11)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.11</b><b>Cast-In-Situ Concrete Pavement</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER11.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=12" target="_blank">
+                  SDRE Chapter 3 - 11 (page 12)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.12</b><b>Homogeneous Tactile Tiles and Arrangement of Tactile Tiles</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER12.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=13" target="_blank">
+                  SDRE Chapter 3 - 12 (page 13)</a></p>
+
+              <p style="padding-top:3%"><b class="tab2">1.2.13</b><b>Kerb With Slot Holes</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap3-KER13.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=14" target="_blank">
+                  SDRE Chapter 3 - 13 (page 14)</a></p>
+
             </div>
           </td>
           </tr>
