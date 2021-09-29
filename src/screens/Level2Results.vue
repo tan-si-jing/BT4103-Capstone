@@ -84,7 +84,7 @@ methods: {
         return JSON.parse(localStorage.getItem('choice'))
   },
   back() {
-    this.$router.push({path: "/search5"})
+    this.$router.push({path: "/contentpage"})
   }
 },
 created(){

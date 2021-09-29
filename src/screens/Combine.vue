@@ -2,7 +2,7 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-            <td scope="header">16 &nbsp; Combination of Horizontal & Vertical Alignment</td>
+            <td scope="header">17 &nbsp; Combination of Horizontal & Vertical Alignment</td>
           </tr>
         </thead>
         <tbody>
@@ -12,7 +12,7 @@
 
                 <div class="title" @click="collapse()">
                   <div class="title-text">
-                    <b class="tab2">16.1</b>Combination of Horizontal & Vertical Alignment
+                    <b class="tab2">17.1</b>Combination of Horizontal & Vertical Alignment
                   </div>
                   <div class="title-icon">
                     <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>

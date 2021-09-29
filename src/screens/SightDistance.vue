@@ -2,14 +2,14 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">11 &nbsp; Sight Distance</td>
+          <td scope="header">12 &nbsp; Sight Distance</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b class="tab2">11.1</b><b>Stopping Sight Distance</b></p>
+                <p style="padding-top:3%"><b class="tab2">12.1</b><b>Stopping Sight Distance</b></p>
                 <p> The minimum stopping sight distance for various road gradient shall be determined by the following formula:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.2.1.png">
@@ -18,7 +18,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.1 - Stopping Sight Distance (page 203)</a></p>
 
-                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">11.2</b><b>Intermediate Sight Distance</b></p>
+                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">12.2</b><b>Intermediate Sight Distance</b></p>
                     <p v-show="isUndivided">a) Intermediate sight distance is equal to 2 times stopping sight distance. </p>
                     <p v-show="isUndivided">b) Intermediate sight distance is only applicable to undivided 2-lane road. </p>
                     <p v-show="isUndivided">c) Where intermediate sight distance is unachievable because of site constraint, 
@@ -28,7 +28,7 @@
                   <a v-show="isUndivided" href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.2 - Intermediate Sight Distance (page 203)</a></p>
 
-                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">11.3</b><b>Overtaking Sight Distance</b></p>
+                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">12.3</b><b>Overtaking Sight Distance</b></p>
                     <p v-show="isUndivided">The following sight distances are to be considered in the design. If overtaking sight distance 
                         for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
                       <p v-show="isUndivided" >Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
@@ -40,7 +40,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
                   CDC 10.4.2.2.3 - Overtaking Sight Distance (page 204)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">11.4</b><b>Intersection Sight Distance</b></p>
+                <p style="padding-top:3%"><b class="tab3">12.4</b><b>Intersection Sight Distance</b></p>
                     <p>The desirable intersection sight distance at unsignalised junction can be derived 
                         from the following formula and to be read in conjunction with Figure 10.2.</p>
                     <div class="img-container2">
@@ -55,7 +55,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=226" target='_blank'>
                   CDC Figure 10.2 (page 226)</a></p>
                 
-                <p style="padding-top:3%"><b class="tab3">11.5</b><b>Sight Distance on Horizontal Curve</b></p>
+                <p style="padding-top:3%"><b class="tab3">12.5</b><b>Sight Distance on Horizontal Curve</b></p>
                     <p>On a horizontal curve where the obstruction on the inside of the curve cannot be removed, 
                         offset distance to the obstruction shall be provided. 
                         The offset distance can be derived from the following formula and shall be read in conjunction with Figure 10.3.</p>

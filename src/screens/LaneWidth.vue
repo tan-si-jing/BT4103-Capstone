@@ -77,12 +77,12 @@
                 <p v-show="isSlip" style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212">
                   CDC 10.5.2.4.3 (page 214)</a></p>
-                    <div class="img-container">
+                    <div v-show="isSlip" class="img-container">
                         <img src="../assets/Table10-13.png">
                     </div>
                     Notes:
-                    <p>Additional 0.3m lane width shall be added next to parapet/ barrier</p>
-                <p style="font-size: 16px;"> Referenced from:
+                    <p v-show="isSlip">Additional 0.3m lane width shall be added next to parapet/ barrier</p>
+                <p v-show="isSlip" style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
                   CDC 10.5.2.4.3 - Slip Road (page 214)</a></p>
 

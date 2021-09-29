@@ -42,7 +42,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-7_DIR_1-8-JULY_2020.pdf#page=5" target="_blank">
                   SDRE Chapter 7 - 4 (page 5)</a></p>
 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Number for Directional Signs</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.5</b><b>Number for Directional Signs</b></p>
                   <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR5.png">
                     </div>
@@ -50,7 +50,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-7_DIR_1-8-JULY_2020.pdf#page=6" target="_blank">
                   SDRE Chapter 7 - 5 (page 6)</a></p>
 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Arrows for Directional Signs</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.6</b><b>Arrows for Directional Signs</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR6.png">
                     </div>
@@ -59,7 +59,7 @@
                   SDRE Chapter 7 - 6 (page 7)</a></p>
                 
 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Notes for Directional Signs (Sheet 1 of 2)</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.7</b><b>Notes for Directional Signs (Sheet 1 of 2)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR7.png">
                     </div>
@@ -67,7 +67,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-7_DIR_1-8-JULY_2020.pdf#page=8" target="_blank">
                   SDRE Chapter 7 - 7 (page 8)</a></p>
                 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Notes for Directional Signs (Sheet 2 of 2)</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.8</b><b>Notes for Directional Signs (Sheet 2 of 2)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR8.png">
                     </div>
