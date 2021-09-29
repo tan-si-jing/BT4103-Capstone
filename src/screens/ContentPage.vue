@@ -1,10 +1,28 @@
 <template>
   <div class="wrapper">
     <p class="header">Content Page for Step-by-Step Guide</p>
-    <span v-if="!displayInfo" v-on:click="toggleDisplay()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
-    <span v-if="displayInfo" v-on:click="toggleDisplay()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
-    <div class="container" v-if="displayInfo">
+    <span v-if="!displayInfo1" v-on:click="toggleDisplay1()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+    <span v-if="displayInfo1" v-on:click="toggleDisplay1()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+    <div class="container" v-if="displayInfo1">
         <PageOne></PageOne>
+    </div>
+
+    <span v-if="!displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+    <span v-if="displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+    <div class="container" v-if="displayInfo2">
+        <PageTwo></PageTwo>
+    </div>
+
+    <span v-if="!displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+    <span v-if="displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+    <div class="container" v-if="displayInfo2">
+        <PageThree></PageThree>
+    </div>
+
+    <span v-if="!displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+    <span v-if="displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+    <div class="container" v-if="displayInfo2">
+        <PageFour></PageFour>
     </div>
 
     <div class="pages">
@@ -23,25 +41,43 @@
 
 <script>
 import PageOne from "./Page1.vue"
+import PageTwo from "./Page2.vue"
+import PageThree from "./Page3.vue"
+import PageFour from "./Page4.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
 name: "Results",
 components: {
   "PageOne": PageOne,
+  "PageTwo": PageTwo,
+  "PageThree": PageThree,
+  "PageFour": PageFour,
   "PageCircle2": PageCircle2
 },
 props: {},
 data() {
   return {
-    displayInfo: true,
+    displayInfo1: true,
+    displayInfo2: true,
+    displayInfo3: true,
+    displayInfo4: true,
     road: require("../assets/road.png"),
     mascot: require("../assets/mascot.png"),
   };
 },
 methods: {
-    toggleDisplay: function() {
-        this.displayInfo = !this.displayInfo;
+    toggleDisplay1: function() {
+        this.displayInfo1 = !this.displayInfo1;
+    },
+    toggleDisplay2: function() {
+        this.displayInfo2 = !this.displayInfo2;
+    },
+    toggleDisplay3: function() {
+        this.displayInfo3 = !this.displayInfo2;
+    },
+    toggleDisplay4: function() {
+        this.displayInfo4 = !this.displayInfo2;
     },
     level2() {
         this.$router.push({path: "/level2results"})
