@@ -38,7 +38,7 @@
         <div id = "specific-results">
             <ul>
                 <li v-for="cdc in final_array" :key="cdc.chapterID">
-                    <p><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
+                    <p style="padding-top:3%"><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
                     <p v-html="cdc.Text"></p>
                     <div class='image'>
                         <img :src="cdc.Image" style='zoom: 1.2'>
@@ -294,12 +294,17 @@ ul {
 .image {
     display: flex;
     justify-content:center;
+    width:80%;
+    margin-left: 3em; 
+   /* margin-top: 5%;
+    margin-bottom: 5%; */
+
 }
-/** 
+
 img {
-    width: 50%;
+    width: 100%;
 }
-*/
+
 #current_btn {
   pointer-events: none;
   cursor: not-allowed;
