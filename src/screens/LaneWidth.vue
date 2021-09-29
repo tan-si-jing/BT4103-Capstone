@@ -40,17 +40,17 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=225">
                   CDC Figure 10.1 (page 225)</a></p>
 
-                <p v-show="this.choice.roadType=slipRoad" style="padding-top:3%"><b>8.3</b></p>
-                    <p v-show="this.choice.roadType = slipRoad">For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
+                <p v-show="isSlip" style="padding-top:3%"><b>8.3</b></p>
+                    <p v-show="isSlip">For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
                         (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
                         the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
                         roads are shown in Table 10.13:</p>
-                    <div v-show="this.choice.roadType = slipRoad" class="img-container3">
-                        <img v-show="this.choice.roadType = slipRoad" src="../assets/Table10-13.png">
+                    <div v-show="isSlip" class="img-container3">
+                        <img v-show="isSlip" src="../assets/Table10-13.png">
                     </div>
-                    Notes:
-                    <p v-show="this.choice.roadType = slipRoad">Additional 0.3m lane width shall be added next to parapet/ barrier</p>
-                <p v-show="this.choice.roadType = slipRoad" style="font-size: 16px;"> Referenced from:
+                    <a v-show="isSlip" >Notes:</a>
+                    <p v-show="isSlip"> Additional 0.3m lane width shall be added next to parapet/ barrier</p>
+                <p v-show="isSlip" style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212">
                   CDC 10.5.2.4.3 (page 214)</a></p>
 
@@ -141,23 +141,16 @@ export default {
           designSpeed: "",
           grad_curv_change:"",
           specific_param:"",
-        }
+        },
+        isSlip: this.$parent.choice.roadType === 'slipRoad' ? true : false
       }
     },
     methods:{
       openStorage(){
         return JSON.parse(localStorage.getItem('choice'))
       },
-      displayChange(){
-        console.log(this.choice.role)
-        console.log(this.choice.roadDesign)
-        console.log(this.choice.roadClass)
-        console.log(this.choice.roadType)
-        console.log(this.choice.designSpeed)
-        console.log(this.choice.gradcurvchange)
-      },
     },
-    created(){
+    mounted(){
       const storedChoice = this.openStorage()
       if (storedChoice){
         this.choice = {
@@ -165,7 +158,7 @@ export default {
           ...storedChoice
         }
       }
-      this.displayChange()
+      console.log("Lane Width: " + this.isSlip)
     }
 }
 

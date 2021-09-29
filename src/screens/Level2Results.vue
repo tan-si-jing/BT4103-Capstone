@@ -70,8 +70,6 @@ components: {
   "LateralClearance": LateralClearance,
   "PageCircle2": PageCircle2
 },
-props: {},
-
 methods: {
   level3() {
     this.$router.push({path: "/level3results"})
@@ -82,10 +80,22 @@ methods: {
   level5() {
     this.$router.push({path: "/level5results"})
   },
+  openStorage(){
+        return JSON.parse(localStorage.getItem('choice'))
+  },
   back() {
     this.$router.push({path: "/search5"})
   }
 },
+created(){
+      const storedChoice = this.openStorage()
+      if (storedChoice){
+        this.choice = {
+          ...this.choice,
+          ...storedChoice
+        }
+      }
+ },
 data() {
   return {
     road: require("../assets/road.png"),
