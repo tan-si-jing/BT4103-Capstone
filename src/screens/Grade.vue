@@ -11,26 +11,24 @@
             <div class="content">
               <p><b class="tab2">2.1</b><b>Main Carriageway</b></p>
                 <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-                <div class="img-container">
-                    <img src="../assets/Table10-9.png">
-                </div>
-                <br>
-                <br>
-                Notes:
+                <p>Notes:</p>
                 <p>1) Minimum gradient for all roads is 0.4%.</p>
                 <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
                 <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
                 <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
+                <div class="img-container">
+                    <img src="../assets/Table10-9.png">
+                </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
                   CDC 10.4.3.1.1 - Main Carriageway (page 209)</a></p>
 
               <p style="padding-top:3%"><b class="tab2">2.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
-                <div class="img-container3">
+                <div class="img-container">
                     <img src="../assets/Table10-10.png">
                 </div>                
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
                   CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a></p>
             </div>
           </td>
@@ -72,7 +70,7 @@
 <style scoped>
 table {
     width: 70vw;
-    height: 60vh;
+    height: auto;
     margin-top: 5vh;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -142,16 +140,10 @@ tbody tr:last-child td{
     max-width:80%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 5%;
+    /*margin-top: 5%;
+    margin-bottom:3%;*/
 }
 
-.img-container3{
-    max-width:80%;
-    height: auto;
-    margin-left: 3em; 
-    margin-top: 5%;
-    margin-bottom:3%;
-}
 
 /* Resize images to standardise size */
 .img-container img{
@@ -159,10 +151,6 @@ tbody tr:last-child td{
     height: auto;
 }
 
-.img-container3 img{
-    width: 100%;
-    height: auto;
-}
 
 p {
   font-size:20px;

@@ -15,7 +15,7 @@
                         <img src="../assets/10.4.2.2.1.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.1 - Stopping Sight Distance (page 203)</a></p>
 
                 <p style="padding-top:3%"><b class="tab3">11.2</b><b>Intermediate Sight Distance</b></p>
@@ -25,18 +25,19 @@
                     the stopping sight distance shall be used and the appropriate control measures to 
                     prohibit overtaking shall be introduced.</p>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.2 - Intermediate Sight Distance (page 203)</a></p>
 
                 <p style="padding-top:3%"><b class="tab3">11.3</b><b>Overtaking Sight Distance</b></p>
                     <p>The following sight distances are to be considered in the design. If overtaking sight distance 
                         for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
+                      <p>Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
                     <div class="img-container">
                         <img src="../assets/Table10.5.png">
                     </div>
-                    <p>Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
+                    
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
                   CDC 10.4.2.2.3 - Overtaking Sight Distance (page 204)</a></p>
 
                 <p style="padding-top:3%"><b class="tab3">11.4</b><b>Intersection Sight Distance</b></p>
@@ -49,9 +50,9 @@
                         <img src="../assets/Figure10.2.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
                   CDC 10.4.2.2.4 - Intersection Sight Distance (page 204)</a>,
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=226">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=226" target='_blank'>
                   CDC Figure 10.2 (page 226)</a></p>
                 
                 <p style="padding-top:3%"><b class="tab3">11.5</b><b>Sight Distance on Horizontal Curve</b></p>
@@ -65,9 +66,9 @@
                         <img src="../assets/Figure10.3.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205" target='_blank'>
                   CDC 10.4.2.2.5 - Sight Distance on Horizontal Curve (page 205)</a>,
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=227">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=227" target='_blank'>
                   CDC Figure 10.3 (page 226)</a></p>
                        
             </div>
@@ -116,7 +117,7 @@
 <style scoped>
 table {
     width: 70vw;
-    height: 60vh;
+    height: auto;
     margin-top: 5vh;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -187,16 +188,16 @@ tbody tr:last-child td{
     width: 80%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 5%;
-    margin-bottom:3%;
+    /*margin-top: 5%;
+    margin-bottom:3%;*/
 }
 
 .img-container2{
     width: 50%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 2%;
-    margin-bottom:3%;
+    /*margin-top: 2%;
+    margin-bottom:3%;*/
 }
 
 /* Resize images to standardise size */

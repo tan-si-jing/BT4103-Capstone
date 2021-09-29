@@ -16,7 +16,7 @@
                         <img src="../assets/Table10-8.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
                   CDC 10.4.2.6 - Corner Radius (page 209)</a></p>
             </div>
           </td>
@@ -56,7 +56,7 @@
 <style scoped>
 table {
     width: 70vw;
-    height: 60vh;
+    height: auto;
     margin-top: 5vh;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -126,8 +126,8 @@ tbody tr:last-child td{
     width: 80%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 5%;
-    margin-bottom:3%;
+    /*margin-top: 5%;
+    margin-bottom:3%;*/
 }
 
 

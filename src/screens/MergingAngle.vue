@@ -16,9 +16,9 @@
                         <img src="../assets/Figure10.12.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=213">
-                  CDC 10.5.2.4.1 (page 213)</a>, 
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=213" target='_blank'>
+                  CDC 10.5.2.4.1 - Slip Road (page 213)</a>, 
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236" target='_blank'>
                   CDC Figure 10.12 (page 236)</a></p>
             </div>
           </td>
@@ -60,7 +60,7 @@
 <style scoped>
 table {
     width: 70vw;
-    height: 60vh;
+    height: auto;
     margin-top: 5vh;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -129,8 +129,8 @@ tbody tr:last-child td{
     width: 80%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 5%;
-    margin-bottom:5%;
+    /*margin-top: 5%;
+    margin-bottom:3%;*/
 }
 
 /* Resize images to standardise size */

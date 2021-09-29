@@ -19,7 +19,7 @@
                 <p>e) both horizontal and vertical curves shall be kept as long as possible and where both are present, they shall not be 
                 considered separately.</p>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=201">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=201" target="_blank">
                   CDC 10.4.1.3 - Combination of Horizontal & Vertical Alignment (page 201)</a></p>
             </div>
 
@@ -60,7 +60,7 @@
 <style scoped>
 table {
     width: 70vw;
-    height: 60vh;
+    height: auto;
     margin-top: 5vh;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);

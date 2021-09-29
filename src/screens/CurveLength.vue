@@ -9,7 +9,8 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab3">12.1</b><b>Crest Curve</b></p>
+
+                <p><b class="tab2">12.1</b><b>Crest Curve</b></p>
                 <p> The minimum length of a crest curve in metre shall be the greater of:</p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
@@ -22,13 +23,13 @@
                         <img src="../assets/Figure10.8.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
                   CDC 10.4.3.2.1 - Crest Curve (page 210)</a>,
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=232">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=232" target="_blank">
                   CDC Figure 10.8 (page 232)</a></p>
 
-
-                <p style="padding-top:3%"><b class="tab3">12.2</b><b>Sag Curve</b></p>
+                
+                <p style="padding-top:3%"><b class="tab2">12.2</b><b>Sag Curve</b></p>
                 <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
@@ -45,11 +46,11 @@
                         <img src="../assets/Figure10.10.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=211">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=211" target="_blank">
                   CDC 10.4.3.2.2 - Sag Curve (page 211)</a>,
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=233">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=233" target="_blank">
                   CDC Figure 10.9 (page 233)</a>,
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234" target="_blank">
                   CDC Figure 10.10 (page 234)</a></p>
 
             </div>
@@ -95,10 +96,36 @@
       </table>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+    isActive1: false,
+    isActive2: false,
+    }
+  },
+  methods:{
+      toggle1() {
+        if (!this.isActive1) {
+            this.isActive1 = true;
+        } else {
+            this.isActive1 = false;
+        }
+    },
+    toggle2() {
+        if (!this.isActive2) {
+            this.isActive2 = true;
+        } else {
+            this.isActive2 = false;
+        }
+    },
+  }
+  }
+</script>
 <style scoped>
 table {
     width: 70vw;
-    height: 60vh;
+    height: auto;
     margin-top: 5vh;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -168,15 +195,15 @@ tbody tr:last-child td{
     width: 80%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 5%;
-    margin-bottom:3%;
+    /*margin-top: 5%;
+    margin-bottom:3%;*/
 }
 
 .img-container2{
     width: 50%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 2%;
+    margin-top: 3%;
     margin-bottom:3%;
 }
 
@@ -204,5 +231,19 @@ p {
 
 .tab3 {
   margin-right: 1em
+}
+
+
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color:black;
+    font-size:20px;
+}
+
+
+.description-box{
+    margin-bottom:5%;
 }
 </style>

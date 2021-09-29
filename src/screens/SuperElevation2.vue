@@ -9,41 +9,41 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.1</b><b></b></p>
+                <p><b class="tab2">10.1</b><b>Desirable Super-Elevation Forumla</b></p>
                 <p> The desirable super-elevation can be derived from the following equation:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.5.1.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207">
-                  CDC 10.4.2.5.1 (page 207)</a></p>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target='_blank'>
+                  CDC 10.4.2.5.1 - Super-elevation (page 207)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">10.2</b><b></b></p>
+                <p style="padding-top:3%"><b class="tab2">10.2</b><b>Negative or Positive Super-elevation</b></p>
                     <p>In cases where the negative or positive super-elevation derived is lower than the desirable crossfall, the desirable super-elevation shall be 
                       pegged at the crossfall as shown in Table 10.6 to slope towards the inner radius of the carriageway.</p>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
-                  CDC 10.4.2.5.2 (page 208)</a></p>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+                  CDC 10.4.2.5.2 - Super-elevation (page 208)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">10.3</b><b></b></p>
+                <p style="padding-top:3%"><b class="tab2">10.3</b><b>Rotation of Pavement</b></p>
                     <p>For rotation of pavement to attain super-elevation, the length required to develop the 
                       super-elevation shall satisfy the larger value obtained from the following two formulae:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.5.3.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
-                  CDC 10.4.2.5.3 (page 208)</a></p>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+                  CDC 10.4.2.5.3 - Super-elevation (page 208)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">10.4</b><b></b></p>
+                <p style="padding-top:3%"><b class="tab2">10.4</b><b>Effected Distance</b></p>
                     <p>Where transition curve is provided, super-elevation shall be effected along the l
                       ength of the curve. For simple circular curve, about two-third of the super-elevation 
                       development length shall be introduced on the tangent approach and one third on the curve.</p>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
-                  CDC 10.4.2.5.4 (page 208)</a></p>
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+                  CDC 10.4.2.5.4 - Super-elevation (page 208)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">10.5</b><b></b></p>
+                <p style="padding-top:3%"><b class="tab2">10.5</b><b>Percentage of Super-elevation</b></p>
                     <p>The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
                     the Figure 10.6. </p>
                     <div class="img-container">
@@ -53,11 +53,11 @@
                         <img src="../assets/Figure10.5.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208">
-                  CDC 10.4.2.5.5 (page 208)</a>,
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=230">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+                  CDC 10.4.2.5.5 - Super-elevation (page 208)</a>,
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=230" target='_blank'>
                   CDC Figure 10.6 (page 230)</a>,
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229">
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229" target='_blank'>
                   CDC Figure 10.5 (page 229)</a></p>
                         
             </div>
@@ -104,7 +104,7 @@
 <style scoped>
 table {
     width: 70vw;
-    height: 60vh;
+    height: auto;
     margin-top: 5vh;
     border-radius: 15px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -176,8 +176,8 @@ tbody tr:last-child td{
     width: 80%;
     height: auto;
     margin-left: 3em; 
-    margin-top: 5%;
-    margin-bottom:3%;
+    /*margin-top: 5%;
+    margin-bottom:3%;*/
 }
 
 .img-container2{
