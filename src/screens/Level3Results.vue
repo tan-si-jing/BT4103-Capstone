@@ -38,7 +38,6 @@ components: {
   "CurveLength" : CurveLength,
   "PageCircle2": PageCircle2
 },
-props: {},
 
 methods: {
   level2() {
@@ -52,9 +51,20 @@ methods: {
   },
   back() {
     this.$router.push({path: "/search5"})
-  }
+  },
+  openStorage(){
+        return JSON.parse(localStorage.getItem('choice'))
+  },
 },
-
+  created(){
+    const storedChoice = this.openStorage()
+    if (storedChoice){
+      this.choice = {
+        ...this.choice,
+        ...storedChoice
+      }
+    }
+  },
 data() {
   return {
     road: require("../assets/road.png"),
