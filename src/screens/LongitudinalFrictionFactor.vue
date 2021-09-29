@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p><b class="tab2">3.1</b><b>Longitudinal Friction Factor given Design Speed</b></p>
+              <p style="padding-top:3%"><b class="tab2">3.1</b><b>Longitudinal Friction Factor given Design Speed</b></p>
                 <div class="img-container">
                     <img src="../assets/Table10-4.png">
                 </div>         

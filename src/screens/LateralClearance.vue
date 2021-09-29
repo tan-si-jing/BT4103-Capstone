@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">9.1</b><b>Clear Lateral</b></p>
+                <p style="padding-top:3%"><b class="tab2">9.1</b><b>Clear Lateral</b></p>
                     <p>Minimum lateral clearance from the edge of road pavement (both at centre median and side table) to any adjacent 
                         structure is shown in Table 10.17 unless otherwise specified in the Standard Details of Road Elements.</p>
                     <p>Notes:</p>

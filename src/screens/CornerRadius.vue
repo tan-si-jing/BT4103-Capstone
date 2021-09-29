@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">6.1</b><b> Corner Radius</b></p>
+                <p style="padding-top:3%"><b class="tab2">6.1</b><b> Corner Radius</b></p>
                     <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
                         shall not be less than the values as shown in Table 10.8.</p>
                     <div class="img-container">

@@ -10,7 +10,7 @@
           <td scope="row">
             <div class="content">
 
-                <p><b class="tab2">12.1</b><b>Crest Curve</b></p>
+                <p style="padding-top:3%"><b class="tab2">12.1</b><b>Crest Curve</b></p>
                 <p> The minimum length of a crest curve in metre shall be the greater of:</p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
