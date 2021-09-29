@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">8.1</b><b>Main Carriageway</b></p>
+                <p style="padding-top:3%"><b class="tab2">8.1</b><b>Main Carriageway</b></p>
                     <p>The typical lane width for a major road is 3.2m and the absolute minimum shall be 3m if there are constraints. 
                         In addition,</p>
                     <p>a) For lane adjacent to kerb, an additional width of 0.3m shall be provided.</p>

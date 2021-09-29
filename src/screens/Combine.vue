@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">16.1</b><b>Combination of Horizontal & Vertical Alignment</b></p>
+                <p style="padding-top:3%"><b class="tab2">16.1</b><b>Combination of Horizontal & Vertical Alignment</b></p>
                 <p>To avoid undesirable effect of poor combination of vertical and horizontal curve, the following principles shall be observed: -</p>
                 <p>a) the tangent point for both vertical and horizontal curve shall coincide; </p>
                 <p>b) when condition (a) cannot be met, the vertical curve shall be completely within the horizontal curve and have common mid-point. 

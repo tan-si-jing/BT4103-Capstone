@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">11.1</b><b>Stopping Sight Distance</b></p>
+                <p style="padding-top:3%"><b class="tab2">11.1</b><b>Stopping Sight Distance</b></p>
                 <p> The minimum stopping sight distance for various road gradient shall be determined by the following formula:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.2.1.png">

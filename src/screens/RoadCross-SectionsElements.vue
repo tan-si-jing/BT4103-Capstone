@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p><b class="tab2">1.1</b><b>General</b></p>
+              <p style="padding-top:3%"><b class="tab2">1.1</b><b>General</b></p>
                 <p>The details of the cross-section elements such as lane width, centre median width, paved shoulder, services verge, 
                     footpath, drain and landscaping, etc. shall be in accordance with the Authority’s Drawings and the Standard Details 
                     of Road Elements.</p>

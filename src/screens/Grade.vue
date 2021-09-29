@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p><b class="tab2">2.1</b><b>Main Carriageway</b></p>
+              <p style="padding-top:3%"><b class="tab2">2.1</b><b>Main Carriageway</b></p>
                 <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
                 <p>Notes:</p>
                 <p>1) Minimum gradient for all roads is 0.4%.</p>

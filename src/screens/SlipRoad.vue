@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">15.1</b><b></b></p>
+                <p style="padding-top:3%"><b class="tab2">15.1</b><b></b></p>
                 <p> The desirable minimum dimension and the approach nose of the traffic island shall be as shown in the Figure 10.12. </p>
                     <div class="img-container">
                         <img src="../assets/Figure10.12.png">

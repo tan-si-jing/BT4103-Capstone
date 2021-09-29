@@ -9,7 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p><b class="tab2">10.1</b><b>Desirable Super-Elevation Forumla</b></p>
+                <p style="padding-top:3%"><b class="tab2">10.1</b><b>Desirable Super-Elevation Forumla</b></p>
                 <p> The desirable super-elevation can be derived from the following equation:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.5.1.png">
