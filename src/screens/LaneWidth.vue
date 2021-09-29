@@ -40,11 +40,19 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=225" target='_blank'>
                   CDC Figure 10.1 (page 225)</a></p>
 
-                <p style="padding-top:3%"><b>8.3</b></p>
-                    <p>For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
+                <p v-show="isSlip" style="padding-top:3%"><b>8.3</b></p>
+                    <p v-show="isSlip">For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
                         (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
                         the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
                         roads are shown in Table 10.13:</p>
+                    <div v-show="isSlip" class="img-container3">
+                        <img v-show="isSlip" src="../assets/Table10-13.png">
+                    </div>
+                    <a v-show="isSlip" >Notes:</a>
+                    <p v-show="isSlip"> Additional 0.3m lane width shall be added next to parapet/ barrier</p>
+                <p v-show="isSlip" style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212">
+                  CDC 10.5.2.4.3 (page 214)</a></p>
                     <div class="img-container">
                         <img src="../assets/Table10-13.png">
                     </div>
@@ -127,6 +135,44 @@
         </tbody>
       </table>
 </template>
+
+
+<script>
+export default {
+    name:'LaneWidth',
+    data(){
+      return{
+        choice:{
+          role: "",
+          roadDesign: "",
+          roadClass: "",
+          roadType: "",
+          designSpeed: "",
+          grad_curv_change:"",
+          specific_param:"",
+        },
+        isSlip: this.$parent.choice.roadType === 'slipRoad' ? true : false
+      }
+    },
+    methods:{
+      openStorage(){
+        return JSON.parse(localStorage.getItem('choice'))
+      },
+    },
+    mounted(){
+      const storedChoice = this.openStorage()
+      if (storedChoice){
+        this.choice = {
+          ...this.choice,
+          ...storedChoice
+        }
+      }
+      console.log("Lane Width: " + this.isSlip)
+    }
+}
+
+</script>
+
 
 <style scoped>
 table {

@@ -18,22 +18,22 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.1 - Stopping Sight Distance (page 203)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">11.2</b><b>Intermediate Sight Distance</b></p>
-                    <p>a) Intermediate sight distance is equal to 2 times stopping sight distance. </p>
-                    <p>b) Intermediate sight distance is only applicable to undivided 2-lane road. </p>
-                    <p>c) Where intermediate sight distance is unachievable because of site constraint, 
+                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">11.2</b><b>Intermediate Sight Distance</b></p>
+                    <p v-show="isUndivided">a) Intermediate sight distance is equal to 2 times stopping sight distance. </p>
+                    <p v-show="isUndivided">b) Intermediate sight distance is only applicable to undivided 2-lane road. </p>
+                    <p v-show="isUndivided">c) Where intermediate sight distance is unachievable because of site constraint, 
                     the stopping sight distance shall be used and the appropriate control measures to 
                     prohibit overtaking shall be introduced.</p>
-                <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
+                <p v-show="isUndivided" style="font-size: 16px;"> Referenced from:
+                  <a v-show="isUndivided" href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.2 - Intermediate Sight Distance (page 203)</a></p>
 
-                <p style="padding-top:3%"><b class="tab3">11.3</b><b>Overtaking Sight Distance</b></p>
-                    <p>The following sight distances are to be considered in the design. If overtaking sight distance 
+                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">11.3</b><b>Overtaking Sight Distance</b></p>
+                    <p v-show="isUndivided">The following sight distances are to be considered in the design. If overtaking sight distance 
                         for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
-                      <p>Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
+                      <p v-show="isUndivided" >Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
                     <div class="img-container">
-                        <img src="../assets/Table10.5.png">
+                        <img v-show="isUndivided" src="../assets/Table10.5.png">
                     </div>
                     
                 <p style="font-size: 16px;"> Referenced from:
@@ -113,6 +113,44 @@
         </tbody>
       </table>
 </template>
+
+
+<script>
+export default {
+    name:'SightDistance',
+    data(){
+      return{
+        choice:{
+          role: "",
+          roadDesign: "",
+          roadClass: "",
+          roadType: "",
+          designSpeed: "",
+          grad_curv_change:"",
+          specific_param:"",
+        },
+        isUndivided: this.$parent.choice.roadType === 'undividedRoad' ? true : false
+      }
+    },
+    methods:{
+      openStorage(){
+        return JSON.parse(localStorage.getItem('choice'))
+      },
+    },
+    mounted(){
+      const storedChoice = this.openStorage()
+      if (storedChoice){
+        this.choice = {
+          ...this.choice,
+          ...storedChoice
+        }
+      }
+      console.log("SightDistance: " + this.isUndivided)
+    }
+}
+
+</script>
+
 
 <style scoped>
 table {
