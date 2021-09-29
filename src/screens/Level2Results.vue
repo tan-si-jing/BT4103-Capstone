@@ -23,10 +23,13 @@
     <div class="container">
       <MergingAngle></MergingAngle>
     </div>
-    <div class="lastContainer">
+    <div class="container">
       <LaneWidth></LaneWidth>
     </div>
-    
+    <div class="lastContainer">
+      <Signs></Signs>
+    </div>
+
     <div class="pages">
         <PageCircle2 num="1" v-bind:isActive="true"/>
         <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
@@ -50,6 +53,7 @@ import Crossfall from "./Crossfall.vue"
 import CornerRadius from "./CornerRadius.vue"
 import MergingAngle from "./MergingAngle.vue"
 import LaneWidth from "./LaneWidth.vue"
+import Signs from "./Signs.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
@@ -63,6 +67,7 @@ components: {
   "CornerRadius": CornerRadius,
   "MergingAngle": MergingAngle,
   "LaneWidth": LaneWidth,
+  "Signs" : Signs,
   "PageCircle2": PageCircle2
 },
 methods: {
