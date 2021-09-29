@@ -13,19 +13,20 @@
         <PageTwo></PageTwo>
     </div>
 
-    <span v-if="!displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
-    <span v-if="displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
-    <div class="container" v-if="displayInfo2">
+    <span v-if="!displayInfo3" v-on:click="toggleDisplay3()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+    <span v-if="displayInfo3" v-on:click="toggleDisplay3()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+    <div class="container" v-if="displayInfo3">
         <PageThree></PageThree>
     </div>
 
-    <span v-if="!displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
-    <span v-if="displayInfo2" v-on:click="toggleDisplay2()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
-    <div class="container" v-if="displayInfo2">
+    <span v-if="!displayInfo4" v-on:click="toggleDisplay4()"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+    <span v-if="displayInfo4" v-on:click="toggleDisplay4()"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+    <div class="container" v-if="displayInfo4">
         <PageFour></PageFour>
     </div>
 
     <div class="pages">
+        <PageCircle2 num="0" v-bind:isActive="true"/>
         <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
         <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
         <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
@@ -74,10 +75,10 @@ methods: {
         this.displayInfo2 = !this.displayInfo2;
     },
     toggleDisplay3: function() {
-        this.displayInfo3 = !this.displayInfo2;
+        this.displayInfo3 = !this.displayInfo3;
     },
     toggleDisplay4: function() {
-        this.displayInfo4 = !this.displayInfo2;
+        this.displayInfo4 = !this.displayInfo4;
     },
     level2() {
         this.$router.push({path: "/level2results"})
