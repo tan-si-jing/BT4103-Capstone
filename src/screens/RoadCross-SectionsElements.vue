@@ -43,7 +43,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=2" target="_blank">
                   SDRE Chapter 3 - 1 (page 2)</a></p>
 
-              <p style="padding-top:3%"><b class="tab2">1.2.2</b><b>Kerbs Painting (1 of 2)</b></p>
+              <p style="padding-top:3%"><b class="tab2">1.2.2</b><b>Kerbs Painting (Sheet 1 of 2)</b></p>
                     <div class="img-container">
                         <img src="../assets/SDRE-Chap3-KER2.png">
                     </div>
@@ -51,7 +51,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-3_KER_1-13-JULY_2020.pdf#page=3" target="_blank">
                   SDRE Chapter 3 - 2 (page 3)</a></p>
 
-              <p style="padding-top:3%"><b class="tab2">1.2.3</b><b>Kerbs Painting (2 of 2)</b></p>
+              <p style="padding-top:3%"><b class="tab2">1.2.3</b><b>Kerbs Painting (Sheet 2 of 2)</b></p>
                     <div class="img-container">
                         <img src="../assets/SDRE-Chap3-KER3.png">
                     </div>

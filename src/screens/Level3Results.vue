@@ -15,6 +15,7 @@
       <CurveLength></CurveLength>
     </div>
     <div class="pages">
+        <PageCircle2 num="0" v-bind:isActive="false" @click="contentpage"/>
         <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
         <PageCircle2 num="2" v-bind:isActive="true"/>
         <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
@@ -45,6 +46,9 @@ components: {
 },
 
 methods: {
+  contentpage() {
+    this.$router.push({path: "/contentpage"})
+  },
   level2() {
     this.$router.push({path: "/level2results"})
   },
