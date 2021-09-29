@@ -27,7 +27,15 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
                   CDC 10.5.2.1 - Main Carriageway (page 212)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">8.2</b><b>Ramp or Loop</b></p>
+                 <p style="padding-top:3%"><b class="tab2">8.2</b><b>Road Signs & Markings At Intersections</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap8-RMS9.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=10" target="_blank">
+                  SDRE Chapter 8 - 9 (page 10)</a></p>
+
+                <p style="padding-top:3%"><b class="tab2">8.3</b><b>Ramp or Loop</b></p>
                     <p>The minimum lane width for ramp or loop is 3.7m per lane. The total width of the ramp or loop shall include the 
                         paved shoulder width specified in Clause 10.5.4. However, consideration shall be given to widen the lane width 
                         for the swept path of a heavy vehicle (refer to Figure 10.1).</p>
@@ -40,7 +48,23 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=225" target='_blank'>
                   CDC Figure 10.1 (page 225)</a></p>
 
-                <p v-show="isSlip" style="padding-top:3%"><b>8.3</b></p>
+                <p style="padding-top:3%"><b class="tab2">8.4</b><b>Typical Acceleration Lane At Expressway</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap8-RMS6.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=7" target="_blank">
+                  SDRE Chapter 8 - 6 (page 7)</a></p>
+
+                <p style="padding-top:3%"><b class="tab2">8.5</b><b>Typical Deceleration Lane At Expressway</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap8-RMS7.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=8" target="_blank">
+                  SDRE Chapter 8 - 7 (page 8)</a></p>
+
+                <p v-show="isSlip" style="padding-top:3%"><b>8.6</b></p>
                     <p v-show="isSlip">For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
                         (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
                         the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
@@ -62,7 +86,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
                   CDC 10.5.2.4.3 - Slip Road (page 214)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">8.4</b><b>Turning Lane</b></p>
+                <p style="padding-top:3%"><b class="tab2">8.7</b><b>Turning Lane</b></p>
                     <p>The turning lane at the intersection is to provide storage space for turning vehicle so as not to impede the main 
                         traffic flow (refer to Figure 10.11). The desirable minimum width of the turning lane shall be 3.5m and absolute 
                         minimum width shall be 3m. The turning lane shall be 70m long or sufficiently long to store the likely number of 
@@ -79,7 +103,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=235" target='_blank'>
                   CDC Figure 10.11 (page 235)</a></p>
                 
-                <p style="padding-top:3%"><b class="tab1">8.5</b><b>Paved Shoulder </b></p>
+                <p style="padding-top:3%"><b class="tab1">8.8</b><b>Paved Shoulder </b></p>
                     <p>The width of the paved shoulder shall be as shown in Table 10.14. </p>
                     <p>Notes:</p>
                     <p>1 1.0m in tunnel</p>
