@@ -23,11 +23,8 @@
     <div class="container">
       <MergingAngle></MergingAngle>
     </div>
-    <div class="container">
-      <LaneWidth></LaneWidth>
-    </div>
     <div class="lastContainer">
-      <LateralClearance></LateralClearance>
+      <LaneWidth></LaneWidth>
     </div>
     
     <div class="pages">
@@ -53,7 +50,6 @@ import Crossfall from "./Crossfall.vue"
 import CornerRadius from "./CornerRadius.vue"
 import MergingAngle from "./MergingAngle.vue"
 import LaneWidth from "./LaneWidth.vue"
-import LateralClearance from "./LateralClearance.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
@@ -67,7 +63,6 @@ components: {
   "CornerRadius": CornerRadius,
   "MergingAngle": MergingAngle,
   "LaneWidth": LaneWidth,
-  "LateralClearance": LateralClearance,
   "PageCircle2": PageCircle2
 },
 methods: {
