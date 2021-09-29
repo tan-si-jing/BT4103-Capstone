@@ -27,6 +27,15 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214" target='_blank'>
                   CDC 10.5.3.2 - Traffic Island (page 214)</a></p>
+  
+                <p style="padding-top:3%;"><b class="tab2">15.3</b><b>Road Signs & Marking at Intersections</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap8-RMS9.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=10" target="_blank">
+                  SDRE Chapter 8 - 9 (page 10)</a></p>
+
             </div>
           </td>
           </tr>

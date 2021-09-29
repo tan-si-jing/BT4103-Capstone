@@ -19,6 +19,8 @@
                   CDC 10.4.2.3 - Horizontal Curve (page 205)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=228" target='_blank'>
                   CDC Figure 10.4 (page 228)</a></p>
+
+
                 <p style="padding-top:3%"><b class="tab2">13.2</b><b>Simple Curve</b></p>
                     <p>This is an arc of constant radius which achieves the desirable deflection without using a transition curve. 
                         This type of curve shall be used whenever possible.</p>
@@ -85,8 +87,24 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=202" target='_blank'>
                   CDC 10.4.2.1.1 - Main Carriageway (page 202)</a></p>
 
+                <p style="padding-top:3%;"><b class="tab2">13.8</b><b>Pavement Markings For Sharp Curve</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap8-RMS12.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=13" target="_blank">
+                  SDRE Chapter 8 - 12 (page 13)</a></p>
 
-                <p style="padding-top:3%;"><b class="tab2">13.8</b><b>Horizontal Alignment</b></p> 
+                <p style="padding-top:3%;"><b class="tab2">13.9</b><b>Curve Alignment Markers (CAM)</b></p>
+                    <div class="img-container">
+                        <img src="../assets/SDRE-Chap8-RMS13.png">
+                    </div>
+                <p style="font-size: 16px;"> Referenced from:
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=14" target="_blank">
+                  SDRE Chapter 8 - 13 (page 14)</a></p>
+
+
+                <p style="padding-top:3%;"><b class="tab2">13.10</b><b>Horizontal Alignment</b></p> 
                 <p> There are several general controls that shall be considered when designing the horizontal alignment. </p>
                 <p>a) Where it becomes necessary to introduce curve of lower standard than the design requirement, 
                 the respective design speed between the successive geometric elements shall not differ by more than 10km/h; </p>
