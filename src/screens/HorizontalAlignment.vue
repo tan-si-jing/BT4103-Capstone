@@ -440,13 +440,14 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
-}
+    margin-bottom:3%;
+}*/
 
 .img-container2{
     width: 50%;
@@ -458,11 +459,11 @@ tbody tr:last-child td{
 
 
 
-/* Resize images to standardise size */
+/* Resize images to standardise size 
 .img-container img{
     max-width: 100%;
     height: auto;
-}
+}*/
 
 .img-container2 img{
     width: 100%;

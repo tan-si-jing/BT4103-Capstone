@@ -418,20 +418,22 @@ tbody tr:last-child td{
 }
 */
 
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
+    margin-bottom:3%;
 }
 
 
-/* Resize images to standardise size */
+/* Resize images to standardise size 
 .img-container img{
     width: 100%;
     height: auto;
 }
+*/
 
 p {
   font-size:20px;
