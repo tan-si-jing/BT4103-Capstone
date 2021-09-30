@@ -117,6 +117,9 @@ const router = createRouter({
       ],
     },*/
   ],
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView();
+}
 });
 
 /* to disable viewing of dashboard if admin is not logged in*/

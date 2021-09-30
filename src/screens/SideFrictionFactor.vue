@@ -9,7 +9,7 @@
       <tr>
       <td scope="row">
       <Collapsible chapt="4.1" title="">
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10-7.png">
         </div>
         <p style="font-size: 16px;"> Referenced from:

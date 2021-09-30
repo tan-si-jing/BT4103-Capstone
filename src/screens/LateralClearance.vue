@@ -14,7 +14,7 @@
         <p>Notes:</p>
           <p>1 If no Vehicular Impact Guardrail is installed. Applicable to both centre median and sidetable.</p>
           <p>2 Where Vehicular Impact Guardrail is installed.</p>
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10-17.png">
         </div>
         <p style="font-size: 16px;"> Referenced from:

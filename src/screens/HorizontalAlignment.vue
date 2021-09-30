@@ -85,7 +85,7 @@
       </Collapsible>
       <Collapsible chapt="14.7" title="Main Carriageway">
         <p> The geometric design requirement of road shall be as follows: - </p>
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10.2.png">
         </div>  
         <p style="font-size: 16px;"> Referenced from:
@@ -183,5 +183,9 @@ tbody tr:last-child td{
 }
 .tab3 {
   margin-right: 1em
+}
+
+.tab5 {
+  margin-right: 1.2em
 }
 </style>

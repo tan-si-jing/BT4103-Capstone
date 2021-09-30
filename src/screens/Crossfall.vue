@@ -54,7 +54,6 @@ table {
     margin-right: auto;
     margin-bottom: auto;
 }
-
 .table thead td {
     background-color: #273B8C;
     color: white;
@@ -68,7 +67,6 @@ table {
 tbody tr{
     background-color: #ffffff;
 }
-
 tbody tr:last-child td{ 
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
