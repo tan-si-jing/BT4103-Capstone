@@ -38,14 +38,15 @@
         <div id = "specific-results">
             <ul>
                 <li v-for="cdc in final_array" :key="cdc.chapterID">
-                    <p style="padding-top:3%"><b class="tab2">{{cdc.Number}}</b><b>{{cdc.Content}}</b></p>
-                    <p v-html="cdc.Text"></p>
-                    <div class='image'>
-                        <img :src="cdc.Image" style='zoom: 1.2'>
-                    </div>
-                    <p style="font-size: 16px;"> Referenced from:
-                    <a v-bind:href="cdc.Link" target="_blank">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
-                    </p>
+                    <Collapsible :title="cdc.Content" :chapt="cdc.Number">
+                        <p v-html="cdc.Text"></p>
+                        <div class='image'>
+                            <img :src="cdc.Image" style='zoom: 1.2'>
+                        </div>
+                        <p style="font-size: 16px;"> Referenced from:
+                        <a v-bind:href="cdc.Link" target="_blank">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
+                        </p>
+                    </Collapsible>
                 </li>                        
                 <!--li v-for="cdc in final_array" :key="cdc.chapterID">
                     <div class='chapter-text-image'>
@@ -89,8 +90,12 @@
 import database from '../firebase.js'
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+import Collapsible from '../components/Collapsible.vue';
 
 export default {
+    components: {
+        Collapsible
+    },
     data() {
         return {
             order : [],
@@ -103,7 +108,8 @@ export default {
             level_3_parameter : [],
             level_4_parameter : [],
             choice2 : '',
-            specific_param:""
+            specific_param:"",
+            displayInfo: false
         } 
     },
 
@@ -161,7 +167,11 @@ export default {
             }
         },
 
-        display:function(parameter){
+        collapse() {
+            this.displayInfo = !this.displayInfo;
+        },
+
+        display(parameter){
             this.choice2 = parameter;
             database.collection('data_cdc').doc(parameter).get().then(querySnapshot => {
                 var temp_order = querySnapshot.data().Order;
@@ -272,6 +282,8 @@ export default {
 
 ul {
     list-style-type: none;
+    padding:0;
+    margin:0;
 }
 /** 
 .chapter-text-image {
@@ -298,7 +310,6 @@ ul {
     margin-left: 3em; 
    /* margin-top: 5%;
     margin-bottom: 5%; */
-
 }
 
 img {
@@ -356,6 +367,20 @@ td {
 
 .tab2 {
  margin-right: 1.7em
+}
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
 }
 
 </style>

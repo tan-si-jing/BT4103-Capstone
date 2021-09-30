@@ -2,7 +2,7 @@
   <div style="height:100vh; overflow: hidden;">
   <div class="header">
     <div class="headerText">
-    <h3>Road Design Guide</h3>
+    <h2>Road Design Guide</h2>
     <h5>CDC & SDRE Manuals</h5>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -71,6 +71,7 @@ export default {
 </script>
 
 <style scoped>
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 .button-group {
   display: flex;
   justify-content: space-around;
@@ -114,5 +115,8 @@ h6 {
   top:10vh;
   left: 70vw;
   z-index: 2;
+}
+h2 {
+  font-weight: semi-bold;
 }
 </style>

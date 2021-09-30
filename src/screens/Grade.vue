@@ -1,114 +1,49 @@
 <template>
-      <table class="table table-borderless">
-        <thead class="table">
-          <tr>
-          <td scope="header">2 &nbsp; Grade</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-          <td scope="row">
-            <div class="content">
-
-                <div class="title" @click="collapse()">
-                  <div class="title-text">
-                    <b class="tab2">2.1</b>Main Carriageway
-                  </div>
-                  <div class="title-icon">
-                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
-                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
-                  </div>
-                </div>
-
-                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
-
-              <!--p style="padding-top:3%"><b class="tab2">2.1</b><b>Main Carriageway</b></p-->
-                <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-                <p>Notes:</p>
-                <p>1) Minimum gradient for all roads is 0.4%.</p>
-                <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
-                <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
-                <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
-                <div class="img-container">
-                    <img src="../assets/Table10-9.png">
-                </div>
-                <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
-                  CDC 10.4.3.1.1 - Main Carriageway (page 209)</a></p>
-                </div>
-                
-                <div class="title" @click="collapse1()">
-                  <div class="title-text">
-                    <b class="tab2">2.2</b>Interchange Ramp/Loop and Slip Road
-                  </div>
-                  <div class="title-icon">
-                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
-                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
-                  </div>
-                </div>
-
-                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
-
-              <!--p style="padding-top:3%"><b class="tab2">2.2</b><b>Interchange Ramp/Loop and Slip Road</b></p-->
-                <div class="img-container">
-                    <img src="../assets/Table10-10.png">
-                </div>                
-                <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
-                  CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a></p>
-            </div>
-            </div>
-          </td>
-          </tr>
-          <!--tr>
-          <td scope="row"></td>
-          </tr>
-          <tr>
-          <td scope="row">
-          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <div class="grid-container">
-              Reference from:
-              <div class="grid-item inner-grid-container">
-                <div class="grid-item">
-                  <span id = "manuals"> Manuals </span>
-                  <br>Civil Design Criteria (CDC)
-                </div>   
-                
-                <div class="grid-item">
-                  <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / <br>Section 10.4.3
-                </div>   
-                
-                <div class="grid-item">
-                  <span id = "link">Link to Chapter/ Section</span>
-                   <br>
-                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.3.1.1 (page 209)</a>
-                  <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.2 (page 210)</a>
-                </div>   
-              </div>
-            </div>      
-          </td>
-          </tr-->
-        </tbody>
-      </table>
+  <table class="table table-borderless">
+    <thead class="table">
+      <tr>
+      <td scope="header">2 &nbsp; Grade</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td scope="row">
+      <Collapsible chapt="2.1" title="Main Carriageway">
+        <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
+        <p>Notes:</p>
+        <p>1) Minimum gradient for all roads is 0.4%.</p>
+        <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
+        <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
+        <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
+        <div class="img-container">
+          <img src="../assets/Table10-9.png">
+        </div>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
+          CDC 10.4.3.1.1 - Main Carriageway (page 209)</a>
+        </p>
+      </Collapsible>
+      <Collapsible chapt="2.2" title="Interchange Ramp/Loop and Slip Road">
+        <div class="img-container">
+          <img src="../assets/Table10-10.png">
+        </div>                
+        <p style="font-size: 16px;"> Referenced from:
+        <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
+          CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a>
+        </p>
+      </Collapsible>
+      </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>
+import Collapsible from '../components/Collapsible.vue';
+
 export default {
-  data() {
-    return {
-    displayInfo: false,
-    displayInfo1: false
-    }
-  },
-  methods:{
-      collapse: function() {
-        this.displayInfo = !this.displayInfo;
-    },
-    collapse1: function() {
-        this.displayInfo1 = !this.displayInfo1;
-    }
+  components: {
+    Collapsible
   }
 }
 </script>
@@ -138,94 +73,11 @@ table {
 tbody tr{
     background-color: #ffffff;
 }
-
 tbody tr:last-child td{ 
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
     height: 23vh;
 }
-
-.content{
-  font-size:18px;
-  margin: 2% 10%;
-  text-align: justify;
-  padding-bottom:5%;
-  /*max-width:70vw;*/
-}
-
-.title {
-  cursor: pointer;
-  display: flex;
-  margin-top: 3%;
-  padding: 1% 0;
-  font-weight: bold;
-}
-.title-text {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  font-size: 20px;
-}
-
-
-/*
-.grid-container{
-  margin: 5% 5% -8%;
-  font-size:20px;
-}
-
-.grid-item {
-    padding-top:1%;
-    margin-bottom:10%;
-    font-size:16px;
-}
-
-.grid-container .inner-grid-container {
-	display: grid;
-	grid-template-columns: auto auto auto;
-	text-align: center;
-}
-
-#manuals{
-  font-weight:bold;
-}
-
-#chapter{
-  font-weight:bold;
-}
-
-#link{
-  font-weight:bold;
-}*/
-
-/*
-.img-container{
-    max-width:80%;
-    height: auto;
-    margin-left: 3em; 
-    /*margin-top: 5%;
-    margin-bottom:3%;
-}
-
-
-/* Resize images to standardise size 
-.img-container img{
-    width: 100%;
-    height: auto;
-}
-*/
-
-p {
-  font-size:20px;
-}
-.tab1 {
- margin-right: 2.5em
-}
-
-.tab2 {
- margin-right: 1.7em
-}
-
 .tab3 {
   margin-right: 1em
 }
