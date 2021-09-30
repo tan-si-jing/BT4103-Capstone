@@ -117,6 +117,9 @@ const router = createRouter({
       ],
     },*/
   ],
+  scrollBehavior() {
+    document.getElementById('app').scrollIntoView();
+}
 });
 
 /*
