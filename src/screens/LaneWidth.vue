@@ -33,7 +33,7 @@
                     <p>Notes:</p>
                     <p>1 Typical lane width for an expressway is 3.5m.</p>
                     <p>2 Actual lane width to be determined in consultation with Land Transport Authority</p>
-                    <div class="img-container">
+                    <div class="img-container4">
                         <img src="../assets/Table10-12.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
@@ -149,7 +149,7 @@
                         roads are shown in Table 10.13:</p>
                     <a v-show="isSlip" ><p>Notes:</p></a>
                     <p v-show="isSlip"> Additional 0.3m lane width shall be added next to parapet/ barrier</p>
-                    <div v-show="isSlip" class="img-container3">
+                    <div v-show="isSlip" class="img-container4">
                         <img v-show="isSlip" src="../assets/Table10-13.png">
                     </div>
 
@@ -158,7 +158,7 @@
                   CDC 10.5.2.4.3 (page 214)</a></p>
                     <a v-show="isSlip" ><p>Notes:</p></a>
                     <p v-show="isSlip">Additional 0.3m lane width shall be added next to parapet/ barrier</p>
-                    <div v-show="isSlip" class="img-container">
+                    <div v-show="isSlip" class="img-container4">
                         <img src="../assets/Table10-13.png">
                     </div>
                 <p v-show="isSlip" style="font-size: 16px;"> Referenced from:
@@ -214,7 +214,7 @@
                     <p>1 1.0m in tunnel</p>
                     <p>2 Only applicable to viaduct, tunnel and associated depressed road. Paved shoulder is not required on flyover, underpass 
                         and associated depressed road.</p>
-                    <div class="img-container">
+                    <div class="img-container4">
                         <img src="../assets/Table10-14.png">
                     </div>
 
@@ -419,22 +419,22 @@ tbody tr:last-child td{
 }
 */
 
-/*
-.img-container{
+
+.img-container4{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;
+    margin-bottom:3%;*/
 }
 
 
-/* Resize images to standardise size 
-.img-container img{
+/* Resize images to standardise size */
+.img-container4 img{
     width: 100%;
     height: auto;
 }
-*/
+
 
 p {
   font-size:20px;

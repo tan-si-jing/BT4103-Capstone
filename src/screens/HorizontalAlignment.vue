@@ -171,7 +171,7 @@
 
                 <!--p style="padding-top:3%"><b class="tab2">14.7</b><b>Main Carriageway</b></p-->
                 <p> The geometric design requirement of road shall be as follows: - </p>
-                <div class="img-container">
+                <div class="img-container4">
                     <img src="../assets/Table10.2.png">
                 </div>  
                 <p style="font-size: 16px;"> Referenced from:
@@ -224,7 +224,7 @@
 
                 <div class="title" @click="collapse9()">
                   <div class="title-text">
-                    <b class="tab2">4.10</b>Horizontal Alignment
+                    <b class="tab5">14.10</b>Horizontal Alignment
                   </div>
                   <div class="title-icon">
                     <span v-if="!displayInfo9"><font-awesome-icon icon="angle-down" id="arrow"/></span>
@@ -440,14 +440,14 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
-/*
-.img-container{
+
+.img-container4{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;
-}*/
+    margin-bottom:3%;*/
+}
 
 .img-container2{
     width: 50%;
@@ -459,11 +459,11 @@ tbody tr:last-child td{
 
 
 
-/* Resize images to standardise size 
-.img-container img{
+/* Resize images to standardise size */
+.img-container4 img{
     max-width: 100%;
     height: auto;
-}*/
+}
 
 .img-container2 img{
     width: 100%;
@@ -483,5 +483,9 @@ p {
 
 .tab3 {
   margin-right: 1em
+}
+
+.tab5 {
+  margin-right: 1.2em
 }
 </style>
