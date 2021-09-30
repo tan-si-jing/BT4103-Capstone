@@ -11,20 +11,70 @@
             <div class="content">
               <p style="padding-top:3%"><b class="tab2">1</b><b>Road Cross-Sections and Elements</b></p>
                 <p class="tab4">1.1 General</p>
-                <p class="tab4">1.2 Sidetable, Drain, Footpath and Divider</p>
-                <p class="tab5">1.2.1 Kerbs</p>
-                <p class="tab5">1.2.2 Kerbs Painting (1 of 2)</p>
-                <p class="tab5">1.2.3 Kerbs Painting (2 of 2)</p>
-                <p class="tab5">1.2.4 Civic District Kerb - Type C1, C2, C3 & C4</p>
-                <p class="tab5">1.2.5 Footpath Ramp - Type 1 Pedestrain Crossing Points</p>
-                <p class="tab5">1.2.6 Footpath Ramp - Type 2 Pedestrain Crossing Points</p>
-                <p class="tab5">1.2.7 Footpath Ramp - Traffic Island</p>
-                <p class="tab5">1.2.8 Footpath Ramp - Side Road</p>
-                <p class="tab5">1.2.9 Footpath Ramp - Driveway</p>
-                <p class="tab5">1.2.10 Footpath Ramp - Footpath Beside Open Drain</p>
-                <p class="tab5">1.2.11 Footpath Ramp - Cast-In-Situ Concrete Pavement</p>
-                <p class="tab5">1.2.12 Homogeneous Tactile Tiles and Arrangement of Tactile Tiles</p>
-                <p class="tab5">1.2.13 Kerb With Slot Holes</p>
+
+                <p class="tab4">1.2 Lane Width</p>
+                <p class="tab5">1.2.1 Lane Width Without Cycling Path</p>
+                <p class="tab6">1.2.1.1 Typical Acceleration Lane At Expressway</p>
+                <p class="tab6">1.2.1.2 Typical Deceleration Lane At Expressway</p>
+                <p class="tab6">1.2.1.3 Chevron Markings</p>
+                <p class="tab6">1.2.1.4 Road Signs & Markings At Intersections</p>
+                <p class="tab6">1.2.1.5 Bus Lane Markings</p>
+                <p class="tab5">1.2.2 Lane Width With Cycling Path</p>
+                <p class="tab6">1.2.2.1 Treatment at Major Junction</p>
+                <p class="tab6">1.2.2.2 Treatment at Other Junctions</p>
+                <p class="tab6">1.2.2.3 Treatment at Development/ Carpark Access (Sheet 1 of 2)</p>
+                <p class="tab6">1.2.2.4 Treatment at Development/ Carpark Access (Sheet 2 of 2)</p>
+                <p class="tab6">1.2.2.5 Bicycle Crossing</p>
+                <p class="tab6">1.2.2.6 Shared Track</p>
+                <p class="tab6">1.2.2.7 Treatment at Bus Stop With Bus Bay</p>
+                <p class="tab6">1.2.2.8 Treatment at Bus Stop Without Bus Bay</p>
+                <p class="tab6">1.2.2.9 Cycling Pavement Marking Details</p>
+                <p class="tab6">1.2.2.10 Cycling Signs (Sheet 1 of 2)</p>
+                <p class="tab6">1.2.2.11 Cycling Signs (Sheet 2 of 2)</p>
+                <p class="tab6">1.2.2.12 Cycling Track Lighting</p>
+
+                <p class="tab4">1.3 Services Verge</p>
+                <p class="tab5">1.3.1 Pavement of Roads</p>
+                <p class="tab6">1.3.1.1 Flexible Pavement, Recambering & Widening of Carriageway</p>
+                <p class="tab6">1.3.1.2 Rigid Pavement (Sheet 1 of 2)</p>
+                <p class="tab6">1.3.1.3 Rigid Pavement (Sheet 2 of 2)</p>
+                <p class="tab6">1.3.1.4 Public Lighting</p>
+                <p class="tab6">1.3.1.5 Traffic Light Cable</p>
+                <p class="tab5">1.3.2 Gratings & Manhole Covers</p>
+                <p class="tab6">1.3.2.1 Pedestrian Grating for Sump / Drain - Without Mild Steel Plate</p>
+                <p class="tab6">1.3.2.2 Pedestrian Concrete In-Fill Grating For Sump / Drain</p>
+                <p class="tab6">1.3.2.3 Frame For Pedestrian Grating</p>
+                <p class="tab6">1.3.2.4 Vehicular Grating for Manholes (Sheet 1 of 2)</p>
+                <p class="tab6">1.3.2.5 Vehicular Grating for Manholes (Sheet 2 of 2)</p>
+                <p class="tab6">1.3.2.6 Vehicular Grating for Drains (Sheet 1 of 2)</p>
+                <p class="tab6">1.3.2.7 Vehicular Grating for Manholes (Sheet 2 of 2)</p>
+                <p class="tab6">1.3.2.8 Manhole Cover and Frame</p>
+                <p class="tab6">1.3.2.9 Roadside Manhole Grating</p>
+
+                <p class="tab4">1.4 Drains & Culverts</p>
+                <p class="tab5">1.4.1 Precast Concrete Channel and Drain</p>
+                <p class="tab5">1.4.2 Cast-In-Situ Box Culvert</p>
+                <p class="tab5">1.4.3 Precast Concrete Pipe Culverts</p>
+                <p class="tab5">1.4.4 Precast Open U-Drain</p>
+                <p class="tab5">1.4.5 Precast Slabbed Over U-Drain</p>
+                <p class="tab5">1.4.6 Precast Concrete Drop-Inlet Chamber</p>
+                <p class="tab5">1.4.7 Sub-Soil Drain and Sump Along Expressway</p>
+                <p class="tab5">1.4.8 Sub-Soil Drain and Sump Along Major Arterial</p>
+
+                <p class="tab4">1.5 Sidetable, Drain, Footpath and Divider</p>
+                <p class="tab5">1.5.1 Kerbs</p>
+                <p class="tab5">1.5.2 Kerbs Painting (1 of 2)</p>
+                <p class="tab5">1.5.3 Kerbs Painting (2 of 2)</p>
+                <p class="tab5">1.5.4 Civic District Kerb - Type C1, C2, C3 & C4</p>
+                <p class="tab5">1.5.5 Footpath Ramp - Type 1 Pedestrain Crossing Points</p>
+                <p class="tab5">1.5.6 Footpath Ramp - Type 2 Pedestrain Crossing Points</p>
+                <p class="tab5">1.5.7 Footpath Ramp - Traffic Island</p>
+                <p class="tab5">1.5.8 Footpath Ramp - Side Road</p>
+                <p class="tab5">1.5.9 Footpath Ramp - Driveway</p>
+                <p class="tab5">1.5.10 Footpath Ramp - Footpath Beside Open Drain</p>
+                <p class="tab5">1.5.11 Footpath Ramp - Cast-In-Situ Concrete Pavement</p>
+                <p class="tab5">1.5.12 Homogeneous Tactile Tiles and Arrangement of Tactile Tiles</p>
+                <p class="tab5">1.5.13 Kerb With Slot Holes</p>
 
               <p style="padding-top:3%"><b class="tab2">2</b><b>Grade</b></p>
                 <p class="tab4">2.1 Main Carriageway</p>
@@ -66,9 +116,11 @@
                 <p class="tab5">9.1.6 Arrows for Directional Signs</p>
                 <p class="tab5">9.1.7 Notes for Directional Signs (Sheet 1 of 2)</p>
                 <p class="tab5">9.1.8 Notes for Directional Signs (Sheet 2 of 2)</p>
+
                 <p class="tab4">9.2 Traffic Mandatory Signs</p>
                 <p class="tab5">9.2.1 Traffic Mandatory Signs (Sheet 1 of 2)</p>
                 <p class="tab5">9.2.2 Traffic Mandatory Signs (Sheet 2 of 2)</p>
+
                 <p class="tab4">9.3 Traffic Prohibitory Signs</p>
                 <p class="tab5">9.3.1 Traffic Prohibitory Signs (Sheet 1 of 6)</p>
                 <p class="tab5">9.3.2 Traffic Prohibitory Signs (Sheet 2 of 6)</p>
@@ -76,6 +128,7 @@
                 <p class="tab5">9.3.4 Traffic Prohibitory Signs (Sheet 4 of 6)</p>
                 <p class="tab5">9.3.5 Traffic Prohibitory Signs (Sheet 5 of 6)</p>
                 <p class="tab5">9.3.6 Traffic Prohibitory Signs (Sheet 6 of 6)</p>
+
                 <p class="tab4">9.4 Traffic Warning Signs</p>
                 <p class="tab5">9.4.1 Traffic Warning Signs (Sheet 1 of 9)</p>
                 <p class="tab5">9.4.2 Traffic Warning Signs (Sheet 2 of 9)</p>
@@ -86,6 +139,7 @@
                 <p class="tab5">9.4.7 Traffic Warning Signs (Sheet 7 of 9)</p>
                 <p class="tab5">9.4.8 Traffic Warning Signs (Sheet 8 of 9)</p>
                 <p class="tab5">9.4.9 Traffic Warning Signs (Sheet 9 of 9)</p>
+                
                 <p class="tab4">9.5 Traffic Informatory Signs</p>
                 <p class="tab5">9.5.1 Traffic Informatory Signs (Sheet 1 of 17)</p>
                 <p class="tab5">9.5.2 Traffic Informatory Signs (Sheet 2 of 17)</p>
@@ -106,6 +160,7 @@
                 <p class="tab5">9.5.17 Traffic Informatory Signs (Sheet 17 of 17)</p>
                 <p class="tab5">9.5.18 Traffic Informatory Signs (Sheet 1 of 2)</p>
                 <p class="tab5">9.5.19 Traffic Informatory Signs (Sheet 1 of 2)</p>
+
                 <p class="tab4">9.6 Street Name Board</p>  
                 <p class="tab5">9.6.1 Street Name Sign - General Configuration Layout (Sheet 1 of 3)</p>
                 <p class="tab5">9.6.2 Street Name Sign - General Configuration Layout (Sheet 2 of 3)</p> 
@@ -119,6 +174,7 @@
                 <p class="tab5">9.6.10 Street Name Sign - Extrusion</p>
                 <p class="tab5">9.6.11 Street Name Sign - Casting Parts</p>
                 <p class="tab5">9.6.12 Street Name Sign - Traffic Sign on Support Post</p>
+                
                 <p class="tab4">9.7 Signs - Cycling Path</p> 
                 <p class="tab5">9.7.1 Treatment at Major Junction</p>
                 <p class="tab5">9.7.2 Treatment at Other Junctions</p>
@@ -277,5 +333,10 @@ p {
 .tab5 {
     margin-left: 5em;
     font-size: 16px;
+}
+
+.tab6 {
+    margin-left: 7em;
+    font-size: 14px;
 }
 </style>
