@@ -2,37 +2,16 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">6 &nbsp; Corner Radius</td>
+          <td scope="header">Page Three</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
+              <p style="padding-top:3%"><b class="tab2">17</b><b>Combination of Horizontal & Vertical Alignment</b></p>
+                <p class="tab4">17.1 Combination of Horizontal & Vertical Alignment</p>
 
-                <div class="title" @click="collapse()">
-                  <div class="title-text">
-                    <b class="tab2">6.1</b>Corner Radius
-                  </div>
-                  <div class="title-icon">
-                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
-                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
-                  </div>
-                </div>
-
-                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
-
-
-                <!--p style="padding-top:3%"><b class="tab2">6.1</b><b> Corner Radius</b></p-->
-                    <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
-                        shall not be less than the values as shown in Table 10.8.</p>
-                    <div class="img-container">
-                        <img src="../assets/Table10-8.png">
-                    </div>
-                <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
-                  CDC 10.4.2.6 - Corner Radius (page 209)</a></p>
-            </div>
             </div>
           </td>
           </tr>
@@ -52,14 +31,16 @@
                 
                 <div class="grid-item">
                   <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / <br>Section 10.4.2.6
+                  <br>CDC Chapter 10 / <br>Section 10.4.3
                 </div>   
                 
                 <div class="grid-item">
                   <span id = "link">Link to Chapter/ Section</span>
+                   <br>
+                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.3.1.1 (page 209)</a>
                   <br>
-                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.2.6 (page 209)</a>
-                  </div>   
+                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.2 (page 210)</a>
+                </div>   
               </div>
             </div>      
           </td>
@@ -67,21 +48,6 @@
         </tbody>
       </table>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-    displayInfo: false
-    }
-  },
-  methods:{
-      collapse: function() {
-        this.displayInfo = !this.displayInfo;
-    },
-  }
-}
-</script>
 
 <style scoped>
 table {
@@ -103,7 +69,7 @@ table {
     border-top-right-radius: 15px;
     font-size:22px;
     text-indent:1.5%;
-    vertical-align: middle;
+     vertical-align: middle;
 }
 tbody tr{
     background-color: #ffffff;
@@ -120,20 +86,7 @@ tbody tr:last-child td{
   margin: 2% 10%;
   text-align: justify;
   padding-bottom:5%;
-}
-
-.title {
-  cursor: pointer;
-  display: flex;
-  margin-top: 3%;
-  padding: 1% 0;
-  font-weight: bold;
-}
-.title-text {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  font-size: 20px;
+  /*max-width:70vw;*/
 }
 /*
 .grid-container{
@@ -163,11 +116,10 @@ tbody tr:last-child td{
 
 #link{
   font-weight:bold;
-}
-*/
+}*/
 
 .img-container{
-    width: 80%;
+    max-width:80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
@@ -181,6 +133,7 @@ tbody tr:last-child td{
     height: auto;
 }
 
+
 p {
   font-size:20px;
 }
@@ -190,5 +143,20 @@ p {
 
 .tab2 {
  margin-right: 1.7em
+}
+
+.tab3 {
+  margin-right: 1em
+}
+
+.tab4 {
+    margin-left: 2em;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.tab5 {
+    margin-left: 5em;
+    font-size: 16px;
 }
 </style>

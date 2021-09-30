@@ -2,7 +2,7 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">12 &nbsp; Curve Length</td>
+          <td scope="header">13 &nbsp; Curve Length</td>
           </tr>
         </thead>
         <tbody>
@@ -10,7 +10,20 @@
           <td scope="row">
             <div class="content">
 
-                <p style="padding-top:3%"><b class="tab2">12.1</b><b>Crest Curve</b></p>
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">13.1</b>Crest Curve
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+
+                <!--p style="padding-top:3%"><b class="tab2">13.1</b><b>Crest Curve</b></p-->
                 <p> The minimum length of a crest curve in metre shall be the greater of:</p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
@@ -27,9 +40,21 @@
                   CDC 10.4.3.2.1 - Crest Curve (page 210)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=232" target="_blank">
                   CDC Figure 10.8 (page 232)</a></p>
+                </div>
 
-                
-                <p style="padding-top:3%"><b class="tab2">12.2</b><b>Sag Curve</b></p>
+                <div class="title" @click="collapse1()">
+                  <div class="title-text">
+                    <b class="tab2">13.2</b>Sag Curve
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b class="tab2">13.2</b><b>Sag Curve</b></p-->
                 <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
@@ -52,6 +77,7 @@
                   CDC Figure 10.9 (page 233)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234" target="_blank">
                   CDC Figure 10.10 (page 234)</a></p>
+              </div>
 
             </div>
           </td>
@@ -100,27 +126,19 @@
 export default {
   data() {
     return {
-    isActive1: false,
-    isActive2: false,
+    displayInfo: false,
+    displayInfo1: false
     }
   },
   methods:{
-      toggle1() {
-        if (!this.isActive1) {
-            this.isActive1 = true;
-        } else {
-            this.isActive1 = false;
-        }
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
     },
-    toggle2() {
-        if (!this.isActive2) {
-            this.isActive2 = true;
-        } else {
-            this.isActive2 = false;
-        }
+    collapse1: function() {
+        this.displayInfo1 = !this.displayInfo1;
     },
   }
-  }
+}
 </script>
 <style scoped>
 table {
@@ -160,6 +178,20 @@ tbody tr:last-child td{
   text-align: justify;
   padding-bottom:5%;
 }
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
 /*
 .grid-container{
   margin: 5% 5% -8%;
@@ -191,13 +223,14 @@ tbody tr:last-child td{
 }
 */
 
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
-}
+    margin-bottom:3%;
+}*/
 
 .img-container2{
     width: 50%;
@@ -207,11 +240,11 @@ tbody tr:last-child td{
     margin-bottom:3%;
 }
 
-/* Resize images to standardise size */
+/* Resize images to standardise size 
 .img-container img{
     width: 100%;
     height: auto;
-}
+}*/
 
 .img-container2 img{
     width: 100%;

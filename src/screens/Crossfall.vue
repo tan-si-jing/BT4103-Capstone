@@ -9,13 +9,40 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b class="tab2">5.1 </b></p>
+
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">5.1</b>Definition
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b class="tab2">5.1 </b></p-->
                 <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=199" target="_blank">
                   CDC 10.2.2 - Definition: Crossfall (page 199)</a></p>
+                </div>
 
-                <p style="padding-top:3%"><b class="tab2">5.2</b><b>Crossfall of Carriageway</b></p>    
+                <div class="title" @click="collapse1()">
+                  <div class="title-text">
+                    <b class="tab2">5.2</b>Crossfall of Carriageway
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
+
+
+                <!--p style="padding-top:3%"><b class="tab2">5.2</b><b>Crossfall of Carriageway</b></p-->    
                     <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
                         to the side drain and the design requirements shall be as shown in Table 10.6.</p>
                     <div class="img-container">
@@ -24,6 +51,7 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target="_blank"> 
                   CDC 10.4.2.4 - Crossfall of Carriageway (page 207)</a></p>
+            </div>
             </div>
           </td>
           </tr>
@@ -60,6 +88,26 @@
         </tbody>
       </table>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false,
+    displayInfo1: false
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+    collapse1: function() {
+        this.displayInfo1 = !this.displayInfo1;
+    },
+    
+  }
+}
+</script>
 
 <style scoped>
 table {
@@ -100,6 +148,21 @@ tbody tr:last-child td{
   text-align: justify;
   padding-bottom:5%;
 }
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
+
 /*
 .grid-container{
   margin: 5% 5% -8%;
@@ -130,20 +193,21 @@ tbody tr:last-child td{
   font-weight:bold;
 }*/
 
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
+    margin-bottom:3%;
 }
 
-/* Resize images to standardise size */
+/* Resize images to standardise size 
 .img-container img{
     width: 100%;
     height: auto;
 }
-
+*/
 p {
   font-size:20px;
 }

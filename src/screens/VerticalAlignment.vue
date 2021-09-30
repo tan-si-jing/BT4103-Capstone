@@ -2,20 +2,46 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">14 &nbsp; Vertical Alignment</td>
+          <td scope="header">15 &nbsp; Vertical Alignment</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b class="tab2">14.1</b><b>Types of Vertical Curve</b></p>
+
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">15.1</b>Types of Vertical Curve
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b class="tab2">15.1</b><b>Types of Vertical Curve</b></p-->
                 <p> A vertical curve shall be provided when there is a change in road gradient by using symmetrical simple parabolic curve.</p>
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target='_blank'>
                   CDC 10.4.3.2 - Types of Vertical Curve (page 210)</a></p>
+                </div>
+              
+                <div class="title" @click="collapse1()">
+                  <div class="title-text">
+                    <b class="tab2">15.2</b>Crest Curve
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
 
-                <p style="padding-top:3%"><b class="tab2">14.2</b><b>Crest Curve</b></p>
+                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b class="tab2">15.2</b><b>Crest Curve</b></p-->
                 <p> The minimum length of a crest curve in metre shall be the greater of:</p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
@@ -32,9 +58,21 @@
                   CDC 10.4.3.2.1 - Crest Curve (page 210)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=232" target='_blank'>
                   CDC Figure 10.8 (page 232)</a></p>
+                </div>
+              
+                <div class="title" @click="collapse2()">
+                  <div class="title-text">
+                    <b class="tab2">15.3</b>Sag Curve
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo2"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo2"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
 
+                <div class="information" v-show="displayInfo2" style="font-size: 20px; margin-top: 1%;">
 
-                <p style="padding-top:3%"><b class="tab2">14.3</b><b>Sag Curve</b></p>
+                <!--p style="padding-top:3%"><b class="tab2">15.3</b><b>Sag Curve</b></p-->
                 <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
                 <p>a) 0.6 times of the design speed (in km/h); or </p>
                 <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
@@ -58,7 +96,21 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234" target='_blank'>
                   CDC Figure 10.10 (page 234)</a></p>
 
-                <p style="padding-top:3%"><b class="tab2">14.3</b><b>Critical Length of Grade</b></p>
+                </div>
+              
+                <div class="title" @click="collapse4()">
+                  <div class="title-text">
+                    <b class="tab2">15.4</b>Critical Length of Grade
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo4"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo4"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo4" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b class="tab2">15.4</b><b>Critical Length of Grade</b></p-->
                 <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
                   Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
                     <div class="img-container">
@@ -72,8 +124,22 @@
                   CDC 10.4.3.1.3 - Critical Length of Grade (page 210)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=231" target='_blank'>
                   CDC Figure 10.7 (page 231)</a></p>
-                  
-                <p style="padding-top:3%"><b class="tab2">14.4</b><b>Vertical Alignment</b></p>
+
+                </div>
+              
+                <div class="title" @click="collapse5()">
+                  <div class="title-text">
+                    <b class="tab2">15.5</b>Vertical Alignment
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo5"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo5"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo5" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b class="tab2">15.5</b><b>Vertical Alignment</b></p-->
                 <p>There are several general controls that shall be considered when designing the vertical alignment: - </p>
                 <p>a) a smooth grade line with gradual changes shall be used instead of a line with numerous breaks and short lengths of grades; </p>
                 <p>b) grade through intersection shall not exceed 3% to avoid adverse effect to turning movement and ensure effective surface drainage; </p>
@@ -84,12 +150,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=201" target='_blank'>
                   CDC 10.4.1.2 - Vertical Alignment (page 201)</a></p>
 
-
-
-
-
-
-
+                </div>
             </div>
           </td>
           </tr>
@@ -140,6 +201,41 @@
       </table>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false,
+    displayInfo1: false,
+    displayInfo2: false,
+    displayInfo3: false,
+    displayInfo4: false,
+    displayInfo5: false,
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+    collapse1: function() {
+        this.displayInfo1 = !this.displayInfo1;
+    },
+    collapse2: function() {
+        this.displayInfo2 = !this.displayInfo2;
+    },
+    collapse3: function() {
+        this.displayInfo3 = !this.displayInfo3;
+    },
+    collapse4: function() {
+        this.displayInfo4 = !this.displayInfo4;
+    },
+    collapse5: function() {
+        this.displayInfo5 = !this.displayInfo5;
+    },
+  }
+}
+</script>
+
 <style scoped>
 table {
     width: 70vw;
@@ -179,6 +275,20 @@ tbody tr:last-child td{
   padding-bottom:5%;
 }
 
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
+
 /*
 .grid-container{
   margin: 5% 5% -8%;
@@ -209,13 +319,14 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
-}
+    margin-bottom:3%;
+}*/
 
 .img-container2{
     width: 50%;
@@ -227,10 +338,11 @@ tbody tr:last-child td{
 
 
 /* Resize images to standardise size */
+/*
 .img-container img{
     width: 100%;
     height: auto;
-}
+}*/
 
 .img-container2 img{
     width: 100%;

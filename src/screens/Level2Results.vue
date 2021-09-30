@@ -31,6 +31,7 @@
     </div>
 
     <div class="pages">
+        <PageCircle2 num="0" v-bind:isActive="false" @click="contentpage"/>
         <PageCircle2 num="1" v-bind:isActive="true"/>
         <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
         <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
@@ -71,6 +72,9 @@ components: {
   "PageCircle2": PageCircle2
 },
 methods: {
+  contentpage() {
+    this.$router.push({path: "/contentpage"})
+  },
   level3() {
     this.$router.push({path: "/level3results"})
   },
@@ -84,7 +88,7 @@ methods: {
         return JSON.parse(localStorage.getItem('choice'))
   },
   back() {
-    this.$router.push({path: "/search5"})
+    this.$router.push({path: "/contentpage"})
   }
 },
 created(){

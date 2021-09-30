@@ -2,14 +2,26 @@
       <table class="table table-borderless">
         <thead class="table">
           <tr>
-          <td scope="header">11 &nbsp; Sight Distance</td>
+          <td scope="header">12 &nbsp; Sight Distance</td>
           </tr>
         </thead>
         <tbody>
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b class="tab2">11.1</b><b>Stopping Sight Distance</b></p>
+
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">12.1</b>Stopping Sight Distance
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+                <!--p style="padding-top:3%"><b class="tab2">12.1</b><b>Stopping Sight Distance</b></p-->
                 <p> The minimum stopping sight distance for various road gradient shall be determined by the following formula:</p>
                     <div class="img-container2">
                         <img src="../assets/10.4.2.2.1.png">
@@ -17,8 +29,20 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.1 - Stopping Sight Distance (page 203)</a></p>
+                </div>
 
-                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">11.2</b><b>Intermediate Sight Distance</b></p>
+                <div class="title" v-show="isUndivided" @click="collapse1()">
+                  <div class="title-text">
+                    <b class="tab2">12.2</b>Intermediate Sight Distance
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+                
+                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
+                <!--p v-show="isUndivided" style="padding-top:3%"><b class="tab3">12.2</b><b>Intermediate Sight Distance</b></p-->
                     <p v-show="isUndivided">a) Intermediate sight distance is equal to 2 times stopping sight distance. </p>
                     <p v-show="isUndivided">b) Intermediate sight distance is only applicable to undivided 2-lane road. </p>
                     <p v-show="isUndivided">c) Where intermediate sight distance is unachievable because of site constraint, 
@@ -27,20 +51,44 @@
                 <p v-show="isUndivided" style="font-size: 16px;"> Referenced from:
                   <a v-show="isUndivided" href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
                   CDC 10.4.2.2.2 - Intermediate Sight Distance (page 203)</a></p>
+                </div>
 
-                <p v-show="isUndivided" style="padding-top:3%"><b class="tab3">11.3</b><b>Overtaking Sight Distance</b></p>
+
+                <div class="title" v-show="isUndivided" @click="collapse2()">
+                  <div class="title-text">
+                    <b class="tab2">12.3</b>Overtaking Sight Distance
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo2"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo2"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo2" style="font-size: 20px; margin-top: 1%;">
+                <!--p v-show="isUndivided" style="padding-top:3%"><b class="tab3">12.3</b><b>Overtaking Sight Distance</b></p-->
                     <p v-show="isUndivided">The following sight distances are to be considered in the design. If overtaking sight distance 
                         for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
                       <p v-show="isUndivided" >Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
-                    <div class="img-container">
+                    <div class="img-container" v-show="displayInfo2">
                         <img v-show="isUndivided" src="../assets/Table10.5.png">
-                    </div>
-                    
-                <p style="font-size: 16px;"> Referenced from:
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
+                    </div>  
+                <p v-show="isUndivided" style="font-size: 16px;"> Referenced from:
+                  <a v-show="isUndivided" href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
                   CDC 10.4.2.2.3 - Overtaking Sight Distance (page 204)</a></p>
+                </div> 
 
-                <p style="padding-top:3%"><b class="tab3">11.4</b><b>Intersection Sight Distance</b></p>
+                <div class="title" @click="collapse3()">
+                  <div class="title-text">
+                    <b class="tab2">12.4</b>Intersection Sight Distance
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo3"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo3"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo3" style="font-size: 20px; margin-top: 1%;">
+                <!--p style="padding-top:3%"><b class="tab3">12.4</b><b>Intersection Sight Distance</b></p-->
                     <p>The desirable intersection sight distance at unsignalised junction can be derived 
                         from the following formula and to be read in conjunction with Figure 10.2.</p>
                     <div class="img-container2">
@@ -49,13 +97,26 @@
                     <div class="img-container">
                         <img src="../assets/Figure10.2.png">
                     </div>
-                <p style="font-size: 16px;"> Referenced from:
+                
+                  <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
                   CDC 10.4.2.2.4 - Intersection Sight Distance (page 204)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=226" target='_blank'>
                   CDC Figure 10.2 (page 226)</a></p>
-                
-                <p style="padding-top:3%"><b class="tab3">11.5</b><b>Sight Distance on Horizontal Curve</b></p>
+
+                </div>
+
+                <div class="title" @click="collapse4()">
+                  <div class="title-text">
+                    <b class="tab2">12.5</b>Sight Distance on Horizontal Curve
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo4"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo4"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+                <div class="information" v-show="displayInfo4" style="font-size: 20px; margin-top: 1%;">
+                <!--p style="padding-top:3%"><b class="tab3">12.5</b><b>Sight Distance on Horizontal Curve</b></p-->
                     <p>On a horizontal curve where the obstruction on the inside of the curve cannot be removed, 
                         offset distance to the obstruction shall be provided. 
                         The offset distance can be derived from the following formula and shall be read in conjunction with Figure 10.3.</p>
@@ -70,6 +131,7 @@
                   CDC 10.4.2.2.5 - Sight Distance on Horizontal Curve (page 205)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=227" target='_blank'>
                   CDC Figure 10.3 (page 226)</a></p>
+              </div>
                        
             </div>
           </td>
@@ -114,7 +176,6 @@
       </table>
 </template>
 
-
 <script>
 export default {
     name:'SightDistance',
@@ -128,13 +189,34 @@ export default {
           designSpeed: "",
           grad_curv_change:"",
           specific_param:"",
+          displayInfo: false,
         },
+        displayInfo: false,
+        displayInfo1: false,
+        displayInfo2: false,
+        displayInfo3: false,
+        displayInfo4: false,
         isUndivided: this.$parent.choice.roadType === 'undividedRoad' ? true : false
       }
     },
     methods:{
       openStorage(){
         return JSON.parse(localStorage.getItem('choice'))
+      },
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+      },
+      collapse1: function() {
+        this.displayInfo1 = !this.displayInfo1;
+      },
+      collapse2: function() {
+        this.displayInfo2 = !this.displayInfo2;
+      },
+      collapse3: function() {
+        this.displayInfo3 = !this.displayInfo3;
+      },
+      collapse4: function() {
+        this.displayInfo4 = !this.displayInfo4;
       },
     },
     mounted(){
@@ -191,6 +273,20 @@ tbody tr:last-child td{
   padding-bottom:5%;
 }
 
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
+
 /*
 .grid-container{
   margin: 5% 5% -8%;
@@ -221,14 +317,14 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
-
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
-}
+    margin-bottom:3%;
+}*/
 
 .img-container2{
     width: 50%;
@@ -238,12 +334,12 @@ tbody tr:last-child td{
     margin-bottom:3%;*/
 }
 
-/* Resize images to standardise size */
+/* Resize images to standardise size 
 .img-container img{
     width: 100%;
     height: auto;
 }
-
+*/
 .img-container2 img{
     width: 100%;
     height: auto;

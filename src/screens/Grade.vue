@@ -9,7 +9,20 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p style="padding-top:3%"><b class="tab2">2.1</b><b>Main Carriageway</b></p>
+
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">2.1</b>Main Carriageway
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+              <!--p style="padding-top:3%"><b class="tab2">2.1</b><b>Main Carriageway</b></p-->
                 <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
                 <p>Notes:</p>
                 <p>1) Minimum gradient for all roads is 0.4%.</p>
@@ -22,14 +35,28 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
                   CDC 10.4.3.1.1 - Main Carriageway (page 209)</a></p>
+                </div>
+                
+                <div class="title" @click="collapse1()">
+                  <div class="title-text">
+                    <b class="tab2">2.2</b>Interchange Ramp/Loop and Slip Road
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
 
-              <p style="padding-top:3%"><b class="tab2">2.2</b><b>Interchange Ramp/Loop and Slip Road</b></p>
+                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
+
+              <!--p style="padding-top:3%"><b class="tab2">2.2</b><b>Interchange Ramp/Loop and Slip Road</b></p-->
                 <div class="img-container">
                     <img src="../assets/Table10-10.png">
                 </div>                
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
                   CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a></p>
+            </div>
             </div>
           </td>
           </tr>
@@ -66,6 +93,25 @@
         </tbody>
       </table>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false,
+    displayInfo1: false
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+    collapse1: function() {
+        this.displayInfo1 = !this.displayInfo1;
+    }
+  }
+}
+</script>
 
 <style scoped>
 table {
@@ -106,6 +152,22 @@ tbody tr:last-child td{
   padding-bottom:5%;
   /*max-width:70vw;*/
 }
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
+
+
 /*
 .grid-container{
   margin: 5% 5% -8%;
@@ -136,21 +198,22 @@ tbody tr:last-child td{
   font-weight:bold;
 }*/
 
+/*
 .img-container{
     max-width:80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
+    margin-bottom:3%;
 }
 
 
-/* Resize images to standardise size */
+/* Resize images to standardise size 
 .img-container img{
     width: 100%;
     height: auto;
 }
-
+*/
 
 p {
   font-size:20px;

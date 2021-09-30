@@ -9,13 +9,26 @@
           <tr>
           <td scope="row">
             <div class="content">
-              <p style="padding-top:3%"><b class="tab2">4.1</b><b>Side Friction Factor given Design Speed</b></p>
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">4.1</b>
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+              <!--p style="padding-top:3%"><b class="tab2">4.1</b><b>Side Friction Factor given Design Speed</b></p-->
                 <div class="img-container">
                     <img src="../assets/Table10-7.png">
                 </div>
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
                   CDC 10.4.2.5.1 - Side Friction Factor given Design Speed (page 208)</a></p>               
+            </div>
             </div>
           </td>
           </tr>
@@ -52,6 +65,21 @@
         </tbody>
       </table>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+  }
+}
+</script>
 
 <style scoped>
 table {
@@ -92,6 +120,20 @@ tbody tr:last-child td{
   padding-bottom:5%;
 }
 
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
+
 /* 
 .grid-container{
   margin: 5% 5% -8%;
@@ -122,21 +164,22 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
+    margin-bottom:3%;
 }
 
 
-/* Resize images to standardise size */
+/* Resize images to standardise size 
 .img-container img{
     width: 100%;
     height: auto;
 }
-
+*/
 p {
   font-size:20px;
 }

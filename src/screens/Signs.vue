@@ -9,7 +9,19 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b class="tab2">9.1</b><b>Directional Sign</b></p>
+  
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">9.1</b>Directional Sign
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+                <!--p style="padding-top:3%"><b class="tab2">9.1</b><b>Directional Sign</b></p-->
                 <p style="padding-top:2%; padding-bottom:1%;"><b class="tab3">9.1.1</b><b>Letters for Directional Signs - Upper Case (Sheet 1 of 2)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR1.png">
@@ -42,7 +54,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-7_DIR_1-8-JULY_2020.pdf#page=5" target="_blank">
                   SDRE Chapter 7 - 4 (page 5)</a></p>
 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Number for Directional Signs</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.5</b><b>Number for Directional Signs</b></p>
                   <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR5.png">
                     </div>
@@ -50,7 +62,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-7_DIR_1-8-JULY_2020.pdf#page=6" target="_blank">
                   SDRE Chapter 7 - 5 (page 6)</a></p>
 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Arrows for Directional Signs</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.6</b><b>Arrows for Directional Signs</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR6.png">
                     </div>
@@ -59,7 +71,7 @@
                   SDRE Chapter 7 - 6 (page 7)</a></p>
                 
 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Notes for Directional Signs (Sheet 1 of 2)</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.7</b><b>Notes for Directional Signs (Sheet 1 of 2)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR7.png">
                     </div>
@@ -67,7 +79,7 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-7_DIR_1-8-JULY_2020.pdf#page=8" target="_blank">
                   SDRE Chapter 7 - 7 (page 8)</a></p>
                 
-                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.4</b><b>Notes for Directional Signs (Sheet 2 of 2)</b></p>
+                <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.1.8</b><b>Notes for Directional Signs (Sheet 2 of 2)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap7-DIR8.png">
                     </div>
@@ -75,9 +87,22 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-7_DIR_1-8-JULY_2020.pdf#page=9" target="_blank">
                   SDRE Chapter 7 - 8 (page 9)</a></p>
 
+                </div>
+
+                <div class="title" @click="collapse1()">
+                  <div class="title-text">
+                    <b class="tab2">9.2</b>Traffic Mandatory Signs
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
                 
 
-                <p style="padding-top:8%"><b class="tab2">9.2</b><b>Traffic Mandatory Signs</b></p>
+                <!--p style="padding-top:8%"><b class="tab2">9.2</b><b>Traffic Mandatory Signs</b></p-->
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.2.1</b><b>Traffic Mandatory Signs (Sheet 1 of 2)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap15-TFM1.png">
@@ -94,9 +119,21 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-15_TFM_1-2-JULY_2020.pdf#page=3" target="_blank">
                   SDRE Chapter 15 - 2 (page 3)</a></p>
 
+                </div>
 
+                <div class="title" @click="collapse2()">
+                  <div class="title-text">
+                    <b class="tab2">9.3</b>Traffic Prohibitory Signs
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo2"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo2"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
 
-                <p style="padding-top:8%"><b class="tab2">9.3</b><b>Traffic Prohibitory Signs</b></p>
+                <div class="information" v-show="displayInfo2" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:8%"><b class="tab2">9.3</b><b>Traffic Prohibitory Signs</b></p-->
                  <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.3.1</b><b>Traffic Prohibitory Signs (Sheet 1 of 6)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap16-TFP1.png">
@@ -145,8 +182,21 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-16_TFP_1-6-JULY_2020.pdf#page=7" target="_blank">
                   SDRE Chapter 16 - 6 (page 7)</a></p>
 
+                </div>
 
-                <p style="padding-top:8%"><b class="tab2">9.4</b><b>Traffic Warning Signs</b></p>
+                <div class="title" @click="collapse3()">
+                  <div class="title-text">
+                    <b class="tab2">9.4</b>Traffic Warning Signs
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo3"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo3"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo3" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:8%"><b class="tab2">9.4</b><b>Traffic Warning Signs</b></p-->
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.4.1</b><b>Traffic Warning Signs (Sheet 1 of 9)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap17-TFW1.png">
@@ -219,9 +269,22 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-17_TFW_1-9-JULY_2020.pdf#page=10" target="_blank">
                   SDRE Chapter 17 - 9 (page 10)</a></p>
 
+                </div>
+
+                <div class="title" @click="collapse4()">
+                  <div class="title-text">
+                    <b class="tab2">9.5</b>Traffic Informatory Signs
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo4"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo4"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo4" style="font-size: 20px; margin-top: 1%;">
 
 
-                <p style="padding-top:8%"><b class="tab2">9.5</b><b>Traffic Informatory Signs</b></p>
+                <!--p style="padding-top:8%"><b class="tab2">9.5</b><b>Traffic Informatory Signs</b></p-->
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.5.1</b><b>Traffic Informatory Signs (Sheet 1 of 17)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap18-TFI1.png">
@@ -373,9 +436,22 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-19_TFS_1-2-JULY_2020.pdf#page=3" target="_blank">
                   SDRE Chapter 19 - 2 (page 3)</a></p>
+                </div>
+
+                <div class="title" @click="collapse5()">
+                  <div class="title-text">
+                    <b class="tab2">9.6</b>Street Name Board
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo5"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo5"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo5" style="font-size: 20px; margin-top: 1%;">
 
 
-                <p style="padding-top:8%"><b class="tab2">9.6</b><b>Street Name Board</b></p>
+                <!--p style="padding-top:8%"><b class="tab2">9.6</b><b>Street Name Board</b></p-->
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.6.1</b><b>Street Name Sign - General Configuration Layout (Sheet 1 of 3)</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap20-SNB1.png">
@@ -472,9 +548,22 @@
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-20_SNB_1-12-JULY_2020.pdf#page=13" target="_blank">
                   SDRE Chapter 20 - 12 (page 13)</a></p>
 
+                </div>
+
+                <div class="title" @click="collapse6()">
+                  <div class="title-text">
+                    <b class="tab2">9.7</b>Signs – Cycling Path
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo6"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo6"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo6" style="font-size: 20px; margin-top: 1%;">
 
 
-                <p style="padding-top:8%"><b class="tab2">9.7</b><b>Signs – Cycling Path</b></p>
+                <!--p style="padding-top:8%"><b class="tab2">9.7</b><b>Signs – Cycling Path</b></p-->
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.7.1</b><b>Treatment at Major Junction</b></p>
                     <div class="img-container4">
                         <img src="../assets/SDRE-Chap21-CYC1.png">
@@ -554,7 +643,8 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-21_CYC_1-12-JULY_2020.pdf#page=12" target="_blank">
                   SDRE Chapter 21 - 11 (page 12)</a></p>
-
+            
+            </div>
             </div>
 
           </td>
@@ -562,6 +652,46 @@
         </tbody>
       </table>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false,
+    displayInfo1: false,
+    displayInfo2: false,
+    displayInfo3: false,
+    displayInfo4: false,
+    displayInfo5: false,
+    displayInfo6: false,
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+    collapse1: function() {
+        this.displayInfo1 = !this.displayInfo1;
+    },
+    collapse2: function() {
+        this.displayInfo2 = !this.displayInfo2;
+    },
+    collapse3: function() {
+        this.displayInfo3 = !this.displayInfo3;
+    },
+    collapse4: function() {
+        this.displayInfo4 = !this.displayInfo4;
+    },
+    collapse5: function() {
+        this.displayInfo5 = !this.displayInfo5;
+    },
+    collapse6: function() {
+        this.displayInfo6 = !this.displayInfo6;
+    },
+  }
+}
+</script>
+
 
 <style scoped>
 table {
@@ -601,6 +731,21 @@ tbody tr:last-child td{
   text-align: justify;
   padding-bottom:5%;
 }
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
+/*
 .img-container4{
     max-width:80%;
     height: auto;
@@ -608,12 +753,11 @@ tbody tr:last-child td{
 }
 
 
-/* Resize images to standardise size */
 .img-container4 img{
     width: 100%;
     height: auto;
 }
-
+*/
 p {
   font-size:20px;
 }
