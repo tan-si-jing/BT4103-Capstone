@@ -113,20 +113,6 @@ const router = createRouter({
   ],
 });
 
-/*
-// eslint-disable-next-line no-unused-vars
-router.beforeEach((to, from, next) => {
-  const isLoggedIn = true //check if logged in
-  
-  if (to.meta.requiresAuth && !isLoggedIn) {
-    return {
-      path: '/login',
-      // save the location we were at to come back later
-      query: { redirect: to.fullPath },
-    }
-  } else next()
-})*/
-
 /* to disable viewing of dashboard if admin is not logged in*/
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.authRequired)) {

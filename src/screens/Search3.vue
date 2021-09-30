@@ -10,7 +10,16 @@
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
     <div class="question">
-      <h5>Are you working on <u>Undivided (x-lane) Road</u>, <u>Slip Road</u> or <u>Dual (x-lane) Road</u>? Please select below. </h5>
+      <h5>Are you working on <u>Undivided (x-lane) Road</u>, <u>Slip Road</u> or <u>Dual (x-lane) Road</u>? Please select below.
+      <span tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" 
+      title="
+        <b>Undivided (x-lane) Road</b>: bi-directional road with no physical separator/ divider with x-lane in total <br> 
+        <b>Slip Road</b>: connecting road to allow vehicles to enter or exit the interconnecting carriageway and to bypass the intersection at-grade <br> 
+        <b>Dual (x-lane) Road</b>: two directional road (x-lane in each direction) with a physical separator as a central divider (or) median
+      ">
+        <i class="bi bi-info-circle" id="info" style="font-size: 1rem; padding-left:0.25rem"></i>
+      </span>
+      </h5>
     </div>
     </div>
     <img src="../assets/mascot.png" class="mascot"/>
@@ -32,6 +41,7 @@
 <script>
 import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
+import { Tooltip } from 'bootstrap/dist/js/bootstrap.esm.min.js'
 
 export default {
   name: 'search3',
@@ -45,44 +55,49 @@ export default {
       roadType: '',
     }
   },
-methods:{
-  openStorage(){
-    return JSON.parse(localStorage.getItem('choice'))
-  },
-  saveStorage(form){
-    localStorage.setItem('choice',JSON.stringify(form))
-  },
-  updateChoice(input,value){
-    this.choice[input] = value
+  methods:{
+    openStorage() {
+      return JSON.parse(localStorage.getItem('choice'))
+    },
+    saveStorage(form) {
+      localStorage.setItem('choice',JSON.stringify(form))
+    },
+    updateChoice(input,value) {
+      this.choice[input] = value
 
-    let storedChoice = this.openStorage()
-    if(!storedChoice) storedChoice = {}
+      let storedChoice = this.openStorage()
+      if(!storedChoice) storedChoice = {}
 
-    storedChoice[input] = value
-    this.saveStorage(storedChoice)
+      storedChoice[input] = value
+      this.saveStorage(storedChoice)
+    },
+    storeRoadType(text) {
+      this.updateChoice('roadType',text)
+      this.displayRoadType();
+      this.$router.push({name:'search4'})
+    },
+    displayRoadType() {
+      console.log(this.choice.role)
+      console.log(this.choice.roadDesign)
+      console.log(this.choice.roadClass)
+      console.log(this.choice.roadType)
+    },
   },
-
-  storeRoadType(text){
-    this.updateChoice('roadType',text)
-    this.displayRoadType();
-    this.$router.push({name:'search4'})
-  },
-  displayRoadType(){
-    console.log(this.choice.role)
-    console.log(this.choice.roadDesign)
-    console.log(this.choice.roadClass)
-    console.log(this.choice.roadType)
-  },
-},
-created(){
-  const storedChoice = this.openStorage()
-  if (storedChoice){
-    this.choice = {
-      ...this.choice,
-      ...storedChoice
+  created() {
+    const storedChoice = this.openStorage()
+    if (storedChoice){
+      this.choice = {
+        ...this.choice,
+        ...storedChoice
+      }
     }
+  },
+  mounted() {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new Tooltip(tooltipTriggerEl)
+    })
   }
-}
 }
 </script>
 
@@ -145,5 +160,11 @@ created(){
 .pages {
     display: flex;
     margin: 3% 0
+}
+.tooltip-inner {
+    text-align: left;
+    max-width: 500px;
+    color:white;
+    background-color:black;
 }
 </style>
