@@ -9,7 +9,20 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b>7.1</b></p>
+
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">7.1</b>
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b>7.1</b></p-->
                     <p>Slip road is provided to permit left-turning vehicle to bypass the intersection. The desirable merging angle for 
                         left turn slip road shall be 70&#176; and absolute minimum merging angle shall be 50&#176; as shown in Figure 10.12.</p>
                     <div class="img-container">
@@ -20,6 +33,7 @@
                   CDC 10.5.2.4.1 - Slip Road (page 213)</a>, 
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236" target='_blank'>
                   CDC Figure 10.12 (page 236)</a></p>
+            </div>
             </div>
           </td>
           </tr>
@@ -56,6 +70,21 @@
         </tbody>
       </table>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+  }
+}
+</script>
 
 <style scoped>
 table {
@@ -94,6 +123,20 @@ tbody tr:last-child td{
   margin: 2% 10%;
   text-align: justify;
   padding-bottom:5%;
+}
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
 }
 
 /*

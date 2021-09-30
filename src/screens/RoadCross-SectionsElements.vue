@@ -179,6 +179,21 @@
       </table>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+  }
+}
+</script>
+
 <style scoped>
 table {
     width: 70vw;
@@ -218,6 +233,20 @@ tbody tr:last-child td{
   font-size:18px;
   margin: 2% 10%;
   text-align: justify;
+}
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
 }
 
 /*

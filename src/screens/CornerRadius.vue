@@ -9,7 +9,21 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b class="tab2">6.1</b><b> Corner Radius</b></p>
+
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">6.1</b>Corner Radius
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+
+                <!--p style="padding-top:3%"><b class="tab2">6.1</b><b> Corner Radius</b></p-->
                     <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
                         shall not be less than the values as shown in Table 10.8.</p>
                     <div class="img-container">
@@ -18,6 +32,7 @@
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
                   CDC 10.4.2.6 - Corner Radius (page 209)</a></p>
+            </div>
             </div>
           </td>
           </tr>
@@ -52,6 +67,21 @@
         </tbody>
       </table>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+  }
+}
+</script>
 
 <style scoped>
 table {
@@ -90,6 +120,20 @@ tbody tr:last-child td{
   margin: 2% 10%;
   text-align: justify;
   padding-bottom:5%;
+}
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
 }
 /*
 .grid-container{

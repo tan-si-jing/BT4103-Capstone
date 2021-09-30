@@ -9,6 +9,7 @@
           <tr>
           <td scope="row">
             <div class="content">
+              
                 <p style="padding-top:3%"><b class="tab2">12.1</b><b>Stopping Sight Distance</b></p>
                 <p> The minimum stopping sight distance for various road gradient shall be determined by the following formula:</p>
                     <div class="img-container2">
@@ -114,7 +115,6 @@
       </table>
 </template>
 
-
 <script>
 export default {
     name:'SightDistance',
@@ -128,6 +128,7 @@ export default {
           designSpeed: "",
           grad_curv_change:"",
           specific_param:"",
+          displayInfo: false,
         },
         isUndivided: this.$parent.choice.roadType === 'undividedRoad' ? true : false
       }
@@ -136,6 +137,9 @@ export default {
       openStorage(){
         return JSON.parse(localStorage.getItem('choice'))
       },
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+      }
     },
     mounted(){
       const storedChoice = this.openStorage()
@@ -189,6 +193,20 @@ tbody tr:last-child td{
   margin: 2% 10%;
   text-align: justify;
   padding-bottom:5%;
+}
+
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
 }
 
 /*

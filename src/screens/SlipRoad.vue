@@ -9,7 +9,20 @@
           <tr>
           <td scope="row">
             <div class="content">
-                <p style="padding-top:3%"><b class="tab2">16.1</b><b></b></p>
+
+                <div class="title" @click="collapse()">
+                  <div class="title-text">
+                    <b class="tab2">16.1</b>
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+
+                <!--p style="padding-top:3%"><b class="tab2">16.1</b><b></b></p-->
                 <p> The desirable minimum dimension and the approach nose of the traffic island shall be as shown in the Figure 10.12. </p>
                     <div class="img-container">
                         <img src="../assets/Figure10.12.png">
@@ -19,22 +32,48 @@
                   CDC 10.5.3.1 - Traffic Island (page 214)</a>,
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=236" target='_blank'>
                   CDC Figure 10.12 (page 236)</a></p>
+                </div>
 
-                 <p style="padding-top:3%"><b class="tab2">16.2</b><b></b></p>
+                <div class="title" @click="collapse1()">
+                  <div class="title-text">
+                    <b class="tab2">16.2</b>
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo1"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo1"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo1" style="font-size: 20px; margin-top: 1%;">
+
+                 <!--p style="padding-top:3%"><b class="tab2">16.2</b><b></b></p-->
                  <p>Where there is a high concentration of pedestrian at the road intersection adjacent to school, shopping centre, hospital, food centre, the dimension 
                      of the traffic island shall be increased based on 0.3&#13217; standing place per person. The number of pedestrians shall include those who are waiting 
                      to cross the road at the island before the start of the pedestrian crossing signal.</p>
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214" target='_blank'>
                   CDC 10.5.3.2 - Traffic Island (page 214)</a></p>
-  
-                <p style="padding-top:3%;"><b class="tab2">16.3</b><b>Road Signs & Marking at Intersections</b></p>
+                </div>
+
+                <div class="title" @click="collapse2()">
+                  <div class="title-text">
+                    <b class="tab2">16.3</b>Road Signs & Marking at Intersections
+                  </div>
+                  <div class="title-icon">
+                    <span v-if="!displayInfo2"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+                    <span v-if="displayInfo2"><font-awesome-icon icon="angle-up" id="arrow"/></span>
+                  </div>
+                </div>
+
+                <div class="information" v-show="displayInfo2" style="font-size: 20px; margin-top: 1%;">
+                <!--p style="padding-top:3%;"><b class="tab2">16.3</b><b>Road Signs & Marking at Intersections</b></p-->
                     <div class="img-container">
                         <img src="../assets/SDRE-Chap8-RMS9.png">
                     </div>
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=10" target="_blank">
                   SDRE Chapter 8 - 9 (page 10)</a></p>
+                  </div>
 
             </div>
           </td>
@@ -72,6 +111,29 @@
         </tbody>
       </table>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+    displayInfo: false,
+    displayInfo1: false,
+    displayInfo2: false
+    }
+  },
+  methods:{
+      collapse: function() {
+        this.displayInfo = !this.displayInfo;
+    },
+    collapse1: function() {
+        this.displayInfo1 = !this.displayInfo1;
+    },
+    collapse2: function() {
+        this.displayInfo2 = !this.displayInfo2;
+    },
+  }
+}
+</script>
 
 <style scoped>
 table {
@@ -112,6 +174,20 @@ tbody tr:last-child td{
   padding-bottom:5%;
 }
 
+.title {
+  cursor: pointer;
+  display: flex;
+  margin-top: 3%;
+  padding: 1% 0;
+  font-weight: bold;
+}
+.title-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-size: 20px;
+}
+
 /*
 .grid-container{
   margin: 5% 5% -8%;
@@ -142,19 +218,19 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
+/*
 .img-container{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;*/
+    margin-bottom:3%;
 }
 
-/* Resize images to standardise size */
 .img-container img{
     width: 100%;
     height: auto;
-}
+}*/
 
 p {
   font-size:20px;
