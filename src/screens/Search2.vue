@@ -142,6 +142,7 @@ export default {
 }
 .mascot {
   height: 20vh;
+  width: auto;
   position: absolute;
   top: 30%;
   left: 22.5%;

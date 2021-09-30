@@ -108,6 +108,7 @@ h6 {
 }
 .mascot {
   height: 30vh;
+  width: auto;
   transform: scaleX(-1);
   position: absolute;
   top:10vh;
