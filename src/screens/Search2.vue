@@ -18,12 +18,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="1 - Expressways"  @click="storeRoadClass('1');"/>
-      <SearchParamButton text="1A - Semi Expressway"  @click="storeRoadClass('1A');"/>
-      <SearchParamButton text="2 - Major Arterial"  @click="storeRoadClass('2');"/>
-      <SearchParamButton text="3 - Minor Arterial"  @click="storeRoadClass('3');"/>
-      <SearchParamButton text="4 - Primary Access"  @click="storeRoadClass('4');"/>
-      <SearchParamButton text="5 - Local Access"  @click="storeRoadClass('5');"/>
+      <SearchParamButton text="1 - Expressways"  @click="storeRoadClass('expressway');"/>
+      <SearchParamButton text="1A - Semi Expressway"  @click="storeRoadClass('semiExpressway');"/>
+      <SearchParamButton text="2 - Major Arterial"  @click="storeRoadClass('majorArterial');"/>
+      <SearchParamButton text="3 - Minor Arterial"  @click="storeRoadClass('minorArterial');"/>
+      <SearchParamButton text="4 - Primary Access"  @click="storeRoadClass('primaryAccess');"/>
+      <SearchParamButton text="5 - Local Access"  @click="storeRoadClass('localAccess');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>

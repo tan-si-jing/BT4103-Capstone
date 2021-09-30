@@ -27,9 +27,9 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Undivided (x-lane) Road" @click="storeRoadType('UndividedRoad');"/>
-      <SearchParamButton text="Slip Road" @click="storeRoadType('SlipRoad');"/>
-      <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('DualRoad');"/>
+      <SearchParamButton text="Undivided (x-lane) Road" @click="storeRoadType('undividedRoad');"/>
+      <SearchParamButton text="Slip Road" @click="storeRoadType('slipRoad');"/>
+      <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('dualRoad');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>

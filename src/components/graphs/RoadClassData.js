@@ -6,7 +6,7 @@ export const roadClassData = {
     datasets: [
       {
         label: "No. Searches",
-        data: [40, 50, 60, 70, 80, 90],
+        data: [0, 0, 0, 0, 0, 0],
         backgroundColor: [
           '#407fad'
         ]

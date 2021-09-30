@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
-    <p class="header">Results</p>
+    <p class="header">Specific Results Page</p>
+    <br>
+    <br>
     <div class="container">
       <DynamicTable></DynamicTable>   
     </div>
@@ -45,7 +47,9 @@ data() {
   bottom: 0px;
   left: 0px;
 }
-
+.container {
+  width: 80vw;
+}
 
 .header {
   font-size: 5vh;

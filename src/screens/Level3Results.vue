@@ -3,6 +3,9 @@
     <p class="header">Results</p>
     <div>
     <div class="container">
+      <LateralClearance></LateralClearance>
+    </div>
+    <div class="container">
       <SuperElevation2></SuperElevation2>
     </div>
     <div class="Container">
@@ -12,6 +15,7 @@
       <CurveLength></CurveLength>
     </div>
     <div class="pages">
+        <PageCircle2 num="0" v-bind:isActive="false" @click="contentpage"/>
         <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
         <PageCircle2 num="2" v-bind:isActive="true"/>
         <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
@@ -25,6 +29,7 @@
 </template>
 
 <script>
+import LateralClearance from "./LateralClearance.vue"
 import SuperElevation2 from "./SuperElevation2.vue"
 import SightDistance from "./SightDistance.vue"
 import CurveLength from "./CurveLength.vue"
@@ -33,14 +38,17 @@ import PageCircle2 from '../components/PageCircle2.vue'
 export default {
 name: "Level3Results",
 components: {
+  "LateralClearance" : LateralClearance,
   "SuperElevation2" : SuperElevation2,
   "SightDistance" : SightDistance,
   "CurveLength" : CurveLength,
   "PageCircle2": PageCircle2
 },
-props: {},
 
 methods: {
+  contentpage() {
+    this.$router.push({path: "/contentpage"})
+  },
   level2() {
     this.$router.push({path: "/level2results"})
   },
@@ -52,9 +60,20 @@ methods: {
   },
   back() {
     this.$router.push({path: "/search5"})
-  }
+  },
+  openStorage(){
+        return JSON.parse(localStorage.getItem('choice'))
+  },
 },
-
+  created(){
+    const storedChoice = this.openStorage()
+    if (storedChoice){
+      this.choice = {
+        ...this.choice,
+        ...storedChoice
+      }
+    }
+  },
 data() {
   return {
     road: require("../assets/road.png"),

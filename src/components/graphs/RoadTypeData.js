@@ -5,7 +5,7 @@ export const roadTypeData = {
     datasets: [
       {
         label: "No. Searches",
-        data: [40, 50, 60],
+        data: [0, 0, 0],
         backgroundColor: [
           '#474747'
         ]
@@ -30,7 +30,7 @@ export const roadTypeData = {
     plugins: {
       title: {
         display: true,
-        text: ['Search Distribution','for Road Type'],
+        text: 'Search Distribution for Road Type',
         color: '#263238',
         align: 'start',
         font: {

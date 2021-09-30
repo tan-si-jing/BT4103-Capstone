@@ -18,23 +18,21 @@
             <canvas id="donut-chart"></canvas>
           </div>
           <div>
-            1
+            <canvas id="bar-chart"></canvas>
           </div>
         </div>
         <!-- row 2 -->
         <div class="graphSecondRow">
           <div>
-            <canvas id="bar-chart"></canvas>
-          </div>
-          <div>
             <SpecificTable/>
           </div>
-        </div>
-        <!-- row 3 -->
-        <div class="graphThirdRow">
           <div>
             <canvas id="roadclass-chart"></canvas>
           </div>
+          
+        </div>
+        <!-- row 3 -->
+        <div class="graphThirdRow">
           <div>
             <canvas id="roadtype-chart"></canvas>
           </div>
@@ -53,11 +51,13 @@
 </template>
 
 <script>
+import database from '../firebase.js'
+import 'firebase/firestore';
+
 import { Chart, registerables } from 'chart.js';
 import LogoutButton from '../components/LogoutButton.vue';
 import SummaryData from '../components/graphs/SummaryData.vue';
 import donutChartData from '../components/graphs/DonutChartData.js';
-//import lineChartData from '../components/graphs/LineChartData.js';
 import barChartData from '../components/graphs/BarChartData.js';
 import SpecificTable from '../components/graphs/SpecificTable.vue';
 import roadClassData from '../components/graphs/RoadClassData.js';
@@ -76,29 +76,77 @@ export default {
   data() {
     return {
       donutChartData,
-      //lineChartData,
       barChartData,
       roadClassData,
       roadTypeData,
       designSpeedData,
-      changeJunctionData
+      changeJunctionData,
+      docID: 'H1uwnxYevFozEeNv7SiY'
     };
   },
+  methods: {
+    getValues: function(donutChart, barChart, roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart) {
+      database.collection('search_parameters')
+              .doc(this.docID)
+              .get()
+              .then(querySnapShot => {
+                // donut chart - user type breakdown
+                donutChart.data.datasets[0].data[0] = querySnapShot.data().engineerSpecific + querySnapShot.data().engineerGuide;
+                donutChart.data.datasets[0].data[1] = querySnapShot.data().consultantSpecific + querySnapShot.data().consultantGuide;
+                donutChart.data.datasets[0].data[2] = querySnapShot.data().publicSpecific + querySnapShot.data().publicGuide;
+                donutChart.update();
+                // bar chart - comparison of search options
+                barChart.data.datasets[0].data[0] = querySnapShot.data().engineerSpecific;
+                barChart.data.datasets[0].data[1] = querySnapShot.data().engineerGuide;
+                barChart.data.datasets[1].data[0] = querySnapShot.data().consultantSpecific;
+                barChart.data.datasets[1].data[1] = querySnapShot.data().consultantGuide;
+                barChart.data.datasets[2].data[0] = querySnapShot.data().publicSpecific;
+                barChart.data.datasets[2].data[1] = querySnapShot.data().publicGuide;
+                barChart.update();
+                // road classification
+                roadClassChart.data.datasets[0].data[0] = querySnapShot.data().expressway;
+                roadClassChart.data.datasets[0].data[1] = querySnapShot.data().semiExpressway;
+                roadClassChart.data.datasets[0].data[2] = querySnapShot.data().majorArterial;
+                roadClassChart.data.datasets[0].data[3] = querySnapShot.data().minorArterial;
+                roadClassChart.data.datasets[0].data[4] = querySnapShot.data().primaryAccess;
+                roadClassChart.data.datasets[0].data[5] = querySnapShot.data().localAccess;
+                roadClassChart.update(); 
+                // road type
+                roadTypeChart.data.datasets[0].data[0] = querySnapShot.data().undividedRoad;
+                roadTypeChart.data.datasets[0].data[1] = querySnapShot.data().slipRoad;
+                roadTypeChart.data.datasets[0].data[2] = querySnapShot.data().dualRoad;
+                roadTypeChart.update();
+                // design speed
+                designSpeedChart.data.datasets[0].data[0] = querySnapShot.data().speed40;
+                designSpeedChart.data.datasets[0].data[1] = querySnapShot.data().speed50;
+                designSpeedChart.data.datasets[0].data[2] = querySnapShot.data().speed60;
+                designSpeedChart.data.datasets[0].data[3] = querySnapShot.data().speed70;
+                designSpeedChart.data.datasets[0].data[4] = querySnapShot.data().speed80;
+                designSpeedChart.data.datasets[0].data[5] = querySnapShot.data().speed90;
+                designSpeedChart.update();
+                // change junction
+                changeJunctionChart.data.datasets[0].data[0] = querySnapShot.data().changeJunctionYes;
+                changeJunctionChart.data.datasets[0].data[1] = querySnapShot.data().changeJunctionNo;
+                changeJunctionChart.update();
+                })
+    },
+  },
   mounted() {
+    // render charts
     const chart1 = document.getElementById('donut-chart').getContext("2d", {alpha: false});
-    //const chart2 = document.getElementById('line-chart').getContext("2d", {alpha: false});
-    const chart3 = document.getElementById('bar-chart').getContext("2d", {alpha: false});
-    const chart4 = document.getElementById('roadclass-chart').getContext("2d", {alpha: false});
-    const chart5 = document.getElementById('roadtype-chart').getContext("2d", {alpha: false});
-    const chart6 = document.getElementById('designspeed-chart').getContext("2d", {alpha: false});
-    const chart7 = document.getElementById('changejunction-chart').getContext("2d", {alpha: false});
-    new Chart(chart1, this.donutChartData);
-    //new Chart(chart2, this.lineChartData);
-    new Chart(chart3, this.barChartData);
-    new Chart(chart4, this.roadClassData);
-    new Chart(chart5, this.roadTypeData);
-    new Chart(chart6, this.designSpeedData);
-    new Chart(chart7, this.changeJunctionData);
+    const chart2 = document.getElementById('bar-chart').getContext("2d", {alpha: false});
+    const chart3 = document.getElementById('roadclass-chart').getContext("2d", {alpha: false});
+    const chart4 = document.getElementById('roadtype-chart').getContext("2d", {alpha: false});
+    const chart5 = document.getElementById('designspeed-chart').getContext("2d", {alpha: false});
+    const chart6 = document.getElementById('changejunction-chart').getContext("2d", {alpha: false});
+    var donutChart = new Chart(chart1, this.donutChartData);
+    var barChart = new Chart(chart2, this.barChartData);
+    var roadClassChart = new Chart(chart3, this.roadClassData);
+    var roadTypeChart = new Chart(chart4, this.roadTypeData);
+    var designSpeedChart = new Chart(chart5, this.designSpeedData);
+    var changeJunctionChart = new Chart(chart6, this.changeJunctionData);
+    // firebase
+    this.getValues(donutChart, barChart, roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart);
   }
 };
 </script>
@@ -159,17 +207,17 @@ export default {
 }
 .graphSecondRow {
   display: grid;
-  grid-template-columns: 42% 56%;
+  grid-template-columns: 49% 49%;
   grid-gap: 2%;
   margin-bottom: 2rem;
   height: 350px;
 }
 .graphThirdRow {
   display: grid;
-  grid-template-columns: 30% 20% 28% 17.5%;
-  grid-gap: 1.5%;
+  grid-template-columns: 30% 43% 23%;
+  grid-gap: 2%;
   margin-bottom: 1rem;
-  height: 375px;
+  height: 350px;
 }
 .summary {
   display: grid;

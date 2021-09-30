@@ -27,10 +27,11 @@
       <LaneWidth></LaneWidth>
     </div>
     <div class="lastContainer">
-      <LateralClearance></LateralClearance>
+      <Signs></Signs>
     </div>
-    
+
     <div class="pages">
+        <PageCircle2 num="0" v-bind:isActive="false" @click="contentpage"/>
         <PageCircle2 num="1" v-bind:isActive="true"/>
         <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
         <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
@@ -53,7 +54,7 @@ import Crossfall from "./Crossfall.vue"
 import CornerRadius from "./CornerRadius.vue"
 import MergingAngle from "./MergingAngle.vue"
 import LaneWidth from "./LaneWidth.vue"
-import LateralClearance from "./LateralClearance.vue"
+import Signs from "./Signs.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
@@ -67,12 +68,13 @@ components: {
   "CornerRadius": CornerRadius,
   "MergingAngle": MergingAngle,
   "LaneWidth": LaneWidth,
-  "LateralClearance": LateralClearance,
+  "Signs" : Signs,
   "PageCircle2": PageCircle2
 },
-props: {},
-
 methods: {
+  contentpage() {
+    this.$router.push({path: "/contentpage"})
+  },
   level3() {
     this.$router.push({path: "/level3results"})
   },
@@ -82,10 +84,22 @@ methods: {
   level5() {
     this.$router.push({path: "/level5results"})
   },
+  openStorage(){
+        return JSON.parse(localStorage.getItem('choice'))
+  },
   back() {
-    this.$router.push({path: "/search5"})
+    this.$router.push({path: "/contentpage"})
   }
 },
+created(){
+      const storedChoice = this.openStorage()
+      if (storedChoice){
+        this.choice = {
+          ...this.choice,
+          ...storedChoice
+        }
+      }
+ },
 data() {
   return {
     road: require("../assets/road.png"),

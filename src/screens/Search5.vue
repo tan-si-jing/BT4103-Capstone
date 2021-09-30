@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Yes" @click="storeChange('Yes');"/>
-      <SearchParamButton text="No" @click="storeChange('No');"/>
+      <SearchParamButton text="Yes" @click="storeChange('changeJunctionYes')"/>
+      <SearchParamButton text="No" @click="storeChange('changeJunctionNo')"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
       <i class="bi bi-arrow-left"></i>
@@ -31,6 +31,9 @@
 <script>
 import SearchParamButton from '../components/SearchParamButton.vue'
 import PageCircle from '../components/PageCircle.vue'
+import database from '../firebase.js'
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 export default {
   name: 'search5',
@@ -41,7 +44,7 @@ export default {
   },
   data() {
     return{
-      grad_curv_change:'',
+      gradcurvchange:'',
     }
   },
 methods:{
@@ -53,7 +56,6 @@ methods:{
   },
   updateChoice(input,value){
     this.choice[input] = value
-
     let storedChoice = this.openStorage()
     if(!storedChoice) storedChoice = {}
 
@@ -62,9 +64,11 @@ methods:{
   },
 
   storeChange(text){
-    this.updateChoice('grad_curv_change',text);
+    this.gradcurvchange= text
+    this.updateChoice('gradcurvchange',text);
     this.displayChange();
-   this.$router.push({name: 'level2results'})
+    this.updateFirebase();
+    this.$router.push({name: 'contentpage'})
   },
   displayChange(){
     console.log(this.choice.role)
@@ -72,7 +76,19 @@ methods:{
     console.log(this.choice.roadClass)
     console.log(this.choice.roadType)
     console.log(this.choice.designSpeed)
-    console.log(this.choice.grad_curv_change)
+    console.log(this.choice.gradcurvchange)
+  },
+  updateFirebase(){
+    //update parameters to firebase
+    var myparam = database.collection('search_parameters').doc("H1uwnxYevFozEeNv7SiY");
+    myparam.update({
+      ['numVisits']: firebase.firestore.FieldValue.increment(1) ,
+      [this.choice.role + this.choice.roadDesign]: firebase.firestore.FieldValue.increment(1) ,
+      [this.choice.roadClass]: firebase.firestore.FieldValue.increment(1),
+      [this.choice.roadType]: firebase.firestore.FieldValue.increment(1),
+      [this.choice.designSpeed]: firebase.firestore.FieldValue.increment(1),
+      [this.choice.gradcurvchange]: firebase.firestore.FieldValue.increment(1)
+    })
   },
 },
 created(){
