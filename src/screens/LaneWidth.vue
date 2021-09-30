@@ -130,7 +130,7 @@
                 </div>
 
 
-                <div class="title" @click="collapse5()">
+                <div class="title" v-show="isSlip" @click="collapse5()">
                   <div class="title-text">
                      <p v-show="isSlip"><b class="tab2">8.6</b></p>
                   </div>
@@ -278,15 +278,15 @@ export default {
           designSpeed: "",
           grad_curv_change:"",
           specific_param:"",
-          displayInfo: false,
-          displayInfo1: false,
-          displayInfo2: false,
-          displayInfo3: false,
-          displayInfo4: false,
-          displayInfo5: false,
-          displayInfo6: false,
-          displayInfo7: false,
         },
+        displayInfo: false,
+        displayInfo1: false,
+        displayInfo2: false,
+        displayInfo3: false,
+        displayInfo4: false,
+        displayInfo5: false,
+        displayInfo6: false,
+        displayInfo7: false,
         isSlip: this.$parent.choice.roadType === 'slipRoad' ? true : false
       }
     },
