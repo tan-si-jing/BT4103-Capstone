@@ -22,7 +22,7 @@
                 <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
 
               <!--p style="padding-top:3%"><b class="tab2">4.1</b><b>Side Friction Factor given Design Speed</b></p-->
-                <div class="img-container">
+                <div class="img-container4">
                     <img src="../assets/Table10-7.png">
                 </div>
                 <p style="font-size: 16px;"> Referenced from:
@@ -164,22 +164,22 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
-/*
-.img-container{
+
+.img-container4{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;
+    margin-bottom:3%;*/
 }
 
 
-/* Resize images to standardise size 
-.img-container img{
+/* Resize images to standardise size */
+.img-container4 img{
     width: 100%;
     height: auto;
 }
-*/
+
 p {
   font-size:20px;
 }

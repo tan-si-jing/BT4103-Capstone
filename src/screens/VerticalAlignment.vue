@@ -113,7 +113,7 @@
                 <!--p style="padding-top:3%"><b class="tab2">15.4</b><b>Critical Length of Grade</b></p-->
                 <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
                   Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
-                    <div class="img-container">
+                    <div class="img-container4">
                         <img src="../assets/Table10.11.png">
                     </div>
                     <div class="img-container">
@@ -319,14 +319,14 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
-/*
-.img-container{
+
+.img-container4{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;
-}*/
+    margin-bottom:3%;*/
+}
 
 .img-container2{
     width: 50%;
@@ -338,11 +338,11 @@ tbody tr:last-child td{
 
 
 /* Resize images to standardise size */
-/*
-.img-container img{
+
+.img-container4 img{
     width: 100%;
     height: auto;
-}*/
+}
 
 .img-container2 img{
     width: 100%;

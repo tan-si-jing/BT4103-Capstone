@@ -69,7 +69,7 @@
                     <p v-show="isUndivided">The following sight distances are to be considered in the design. If overtaking sight distance 
                         for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
                       <p v-show="isUndivided" >Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
-                    <div class="img-container" v-show="displayInfo2">
+                    <div class="img-container4" v-show="displayInfo2">
                         <img v-show="isUndivided" src="../assets/Table10.5.png">
                     </div>  
                 <p v-show="isUndivided" style="font-size: 16px;"> Referenced from:
@@ -317,14 +317,14 @@ tbody tr:last-child td{
   font-weight:bold;
 }
 */
-/*
-.img-container{
+
+.img-container4{
     width: 80%;
     height: auto;
     margin-left: 3em; 
     /*margin-top: 5%;
-    margin-bottom:3%;
-}*/
+    margin-bottom:3%;*/
+}
 
 .img-container2{
     width: 50%;
@@ -334,12 +334,12 @@ tbody tr:last-child td{
     margin-bottom:3%;*/
 }
 
-/* Resize images to standardise size 
-.img-container img{
+/* Resize images to standardise size */
+.img-container4 img{
     width: 100%;
     height: auto;
 }
-*/
+
 .img-container2 img{
     width: 100%;
     height: auto;
