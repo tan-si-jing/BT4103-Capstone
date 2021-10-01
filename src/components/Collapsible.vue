@@ -63,6 +63,7 @@ export default {
 img {
     width: 100%;
 }
+
 p {
   font-size:20px;
 }

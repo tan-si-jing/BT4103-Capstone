@@ -1,139 +1,96 @@
 <template>
-    <div>
-        <div class="action_btn" v-for='param in level_1_parameter' :key='param.Name'>
-            <button>{{param.Name}}</button>
+  <table class="table table-borderless">
+    <thead class="table">
+      <tr>
+      <td scope="header">11 &nbsp; Super-Elevation</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <td scope="row">
+      <Collapsible title="Desirable Super-Elevation Forumla" chapt="11.1">
+        <p> The desirable super-elevation can be derived from the following equation:</p>
+        <div class="img-container2">
+          <img src="../assets/10.4.2.5.1.png">
         </div>
-        <br>
-        <div class="action_btn" v-for='param in level_2_parameter' :key='param.Name'>
-            <button>{{param.Name}}</button>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target='_blank'>
+          CDC 10.4.2.5.1 - Super-elevation (page 207)</a>
+        </p>
+      </Collapsible>
+      <Collapsible chapt="11.2" title="Negative or Positive Super-elevation">
+        <p>In cases where the negative or positive super-elevation derived is lower than the desirable crossfall, the desirable super-elevation shall be 
+          pegged at the crossfall as shown in Table 10.6 to slope towards the inner radius of the carriageway.</p>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+          CDC 10.4.2.5.2 - Super-elevation (page 208)</a>
+        </p>
+      </Collapsible>
+      <Collapsible chapt="11.3" title="Rotation of Pavement">
+        <p>For rotation of pavement to attain super-elevation, the length required to develop the 
+          super-elevation shall satisfy the larger value obtained from the following two formulae:</p>
+        <div class="img-container2">
+          <img src="../assets/10.4.2.5.3.png">
         </div>
-        <div class="action_btn" v-for='param in level_3_parameter' :key='param.Name'>
-            <button>{{param.Name}}</button>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+          CDC 10.4.2.5.3 - Super-elevation (page 208)</a>
+        </p>
+      </Collapsible>
+      <Collapsible chapt="11.4" title="Effected Distance">
+        <p>Where transition curve is provided, super-elevation shall be effected along the 
+          length of the curve. For simple circular curve, about two-third of the super-elevation 
+          development length shall be introduced on the tangent approach and one third on the curve.</p>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+          CDC 10.4.2.5.4 - Super-elevation (page 208)</a>
+        </p>
+      </Collapsible>
+      <Collapsible chapt="11.5" title="Percentage of Super-elevation">
+        <p>The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
+          the Figure 10.6. </p>
+        <div class="img-container">
+          <img src="../assets/Figure10.6.png">
         </div>
-        <br>
-        <div class="action_btn" v-for='param in level_3_parameter' :key='param.Name'>
-            <button>{{param.Name}}</button>
+        <div class="img-container">
+          <img src="../assets/Figure10.5.png">
         </div>
-        <br>
-        <div class="action_btn" v-for='param in level_4_parameter' :key='param.Name'>
-            <button>{{param.Name}}</button>
-        </div>
-    </div>
-
-      <table class="table table-borderless">        
-        <tbody>
-          <tr>
-            <td scope="row">
-                <div class="content">
-                <ul>
-                    <li v-for="cdc in final_array" :key="cdc.chapterID">
-                        {{cdc.chapterID}}
-                        <br>
-                        {{cdc.Text}}
-                        <br>
-                        <img :src="cdc.Image">
-                    </li>
-                </ul>
-                </div>
-            </td>
-          </tr>
-          <tr>
-            <td scope='row'>
-                <table class="manual">
-                    <tr>
-                        <th>Content</th>
-                        <th>Manual</th>
-                        <th>Chapter/ Section</th>
-                        <th>Link to Chapter/ Section</th>
-                    </tr>
-                    <tr v-for='cdc in final_array' :key="cdc.chapterID">
-                        <td>{{cdc.Content}}</td>
-                        <td>{{cdc.Manual}}</td>
-                        <td>{{cdc.chapterID}}: {{cdc.Chapter}}</td>
-                        <td style="word-break:break-all;"><a v-bind:href="cdc.Link">{{cdc.Link}}</a></td>
-                    </tr>
-                </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+          CDC 10.4.2.5.5 - Super-elevation (page 208)</a>,
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=230" target='_blank'>
+          CDC Figure 10.6 (page 230)</a>,
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229" target='_blank'>
+          CDC Figure 10.5 (page 229)</a>
+        </p>
+      </Collapsible>
+      </td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script>
-import database from '../firebase.js'
+import Collapsible from '../components/Collapsible.vue';
 
 export default {
-    data() {
-        return {
-            order : [],
-            sorted_order : [],
-            cdc_array : [],
-            final_array : [],
-            related_parameter : [],
-            level_1_parameter : [],
-            level_2_parameter : [],
-            level_3_parameter : [],
-            level_4_parameter : []
-        } 
-    },
-
-    methods : {
-        display:function(){
-            database.collection('data_cdc').doc('Super-Elevation').get().then(querySnapshot => {
-                var temp_order = querySnapshot.data().Order;
-                this.order = temp_order.split(" ");                
-                this.sorted_order = this.order.slice();
-                this.sorted_order = this.sorted_order.sort();
-            });
-            database.collection('data_cdc').doc('Super-Elevation').collection('CDC Documents').get().then(querySnapshot => {
-                querySnapshot.forEach(doc => {
-                    let lst = {};
-                    lst = doc.data();
-                    lst.chapterID = doc.id;
-                    this.cdc_array.push(lst);
-                })
-            }).then(result => {
-                for (let i = 0; i < this.sorted_order.length; i++) {
-                    var element_to_find = this.sorted_order[i];
-                    console.log(element_to_find);
-                    var index = this.order.indexOf(element_to_find);
-                    this.final_array.push(this.cdc_array[index]);
-                    result;
-                }
-            });
-            database.collection('data_cdc').doc('Super-Elevation').collection('Related Parameters').get().then(querySnapshot => {
-                querySnapshot.forEach(doc => {
-                    let lst = {};
-                    lst = doc.data();
-                    lst.Name = doc.id;
-                    if (lst.Level == 1) {
-                        this.level_1_parameter.push(lst);
-                    } else if (lst.Level == 2) {
-                        this.level_2_parameter.push(lst);
-                    } else if (lst.Level == 3) {
-                        this.level_3_parameter.push(lst);
-                    } else if (lst.Level == 4) {
-                        this.level_4_parameter.push(lst);
-                    }
-                })
-            });
-        },
-    },
-    mounted() {
-        this.display();
-    }
-
+  components: {
+    Collapsible
+  }
 }
 </script>
 
 <style scoped>
 table {
-  width: 70vw;
-  height: 60vh;
-  margin-top: 10vh;
-  border-radius: 15px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
+    width: 70vw;
+    height: auto;
+    margin-top: 5vh;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
 }
 .table thead td {
     background-color: #273B8C;
@@ -143,62 +100,16 @@ table {
     border-top-right-radius: 15px;
     font-size:22px;
     text-indent:1.5%;
+    vertical-align: middle;
 }
 tbody tr{
     background-color: #ffffff;
 }
-
 tbody tr:last-child td{ 
-  border-bottom-right-radius: 15px; 
-  border-bottom-left-radius: 15px; 
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px; 
+    height: 31vh;
 }
 
-.content{
-  font-size:20px;
-  margin: 2% 10%;
-}
 
-.grid-container{
-  margin:5% 5% -8%;
-  font-size:20px;
-}
-
-.grid-item {
-	padding: 10px;
-  font-size:16px;
-}
-
-.grid-container .inner-grid-container {
-	display: grid;
-	grid-template-columns: auto auto auto;
-	text-align: center;
-}
-
-.buttons {
-    width: 200px;
-    margin: 20 auto;
-    display: inline;
-    padding: 20;
-}
-
-.action_btn {
-    width: 200px;
-    margin: 0 auto;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
-
-#manuals{
-  font-weight:bold;
-}
-
-#chapter{
-  font-weight:bold;
-}
-
-#link{
-  font-weight:bold;
-}
 </style>
-

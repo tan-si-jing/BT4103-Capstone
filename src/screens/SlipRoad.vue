@@ -84,7 +84,4 @@ tbody tr:last-child td{
     border-bottom-left-radius: 15px; 
     height: 31vh;
 }
-.tab3 {
-  margin-right: 1em
-}
 </style>

@@ -87,5 +87,6 @@ tbody tr:last-child td{
     border-bottom-left-radius: 15px; 
     height: 26vh;
 }
+
 </style>
 
