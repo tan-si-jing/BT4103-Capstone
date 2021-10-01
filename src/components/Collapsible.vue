@@ -63,6 +63,8 @@ export default {
 img {
     width: 100%;
 }
+
+/*
 p {
   font-size:20px;
 }
@@ -100,5 +102,5 @@ p {
 .img-container4 img{
     width: 100%;
     height: auto;
-}
+}*/
 </style>
