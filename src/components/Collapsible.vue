@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .content{
   font-size:18px;
   margin: 2% 10%;
@@ -64,7 +64,6 @@ img {
     width: 100%;
 }
 
-/*
 p {
   font-size:20px;
 }
@@ -102,5 +101,5 @@ p {
 .img-container4 img{
     width: 100%;
     height: auto;
-}*/
+}
 </style>

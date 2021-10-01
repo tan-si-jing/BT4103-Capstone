@@ -516,44 +516,6 @@ tbody tr:last-child td{
     padding-bottom:5%;
 }
 
-p {
-  font-size:20px;
-}
-.tab1 {
- margin-right: 2.5em
-}
-.tab2 {
- margin-right: 1.7em
-}
-.tab3 {
-  margin-right: 1em
-}
-.tab4 {
-  margin-right:0.2em;
-}
-.tab5 {
-  margin-right: 1.2em
-}
-.img-container2{
-    width: 50%;
-    height: auto;
-    margin-left: 3em; 
-    margin-top: 3%;
-    margin-bottom:3%;
-}
-.img-container2 img{
-    width: 100%;
-    height: auto;
-}
-.img-container4{
-    width: 80%;
-    height: auto;
-    margin-left: 3em; 
-}
-.img-container4 img{
-    width: 100%;
-    height: auto;
-}
 
 </style>
 
