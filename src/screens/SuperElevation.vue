@@ -8,7 +8,7 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Desirable Super-Elevation Forumla" chapt="11.1">
+      <Collapsible title="Desirable Super-Elevation Formula" chapt="11.1">
         <p> The desirable super-elevation can be derived from the following equation:</p>
         <div class="img-container2">
           <img src="../assets/10.4.2.5.1.png">
