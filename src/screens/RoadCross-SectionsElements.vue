@@ -364,7 +364,7 @@
       </Collapsible>
 
       <Collapsible chapt="1.6" title="Kerbs and Footpaths">
-        <p style="padding-top:3%"><b class="tab1">1.6.1</b><b>Kerbs</b></p>
+        <p style="padding-top:3%"><b class="tab3">1.6.1</b><b>Kerbs</b></p>
           <div class="img-container">
             <img src="../assets/SDRE-Chap3-KER1.png">
           </div>
