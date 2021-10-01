@@ -171,7 +171,7 @@ table {
     border-top-right-radius: 15px;
     font-size:22px;
     text-indent:1.5%;
-     vertical-align: middle;
+    vertical-align: middle;
 }
 tbody tr{
     background-color: #ffffff;
@@ -180,12 +180,5 @@ tbody tr:last-child td{
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
     height: 31vh;
-}
-.tab3 {
-  margin-right: 1em
-}
-
-.tab5 {
-  margin-right: 1.2em
 }
 </style>
