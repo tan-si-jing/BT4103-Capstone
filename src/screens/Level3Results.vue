@@ -6,7 +6,7 @@
       <LateralClearance></LateralClearance>
     </div>
     <div class="container">
-      <SuperElevation2></SuperElevation2>
+      <SuperElevation></SuperElevation>
     </div>
     <div class="Container">
       <SightDistance></SightDistance>
@@ -30,7 +30,7 @@
 
 <script>
 import LateralClearance from "./LateralClearance.vue"
-import SuperElevation2 from "./SuperElevation2.vue"
+import SuperElevation from "./SuperElevation.vue"
 import SightDistance from "./SightDistance.vue"
 import CurveLength from "./CurveLength.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
@@ -39,7 +39,7 @@ export default {
 name: "Level3Results",
 components: {
   "LateralClearance" : LateralClearance,
-  "SuperElevation2" : SuperElevation2,
+  "SuperElevation" : SuperElevation,
   "SightDistance" : SightDistance,
   "CurveLength" : CurveLength,
   "PageCircle2": PageCircle2
