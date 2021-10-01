@@ -1,8 +1,8 @@
 <template>
     <div class="content">
       <div class="title" @click="collapse()">
-        <div class="title-text">
-          <b class="tab2">{{chapt}}</b><b>{{title}}</b>
+        <div class="collapseTitle-text">
+          <b style="grid-column:1; grid-row:1;">{{chapt}}</b><b style="grid-column:2; grid-row:1;">{{title}}</b>
         </div>
         <div class="title-icon">
           <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
@@ -46,13 +46,13 @@ export default {
   display: flex;
   margin-top: 3%;
   padding: 1% 0;
-  font-weight: bold;
+  justify-content: space-between;
 }
-.title-text {
-  display: flex;
+.collapseTitle-text {
+  display: grid;
   align-items: center;
-  flex: 1;
   font-size: 20px;
+  grid-template-columns: 5rem auto;
 }
 .image {
     display: flex;
