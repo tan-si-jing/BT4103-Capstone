@@ -2,7 +2,28 @@
   <div class="wrapper">
     <p class="header">Results</p>
     <div>
-    <div class="lastContainer">
+
+    <div class="sidebar">
+      <SidebarButton name="Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
+      <SidebarButton name="Grade" @click="moveToSection('grade', 2)"/>
+      <SidebarButton name="Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
+      <SidebarButton name="Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
+      <SidebarButton name="Crossfall" @click="moveToSection('crossfall', 2)"/>
+      <SidebarButton name="Corner Radius" @click="moveToSection('cornerradius', 2)"/>
+      <SidebarButton name="Merging Angle" @click="moveToSection('mergingangle', 2)"/>
+      <SidebarButton name="Lane Width" @click="moveToSection('lanewidth', 2)"/>
+      <SidebarButton name="Signs" @click="moveToSection('signs', 2)"/>
+      <SidebarButton name="Lateral Clearance" @click="moveToSection('lateralclearance', 3)"/>
+      <SidebarButton name="Super-elevation" @click="moveToSection('superelevation', 3)"/>
+      <SidebarButton name="Sight Distance" @click="moveToSection('sightdistance', 3)"/>
+      <SidebarButton name="Curve Length" @click="moveToSection('curvelength', 3)"/>
+      <SidebarButton name="Horizontal Alignment" @click="moveToSection('horizontalalignment', 4)"/>
+      <SidebarButton name="Vertical Alignment" @click="moveToSection('verticalalignment', 4)"/>
+      <SidebarButton name="Slip-road/ Traffic Island" @click="moveToSection('sliproad', 4)"/>
+      <SidebarButton name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
+    </div>
+
+    <div class="lastContainer" id="combinedalignment">
       <Combine></Combine>
     </div>
     <div class="pages">
@@ -22,12 +43,14 @@
 <script>
 import Combine from "./Combine.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
+import SidebarButton from '../components/SidebarButton.vue'
 
 export default {
 name: "Level5Results",
 components: {
   "Combine" : Combine,
-  "PageCircle2": PageCircle2
+  "PageCircle2": PageCircle2,
+  "SidebarButton": SidebarButton
 },
 props: {},
 
@@ -46,6 +69,28 @@ methods: {
   },
   back() {
     this.$router.push({path: "/search5"})
+  },
+  scroll(id) {
+    document.getElementById(id).scrollIntoView({
+      behavior: "smooth"
+      });
+  },
+  moveToSection(id, page) {
+    if (page == 5) {
+      this.scroll(id)
+    }
+    else if (page == 2) {
+      this.level2();
+      this.scroll(id);
+    }
+    else if (page == 3) {
+      this.level3();
+      this.scroll(id);
+    }
+    else {
+      this.level4();
+      this.scroll(id);
+    }
   }
 },
 
@@ -115,5 +160,13 @@ data() {
   bottom:4.5%;
   transform: rotateY(180deg);
   z-index: 2;
+}
+
+.sidebar {
+    position:sticky;
+    top: 30px;
+    height: 20vh;
+    width: 20%;
+    align-items: left;
 }
 </style>
