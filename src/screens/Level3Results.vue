@@ -188,10 +188,10 @@ data() {
 }
 
 .sidebar {
-    position:sticky;
-    top: 30px;
-    height: 20vh;
-    width: 20%;
-    align-items: left;
+  position:sticky;
+  top: 30px;
+  height: 20vh;
+  width: 20%;
+  align-items: left;
 }
 </style>
