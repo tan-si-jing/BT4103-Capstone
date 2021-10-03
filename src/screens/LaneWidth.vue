@@ -68,7 +68,7 @@
               SDRE Chapter 8 - 7 (page 8)</a>
           </p>
         </Collapsible>
-        <Collapsible chapt="8.6" title="">
+        <Collapsible v-show="isSlip" chapt="8.6" title="">
           <p v-show="isSlip">For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
             (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
             the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip

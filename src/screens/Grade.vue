@@ -77,6 +77,7 @@ tbody tr:last-child td{
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px; 
     height: 23vh;
+    padding-bottom: 5%;
 }
 
 </style>

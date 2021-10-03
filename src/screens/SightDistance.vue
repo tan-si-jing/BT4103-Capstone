@@ -18,7 +18,7 @@
             CDC 10.4.2.2.1 - Stopping Sight Distance (page 203)</a>
         </p>
       </Collapsible>
-      <Collapsible title="Intermediate Sight Distance" chapt="12.2">
+      <Collapsible v-show="isUndivided" title="Intermediate Sight Distance" chapt="12.2">
         <p v-show="isUndivided">a) Intermediate sight distance is equal to 2 times stopping sight distance. </p>
         <p v-show="isUndivided">b) Intermediate sight distance is only applicable to undivided 2-lane road. </p>
         <p v-show="isUndivided">c) Where intermediate sight distance is unachievable because of site constraint, 
@@ -29,7 +29,7 @@
           CDC 10.4.2.2.2 - Intermediate Sight Distance (page 203)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="12.3" title="Overtaking Sight Distance">
+      <Collapsible v-show="isUndivided" chapt="12.3" title="Overtaking Sight Distance">
         <p v-show="isUndivided">The following sight distances are to be considered in the design. If overtaking sight distance 
           for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
         <p v-show="isUndivided" >Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
