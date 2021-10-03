@@ -15,8 +15,9 @@
     </div>
     <div class="options">
       <div class="input-group mx-auto" style="width: 55%;">
-        <select class="form-select" @change="changeValue($event)">
-          <option disabled selected value> -- Choose your section from the drop down list -- </option>
+        <input list="specificFields" class="form-select" @change="changeValue($event)" @input="showList()">
+        <datalist id="">
+          <option disabled selected value>-- Choose your section from the drop down list --</option>
           <option value="Road Cross-Sections and Elements">Road Cross-Sections and Elements</option>
           <option value="Grade">Grade</option>
           <option value="Longitudinal Friction Factor">Longitudinal Friction Factor</option>
@@ -26,14 +27,14 @@
           <option value="Merging Angle">Merging Angle</option>
           <option value="Lane Width">Lane Width</option>
           <option value="Lateral Clearance">Lateral Clearance</option>
-          <option value="Super-Elevation">Super-elevation</option>
+          <option value="Super-Elevation">Super-Elevation</option>
           <option value="Sight Distance">Sight Distance</option>
           <option value="Curve Length">Curve Length</option>
           <option value="Horizontal Alignment">Horizontal Alignment</option>
           <option value="Vertical Alignment">Vertical Alignment</option>
-          <option value="Slip-road Traffic Island">Slip-road/ Traffic Island</option>
+          <option value="Slip-road Traffic Island">Slip-road Traffic Island</option>
           <option value="Combination of Horizontal & Vertical Alignment">Combination of Horizontal & Vertical Alignment</option>
-        </select>
+        </datalist>
         <button class="btn btn-outline-secondary w-25" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
       </div>
       <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
@@ -60,60 +61,67 @@ export default {
       specific_param:"",
     }
   },
-methods:{
-  changeValue(event){
-    this.specific_param = event.target.value;
-    console.log(event.target.value);
-  },
+  methods:{
+    changeValue(event){
+      this.specific_param = event.target.value;
+      console.log(event.target.value);
+    },
+    hideList(){
+      var datalist = document.querySelector("datalist");
+      datalist.id = ""; 
+    },
+    showList(){
+      var datalist = document.querySelector("datalist");
+      datalist.id = "specificFields"
+    },
+    openStorage(){
+      return JSON.parse(localStorage.getItem('choice'))
+    },
+    saveStorage(form){
+      localStorage.setItem('choice',JSON.stringify(form))
+    },
+    updateChoice(input,value){
+      this.choice[input] = []
+      this.choice[input].push(value)
 
-  openStorage(){
-    return JSON.parse(localStorage.getItem('choice'))
-  },
-  saveStorage(form){
-    localStorage.setItem('choice',JSON.stringify(form))
-  },
-  updateChoice(input,value){
-    this.choice[input] = []
-    this.choice[input].push(value)
+      let storedChoice = this.openStorage()
+      if(!storedChoice) storedChoice = {}
 
-    let storedChoice = this.openStorage()
-    if(!storedChoice) storedChoice = {}
+      storedChoice[input] = []
+      storedChoice[input].push(value)
+      this.saveStorage(storedChoice)
+      //Analytics
+      var myparam = database.collection('search_parameters').doc("H1uwnxYevFozEeNv7SiY");
+      myparam.update({
+        ['numVisits']: firebase.firestore.FieldValue.increment(1) ,
+        [this.choice.role + this.choice.roadDesign]: firebase.firestore.FieldValue.increment(1) ,
+        [value]: firebase.firestore.FieldValue.increment(1)
+        }).then(res => {
+          this.specific_param = this.choice.specific_param.at(-1);
+          window.location.reload();
+          res;
+      });
+    },
 
-    storedChoice[input] = []
-    storedChoice[input].push(value)
-    this.saveStorage(storedChoice)
-    //Analytics
-    var myparam = database.collection('search_parameters').doc("H1uwnxYevFozEeNv7SiY");
-    myparam.update({
-      ['numVisits']: firebase.firestore.FieldValue.increment(1) ,
-      [this.choice.role + this.choice.roadDesign]: firebase.firestore.FieldValue.increment(1) ,
-      [value]: firebase.firestore.FieldValue.increment(1)
-      }).then(res => {
-        this.specific_param = this.choice.specific_param.at(-1);
-        window.location.reload();
-        res;
-    });
+    storeSpecParam(text){
+      this.updateChoice('specific_param',text);
+      this.displayParam();
+      this.$router.push({name:'specific_results'})
+    },
+    displayParam(){
+      console.log(this.choice.roadDesign)
+      console.log(this.choice.specific_param[0])
+    },
   },
-
-  storeSpecParam(text){
-    this.updateChoice('specific_param',text);
-    this.displayParam();
-    this.$router.push({name:'specific_results'})
-  },
-  displayParam(){
-    console.log(this.choice.roadDesign)
-    console.log(this.choice.specific_param[0])
-  },
-},
-created(){
-  const storedChoice = this.openStorage()
-  if (storedChoice){
-    this.choice = {
-      ...this.choice,
-      ...storedChoice
+  created(){
+    const storedChoice = this.openStorage()
+    if (storedChoice){
+      this.choice = {
+        ...this.choice,
+        ...storedChoice
+      }
     }
   }
-}
 }
 </script>
 
@@ -135,6 +143,9 @@ created(){
   padding-top:5%;
   display: flex;
   justify-content: space-around;
+}
+[list]::-webkit-calendar-picker-indicator {
+  display: none !important;
 }
 .header {
   background-color: #E0E0E0;
