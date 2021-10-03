@@ -55,13 +55,13 @@ export default {
       if(speednum == 40){
         console.log(speed)
         this.table = [
-          { des_speed :40, SFF :0.56},
+          { des_speed :40, LFF :0.56},
           { des_speed:50, LFF :0.52},   
         ]
       }else if (speednum == 50) {
         console.log(speednum)
         this.table = [
-          { des_speed :40, SFF :0.56},
+          { des_speed:40, LFF :0.56},
           { des_speed:50, LFF :0.52}, 
           { des_speed: 60, LFF :0.48},  
         ]
