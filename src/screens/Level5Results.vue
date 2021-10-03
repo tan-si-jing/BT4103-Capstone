@@ -23,6 +23,7 @@
       <SidebarButton name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
     </div>
 
+    <div class="result">
     <div class="lastContainer" id="combinedalignment">
       <Combine></Combine>
     </div>
@@ -34,6 +35,9 @@
         <PageCircle2 num="4" v-bind:isActive="true"/>
     </div>
     </div>
+
+    </div>
+
     <button id="back" type="button" class="btn btn-outline-secondary" @click="back"><i class="bi bi-arrow-left"></i></button>
   <img :src="road" class="road" />
   <img :src="mascot" class="mascot" />
@@ -80,16 +84,16 @@ methods: {
       this.scroll(id)
     }
     else if (page == 2) {
-      this.level2();
-      this.scroll(id);
+      this.level2()
+      this.scroll(id)
     }
     else if (page == 3) {
-      this.level3();
-      this.scroll(id);
+      this.level3()
+      this.scroll(id)
     }
     else {
-      this.level4();
-      this.scroll(id);
+      this.level4()
+      this.scroll(id)
     }
   }
 },
@@ -163,10 +167,18 @@ data() {
 }
 
 .sidebar {
-    position:sticky;
-    top: 30px;
-    height: 20vh;
+    padding-top: 50px;
+    height: 50vh;
     width: 20%;
     align-items: left;
+    float: left;
+    overflow: scroll;
+    position: fixed;
+}
+
+.result {
+  flex-grow: 1;
+  float: left;
+  margin-left: 300px;
 }
 </style>
