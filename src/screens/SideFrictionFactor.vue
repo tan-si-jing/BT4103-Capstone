@@ -16,6 +16,18 @@
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
             CDC 10.4.2.5.1 - Side Friction Factor given Design Speed (page 208)</a>
         </p>
+
+          <thead class="table">
+              <th>Design Speed, V(km/h) </th>
+              <th>Longitudinal Friction Factor, F </th>
+            </thead>
+            <tbody>
+              <tr v-for="row in table" :key="row.id">
+                <td class=des> {{ row.des_speed }} </td>
+                <td class=des> {{ row.LFF}} </td>
+              </tr>
+            </tbody>
+            
       </Collapsible>
       </td>
       </tr>
@@ -29,6 +41,61 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+   data(){
+    return{
+      designSpeed: this.$parent.choice.designSpeed,
+      table: [],  
+    }
+  },
+  methods:{
+    filltable(speed){
+      var speednum = Number(speed.substr(5,6))
+      if(speednum == 40){
+        console.log(speed)
+        this.table = [
+          { des_speed :40, SFF :0.16},
+          { des_speed:50, LFF :0.16},   
+        ]
+      }else if (speednum == 50) {
+        console.log(speednum)
+        this.table = [
+          { des_speed :40, SFF :0.16},
+          { des_speed:50, LFF :0.16}, 
+          { des_speed: 60, LFF :0.15},  
+        ]
+      }else if (speednum == 60) {
+        console.log(speednum)
+        this.table = [
+          { des_speed: 50, LFF :0.16},
+          { des_speed: 60, LFF :0.15},   
+          { des_speed :70, LFF :0.15},
+        ]
+      }else if (speednum == 70) {
+        console.log(speednum)
+        this.table = [
+          { des_speed: 60, LFF :0.15},
+          { des_speed :70, LFF :0.15},   
+          { des_speed :80, LFF :0.14},   
+        ]
+      }else if (speednum == 80) {
+        console.log(speed)
+        this.table = [
+          { des_speed :70, LFF :0.15},
+          { des_speed :80, LFF :0.14},   
+          { des_speed :90, LFF :0.13},
+        ]
+      } else {
+        console.log(speednum)
+        this.table = [
+          { des_speed :80, LFF :0.14},
+          { des_speed :90, LFF :0.13},   
+        ]
+      }
+    }
+  },
+    created(){
+    this.filltable(this.designSpeed)
   }
 }
 </script>
