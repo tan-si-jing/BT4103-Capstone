@@ -18,16 +18,16 @@
         </p>
 
           <thead class="table">
-              <th>Design Speed, V(km/h) </th>
-              <th>Longitudinal Friction Factor, F </th>
+              <th style="text-align:center">Design Speed, V(km/h) </th>
+              <th style="text-align:center">Longitudinal Friction Factor, F </th>
             </thead>
             <tbody>
               <tr v-for="row in table" :key="row.id">
-                <td class=des> {{ row.des_speed }} </td>
-                <td class=des> {{ row.LFF}} </td>
+                <td style="text-align:center"> {{ row.des_speed }} </td>
+                <td style="text-align:center"> {{ row.LFF}} </td>
               </tr>
             </tbody>
-            
+
       </Collapsible>
       </td>
       </tr>
@@ -54,13 +54,13 @@ export default {
       if(speednum == 40){
         console.log(speed)
         this.table = [
-          { des_speed :40, SFF :0.16},
+          { des_speed :40, LFF :0.16},
           { des_speed:50, LFF :0.16},   
         ]
       }else if (speednum == 50) {
         console.log(speednum)
         this.table = [
-          { des_speed :40, SFF :0.16},
+          { des_speed :40, LFF :0.16},
           { des_speed:50, LFF :0.16}, 
           { des_speed: 60, LFF :0.15},  
         ]
@@ -124,6 +124,7 @@ table {
 }
 tbody tr{
     background-color: #ffffff;
+    text-align: center;
 }
 tbody tr:last-child td{ 
     border-bottom-right-radius: 15px;
