@@ -3,6 +3,10 @@
     <p class="header">Results</p>
     <div>
 
+    <div>
+      <fa-icon class="icon" :icon="['fas', 'bars']" size="2x" @click="$emit('togglenav')" />
+    </div>
+
     <div class="sidebar">
       <SidebarButton name="Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
       <SidebarButton name="Grade" @click="moveToSection('grade', 2)"/>
@@ -23,6 +27,7 @@
       <SidebarButton name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
     </div>
 
+    <div class="result">
     <div class="container" id="roadcselements">
       <RoadCSElem></RoadCSElem>
     </div>
@@ -57,6 +62,7 @@
         <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
         <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
         <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
+    </div>
     </div>
 
   </div>
@@ -93,7 +99,7 @@ components: {
   "LaneWidth": LaneWidth,
   "Signs" : Signs,
   "PageCircle2": PageCircle2,
-  "SidebarButton": SidebarButton
+  "SidebarButton": SidebarButton,
 },
 methods: {
   contentpage() {
@@ -124,16 +130,16 @@ methods: {
       this.scroll(id)
     }
     else if (page == 3) {
-      this.level3();
-      this.scroll(id);
+      this.level3()
+      this.scroll(id)
     }
     else if (page == 4) {
-      this.level4();
-      this.scroll(id);
+      this.level4()
+      this.scroll(id)
     }
     else {
-      this.level5();
-      this.scroll(id);
+      this.level5()
+      this.scroll(id)
     }
   }
 },
@@ -150,6 +156,7 @@ data() {
   return {
     road: require("../assets/road.png"),
     mascot: require("../assets/mascot.png"),
+    navOpen: false
   };
 },
 };
@@ -157,6 +164,7 @@ data() {
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+
 * {
   margin: 0;
   padding: 0;
@@ -172,11 +180,15 @@ data() {
   right: 0px;
   bottom: 0px;
   left: 0px;
+  overflow: hidden;
 }
 .header {
   font-size: 5vh;
   margin: 2% 60% 0% 0%;
   text-align:center
+}
+.container {
+  flex-grow: 1;
 }
 .lastContainer {
   margin-bottom: 5%;
@@ -187,7 +199,6 @@ data() {
     /*margin-bottom: 5%;*/
     justify-content: center;
 }
-
 
 #back {
   font-size: 1.5rem;
@@ -217,11 +228,19 @@ data() {
 }
 
 .sidebar {
-  position:sticky;
-  top: 30px;
-  height: 20vh;
-  width: 20%;
-  align-items: left;
+    padding-top: 50px;
+    height: 70vh;
+    width: 20%;
+    align-items: left;
+    float: left;
+    overflow: auto;
+    position: fixed;
+}
+
+.result {
+  flex-grow: 1;
+  float: left;
+  margin-left: 300px;
 }
 
 </style>
