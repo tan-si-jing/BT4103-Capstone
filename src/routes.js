@@ -16,6 +16,7 @@ import Level3Results from './screens/Level3Results.vue'
 import Level4Results from './screens/Level4Results.vue'
 import Level5Results from './screens/Level5Results.vue'
 import ContentPage from './screens/ContentPage.vue'
+import DynamicSigns from './screens/Dynamic-Signs.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -100,6 +101,11 @@ const router = createRouter({
       name: "specific_results",
       path: "/specific-results",
       component: SpecificResults 
+    },
+    {
+      name: "dynamic_signs",
+      path: "/specific-results-signs",
+      component: DynamicSigns 
     }
     /*
     { path: '/:pathMatch(.*)',
