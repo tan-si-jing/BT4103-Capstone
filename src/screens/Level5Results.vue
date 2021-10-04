@@ -4,23 +4,23 @@
     <div>
 
     <div class="sidebar">
-      <SidebarButton name="Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
-      <SidebarButton name="Grade" @click="moveToSection('grade', 2)"/>
-      <SidebarButton name="Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
-      <SidebarButton name="Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
-      <SidebarButton name="Crossfall" @click="moveToSection('crossfall', 2)"/>
-      <SidebarButton name="Corner Radius" @click="moveToSection('cornerradius', 2)"/>
-      <SidebarButton name="Merging Angle" @click="moveToSection('mergingangle', 2)"/>
-      <SidebarButton name="Lane Width" @click="moveToSection('lanewidth', 2)"/>
-      <SidebarButton name="Signs" @click="moveToSection('signs', 2)"/>
-      <SidebarButton name="Lateral Clearance" @click="moveToSection('lateralclearance', 3)"/>
-      <SidebarButton name="Super-elevation" @click="moveToSection('superelevation', 3)"/>
-      <SidebarButton name="Sight Distance" @click="moveToSection('sightdistance', 3)"/>
-      <SidebarButton name="Curve Length" @click="moveToSection('curvelength', 3)"/>
-      <SidebarButton name="Horizontal Alignment" @click="moveToSection('horizontalalignment', 4)"/>
-      <SidebarButton name="Vertical Alignment" @click="moveToSection('verticalalignment', 4)"/>
-      <SidebarButton name="Slip-road/ Traffic Island" @click="moveToSection('sliproad', 4)"/>
-      <SidebarButton name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
+      <SidebarButton2 name="Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
+      <SidebarButton2 name="Grade" @click="moveToSection('grade', 2)"/>
+      <SidebarButton2 name="Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
+      <SidebarButton2 name="Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
+      <SidebarButton2 name="Crossfall" @click="moveToSection('crossfall', 2)"/>
+      <SidebarButton2 name="Corner Radius" @click="moveToSection('cornerradius', 2)"/>
+      <SidebarButton2 name="Merging Angle" @click="moveToSection('mergingangle', 2)"/>
+      <SidebarButton2 name="Lane Width" @click="moveToSection('lanewidth', 2)"/>
+      <SidebarButton2 name="Signs" @click="moveToSection('signs', 2)"/>
+      <SidebarButton2 name="Lateral Clearance" @click="moveToSection('lateralclearance', 3)"/>
+      <SidebarButton2 name="Super-elevation" @click="moveToSection('superelevation', 3)"/>
+      <SidebarButton2 name="Sight Distance" @click="moveToSection('sightdistance', 3)"/>
+      <SidebarButton2 name="Curve Length" @click="moveToSection('curvelength', 3)"/>
+      <SidebarButton2 name="Horizontal Alignment" @click="moveToSection('horizontalalignment', 4)"/>
+      <SidebarButton2 name="Vertical Alignment" @click="moveToSection('verticalalignment', 4)"/>
+      <SidebarButton2 name="Slip-road/ Traffic Island" @click="moveToSection('sliproad', 4)"/>
+      <SidebarButton2 name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
     </div>
 
     <div class="result">
@@ -47,14 +47,14 @@
 <script>
 import Combine from "./Combine.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
-import SidebarButton from '../components/SidebarButton.vue'
+import SidebarButton2 from '../components/SidebarButton2.vue'
 
 export default {
 name: "Level5Results",
 components: {
   "Combine" : Combine,
   "PageCircle2": PageCircle2,
-  "SidebarButton": SidebarButton
+  "SidebarButton2": SidebarButton2
 },
 props: {},
 
@@ -124,7 +124,9 @@ data() {
   right: 0px;
   bottom: 0px;
   left: 0px;
+  height:140vh;
 }
+
 .header {
   font-size: 5vh;
   margin: 2% 60% 0% 0%;
@@ -145,14 +147,15 @@ data() {
   box-shadow:none;
   border:none;
   margin-bottom:2%;
-  margin-right:80%;
+  margin-right:45%;
   padding:0.4% 0.8%;
 }
+
 /** road image */
 .road {
   max-width: 100%;
   width:100%;
-  position: relative;
+  position: absolute;
   bottom: 0;
   z-index: 1;
 }
@@ -168,17 +171,18 @@ data() {
 
 .sidebar {
     padding-top: 50px;
-    height: 50vh;
     width: 20%;
     align-items: left;
     float: left;
-    overflow: scroll;
+    overflow: auto;
     position: fixed;
+    
 }
+
 
 .result {
   flex-grow: 1;
   float: left;
-  margin-left: 300px;
+  margin-left: 22vw;
 }
 </style>
