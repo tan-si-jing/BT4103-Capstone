@@ -1,37 +1,37 @@
 <template>
-  <div class="wrapper">
-    <p class="header">Results</p>
-    <div>
+  <div class="sidebar">
+    <div style="font-size:1.5rem;padding:5%;"><b>Chapters:</b></div>
+    <SidebarButton name="Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
+      <SidebarButton name="Grade" @click="moveToSection('grade', 2)"/>
+      <SidebarButton name="Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
+      <SidebarButton name="Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
+      <SidebarButton name="Crossfall" @click="moveToSection('crossfall', 2)"/>
+      <SidebarButton name="Corner Radius" @click="moveToSection('cornerradius', 2)"/>
+      <SidebarButton name="Merging Angle" @click="moveToSection('mergingangle', 2)"/>
+      <SidebarButton name="Lane Width" @click="moveToSection('lanewidth', 2)"/>
+      <SidebarButton name="Signs" @click="moveToSection('signs', 2)"/>
+      <SidebarButton name="Lateral Clearance" @click="moveToSection('lateralclearance', 3)"/>
+      <SidebarButton name="Super-elevation" @click="moveToSection('superelevation', 3)"/>
+      <SidebarButton name="Sight Distance" @click="moveToSection('sightdistance', 3)"/>
+      <SidebarButton name="Curve Length" @click="moveToSection('curvelength', 3)"/>
+      <SidebarButton name="Horizontal Alignment" @click="moveToSection('horizontalalignment', 4)"/>
+      <SidebarButton name="Vertical Alignment" @click="moveToSection('verticalalignment', 4)"/>
+      <SidebarButton name="Slip-road/ Traffic Island" @click="moveToSection('sliproad', 4)"/>
+      <SidebarButton name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
+  </div>
 
-    <div class="sidebar">
-      <SidebarButton2 name="Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
-      <SidebarButton2 name="Grade" @click="moveToSection('grade', 2)"/>
-      <SidebarButton2 name="Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
-      <SidebarButton2 name="Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
-      <SidebarButton2 name="Crossfall" @click="moveToSection('crossfall', 2)"/>
-      <SidebarButton2 name="Corner Radius" @click="moveToSection('cornerradius', 2)"/>
-      <SidebarButton2 name="Merging Angle" @click="moveToSection('mergingangle', 2)"/>
-      <SidebarButton2 name="Lane Width" @click="moveToSection('lanewidth', 2)"/>
-      <SidebarButton2 name="Signs" @click="moveToSection('signs', 2)"/>
-      <SidebarButton2 name="Lateral Clearance" @click="moveToSection('lateralclearance', 3)"/>
-      <SidebarButton2 name="Super-elevation" @click="moveToSection('superelevation', 3)"/>
-      <SidebarButton2 name="Sight Distance" @click="moveToSection('sightdistance', 3)"/>
-      <SidebarButton2 name="Curve Length" @click="moveToSection('curvelength', 3)"/>
-      <SidebarButton2 name="Horizontal Alignment" @click="moveToSection('horizontalalignment', 4)"/>
-      <SidebarButton2 name="Vertical Alignment" @click="moveToSection('verticalalignment', 4)"/>
-      <SidebarButton2 name="Slip-road/ Traffic Island" @click="moveToSection('sliproad', 4)"/>
-      <SidebarButton2 name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
-    </div>
-
-    <div class="result">
-    <div class="container" id="horizontalalignment">
+  <div class="result">
+    <div class="contents">
+    <h2 style="padding-top:2rem; width:65vw">Results</h2>
+    <div id="horizontalalignment">
       <HorizontalAlignment></HorizontalAlignment>
     </div>
-    <div class="Container" id="verticalalignment">
+    <div id="verticalalignment">
       <VerticalAlignment></VerticalAlignment>
     </div>
-    <div class="lastContainer" id="sliproad">
+    <div id="sliproad" style="margin-bottom: 5%;">
       <SlipRoad></SlipRoad>
+    </div>
     </div>
     <div class="pages">
         <PageCircle2 num="0" v-bind:isActive="false" @click="contentpage"/>
@@ -40,14 +40,12 @@
         <PageCircle2 num="3" v-bind:isActive="true"/>
         <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
     </div>
-    </div>
-
-    </div>
-
-    <button id="back" type="button" class="btn btn-outline-secondary" @click="back"><i class="bi bi-arrow-left"></i></button>
-  <img :src="road" class="road" />
-  <img :src="mascot" class="mascot" />
-</div>
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="back">
+    <i class="bi bi-arrow-left"></i><span>Back to Search</span>
+    </button>
+    <img :src="road" class="road" />
+    <img :src="mascot" class="mascot" />
+  </div>
 </template>
 
 <script>
@@ -55,7 +53,7 @@ import HorizontalAlignment from "./HorizontalAlignment.vue"
 import VerticalAlignment from "./VerticalAlignment.vue"
 import SlipRoad from "./SlipRoad.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
-import SidebarButton2 from '../components/SidebarButton2.vue'
+import SidebarButton from '../components/SidebarButton.vue'
 
 export default {
 name: "Level4Results",
@@ -64,7 +62,7 @@ components: {
   "VerticalAlignment" : VerticalAlignment,
   "SlipRoad" : SlipRoad,
   "PageCircle2": PageCircle2,
-  "SidebarButton2": SidebarButton2
+  "SidebarButton": SidebarButton
 },
 props: {},
 
@@ -119,77 +117,74 @@ data() {
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Roboto);
+
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
-.wrapper {
-  background: #e0e0e0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-}
-.header {
-  font-size: 5vh;
-  margin: 2% 60% 0% 0%;
-  text-align:center
-}
-
-.lastContainer {
-  margin-bottom: 5%;
-}
-
 .pages {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-
 #back {
-  font-size: 1.5rem;
+  font-size: 1rem;
   box-shadow:none;
   border:none;
-  margin-bottom:2%;
-  margin-right:45%;
+  margin: 1% 5% 2.5%;
   padding:0.4% 0.8%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width:15%
 }
 /** road image */
 .road {
   max-width: 100%;
-   width:100%;
+  width:100%;
   position: relative;
   bottom: 0;
   z-index: 1;
 }
 /** lta mascot */
 .mascot {
-  max-width: 15%;
+  max-width: 11%;
   position: absolute;
   right: 4%;
-  bottom: 0.5%;
   transform: rotateY(180deg);
   z-index: 2;
+  bottom:0
+}
+.result {
+  float: right;
+  width: 75%;
+  background: #e0e0e0;
 }
 .sidebar {
-    padding-top: 50px;
-    width: 20%;
-    align-items: left;
-    float: left;
-    overflow: auto;
-    position: fixed;
-    
+  width:25%;
+  padding:1% 2.5% 2.5%;
+  float:left;
+  background: #e0e0e0;
+  position:fixed;
+  height:100vh;
+  overflow-y:scroll;
 }
-
-
-.result {
-  flex-grow: 1;
-  float: left;
-  margin-left: 22vw;
+.contents {
+  margin-left:5vw;
 }
-
+/* Works on Firefox */
+* {
+  scrollbar-color: black grey;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: lightgrey;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 20px;
+}
 </style>

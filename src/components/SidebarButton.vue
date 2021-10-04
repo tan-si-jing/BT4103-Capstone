@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <button type="button" class="btn btn-outline-dark" :abled=!isActive v-bind:style="[isActive ? active : inactive]">
-      {{name}}
-    </button>
-  </div>
+  <button type="button" class="btn btn-light" :abled=!isActive v-bind:style="[isActive ? active : inactive]">
+    {{name}}
+  </button>
 </template>
 
 <script>
 export default {
-  name: 'SidebarButton',
+  name: 'SidebarButton2',
   props: {
     isActive: Boolean,
     name: String
@@ -16,86 +14,14 @@ export default {
   data() {
     return {
       active: {
-        backgroundColor: 'gold',
-        color:'white',
+        backgroundColor: 'none',
+        color:'black',
         cursor: 'default'
       },
       inactive: {
-        backgroundColor: '#273B8C',
-        color:'white'
+        backgroundColor: 'none',
+        color:'black'
       },
-      /*
-      sections: [
-          {
-              id: 1,
-              name: "Road Cross-Sections and Elements"
-          },
-          {
-              id: 2,
-              name: "Grade"
-          },
-          {
-              id: 3,
-              name: "Longitudinal Friction Factor"
-          },
-          {
-              id: 4,
-              name: "Side Friction Factor"
-          },
-          {
-              id: 5,
-              name: "Crossfall"
-          },
-          {
-              id: 6,
-              name: "Corner Radius"
-          },
-          {
-              id: 7,
-              name: "Merging Angle"
-          },
-          {
-              id: 8,
-              name: "Lane Width"
-          },
-          {
-              id: 9,
-              name: "Signs"
-          },
-          {
-              id: 10,
-              name:"Lateral Clearance"
-          },
-          {
-              id: 11,
-              name: "Super-Elevation"
-          },
-          {
-              id: 12,
-              name: "Sight Distance"
-          },
-          {
-              id: 13,
-              name: "Curve Length"
-          },
-          {
-              id: 14,
-              name: "Horizontal Alignment"
-          },
-          {
-              id: 15,
-              name: "Vertical Alignment"
-          },
-          {
-              id: 16,
-              name: "Slip-road/ Traffic Island"
-          },
-          {
-              id: 17,
-              name: "Combination of Horizontal & Vertical Alignment"
-          }
-      ]
-      */
     };
   }
 }
@@ -103,17 +29,17 @@ export default {
 
 <style scoped>
 button {
-    width: 200px;
-    margin: 20 auto;
+    width: 100%;
+    height:fit-content;
     display: inline;
-    padding: 30;
-    height: 50px;
-    background: #273B8C;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
     font-style: normal;
     font-weight: normal;
     color: #FFFFFF;
-    font-size:15px;
+    font-size:1.15rem;
+    text-align:left;
+    background:none;
+    border:none;
+    box-shadow: none;
+    padding: 1.75% 5%;
 }
 </style>

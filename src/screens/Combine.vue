@@ -41,15 +41,12 @@ export default {
 
 <style scoped>
 table {
-  width: 70vw;
+  width: 65vw;
   height: auto;
   margin-top: 5vh;
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
 }
 .table thead td {
   background-color: #273B8C;

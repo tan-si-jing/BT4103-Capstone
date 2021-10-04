@@ -8,7 +8,6 @@ import Search3 from "./screens/Search3.vue"
 import Search4 from "./screens/Search4.vue"
 import Search5 from "./screens/Search5.vue"
 import SearchSpecific from "./screens/SearchSpecific.vue"
-import Results from "./screens/Results.vue"
 import SpecificResults from './screens/SpecificResults.vue'
 import { auth } from './firebase.js'
 import Level2Results from './screens/Level2Results.vue'
@@ -94,10 +93,6 @@ const router = createRouter({
       props: true,
     },
     {
-      path: "/results",
-      component: Results
-    },
-    {
       name: "specific_results",
       path: "/specific-results",
       component: SpecificResults 
@@ -111,17 +106,7 @@ const router = createRouter({
     { path: '/:pathMatch(.*)',
       component: NotFound 
     },
-    {
-      path: "/admin",
-      meta: { requiresAuth: true },
-      //component:...
-      children: [
-        {
-          path: "dashboard",
-          component: Dashboard,
-        }
-      ],
-    },*/
+    */
   ],
   scrollBehavior() {
     document.getElementById('app').scrollIntoView();
