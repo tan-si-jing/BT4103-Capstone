@@ -8,25 +8,26 @@
             <div class="arrow" v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
+
             <p v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>Other Relevant Results : </p>
             <div class="action_btn" v-show='level_4_parameter.length != 0'>
                 <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <!--br v-show='level_4_parameter.length != 0'-->
+
             <div class="arrow" v-show='level_4_parameter.length != 0 && (level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
                 <i class="bi bi-arrow-up"></i>
             </div>
             <div class="action_btn" v-show='level_3_parameter.length != 0'>
                 <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <!--br v-show='level_3_parameter.length != 0'-->
+
             <div class="arrow" v-show='level_3_parameter.length != 0 && (level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
                 <i class="bi bi-arrow-up"></i>
             </div>
             <div class="action_btn" v-show='level_2_parameter.length != 0'>
                 <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
-            <!--br v-show='level_2_parameter.length != 0'-->
+
             <div class="arrow" v-show='level_2_parameter.length != 0 && level_1_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
@@ -34,7 +35,6 @@
                 <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
         </div>
-        <!--h3><b>{{this.choice2}}</b></h3-->
         <div id = "specific-results">
             <ul>
                 <li v-for="cdc in final_array" :key="cdc.chapterID">
@@ -48,36 +48,7 @@
                         </p>
                     </Collapsible>
                 </li>                        
-                <!--li v-for="cdc in final_array" :key="cdc.chapterID">
-                    <div class='chapter-text-image'>
-                        <div class='chapter'>
-                            <b>{{cdc.chapterID}}</b>  
-                        </div>
-                        <div class='text-image'>
-                            <div class='text' v-html="cdc.Text"></div>
-                            <br>
-                            <div class='image'>
-                                <img :src="cdc.Image" style='zoom: 1.2'>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                </li-->
             </ul>
-            <!--table class="manual">
-                <tr>
-                    <th>Content</th>
-                    <th>Manual</th>
-                    <th>Chapter/ Section</th>
-                    <th>Link to Chapter/ Section</th>
-                </tr>
-                <tr v-for='cdc in final_array' :key="cdc.chapterID">
-                    <td>{{cdc.Content}}</td>
-                    <td>{{cdc.Manual}}</td>
-                    <td>{{cdc.chapterID}}: {{cdc.Chapter}}</td>
-                    <td style="word-break:break-all;"><a v-bind:href="cdc.Link">{{cdc.Link}}</a></td>
-                </tr>
-            </table-->
         </div>
     </div>
     
@@ -140,17 +111,18 @@ export default {
                 [value]: firebase.firestore.FieldValue.increment(1)
             }).then(res => {
                 this.specific_param = this.choice.specific_param.at(-1);
-                window.location.reload();
+                if (this.specific_param == "Signs") {
+                    this.$router.push('specific-results-signs')
+                }
+                else {
+                    window.location.reload()
+                }
                 res;
             });
         },
 
         storeSpecParam(text){
             this.updateChoice('specific_param',text)
-/** 
-            this.specific_param = this.choice.specific_param.at(-1);
-            window.location.reload();
-*/
         },
         
         goBack() {
