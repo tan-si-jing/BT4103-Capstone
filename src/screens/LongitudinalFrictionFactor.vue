@@ -9,7 +9,7 @@
       <tr>
       <td scope="row">
       <Collapsible chapt="3.1" title="Longitudinal Friction Factor given Design Speed">
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10-4.png">
         </div>         
         <p style="font-size: 16px;"> Referenced from:

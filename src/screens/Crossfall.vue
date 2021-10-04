@@ -18,7 +18,7 @@
       <Collapsible title="Crossfall of Carriageway" chapt="5.2">
         <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
             to the side drain and the design requirements shall be as shown in Table 10.6.</p>
-        <div class="img-container">
+        <div class="img-container4">
             <img src="../assets/Table10-6.png">
         </div>
         <p style="font-size: 16px;"> Referenced from:
