@@ -118,10 +118,6 @@ export default {
 
         storeSpecParam(text){
             this.updateChoice('specific_param',text)
-/** 
-            this.specific_param = this.choice.specific_param.at(-1);
-            window.location.reload();
-*/
         },
         
         goBack() {
