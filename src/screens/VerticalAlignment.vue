@@ -62,7 +62,7 @@
       <Collapsible chapt="15.4" title="Critical Length of Grade">
         <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
           Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10.11.png">
         </div>
         <div class="img-container">
