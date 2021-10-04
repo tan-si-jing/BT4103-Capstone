@@ -64,7 +64,7 @@
         <p style="padding-top:3%"><b class="tab3">1.2.2</b><b>Lane Width With Cycling Path</b></p>
       
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">1.2.2.7</b><b>Treatment at Bus Stop With Bus Bay</b></p>
-          <div class="img-container4">
+          <div class="img-container">
               <img src="../assets/SDRE-Chap21-CYC1.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -72,7 +72,7 @@
           SDRE Chapter 21 - 1 (page 2)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.2</b><b>Treatment at Other Junctions</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC2.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -80,7 +80,7 @@
           SDRE Chapter 21 - 2 (page 3)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.3</b><b>Treatment at Development/ Carpark Access (Sheet 1 of 2)</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC3.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -88,7 +88,7 @@
           SDRE Chapter 21 - 3 (page 4)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.4</b><b>Treatment at Development/ Carpark Access (Sheet 2 of 2)</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC4.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -96,7 +96,7 @@
           SDRE Chapter 21 - 4 (page 5)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.5</b><b>Bicycle Crossing</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC5.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -104,7 +104,7 @@
           SDRE Chapter 21 - 5 (page 6)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.6</b><b>Shared Track</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC6.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -112,7 +112,7 @@
           SDRE Chapter 21 - 6 (page 7)</a></p>
         
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.7</b><b>Treatment at Bus Stop With Bus Bay</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC7.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -120,7 +120,7 @@
           SDRE Chapter 21 - 7 (page 8)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.8</b><b>Treatment at Bus Stop Without Bus Bay</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC8.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -128,7 +128,7 @@
           SDRE Chapter 21 - 8 (page 9)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.9</b><b>Cycling Pavement Marking Details</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC9.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -136,7 +136,7 @@
           SDRE Chapter 21 - 9 (page 10)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.10</b><b>Cycling Signs (Sheet 1 of 2)</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC10.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -144,7 +144,7 @@
           SDRE Chapter 21 - 10 (page 11)</a></p>
 
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab4">1.2.2.11</b><b>Cycling Signs (Sheet 2 of 2)</b></p>
-          <div class="img-container4">
+          <div class="img-container">
             <img src="../assets/SDRE-Chap21-CYC11.png">
           </div>
         <p style="font-size: 16px;"> Referenced from:

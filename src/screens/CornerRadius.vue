@@ -11,7 +11,7 @@
       <Collapsible title="Corner Radius" chapt="6.1">
         <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
             shall not be less than the values as shown in Table 10.8.</p>
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10-8.png">
         </div>
         <p style="font-size: 16px;"> Referenced from:

@@ -15,7 +15,7 @@
         <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
         <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
         <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10-9.png">
         </div>
         <p style="font-size: 16px;"> Referenced from:
@@ -24,7 +24,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="2.2" title="Interchange Ramp/Loop and Slip Road">
-        <div class="img-container">
+        <div class="img-container4">
           <img src="../assets/Table10-10.png">
         </div>                
         <p style="font-size: 16px;"> Referenced from:
