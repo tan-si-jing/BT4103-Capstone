@@ -56,32 +56,32 @@ export default {
 
 <style scoped>
 table {
-    width: 70vw;
-    height: auto;
-    margin-top: 5vh;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
+  width: 70vw;
+  height: auto;
+  margin-top: 5vh;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
 .table thead td {
-    background-color: #273B8C;
-    color: white;
-    height: 6vh;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    font-size:22px;
-    text-indent:1.5%;
-     vertical-align: middle;
+  background-color: #273B8C;
+  color: white;
+  height: 6vh;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size:22px;
+  text-indent:1.5%;
+  vertical-align: middle;
 }
 tbody tr{
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 tbody tr:last-child td{ 
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px; 
-    height: 31vh;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px; 
+  padding-bottom: 2%;
 }
 </style>
