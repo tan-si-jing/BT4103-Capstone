@@ -614,6 +614,9 @@
       </tr>
     </tbody>
   </table>
+  <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
+    <i class="bi bi-arrow-left"></i>
+  </button>
 </template>
 
 <script>
@@ -622,7 +625,29 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
-  }
+  },
+    data() {
+        return {
+            specific_param:"",
+        } 
+    },
+
+    methods : {
+        openStorage(){
+            return JSON.parse(localStorage.getItem('choice'))
+        },
+        saveStorage(form){
+            localStorage.setItem('choice',JSON.stringify(form))
+        },
+        goBack() {
+            let storedChoice = this.openStorage();
+            if (storedChoice.specific_param.length > 1) {
+                storedChoice.specific_param.pop();
+                this.saveStorage(storedChoice);
+            } 
+            this.$router.go(-1);
+        }
+    }
 }
 </script>
 

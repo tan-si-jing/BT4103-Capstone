@@ -111,7 +111,12 @@ export default {
                 [value]: firebase.firestore.FieldValue.increment(1)
             }).then(res => {
                 this.specific_param = this.choice.specific_param.at(-1);
-                window.location.reload();
+                if (this.specific_param == "Signs") {
+                    this.$router.push('specific-results-signs')
+                }
+                else {
+                    window.location.reload()
+                }
                 res;
             });
         },
