@@ -9,13 +9,13 @@
       <tr>
       <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
       <Collapsible chapt="3.1" title="Longitudinal Friction Factor given Design Speed">
-        <div class="img-container4">
+        <!--div class="img-container4">
           <img src="../assets/Table10-4.png">
-        </div>         
-        <p style="font-size: 16px;"> Referenced from:
+        </div-->         
+        <!--p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
             CDC 10.4.2.2.1 - Table 10.4 (page 203)</a>
-        </p>
+        </p-->
         <table id="speedTable">
           <thead class="table">
             <th style="text-align:center">Design Speed, V(km/h) </th>
