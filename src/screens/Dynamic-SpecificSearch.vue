@@ -57,7 +57,7 @@
     </button>
 </template>
 
-<script>
+<script scoped>
 import database from '../firebase.js'
 import firebase from 'firebase/app';
 import 'firebase/firestore';
