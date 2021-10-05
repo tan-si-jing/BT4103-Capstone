@@ -16,7 +16,7 @@
       <SidebarButton name="Curve Length" @click="moveToSection('curvelength', 3)"/>
       <SidebarButton name="Horizontal Alignment" @click="moveToSection('horizontalalignment', 4)"/>
       <SidebarButton name="Vertical Alignment" @click="moveToSection('verticalalignment', 4)"/>
-      <SidebarButton name="Slip-road/ Traffic Island" @click="moveToSection('sliproad', 4)"/>
+      <SidebarButton name="Slip-road / Traffic Island" @click="moveToSection('sliproad', 4)"/>
       <SidebarButton name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
   </div>
 
@@ -188,17 +188,18 @@ data() {
 }
 /** lta mascot */
 .mascot {
-  max-width: 11%;
+  max-width: 13%;
   position: absolute;
   right: 4%;
   transform: rotateY(180deg);
   z-index: 2;
-  bottom:0
+  bottom:1%
 }
 .result {
   float: right;
   width: 75%;
   background: #e0e0e0;
+  position: relative;
 }
 .sidebar {
   width:25%;
