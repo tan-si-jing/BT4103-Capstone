@@ -30,18 +30,25 @@ const router = createRouter({
       name: "level2results",
       path: "/level2results",
       component: Level2Results,
+      props: true,
     },
     {
+      name: "level3results",
       path: "/level3results",
       component: Level3Results,
+      props: true,
     },
     {
+      name: "level4results",
       path: "/level4results",
       component: Level4Results,
+      props: true,
     },
     {
+      name: "level5results",
       path: "/level5results",
       component: Level5Results,
+      props: true,
     },
     {
       name:"home",

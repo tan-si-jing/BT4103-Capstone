@@ -57,6 +57,7 @@ import SidebarButton from '../components/SidebarButton.vue'
 
 export default {
 name: "Level4Results",
+props: ['id'],
 components: {
   "HorizontalAlignment" : HorizontalAlignment,
   "VerticalAlignment" : VerticalAlignment,
@@ -64,8 +65,6 @@ components: {
   "PageCircle2": PageCircle2,
   "SidebarButton": SidebarButton
 },
-props: {},
-
 methods: {
   contentpage() {
     this.$router.push({path: "/contentpage"})
@@ -104,6 +103,9 @@ methods: {
       this.scroll(id)
     }
   }
+},
+mounted() {
+  this.scroll(this.id);
 },
 
 data() {

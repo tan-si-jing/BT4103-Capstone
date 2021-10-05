@@ -61,6 +61,7 @@ import SidebarButton from '../components/SidebarButton.vue'
 
 export default {
 name: "Level3Results",
+props: ['id'],
 components: {
   "LateralClearance" : LateralClearance,
   "SuperElevation" : SuperElevation,
@@ -99,16 +100,13 @@ methods: {
       this.scroll(id)
     }
     else if (page == 2) {
-      this.level2()
-      this.scroll(id)
+      this.$router.push({name: "level2results", params: {id}})
     }
     else if (page == 4) {
-      this.level4()
-      this.scroll(id)
+      this.$router.push({name: "level4results", params: {id}})
     }
     else {
-      this.level5()
-      this.scroll(id)
+      this.$router.push({name: "level5results", params: {id}})
     }
   }
 },
@@ -120,6 +118,9 @@ methods: {
         ...storedChoice
       }
     }
+  },
+  mounted() {
+  this.scroll(this.id);
   },
 data() {
   return {
