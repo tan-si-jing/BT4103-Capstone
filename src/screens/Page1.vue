@@ -1,18 +1,12 @@
 <template>
-      <table class="table table-borderless">
-        <thead class="table">
-          <tr>
-          <td scope="header">Page One</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-          <td scope="row">
+      <div class="container">
+        <h3>Page One</h3>
             <div class="content">
               <p style="padding-top:3%"><b class="tab2">1</b><b>Road Cross-Sections and Elements</b></p>
                 <p class="tab4">1.1 General</p>
 
                 <p class="tab4">1.2 Lane Width</p>
+                <!--
                 <p class="tab5">1.2.1 Lane Width Without Cycling Path</p>
                 <p class="tab6">1.2.1.1 Typical Acceleration Lane At Expressway</p>
                 <p class="tab6">1.2.1.2 Typical Deceleration Lane At Expressway</p>
@@ -32,8 +26,10 @@
                 <p class="tab6">1.2.2.10 Cycling Signs (Sheet 1 of 2)</p>
                 <p class="tab6">1.2.2.11 Cycling Signs (Sheet 2 of 2)</p>
                 <p class="tab6">1.2.2.12 Cycling Track Lighting</p>
+                -->
 
                 <p class="tab4">1.3 Services Verge</p>
+                <!--
                 <p class="tab5">1.3.1 Pavement of Roads</p>
                 <p class="tab6">1.3.1.1 Flexible Pavement, Recambering & Widening of Carriageway</p>
                 <p class="tab6">1.3.1.2 Rigid Pavement (Sheet 1 of 2)</p>
@@ -50,8 +46,10 @@
                 <p class="tab6">1.3.2.7 Vehicular Grating for Manholes (Sheet 2 of 2)</p>
                 <p class="tab6">1.3.2.8 Manhole Cover and Frame</p>
                 <p class="tab6">1.3.2.9 Roadside Manhole Grating</p>
+                -->
 
                 <p class="tab4">1.4 Drains & Culverts</p>
+                <!--
                 <p class="tab5">1.4.1 Precast Concrete Channel and Drain</p>
                 <p class="tab5">1.4.2 Cast-In-Situ Box Culvert</p>
                 <p class="tab5">1.4.3 Precast Concrete Pipe Culverts</p>
@@ -60,8 +58,10 @@
                 <p class="tab5">1.4.6 Precast Concrete Drop-Inlet Chamber</p>
                 <p class="tab5">1.4.7 Sub-Soil Drain and Sump Along Expressway</p>
                 <p class="tab5">1.4.8 Sub-Soil Drain and Sump Along Major Arterial</p>
+                -->
 
                 <p class="tab4">1.5 Sidetable, Drain, Footpath and Divider</p>
+                <!--
                 <p class="tab5">1.5.1 Kerbs</p>
                 <p class="tab5">1.5.2 Kerbs Painting (1 of 2)</p>
                 <p class="tab5">1.5.3 Kerbs Painting (2 of 2)</p>
@@ -75,6 +75,7 @@
                 <p class="tab5">1.5.11 Footpath Ramp - Cast-In-Situ Concrete Pavement</p>
                 <p class="tab5">1.5.12 Homogeneous Tactile Tiles and Arrangement of Tactile Tiles</p>
                 <p class="tab5">1.5.13 Kerb With Slot Holes</p>
+                -->
 
               <p style="padding-top:3%"><b class="tab2">2</b><b>Grade</b></p>
                 <p class="tab4">2.1 Main Carriageway</p>
@@ -108,6 +109,7 @@
 
               <p style="padding-top:3%"><b class="tab2">9</b><b>Signs</b></p>
                 <p class="tab4">9.1 Directional Sign</p>
+                <!--
                 <p class="tab5">9.1.1 Letters for Directional Signs - Upper Case (Sheet 1 of 2)</p>
                 <p class="tab5">9.1.2 Letters for Directional Signs - Upper Case (Sheet 2 of 2)</p>
                 <p class="tab5">9.1.3 Letters for Directional Signs - Lower Case (Sheet 1 of 2)</p>
@@ -116,20 +118,26 @@
                 <p class="tab5">9.1.6 Arrows for Directional Signs</p>
                 <p class="tab5">9.1.7 Notes for Directional Signs (Sheet 1 of 2)</p>
                 <p class="tab5">9.1.8 Notes for Directional Signs (Sheet 2 of 2)</p>
+                -->
 
                 <p class="tab4">9.2 Traffic Mandatory Signs</p>
+                <!--
                 <p class="tab5">9.2.1 Traffic Mandatory Signs (Sheet 1 of 2)</p>
                 <p class="tab5">9.2.2 Traffic Mandatory Signs (Sheet 2 of 2)</p>
+                -->
 
                 <p class="tab4">9.3 Traffic Prohibitory Signs</p>
+                <!--
                 <p class="tab5">9.3.1 Traffic Prohibitory Signs (Sheet 1 of 6)</p>
                 <p class="tab5">9.3.2 Traffic Prohibitory Signs (Sheet 2 of 6)</p>
                 <p class="tab5">9.3.3 Traffic Prohibitory Signs (Sheet 3 of 6)</p>
                 <p class="tab5">9.3.4 Traffic Prohibitory Signs (Sheet 4 of 6)</p>
                 <p class="tab5">9.3.5 Traffic Prohibitory Signs (Sheet 5 of 6)</p>
                 <p class="tab5">9.3.6 Traffic Prohibitory Signs (Sheet 6 of 6)</p>
+                -->
 
                 <p class="tab4">9.4 Traffic Warning Signs</p>
+                <!--
                 <p class="tab5">9.4.1 Traffic Warning Signs (Sheet 1 of 9)</p>
                 <p class="tab5">9.4.2 Traffic Warning Signs (Sheet 2 of 9)</p>
                 <p class="tab5">9.4.3 Traffic Warning Signs (Sheet 3 of 9)</p>
@@ -139,8 +147,10 @@
                 <p class="tab5">9.4.7 Traffic Warning Signs (Sheet 7 of 9)</p>
                 <p class="tab5">9.4.8 Traffic Warning Signs (Sheet 8 of 9)</p>
                 <p class="tab5">9.4.9 Traffic Warning Signs (Sheet 9 of 9)</p>
+                -->
                 
                 <p class="tab4">9.5 Traffic Informatory Signs</p>
+                <!--
                 <p class="tab5">9.5.1 Traffic Informatory Signs (Sheet 1 of 17)</p>
                 <p class="tab5">9.5.2 Traffic Informatory Signs (Sheet 2 of 17)</p>
                 <p class="tab5">9.5.3 Traffic Informatory Signs (Sheet 3 of 17)</p>
@@ -160,8 +170,10 @@
                 <p class="tab5">9.5.17 Traffic Informatory Signs (Sheet 17 of 17)</p>
                 <p class="tab5">9.5.18 Traffic Informatory Signs (Sheet 1 of 2)</p>
                 <p class="tab5">9.5.19 Traffic Informatory Signs (Sheet 1 of 2)</p>
+                -->
 
                 <p class="tab4">9.6 Street Name Board</p>  
+                <!--
                 <p class="tab5">9.6.1 Street Name Sign - General Configuration Layout (Sheet 1 of 3)</p>
                 <p class="tab5">9.6.2 Street Name Sign - General Configuration Layout (Sheet 2 of 3)</p> 
                 <p class="tab5">9.6.3 Street Name Sign - General Configuration Layout (Sheet 3 of 3)</p>            
@@ -174,8 +186,10 @@
                 <p class="tab5">9.6.10 Street Name Sign - Extrusion</p>
                 <p class="tab5">9.6.11 Street Name Sign - Casting Parts</p>
                 <p class="tab5">9.6.12 Street Name Sign - Traffic Sign on Support Post</p>
+                -->
                 
                 <p class="tab4">9.7 Signs - Cycling Path</p> 
+                <!--
                 <p class="tab5">9.7.1 Treatment at Major Junction</p>
                 <p class="tab5">9.7.2 Treatment at Other Junctions</p>
                 <p class="tab5">9.7.3 Treatment at Development/ Carpark Access (Sheet 1 of 2)</p>
@@ -186,75 +200,18 @@
                 <p class="tab5">9.7.8 Treatment at Bus Stop Without Bus Bay</p>
                 <p class="tab5">9.7.9 Cycling Signs (Sheet 1 of 2)</p>
                 <p class="tab5">9.7.10 Cycling Signs (Sheet 2 of 2)</p>
+                -->
              
             </div>
-          </td>
-          </tr>
-          <!--tr>
-          <td scope="row"></td>
-          </tr>
-          <tr>
-          <td scope="row">
-          <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-            <div class="grid-container">
-              Reference from:
-              <div class="grid-item inner-grid-container">
-                <div class="grid-item">
-                  <span id = "manuals"> Manuals </span>
-                  <br>Civil Design Criteria (CDC)
-                </div>   
-                
-                <div class="grid-item">
-                  <span id = "chapter"> Chapter/ Section </span>
-                  <br>CDC Chapter 10 / <br>Section 10.4.3
-                </div>   
-                
-                <div class="grid-item">
-                  <span id = "link">Link to Chapter/ Section</span>
-                   <br>
-                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209">CDC 10.4.3.1.1 (page 209)</a>
-                  <br>
-                  <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210">CDC 10.4.3.1.2 (page 210)</a>
-                </div>   
-              </div>
-            </div>      
-          </td>
-          </tr-->
-        </tbody>
-      </table>
+      </div>
 </template>
 
 <style scoped>
-table {
-    width: 70vw;
-    height: auto;
-    margin-top: 5vh;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
-}
-.table thead td {
-    background-color: #273B8C;
-    color: white;
-    height: 6vh;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    font-size:22px;
-    text-indent:1.5%;
-     vertical-align: middle;
-}
-tbody tr{
-    background-color: #ffffff;
+
+.container{
+  background-color: white;
 }
 
-tbody tr:last-child td{ 
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px; 
-    height: 23vh;
-}
 
 .content{
   font-size:18px;
