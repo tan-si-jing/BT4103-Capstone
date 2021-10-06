@@ -85,7 +85,9 @@ p {
 .img-container2{
     width: 50%;
     height: auto;
-    margin-left: 3em; 
+    /*margin-left: 3em; */
+    margin-left: auto;
+  margin-right: auto;
     margin-top: 3%;
     margin-bottom:3%;
 }
