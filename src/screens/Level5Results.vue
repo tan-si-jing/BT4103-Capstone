@@ -1,15 +1,15 @@
 <template>
 <div class="sidebar">
-    <div style="font-size:1.5rem;padding:5%;"><b>Step-by-Step Guide Chapters:</b></div>
-      <SidebarButton name="1. Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
-      <SidebarButton name="2. Grade" @click="moveToSection('grade', 2)"/>
-      <SidebarButton name="3. Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
-      <SidebarButton name="4. Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
-      <SidebarButton name="5. Crossfall" @click="moveToSection('crossfall', 2)"/>
-      <SidebarButton name="6. Corner Radius" @click="moveToSection('cornerradius', 2)"/>
-      <SidebarButton name="7. Merging Angle" @click="moveToSection('mergingangle', 2)"/>
-      <SidebarButton name="8. Lane Width" @click="moveToSection('lanewidth', 2)"/>
-      <SidebarButton name="9. Signs" @click="moveToSection('signs', 2)"/>
+    <div style="font-size:1.5rem;padding:5%;"><b>Step-by-Step Guide:</b></div>
+      <SidebarButton name="1.&nbsp;&nbsp; Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
+      <SidebarButton name="2.&nbsp;&nbsp; Grade" @click="moveToSection('grade', 2)"/>
+      <SidebarButton name="3.&nbsp;&nbsp; Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
+      <SidebarButton name="4.&nbsp;&nbsp; Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
+      <SidebarButton name="5.&nbsp;&nbsp; Crossfall" @click="moveToSection('crossfall', 2)"/>
+      <SidebarButton name="6.&nbsp;&nbsp; Corner Radius" @click="moveToSection('cornerradius', 2)"/>
+      <SidebarButton name="7.&nbsp;&nbsp; Merging Angle" @click="moveToSection('mergingangle', 2)"/>
+      <SidebarButton name="8.&nbsp;&nbsp; Lane Width" @click="moveToSection('lanewidth', 2)"/>
+      <SidebarButton name="9.&nbsp;&nbsp; Signs" @click="moveToSection('signs', 2)"/>
       <SidebarButton name="10. Lateral Clearance" @click="moveToSection('lateralclearance', 3)"/>
       <SidebarButton name="11. Super-elevation" @click="moveToSection('superelevation', 3)"/>
       <SidebarButton name="12. Sight Distance" @click="moveToSection('sightdistance', 3)"/>

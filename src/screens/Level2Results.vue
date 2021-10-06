@@ -1,15 +1,15 @@
 <template>
   <div class="sidebar">
-    <div style="font-size:1.5rem;padding:5%;"><b>Step-by-Step Guide Chapters:</b></div>
-      <SidebarButton name="1. Road Cross-Sections and Elements" @click="moveToSection('/level2results/#roadcselements')"/>
-      <SidebarButton name="2. Grade" @click="moveToSection('/level2results/#grade')"/>
-      <SidebarButton name="3. Longitudinal Friction Factor" @click="moveToSection('/level2results/#longfrictionfactor')"/>
-      <SidebarButton name="4. Side Friction Factor" @click="moveToSection('/level2results/#sidefrictionfactor')"/>
-      <SidebarButton name="5. Crossfall" @click="moveToSection('/level2results/#crossfall')"/>
-      <SidebarButton name="6. Corner Radius" @click="moveToSection('/level2results/#cornerradius')"/>
-      <SidebarButton name="7. Merging Angle" @click="moveToSection('/level2results/#mergingangle')"/>
-      <SidebarButton name="8. Lane Width" @click="moveToSection('/level2results/#lanewidth')"/>
-      <SidebarButton name="9. Signs" @click="moveToSection('/level2results/#signs')"/>
+    <div style="font-size:1.5rem;padding:5%;"><b>Step-by-Step Guide:</b></div>
+      <SidebarButton name="1.&nbsp;&nbsp; Road Cross-Sections and Elements" @click="moveToSection('/level2results/#roadcselements')"/>
+      <SidebarButton name="2.&nbsp;&nbsp; Grade" @click="moveToSection('/level2results/#grade')"/>
+      <SidebarButton name="3.&nbsp;&nbsp; Longitudinal Friction Factor" @click="moveToSection('/level2results/#longfrictionfactor')"/>
+      <SidebarButton name="4.&nbsp;&nbsp; Side Friction Factor" @click="moveToSection('/level2results/#sidefrictionfactor')"/>
+      <SidebarButton name="5.&nbsp;&nbsp; Crossfall" @click="moveToSection('/level2results/#crossfall')"/>
+      <SidebarButton name="6.&nbsp;&nbsp; Corner Radius" @click="moveToSection('/level2results/#cornerradius')"/>
+      <SidebarButton name="7.&nbsp;&nbsp; Merging Angle" @click="moveToSection('/level2results/#mergingangle')"/>
+      <SidebarButton name="8.&nbsp;&nbsp; Lane Width" @click="moveToSection('/level2results/#lanewidth')"/>
+      <SidebarButton name="9.&nbsp;&nbsp; Signs" @click="moveToSection('/level2results/#signs')"/>
       <SidebarButton name="10. Lateral Clearance" @click="moveToSection('/level3results/#lateralclearance')"/>
       <SidebarButton name="11. Super-elevation" @click="moveToSection('/level3results/#superelevation')"/>
       <SidebarButton name="12. Sight Distance" @click="moveToSection('/level3results/#sightdistance')"/>
