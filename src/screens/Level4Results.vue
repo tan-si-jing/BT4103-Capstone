@@ -58,7 +58,7 @@ import SidebarButton from '../components/SidebarButton.vue'
 export default {
 name: "Level4Results",
 props: {
-  id : Number
+  id : String
 },
 components: {
   "HorizontalAlignment" : HorizontalAlignment,
@@ -108,7 +108,9 @@ methods: {
 },
 mounted() {
   if (this.$props.id != null) {
-    this.scroll(this.$props.id);
+    document.getElementById(this.$props.id).scrollIntoView({
+      behavior: "smooth"
+    });
   }
 },
 data() {

@@ -62,7 +62,7 @@ import SidebarButton from '../components/SidebarButton.vue'
 export default {
 name: "Level3Results",
 props: {
-  id : Number
+  id : String
 },
 components: {
   "LateralClearance" : LateralClearance,
@@ -105,7 +105,7 @@ methods: {
       this.$router.push({name: "level2results", params: {id: cur_id}})
     }
     else if (page == 4) {
-      this.$router.go({name: "level4results", params: {id: cur_id}})
+      this.$router.push({name: "level4results", params: {id: cur_id}})
     }
     else {
       this.$router.push({name: "level5results", params: {id: cur_id}})
