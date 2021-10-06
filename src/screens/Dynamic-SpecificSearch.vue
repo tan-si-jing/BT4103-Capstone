@@ -65,12 +65,22 @@
                             <img :src="cdc.Figure4" >
                         </div>
 
+                        <div class = 'figure' v-show="cdc.Figure5">
+                            <img :src="cdc.Figure5" >
+                        </div>
+
+                        <div class = 'figure' v-show="cdc.Figure6">
+                            <img :src="cdc.Figure6" >
+                        </div>
+
                         <p style="font-size: 16px;"> Referenced from:
                             <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}},</a>
-                            <a v-bind:href="cdc.Figure1Link" target="_blank" v-show="cdc.Figure1">SDRE {{cdc.Figure1Chapter}}, </a>
-                            <a v-bind:href="cdc.Figure2Link" target="_blank" v-show="cdc.Figure2">SDRE {{cdc.Figure2Chapter}}, </a>
-                            <a v-bind:href="cdc.Figure3Link" target="_blank" v-show="cdc.Figure3">SDRE {{cdc.Figure3Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure1Link" target="_blank" v-show="cdc.Figure1">CDC {{cdc.Figure1Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure2Link" target="_blank" v-show="cdc.Figure2">CDC {{cdc.Figure2Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure3Link" target="_blank" v-show="cdc.Figure3">CDC {{cdc.Figure3Chapter}}, </a>
                             <a v-bind:href="cdc.Figure4Link" target="_blank" v-show="cdc.Figure4">SDRE {{cdc.Figure4Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure5Link" target="_blank" v-show="cdc.Figure5">SDRE {{cdc.Figure5Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure6Link" target="_blank" v-show="cdc.Figure6">SDRE {{cdc.Figure6Chapter}}, </a>
                         </p>
                     </Collapsible>
                 </li>                        
