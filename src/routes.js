@@ -15,6 +15,7 @@ import Level3Results from './screens/Level3Results.vue'
 import Level4Results from './screens/Level4Results.vue'
 import Level5Results from './screens/Level5Results.vue'
 import DynamicSigns from './screens/Dynamic-Signs.vue'
+import DynamicRoadCrossSectionElements from './screens/Dynamic-RoadCrossSectionElements.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -23,18 +24,25 @@ const router = createRouter({
       name: "level2results",
       path: "/level2results",
       component: Level2Results,
+      props: true,
     },
     {
+      name: "level3results",
       path: "/level3results",
       component: Level3Results,
+      props: true,
     },
     {
+      name: "level4results",
       path: "/level4results",
       component: Level4Results,
+      props: true,
     },
     {
+      name: "level5results",
       path: "/level5results",
       component: Level5Results,
+      props: true,
     },
     {
       name:"home",
@@ -95,6 +103,11 @@ const router = createRouter({
       name: "dynamic_signs",
       path: "/specific-results-signs",
       component: DynamicSigns 
+    },
+    {
+      name: "dynamic_road",
+      path: "/specific-results-road",
+      component: DynamicRoadCrossSectionElements 
     }
     /*
     { path: '/:pathMatch(.*)',

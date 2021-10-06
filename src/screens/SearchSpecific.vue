@@ -26,13 +26,14 @@
           <option value="Corner Radius">Corner Radius</option>
           <option value="Merging Angle">Merging Angle</option>
           <option value="Lane Width">Lane Width</option>
+          <option value="Signs">Signs</option>
           <option value="Lateral Clearance">Lateral Clearance</option>
           <option value="Super-Elevation">Super-Elevation</option>
           <option value="Sight Distance">Sight Distance</option>
           <option value="Curve Length">Curve Length</option>
           <option value="Horizontal Alignment">Horizontal Alignment</option>
           <option value="Vertical Alignment">Vertical Alignment</option>
-          <option value="Slip-road Traffic Island">Slip-road Traffic Island</option>
+          <option value="Slip-road/ Traffic Island">Slip-road/ Traffic Island</option>
           <option value="Combination of Horizontal & Vertical Alignment">Combination of Horizontal & Vertical Alignment</option>
         </datalist>
         <button class="btn btn-outline-secondary w-25" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
@@ -106,7 +107,13 @@ export default {
     storeSpecParam(text){
       this.updateChoice('specific_param',text);
       this.displayParam();
-      this.$router.push({name:'specific_results'})
+      if (text == 'Road Cross-Sections and Elements') {
+        this.$router.push({name:'dynamic_road'})
+      } else if (text == 'Signs') {
+        this.$router.push({name:'dynamic_signs'})
+      } else {
+        this.$router.push({name:'specific_results'})
+      }
     },
     displayParam(){
       console.log(this.choice.roadDesign)

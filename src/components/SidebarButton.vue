@@ -9,7 +9,7 @@ export default {
   name: 'SidebarButton2',
   props: {
     isActive: Boolean,
-    name: String
+    name: String,
   },
   data() {
     return {

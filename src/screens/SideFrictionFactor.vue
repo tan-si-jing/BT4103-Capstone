@@ -8,7 +8,7 @@
     <tbody>
       <tr>
       <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
-      <Collapsible chapt="4.1" title="">
+      <Collapsible chapt="4.1" title="Side Friction Factor given Design Speed">
         <!--div class="img-container4">
           <img src="../assets/Table10-7.png">
         </div-->

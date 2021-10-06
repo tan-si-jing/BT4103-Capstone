@@ -1,23 +1,23 @@
 <template>
   <div class="sidebar">
-    <div style="font-size:1.5rem;padding:5%;"><b>Chapters:</b></div>
-    <SidebarButton name="Road Cross-Sections and Elements" @click="moveToSection('roadcselements', 2)"/>
-      <SidebarButton name="Grade" @click="moveToSection('grade', 2)"/>
-      <SidebarButton name="Longitudinal Friction Factor" @click="moveToSection('longfrictionfactor', 2)"/>
-      <SidebarButton name="Side Friction Factor" @click="moveToSection('sidefrictionfactor', 2)"/>
-      <SidebarButton name="Crossfall" @click="moveToSection('crossfall', 2)"/>
-      <SidebarButton name="Corner Radius" @click="moveToSection('cornerradius', 2)"/>
-      <SidebarButton name="Merging Angle" @click="moveToSection('mergingangle', 2)"/>
-      <SidebarButton name="Lane Width" @click="moveToSection('lanewidth', 2)"/>
-      <SidebarButton name="Signs" @click="moveToSection('signs', 2)"/>
-      <SidebarButton name="Lateral Clearance" @click="moveToSection('lateralclearance', 3)"/>
-      <SidebarButton name="Super-elevation" @click="moveToSection('superelevation', 3)"/>
-      <SidebarButton name="Sight Distance" @click="moveToSection('sightdistance', 3)"/>
-      <SidebarButton name="Curve Length" @click="moveToSection('curvelength', 3)"/>
-      <SidebarButton name="Horizontal Alignment" @click="moveToSection('horizontalalignment', 4)"/>
-      <SidebarButton name="Vertical Alignment" @click="moveToSection('verticalalignment', 4)"/>
-      <SidebarButton name="Slip-road / Traffic Island" @click="moveToSection('sliproad', 4)"/>
-      <SidebarButton name="Combination of Horizontal & Vertical Alignment" @click="moveToSection('combinedalignment', 5)"/>
+    <div style="font-size:1.5rem;padding:5%;"><b>Step-by-Step Guide:</b></div>
+      <SidebarButton name="1.&nbsp;&nbsp; Road Cross-Sections and Elements" @click="moveToSection('/level2results/#roadcselements')"/>
+      <SidebarButton name="2.&nbsp;&nbsp; Grade" @click="moveToSection('/level2results/#grade')"/>
+      <SidebarButton name="3.&nbsp;&nbsp; Longitudinal Friction Factor" @click="moveToSection('/level2results/#longfrictionfactor')"/>
+      <SidebarButton name="4.&nbsp;&nbsp; Side Friction Factor" @click="moveToSection('/level2results/#sidefrictionfactor')"/>
+      <SidebarButton name="5.&nbsp;&nbsp; Crossfall" @click="moveToSection('/level2results/#crossfall')"/>
+      <SidebarButton name="6.&nbsp;&nbsp; Corner Radius" @click="moveToSection('/level2results/#cornerradius')"/>
+      <SidebarButton name="7.&nbsp;&nbsp; Merging Angle" @click="moveToSection('/level2results/#mergingangle')"/>
+      <SidebarButton name="8.&nbsp;&nbsp; Lane Width" @click="moveToSection('/level2results/#lanewidth')"/>
+      <SidebarButton name="9.&nbsp;&nbsp; Signs" @click="moveToSection('/level2results/#signs')"/>
+      <SidebarButton name="10. Lateral Clearance" @click="moveToSection('/level3results/#lateralclearance')"/>
+      <SidebarButton name="11. Super-elevation" @click="moveToSection('/level3results/#superelevation')"/>
+      <SidebarButton name="12. Sight Distance" @click="moveToSection('/level3results/#sightdistance')"/>
+      <SidebarButton name="13. Curve Length" @click="moveToSection('/level3results/#curvelength')"/>
+      <SidebarButton name="14. Horizontal Alignment" @click="moveToSection('/level4results/#horizontalalignment')"/>
+      <SidebarButton name="15. Vertical Alignment" @click="moveToSection('/level4results/#verticalalignment')"/>
+      <SidebarButton name="16. Slip-road / Traffic Island" @click="moveToSection('/level4results/#sliproad')"/>
+      <SidebarButton name="17. Combination of Horizontal & Vertical Alignment" @click="moveToSection('/level5results/#combinedalignment')"/>
   </div>
 
   <div class="result">
@@ -80,6 +80,7 @@ import SidebarButton from '../components/SidebarButton.vue'
 
 export default {
 name: "Level2Results",
+props: ['id'],
 components: {
   "RoadCSElem": RoadCSElem,
   "Grade": Grade,
@@ -114,22 +115,8 @@ methods: {
       behavior: "smooth"
       });
   },
-  moveToSection(id, page) {
-    if (page == 2) {
-      this.scroll(id)
-    }
-    else if (page == 3) {
-      this.level3()
-      this.scroll(id)
-    }
-    else if (page == 4) {
-      this.level4()
-      this.scroll(id)
-    }
-    else {
-      this.level5()
-      this.scroll(id)
-    }
+  moveToSection(link) {
+    this.$router.push({path: link})
   }
 },
 created(){
@@ -140,14 +127,19 @@ created(){
           ...storedChoice
         }
       }
- },
+},
+mounted() {
+  if (this.$props.id != null) {
+    this.scroll(this.$props.id);
+  }
+},
 data() {
   return {
     road: require("../assets/road.png"),
     mascot: require("../assets/mascot.png"),
     navOpen: false
-  };
-},
+    };
+  },
 };
 </script>
 
