@@ -10,10 +10,6 @@ import Search5 from "./screens/Search5.vue"
 import SearchSpecific from "./screens/SearchSpecific.vue"
 import SpecificResults from './screens/SpecificResults.vue'
 import { auth } from './firebase.js'
-import Level2Results from './screens/Level2Results.vue'
-import Level3Results from './screens/Level3Results.vue'
-import Level4Results from './screens/Level4Results.vue'
-import Level5Results from './screens/Level5Results.vue'
 import DynamicSigns from './screens/Dynamic-Signs.vue'
 import DynamicRoadCrossSectionElements from './screens/Dynamic-RoadCrossSectionElements.vue'
 import Results from './screens/Results.vue'
@@ -25,30 +21,6 @@ import Results5 from './screens/Results5.vue'
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    {
-      name: "level2results",
-      path: "/level2results",
-      component: Level2Results,
-      props: true,
-    },
-    {
-      name: "level3results",
-      path: "/level3results",
-      component: Level3Results,
-      props: true,
-    },
-    {
-      name: "level4results",
-      path: "/level4results",
-      component: Level4Results,
-      props: true,
-    },
-    {
-      name: "level5results",
-      path: "/level5results",
-      component: Level5Results,
-      props: true,
-    },
     {
       name: "results",
       path: '/results',
