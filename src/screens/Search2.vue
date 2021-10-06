@@ -3,7 +3,7 @@
   <div class="header">
     <div class="center">
     <div class="pages">
-        <PageCircle num="1" v-bind:isActive="true" @click="$router.push('search1')"/>
+        <PageCircle num="1" v-bind:isActive="true" @click="$router.push('search')"/>
         <PageCircle num="2" v-bind:isActive="true"/>
         <PageCircle num="3" v-bind:isActive="false"/>
         <PageCircle num="4" v-bind:isActive="false"/>
@@ -25,7 +25,7 @@
       <SearchParamButton text="4 - Primary Access"  @click="storeRoadClass('primaryAccess');"/>
       <SearchParamButton text="5 - Local Access"  @click="storeRoadClass('localAccess');"/>
     </div>
-    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search')">
       <i class="bi bi-arrow-left"></i>
     </button>
   </div>
