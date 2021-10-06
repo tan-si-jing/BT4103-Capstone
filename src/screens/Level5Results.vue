@@ -97,9 +97,10 @@ methods: {
   }
 },
 mounted() {
-  this.scroll(this.id);
+  if (this.$props.id != null) {
+    this.scroll(this.$props.id);
+  }
 },
-
 data() {
   return {
     road: require("../assets/road.png"),

@@ -57,7 +57,9 @@ import SidebarButton from '../components/SidebarButton.vue'
 
 export default {
 name: "Level4Results",
-props: ['id'],
+props: {
+  id : Number
+},
 components: {
   "HorizontalAlignment" : HorizontalAlignment,
   "VerticalAlignment" : VerticalAlignment,
@@ -105,9 +107,10 @@ methods: {
   }
 },
 mounted() {
-  this.scroll(this.id);
+  if (this.$props.id != null) {
+    this.scroll(this.$props.id);
+  }
 },
-
 data() {
   return {
     road: require("../assets/road.png"),

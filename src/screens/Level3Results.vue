@@ -61,7 +61,9 @@ import SidebarButton from '../components/SidebarButton.vue'
 
 export default {
 name: "Level3Results",
-props: ['id'],
+props: {
+  id : Number
+},
 components: {
   "LateralClearance" : LateralClearance,
   "SuperElevation" : SuperElevation,
@@ -95,33 +97,35 @@ methods: {
       behavior: "smooth"
       });
   },
-  moveToSection(id, page) {
+  moveToSection(cur_id, page) {
     if (page == 3) {
-      this.scroll(id)
+      this.scroll(cur_id)
     }
     else if (page == 2) {
-      this.$router.push({name: "level2results", params: {id}})
+      this.$router.push({name: "level2results", params: {id: cur_id}})
     }
     else if (page == 4) {
-      this.$router.push({name: "level4results", params: {id}})
+      this.$router.go({name: "level4results", params: {id: cur_id}})
     }
     else {
-      this.$router.push({name: "level5results", params: {id}})
+      this.$router.push({name: "level5results", params: {id: cur_id}})
     }
   }
 },
-  created(){
-    const storedChoice = this.openStorage()
-    if (storedChoice){
-      this.choice = {
-        ...this.choice,
-        ...storedChoice
-      }
+created(){
+  const storedChoice = this.openStorage()
+  if (storedChoice){
+    this.choice = {
+      ...this.choice,
+      ...storedChoice
     }
-  },
-  mounted() {
-  this.scroll(this.id);
-  },
+  }
+},
+mounted() {
+  if (this.$props.id != null) {
+    this.scroll(this.$props.id);
+  }
+},
 data() {
   return {
     road: require("../assets/road.png"),
