@@ -33,7 +33,7 @@
           <option value="Curve Length">Curve Length</option>
           <option value="Horizontal Alignment">Horizontal Alignment</option>
           <option value="Vertical Alignment">Vertical Alignment</option>
-          <option value="Slip-road Traffic Island">Slip-road Traffic Island</option>
+          <option value="Slip-road/ Traffic Island">Slip-road/ Traffic Island</option>
           <option value="Combination of Horizontal & Vertical Alignment">Combination of Horizontal & Vertical Alignment</option>
         </datalist>
         <button class="btn btn-outline-secondary w-25" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
