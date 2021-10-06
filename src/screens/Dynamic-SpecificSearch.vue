@@ -266,7 +266,7 @@ export default {
     background-color: #ffffff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
-    padding: 40px;
+    padding: 15px;
     font-size:20px;
     margin-bottom:12%;
     justify-content:center;
@@ -278,6 +278,25 @@ export default {
     font-size: 1.5rem;
     box-shadow:none;
     border:none;
+}
+
+.formula {
+    width: 50%;
+    height: auto;
+    margin-left: 8em;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.table {
+    width: 80%;
+    height: auto;
+    margin-left: 3em;
+}
+
+.figure {
+    width: 100%;
+    height: auto;
 }
 
 .arrow {
@@ -292,32 +311,6 @@ ul {
     list-style-type: none;
     padding:0;
     margin:0;
-}
-/** 
-.chapter-text-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: left;   
-}
-
-.chapter {
-    width: 20%;
-    align-items: left;         
-}
-
-.text-image {
-    width: 100%;
-    align-items: right;
-}
-*/
-.image {
-    display: flex;
-    justify-content:center;
-    width:80%;
-    margin-left: 3em; 
-   /* margin-top: 5%;
-    margin-bottom: 5%; */
 }
 
 img {
