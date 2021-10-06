@@ -3,7 +3,7 @@
   <div class="header">
     <div class="center">
     <div class="pages">
-        <PageCircle num="1" v-bind:isActive="true" @click="$router.push('search1')"/>
+        <PageCircle num="1" v-bind:isActive="true" @click="$router.push('search')"/>
         <PageCircle num="2" v-bind:isActive="true" @click="$router.push('search2')"/>
         <PageCircle num="3" v-bind:isActive="true"/>
         <PageCircle num="4" v-bind:isActive="false"/>
@@ -31,7 +31,7 @@
       <SearchParamButton text="Slip Road" @click="storeRoadType('slipRoad');"/>
       <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('dualRoad');"/>
     </div>
-    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search2')">
       <i class="bi bi-arrow-left"></i>
     </button>
   </div>

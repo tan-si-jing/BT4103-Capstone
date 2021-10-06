@@ -21,7 +21,7 @@
       <SearchParamButton text="Specific Section" @click="this.updateChoice('roadDesign','Specific');this.displayRoad(); this.$router.push({name:'searchspecific'})"/>
       <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('Guide');"/>
     </div>
-    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)"><i class="bi bi-arrow-left"></i></button>
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('/')"><i class="bi bi-arrow-left"></i></button>
   </div>
   </div>
 </template>
