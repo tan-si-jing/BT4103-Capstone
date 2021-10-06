@@ -8,7 +8,7 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="" chapt="16.1">
+      <Collapsible title="Traffic Island" chapt="16.1">
         <p> The desirable minimum dimension and the approach nose of the traffic island shall be as shown in the Figure 10.12. </p>
         <div class="img-container">
           <img src="../assets/Figure10.12.png">
@@ -20,7 +20,7 @@
           CDC Figure 10.12 (page 236)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="16.2" title="">
+      <Collapsible chapt="16.2" title="Traffic Stuff">
         <p>Where there is a high concentration of pedestrian at the road intersection adjacent to school, shopping centre, hospital, food centre, the dimension 
           of the traffic island shall be increased based on 0.3&#13217; standing place per person. The number of pedestrians shall include those who are waiting 
           to cross the road at the island before the start of the pedestrian crossing signal.</p>
