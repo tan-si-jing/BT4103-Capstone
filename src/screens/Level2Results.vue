@@ -133,7 +133,9 @@ created(){
       }
 },
 mounted() {
-  this.scroll(this.id);
+  if (this.$props.id != null) {
+    this.scroll(this.$props.id);
+  }
 },
 data() {
   return {
