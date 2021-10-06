@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'SidebarButton2',
+  name: 'SidebarButton',
   props: {
     isActive: Boolean,
     name: String,

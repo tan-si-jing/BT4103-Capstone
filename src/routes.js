@@ -1,4 +1,4 @@
-import { createRouter,createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from "./screens/Home.vue";
 import Login from "./screens/AdminLogin.vue"
 import Dashboard from "./screens/Dashboard.vue"
@@ -16,6 +16,11 @@ import Level4Results from './screens/Level4Results.vue'
 import Level5Results from './screens/Level5Results.vue'
 import DynamicSigns from './screens/Dynamic-Signs.vue'
 import DynamicRoadCrossSectionElements from './screens/Dynamic-RoadCrossSectionElements.vue'
+import Results from './screens/Results.vue'
+import Results2 from './screens/Results2.vue'
+import Results3 from './screens/Results3.vue'
+import Results4 from './screens/Results4.vue'
+import Results5 from './screens/Results5.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -43,6 +48,17 @@ const router = createRouter({
       path: "/level5results",
       component: Level5Results,
       props: true,
+    },
+    {
+      name: "results",
+      path: '/results',
+      component: Results,
+      children: [
+        { path: 'page1', component: Results2 },
+        { path: 'page2', component: Results3 },
+        { path: 'page3', component: Results4 },
+        { path: 'page4', component: Results5 }
+      ]
     },
     {
       name:"home",
@@ -115,9 +131,13 @@ const router = createRouter({
     },
     */
   ],
-  scrollBehavior() {
-    document.getElementById('app').scrollIntoView();
-}
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      return {el: to.hash, top:10, behavior: 'smooth',}
+    }
+    return { top: 0 }
+  },
 });
 
 /* to disable viewing of dashboard if admin is not logged in*/
@@ -136,5 +156,4 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
-
 export default router;
