@@ -27,12 +27,14 @@
         </div>
         
         <div class="buttonField">
-        <button type="submit">Login</button>
+        <button type="submit" class="loginButton">Login</button>
         </div>
 
       </form>
     </div>
-
+    <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
+    <i class="bi bi-arrow-left"></i><span style="margin-left:1rem">Back to Home</span>
+    </button>
     <img :src="road" class="road" />
     <img :src="mascot" class="mascot" />
   </div>
@@ -87,6 +89,17 @@ export default {
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+#back {
+  position:absolute;
+  top:5%;
+  left:5%;
+  font-size: 1rem;
+  box-shadow:none;
+  border:none;
+  padding:0.4% 0.8%;
+  display: flex;
+  align-items: center;
+}
 .wrapper {
   background: #e0e0e0;
   display: flex;
@@ -137,14 +150,14 @@ input:focus {
   justify-content: center;
   margin-top: 2rem;
 }
-button {
+.loginButton {
   font-size: 1rem;
   color: #fafafa;
   background-color: #21677d;
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 5px;
+  padding: 10px 5px;
   width: 30%;
   height: 50%;
 }

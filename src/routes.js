@@ -14,17 +14,11 @@ import Level2Results from './screens/Level2Results.vue'
 import Level3Results from './screens/Level3Results.vue'
 import Level4Results from './screens/Level4Results.vue'
 import Level5Results from './screens/Level5Results.vue'
-import ContentPage from './screens/ContentPage.vue'
 import DynamicSigns from './screens/Dynamic-Signs.vue'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    {
-      name: "contentpage",
-      path: "/contentpage",
-      component: ContentPage,
-    },
     {
       name: "level2results",
       path: "/level2results",

@@ -68,7 +68,7 @@ methods:{
     this.updateChoice('gradcurvchange',text);
     this.displayChange();
     this.updateFirebase();
-    this.$router.push({name: 'contentpage'})
+    this.$router.push({name: 'level2results'})
   },
   displayChange(){
     console.log(this.choice.role)
