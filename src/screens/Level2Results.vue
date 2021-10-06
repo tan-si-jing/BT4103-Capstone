@@ -18,6 +18,7 @@
       <SidebarButton name="15. Vertical Alignment" @click="moveToSection('/level4results/#verticalalignment')"/>
       <SidebarButton name="16. Slip-road / Traffic Island" @click="moveToSection('/level4results/#sliproad')"/>
       <SidebarButton name="17. Combination of Horizontal & Vertical Alignment" @click="moveToSection('/level5results/#combinedalignment')"/>
+      <HomeButton/>
   </div>
 
   <div class="result">
@@ -78,6 +79,7 @@ import LaneWidth from "./LaneWidth.vue"
 import Signs from "./Signs.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 import SidebarButton from '../components/SidebarButton.vue'
+import HomeButton from '../components/HomeButton.vue'
 
 export default {
 name: "Level2Results",
@@ -94,6 +96,7 @@ components: {
   "Signs" : Signs,
   "PageCircle2": PageCircle2,
   "SidebarButton": SidebarButton,
+  "HomeButton": HomeButton
 },
 methods: {
   contentpage() {
