@@ -40,11 +40,37 @@
                 <li v-for="cdc in final_array" :key="cdc.chapterID">
                     <Collapsible :title="cdc.Content" :chapt="cdc.Number">
                         <p v-html="cdc.Text"></p>
-                        <div class='image'>
-                            <img :src="cdc.Image" style='zoom: 1.2'>
+                        
+                        <div class = 'formula' v-show="cdc.Formula">
+                            <img :src="cdc.Formula">
                         </div>
+
+                        <div class='table' v-show="cdc.Table">
+                            <img :src="cdc.Table" style='zoom: 1.2'>
+                        </div>
+
+                        <div class = 'figure' v-show="cdc.Figure1">
+                            <img :src="cdc.Figure1" >
+                        </div>
+
+                        <div class = 'figure' v-show="cdc.Figure2">
+                            <img :src="cdc.Figure2" >
+                        </div>
+
+                        <div class = 'figure' v-show="cdc.Figure3">
+                            <img :src="cdc.Figure3" >
+                        </div>
+
+                        <div class = 'figure' v-show="cdc.Figure4">
+                            <img :src="cdc.Figure4" >
+                        </div>
+
                         <p style="font-size: 16px;"> Referenced from:
-                        <a v-bind:href="cdc.Link" target="_blank">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
+                            <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}},</a>
+                            <a v-bind:href="cdc.Figure1Link" target="_blank" v-show="cdc.Figure1">CDC {{cdc.Figure1Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure2Link" target="_blank" v-show="cdc.Figure2">CDC {{cdc.Figure2Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure3Link" target="_blank" v-show="cdc.Figure3">CDC {{cdc.Figure3Chapter}}, </a>
+                            <a v-bind:href="cdc.Figure4Link" target="_blank" v-show="cdc.Figure4">CDC {{cdc.Figure4Chapter}}, </a>
                         </p>
                     </Collapsible>
                 </li>                        
