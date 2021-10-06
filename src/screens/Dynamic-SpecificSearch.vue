@@ -66,7 +66,7 @@
                         </div>
 
                         <p style="font-size: 16px;"> Referenced from:
-                            <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Links">CDC {{cdc.chapterID}} - {{cdc.Chapter}},</a>
+                            <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}},</a>
                             <a v-bind:href="cdc.Figure1Link" target="_blank" v-show="cdc.Figure1">SDRE {{cdc.Figure1Chapter}}, </a>
                             <a v-bind:href="cdc.Figure2Link" target="_blank" v-show="cdc.Figure2">SDRE {{cdc.Figure2Chapter}}, </a>
                             <a v-bind:href="cdc.Figure3Link" target="_blank" v-show="cdc.Figure3">SDRE {{cdc.Figure3Chapter}}, </a>
