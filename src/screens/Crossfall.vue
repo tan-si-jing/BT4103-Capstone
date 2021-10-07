@@ -2,20 +2,25 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">5 &nbsp; Crossfall</td>
+      <td id="header">&nbsp;&nbsp; 5 &nbsp; Crossfall
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Definition" chapt="5.1">
+      <Collapsible title="Definition" chapt="5.1" :levelDisplay="levelDisplay">
         <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=199" target="_blank">
           CDC 10.2.2 - Definition: Crossfall (page 199)</a>
         </p>
       </Collapsible>
-      <Collapsible title="Crossfall of Carriageway" chapt="5.2">
+      <Collapsible title="Crossfall of Carriageway" chapt="5.2" :levelDisplay="levelDisplay">
         <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
             to the side drain and the design requirements shall be as shown in Table 10.6.</p>
         <div class="img-container4">
@@ -38,6 +43,16 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+  data() {
+    return {
+      levelDisplay: false
+    }
+  },
+  methods: {
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   }
 }
 </script>
@@ -54,11 +69,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -69,5 +83,15 @@ tbody tr:last-child td{
   border-bottom-left-radius: 15px; 
   height: 23vh;
   padding-bottom: 2%;
+}
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
 }
 </style>

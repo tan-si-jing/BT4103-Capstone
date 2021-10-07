@@ -2,13 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">7 &nbsp; Merging Angle</td>
+      <td id="header">&nbsp;&nbsp; 7 &nbsp; Merging Angle
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="7.1" title="Permitted Slip Road">
+      <Collapsible chapt="7.1" title="Permitted Slip Road" :levelDisplay="levelDisplay">
         <p>Slip road is provided to permit left-turning vehicle to bypass the intersection. The desirable merging angle for 
           left turn slip road shall be 70&#176; and absolute minimum merging angle shall be 50&#176; as shown in Figure 10.12.</p>
         <div class="img-container">
@@ -33,6 +38,16 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+  data() {
+    return {
+      levelDisplay: false
+    }
+  },
+  methods: {
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   }
 }
 </script>
@@ -49,11 +64,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -63,6 +77,16 @@ tbody tr:last-child td{
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px; 
   padding-bottom: 2%;
+}
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
 }
 </style>
 

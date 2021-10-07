@@ -2,13 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">2 &nbsp; Grade</td>
+      <td id="header">&nbsp;&nbsp; 2 &nbsp; Grade
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="2.1" title="Main Carriageway">
+      <Collapsible chapt="2.1" title="Main Carriageway" :levelDisplay="levelDisplay">
         <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
         <p>Notes:</p>
         <p>1) Minimum gradient for all roads is 0.4%.</p>
@@ -23,7 +28,7 @@
           CDC 10.4.3.1.1 - Main Carriageway (page 209)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="2.2" title="Interchange Ramp/Loop and Slip Road">
+      <Collapsible chapt="2.2" title="Interchange Ramp/Loop and Slip Road" :levelDisplay="levelDisplay">
         <div class="img-container4">
           <img src="../assets/Table10-10.png">
         </div>                
@@ -44,6 +49,16 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+  data() {
+    return {
+      levelDisplay: false
+    }
+  },
+  methods: {
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   }
 }
 </script>
@@ -60,11 +75,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -75,5 +89,14 @@ tbody tr:last-child td{
   border-bottom-left-radius: 15px; 
   padding-bottom: 2%;
 }
-
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
+}
 </style>

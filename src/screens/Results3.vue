@@ -2,17 +2,17 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
-    <div id="lateralclearance">
-      <LateralClearance></LateralClearance>
+    <div id="lateralclearance" class="section">
+      <LateralClearance/>
     </div>
-    <div id="superelevation">
-      <SuperElevation></SuperElevation>
+    <div id="superelevation" class="section">
+      <SuperElevation/>
     </div>
-    <div id="sightdistance">
-      <SightDistance></SightDistance>
+    <div id="sightdistance" class="section">
+      <SightDistance/>
     </div>
-    <div id="curvelength" style="margin-bottom: 5%;">
-      <CurveLength></CurveLength>
+    <div id="curvelength" style="margin-bottom: 5%;" class="section">
+      <CurveLength/>
     </div>
     </div>
     <div class="pages">

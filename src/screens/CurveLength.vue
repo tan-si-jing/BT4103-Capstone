@@ -2,13 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">13 &nbsp; Curve Length</td>
+      <td id="header">&nbsp;&nbsp; 13 &nbsp; Curve Length
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="13.1" title="Crest Curve">
+      <Collapsible chapt="13.1" title="Crest Curve" :levelDisplay="levelDisplay">
         <p> The minimum length of a crest curve in metre shall be the greater of:</p>
         <p>a) 0.6 times of the design speed (in km/h); or </p>
         <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
@@ -27,7 +32,7 @@
           CDC Figure 10.8 (page 232)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="13.2" title="Sag Curve">
+      <Collapsible chapt="13.2" title="Sag Curve" :levelDisplay="levelDisplay">
         <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
         <p>a) 0.6 times of the design speed (in km/h); or </p>
         <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
@@ -64,6 +69,16 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+  data() {
+    return {
+      levelDisplay: false
+    }
+  },
+  methods: {
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   }
 }
 </script>
@@ -79,11 +94,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -94,9 +108,6 @@ tbody tr:last-child td{
   border-bottom-left-radius: 15px; 
   padding-bottom: 2%;
 }
-.tab3 {
-  margin-right: 1em
-}
 .arrow {
   background: none;
   border: none;
@@ -106,5 +117,15 @@ tbody tr:last-child td{
 }
 .description-box{
   margin-bottom:5%;
+}
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
 }
 </style>

@@ -2,8 +2,8 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
-    <div id="combinedalignment" style="margin-bottom: 5%;">
-      <Combine></Combine>
+    <div id="combinedalignment" style="margin-bottom: 5%;" class="section">
+      <Combine/>
     </div>
     </div>
     <div class="bottom">

@@ -2,32 +2,32 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
-    <div id="roadcselements">
-      <RoadCSElem></RoadCSElem>
+    <div id="roadcselements" class="section">
+      <RoadCSElem/>
     </div>
-    <div id="grade">
-      <Grade></Grade>
+    <div id="grade" class="section">
+      <Grade/>
     </div>
-    <div id="longfrictionfactor">
-      <LongFrictFactor></LongFrictFactor>
+    <div id="longfrictionfactor" class="section">
+      <LongFrictFactor/>
     </div>
-    <div id="sidefrictionfactor">
-      <SideFrictFactor></SideFrictFactor>
+    <div id="sidefrictionfactor" class="section">
+      <SideFrictFactor/>
     </div>
-    <div id="crossfall">
-      <Crossfall></Crossfall>
+    <div id="crossfall" class="section">
+      <Crossfall/>
     </div>
-    <div id="cornerradius">
-      <CornerRadius></CornerRadius>
+    <div id="cornerradius" class="section">
+      <CornerRadius/>
     </div>
-    <div id="mergingangle">
-      <MergingAngle></MergingAngle>
+    <div id="mergingangle" class="section">
+      <MergingAngle/>
     </div>
-    <div id="lanewidth">
-      <LaneWidth></LaneWidth>
+    <div id="lanewidth" class="section">
+      <LaneWidth/>
     </div>
-    <div id="signs" style="margin-bottom: 5%;">
-      <Signs></Signs>
+    <div id="signs" style="margin-bottom: 5%;"  class="section">
+      <Signs/>
     </div>
     </div>
     <div class="pages">
@@ -105,8 +105,7 @@ created(){
 data() {
   return {
     road: require("../assets/road.png"),
-    mascot: require("../assets/mascot.png"),
-    navOpen: false
+    mascot: require("../assets/mascot.png")
     };
   },
 };

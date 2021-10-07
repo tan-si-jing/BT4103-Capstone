@@ -30,58 +30,64 @@ import SidebarButton from '../components/SidebarButton.vue'
 import HomeButton from '../components/HomeButton.vue'
 
 export default {
-name: "Level2Results",
-props: ['id'],
-components: {
-  "SidebarButton": SidebarButton,
-  "HomeButton": HomeButton
-},
-methods: {
-  level3() {
-    this.$router.push({path: "/level3results"})
+  name: "Results",
+  components: {
+    "SidebarButton": SidebarButton,
+    "HomeButton": HomeButton
   },
-  level4() {
-    this.$router.push({path: "/level4results"})
+  data () {
+    return {
+      shortSectionObserver: null,
+      longSectionObserver: null,
+      road: require("../assets/road.png"),
+      mascot: require("../assets/mascot.png"),
+    }
   },
-  level5() {
-    this.$router.push({path: "/level5results"})
+  mounted () {
+    this.observeSections()
   },
-  openStorage(){
-        return JSON.parse(localStorage.getItem('choice'))
-  },
-  back() {
-    this.$router.push({path: "/contentpage"})
-  },
-  scroll(id) {
-    document.getElementById(id).scrollIntoView({
-      behavior: "smooth"
-      });
-  },
-  moveToSection(link) {
-    this.$router.push({path: link})
-  }
-},
-created(){
-      const storedChoice = this.openStorage()
-      if (storedChoice){
-        this.choice = {
-          ...this.choice,
-          ...storedChoice
+  methods: {
+    observeSections() {
+      try {
+        this.shortSectionObserver.disconnect()
+        this.longSectionObserver.disconnect()
+      } catch (error) {console.log(error)}
+
+      this.shortSectionObserver = new IntersectionObserver(this.sectionObserverHandler, {
+        rootMargin: "-25% 0% -25% 0%",
+        threshold: 0.8
+      })
+      this.longSectionObserver = new IntersectionObserver(this.sectionObserverHandler, {
+        rootMargin: "-10% 0% -10% 0%",
+        threshold: 0.8
+      })
+      this.expandedSectionObserver = new IntersectionObserver(this.sectionObserverHandler, {
+        rootMargin: "0% 0% 0% 0%",
+        threshold: 0
+      })
+      // Observe each section
+      const sections = document.querySelectorAll('.section')
+      sections.forEach(section => {
+        if (section.clientHeight  < 0.50*window.innerHeight ) {
+          this.shortSectionObserver.observe(section)
+        } else if (section.clientHeight > window.innerHeight) {
+          this.expandedSectionObserver.observe(section)
+        } else {
+          this.longSectionObserver.observe(section)
+        }
+      })
+    },
+    sectionObserverHandler (entries) {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          console.log(sectionId)
+          // Push sectionId to router here 
+          //this.$router.replace({ path: this.$route.path, hash: `#${sectionId}` })
         }
       }
-},
-mounted() {
-  if (this.$props.id != null) {
-    this.scroll(this.$props.id);
+    }
   }
-},
-data() {
-  return {
-    road: require("../assets/road.png"),
-    mascot: require("../assets/mascot.png"),
-    navOpen: false
-    };
-  },
 };
 </script>
 
@@ -105,5 +111,20 @@ data() {
 a {
     color:transparent;
     text-decoration: none
+}
+/* Works on Firefox */
+* {
+  scrollbar-color: black grey;
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: lightgrey;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 20px;
 }
 </style>

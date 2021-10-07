@@ -2,13 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">6 &nbsp; Corner Radius</td>
+      <td id="header">&nbsp;&nbsp; 6 &nbsp; Corner Radius
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Corner Radius" chapt="6.1">
+      <Collapsible title="Corner Radius" chapt="6.1" :levelDisplay="levelDisplay">
         <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
             shall not be less than the values as shown in Table 10.8.</p>
         <div class="img-container4">
@@ -31,6 +36,16 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+  data() {
+    return {
+      levelDisplay: false
+    }
+  },
+  methods: {
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   }
 }
 </script>
@@ -47,11 +62,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -62,43 +76,14 @@ tbody tr:last-child td{
   border-bottom-left-radius: 15px; 
   padding-bottom: 2%;
 }
-
-p {
-  font-size:20px;
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
 }
-.tab1 {
- margin-right: 2.5em
-}
-.tab2 {
- margin-right: 1.7em
-}
-.tab3 {
-  margin-right: 1em
-}
-.tab4 {
-  margin-right:0.2em;
-}
-.tab5 {
-  margin-right: 1.2em
-}
-.img-container2{
-  width: 50%;
-  height: auto;
-  margin-left: 3em; 
-  margin-top: 3%;
-  margin-bottom:3%;
-}
-.img-container2 img{
-  width: 100%;
-  height: auto;
-}
-.img-container4{
-  width: 80%;
-  height: auto;
-  margin-left: 3em; 
-}
-.img-container4 img{
-  width: 100%;
-  height: auto;
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
 }
 </style>

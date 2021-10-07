@@ -2,13 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">8 &nbsp; Lane Width</td>
+      <td id="header">&nbsp;&nbsp; 8 &nbsp; Lane Width
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="8.1" title="Main Carriageway">
+      <Collapsible chapt="8.1" title="Main Carriageway" :levelDisplay="levelDisplay">
         <p>The typical lane width for a major road is 3.2m and the absolute minimum shall be 3m if there are constraints. 
           In addition,</p>
         <p>a) For lane adjacent to kerb, an additional width of 0.3m shall be provided.</p>
@@ -27,7 +32,7 @@
             CDC 10.5.2.1 - Main Carriageway (page 212)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="8.2" title="Road Signs & Markings At Intersections">
+      <Collapsible chapt="8.2" title="Road Signs & Markings At Intersections" :levelDisplay="levelDisplay">
         <div class="img-container">
           <img src="../assets/SDRE-Chap8-RMS9.png">
         </div>
@@ -36,7 +41,7 @@
             SDRE Chapter 8 - 9 (page 10)</a>
         </p>
         </Collapsible>
-        <Collapsible chapt="8.3" title="Ramp or Loop">
+        <Collapsible chapt="8.3" title="Ramp or Loop" :levelDisplay="levelDisplay">
           <p>The minimum lane width for ramp or loop is 3.7m per lane. The total width of the ramp or loop shall include the 
             paved shoulder width specified in Clause 10.5.4. However, consideration shall be given to widen the lane width 
             for the swept path of a heavy vehicle (refer to Figure 10.1).</p>
@@ -50,7 +55,7 @@
               CDC Figure 10.1 (page 225)</a>
           </p>
         </Collapsible>
-        <Collapsible chapt="8.4" title="Typical Acceleration Lane At Expressway">
+        <Collapsible chapt="8.4" title="Typical Acceleration Lane At Expressway" :levelDisplay="levelDisplay">
           <div class="img-container">
             <img src="../assets/SDRE-Chap8-RMS6.png">
           </div>
@@ -59,7 +64,7 @@
               SDRE Chapter 8 - 6 (page 7)</a>
           </p>
         </Collapsible>
-        <Collapsible chapt="8.5" title="Typical Deceleration Lane At Expressway">
+        <Collapsible chapt="8.5" title="Typical Deceleration Lane At Expressway" :levelDisplay="levelDisplay">
           <div class="img-container">
             <img src="../assets/SDRE-Chap8-RMS7.png">
           </div>
@@ -68,7 +73,7 @@
               SDRE Chapter 8 - 7 (page 8)</a>
           </p>
         </Collapsible>
-        <Collapsible v-show="isSlip" chapt="8.6" title="Industrial Slip Road">
+        <Collapsible v-show="isSlip" chapt="8.6" title="Industrial Slip Road" :levelDisplay="levelDisplay">
           <p v-show="isSlip">For industrial area and slip road leading in/out of industrial area as shown in Urban Redevelopment Authority 
             (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
             the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
@@ -92,7 +97,7 @@
               CDC 10.5.2.4.3 - Slip Road (page 214)</a>
           </p>
         </Collapsible>
-        <Collapsible chapt="8.7" title="Turning Lane">
+        <Collapsible chapt="8.7" title="Turning Lane" :levelDisplay="levelDisplay">
           <p>The turning lane at the intersection is to provide storage space for turning vehicle so as not to impede the main 
             traffic flow (refer to Figure 10.11). The desirable minimum width of the turning lane shall be 3.5m and absolute 
             minimum width shall be 3m. The turning lane shall be 70m long or sufficiently long to store the likely number of 
@@ -110,7 +115,7 @@
               CDC Figure 10.11 (page 235)</a>
           </p>
         </Collapsible>
-        <Collapsible chapt="8.8" title="Paved Shoulder">
+        <Collapsible chapt="8.8" title="Paved Shoulder" :levelDisplay="levelDisplay">
           <p>The width of the paved shoulder shall be as shown in Table 10.14. </p>
           <p>Notes:</p>
           <p>1 1.0m in tunnel</p>
@@ -149,12 +154,16 @@ export default {
         grad_curv_change:"",
         specific_param:"",
       },
-      isSlip: this.$parent.choice.roadType === 'slipRoad' ? true : false
+      isSlip: this.$parent.choice.roadType === 'slipRoad' ? true : false,
+      levelDisplay: false
     }
   },
   methods:{
     openStorage(){
       return JSON.parse(localStorage.getItem('choice'))
+    },
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
     },
   },
   mounted(){
@@ -166,7 +175,7 @@ export default {
       }
     }
     console.log("Lane Width: " + this.isSlip)
-  }
+  },
 }
 </script>
 
@@ -183,11 +192,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -198,6 +206,15 @@ tbody tr:last-child td{
   border-bottom-left-radius: 15px; 
   padding-bottom: 2%;
 }
-
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
+}
 </style>
 

@@ -2,13 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">1 &nbsp; Road Cross-Sections and Elements</td>
+      <td id="header">&nbsp;&nbsp; 1 &nbsp; Road Cross-Sections and Elements
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="1.1" title="General">
+      <Collapsible chapt="1.1" title="General" :levelDisplay="levelDisplay">
         <p>The details of the cross-section elements such as lane width, centre median width, paved shoulder, services verge, 
           footpath, drain and landscaping, etc. shall be in accordance with the Authority’s Drawings and the Standard Details 
           of Road Elements.</p>
@@ -18,7 +23,7 @@
         </p>
       </Collapsible>
 
-      <Collapsible chapt="1.2" title="Lane Width">
+      <Collapsible chapt="1.2" title="Lane Width" :levelDisplay="levelDisplay">
         <p style="padding-top:3%"><b class="tab3">1.2.1</b><b>Lane Width Without Cycling Path</b></p>
           
         <p style="padding-top:3%"><b class="tab4">1.2.1.1</b><b>Typical Acceleration Lane At Expressway</b></p>
@@ -160,7 +165,7 @@
           SDRE Chapter 21 - 12 (page 13)</a></p>
       </Collapsible>
 
-      <Collapsible chapt="1.3" title="Service Verge">
+      <Collapsible chapt="1.3" title="Service Verge" :levelDisplay="levelDisplay">
         <p style="padding-top:3%"><b class="tab3">1.3.1</b><b>Pavement of Roads</b></p>
 
         <p style="padding-top:3%"><b class="tab4">1.3.1.1</b><b>Flexible Pavement, Recambering & Widening of Carriageway</b></p>
@@ -278,7 +283,7 @@
           SDRE Chapter 4 - 9 (page 10)</a></p>
       </Collapsible>
 
-      <Collapsible chapt="1.4" title="Drains & Culverts">
+      <Collapsible chapt="1.4" title="Drains & Culverts" :levelDisplay="levelDisplay">
         <p style="padding-top:3%"><b class="tab3">1.4.1</b><b>Precast Concrete Channel and Drain</b></p>
           <div class="img-container">
             <img src="../assets/SDRE-Chap2-DRA1.png">
@@ -344,7 +349,7 @@
           SDRE Chapter 2 - 8 (page 9)</a></p>
       </Collapsible>
 
-      <Collapsible chapt="1.5" title="Sidetable, Drain, Footpath and Divider">
+      <Collapsible chapt="1.5" title="Sidetable, Drain, Footpath and Divider" :levelDisplay="levelDisplay">
         <p>a) Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
           other categories of road. The services verge and landscaping shall be turfed and sloped as shown in the Standard 
           Details of Road Elements.</p>
@@ -363,7 +368,7 @@
           CDC 10.5.6 - Sidetable, Train, Footpath and Divider (page 215)</a></p>
       </Collapsible>
 
-      <Collapsible chapt="1.6" title="Kerbs and Footpaths">
+      <Collapsible chapt="1.6" title="Kerbs and Footpaths" :levelDisplay="levelDisplay">
         <p style="padding-top:3%"><b class="tab3">1.6.1</b><b>Kerbs</b></p>
           <div class="img-container">
             <img src="../assets/SDRE-Chap3-KER1.png">
@@ -480,11 +485,27 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+  data() {
+    return {
+      levelDisplay: false
+    }
+  },
+  methods: {
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   }
 }
 </script>
 
 <style scoped>
+#header {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+}
 table {
   width: 65vw;
   height: auto;
@@ -496,11 +517,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -510,6 +530,10 @@ tbody tr:last-child td{
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px; 
   padding-bottom:2%;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
 }
 </style>
 

@@ -2,20 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">4 &nbsp; Side Friction Factor</td>
+      <td id="header">&nbsp;&nbsp; 4 &nbsp; Side Friction Factor
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
-      <Collapsible chapt="4.1" title="Side Friction Factor given Design Speed">
-        <!--div class="img-container4">
-          <img src="../assets/Table10-7.png">
-        </div-->
-        <!--p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
-            CDC 10.4.2.5.1 - Side Friction Factor given Design Speed (page 208)</a>
-        </p-->
+      <Collapsible chapt="4.1" title="Side Friction Factor given Design Speed" :levelDisplay="levelDisplay">
         <table id="speedTable">
           <thead class="table">
             <th style="text-align:center">Design Speed, V(km/h) </th>
@@ -28,6 +26,10 @@
             </tr>
           </tbody>
         </table>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+            CDC 10.4.2.5.1 - Side Friction Factor given Design Speed (page 208)</a>
+        </p>
       </Collapsible>
       </td>
       </tr>
@@ -46,6 +48,7 @@ export default {
     return{
       designSpeed: this.$parent.choice.designSpeed,
       table: [],  
+      levelDisplay: false
     }
   },
   methods:{
@@ -92,9 +95,12 @@ export default {
           { des_speed :90, SFF :0.13},   
         ]
       }
-    }
+    },
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   },
-    created(){
+  created(){
     this.filltable(this.designSpeed)
   }
 }
@@ -112,11 +118,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -127,5 +132,15 @@ tbody tr{
   width: fit-content;
   box-shadow: none;
   margin-bottom: 1.5rem;
+}
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
 }
 </style>

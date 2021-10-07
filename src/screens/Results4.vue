@@ -2,14 +2,14 @@
     <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
-    <div id="horizontalalignment">
-      <HorizontalAlignment></HorizontalAlignment>
+    <div id="horizontalalignment" class="section">
+      <HorizontalAlignment/>
     </div>
-    <div id="verticalalignment">
-      <VerticalAlignment></VerticalAlignment>
+    <div id="verticalalignment" class="section">
+      <VerticalAlignment/>
     </div>
-    <div id="sliproad" style="margin-bottom: 5%;">
-      <SlipRoad></SlipRoad>
+    <div id="sliproad" style="margin-bottom: 5%;" class="section">
+      <SlipRoad/>
     </div>
     </div>
     <div class="pages">

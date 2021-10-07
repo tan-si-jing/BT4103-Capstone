@@ -2,13 +2,18 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td scope="header">9 &nbsp; Signs</td>
+      <td id="header">&nbsp;&nbsp; 9 &nbsp; Signs
+      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      </span>
+      </td>
       </tr>
     </thead>
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Directional Sign" chapt="9.1">
+      <Collapsible title="Directional Sign" chapt="9.1" :levelDisplay="levelDisplay">
         <p style="padding-top:2%; padding-bottom:1%;"><b class="tab3">9.1.1</b><b>Letters for Directional Signs - Upper Case (Sheet 1 of 2)</b></p>
         <div class="img-container">
           <img src="../assets/SDRE-Chap7-DIR1.png">
@@ -82,7 +87,7 @@
           SDRE Chapter 7 - 8 (page 9)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="9.2" title="Traffic Mandatory Signs">
+      <Collapsible chapt="9.2" title="Traffic Mandatory Signs" :levelDisplay="levelDisplay">
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.2.1</b><b>Traffic Mandatory Signs (Sheet 1 of 2)</b></p>
         <div class="img-container">
           <img src="../assets/SDRE-Chap15-TFM1.png">
@@ -101,7 +106,7 @@
           SDRE Chapter 15 - 2 (page 3)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="9.3" title="Traffic Prohibitory Signs">
+      <Collapsible chapt="9.3" title="Traffic Prohibitory Signs" :levelDisplay="levelDisplay">
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.3.1</b><b>Traffic Prohibitory Signs (Sheet 1 of 6)</b></p>
         <div class="img-container">
           <img src="../assets/SDRE-Chap16-TFP1.png">
@@ -156,7 +161,7 @@
           SDRE Chapter 16 - 6 (page 7)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="9.4" title="Traffic Warning Signs">
+      <Collapsible chapt="9.4" title="Traffic Warning Signs" :levelDisplay="levelDisplay">
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.4.1</b><b>Traffic Warning Signs (Sheet 1 of 9)</b></p>
         <div class="img-container">
           <img src="../assets/SDRE-Chap17-TFW1.png">
@@ -238,7 +243,7 @@
             SDRE Chapter 17 - 9 (page 10)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="9.5" title="Traffic Informatory Signs">
+      <Collapsible chapt="9.5" title="Traffic Informatory Signs" :levelDisplay="levelDisplay">
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.5.1</b><b>Traffic Informatory Signs (Sheet 1 of 17)</b></p>
         <div class="img-container">
           <img src="../assets/SDRE-Chap18-TFI1.png">
@@ -410,7 +415,7 @@
           SDRE Chapter 19 - 2 (page 3)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="9.6" title="Street Name Board">
+      <Collapsible chapt="9.6" title="Street Name Board" :levelDisplay="levelDisplay">
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.6.1</b><b>Street Name Sign - General Configuration Layout (Sheet 1 of 3)</b></p>
         <div class="img-container">
           <img src="../assets/SDRE-Chap20-SNB1.png">
@@ -519,7 +524,7 @@
           SDRE Chapter 20 - 12 (page 13)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="9.7" title="Signs – Cycling Path">
+      <Collapsible chapt="9.7" title="Signs – Cycling Path" :levelDisplay="levelDisplay">
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.7.1</b><b>Treatment at Major Junction</b></p>
         <div class="img-container">
           <img src="../assets/SDRE-Chap21-CYC1.png">
@@ -622,10 +627,19 @@ import Collapsible from '../components/Collapsible.vue';
 export default {
   components: {
     Collapsible
+  },
+  data() {
+    return {
+      levelDisplay: false
+    }
+  },
+  methods: {
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
   }
 }
 </script>
-
 
 <style scoped>
 table {
@@ -639,11 +653,10 @@ table {
 .table thead td {
   background-color: #273B8C;
   color: white;
-  height: 6vh;
+  height: 7.25vh;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   font-size:22px;
-  text-indent:1.5%;
   vertical-align: middle;
 }
 tbody tr{
@@ -653,5 +666,15 @@ tbody tr:last-child td{
   border-bottom-right-radius: 15px;
   border-bottom-left-radius: 15px; 
   padding-bottom: 2%;
+}
+#header {
+  display: flex;
+  width: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-icon {
+  font-size:0.95rem;
+  color:lavender
 }
 </style>

@@ -5,7 +5,7 @@
           <b style="grid-column:1; grid-row:1;">{{chapt}}</b><b style="grid-column:2; grid-row:1;">{{title}}</b>
         </div>
         <div class="title-icon">
-          <span v-if="!displayInfo"><font-awesome-icon icon="angle-down" id="arrow"/></span>
+          <span v-if="!(displayInfo)"><font-awesome-icon icon="angle-down" id="arrow"/></span>
           <span v-if="displayInfo"><font-awesome-icon icon="angle-up" id="arrow"/></span>
         </div>
       </div>
@@ -25,10 +25,16 @@ export default {
   props: {
     title: String,
     chapt: String,
+    levelDisplay: Boolean
   },
   methods:{
     collapse: function() {
       this.displayInfo = !this.displayInfo;
+    },
+  },
+  watch: {
+    levelDisplay: function (val) {
+      this.displayInfo = val
     },
   }
 }
