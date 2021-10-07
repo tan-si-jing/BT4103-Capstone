@@ -96,7 +96,8 @@ export default {
       myparam.update({
         ['numVisits']: firebase.firestore.FieldValue.increment(1) ,
         [this.choice.role + this.choice.roadDesign]: firebase.firestore.FieldValue.increment(1) ,
-        [value]: firebase.firestore.FieldValue.increment(1)
+        [value]: firebase.firestore.FieldValue.increment(1),
+        [this.choice.role + '-' + value]: firebase.firestore.FieldValue.increment(1)
         }).then(res => {
           this.specific_param = this.choice.specific_param.at(-1);
           window.location.reload();
