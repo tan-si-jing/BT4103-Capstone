@@ -2,39 +2,39 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
-    <div id="roadcselements" class="section">
+    <div id="roadcselements">
       <RoadCSElem/>
     </div>
-    <div id="grade" class="section">
+    <div id="grade">
       <Grade/>
     </div>
-    <div id="longfrictionfactor" class="section">
+    <div id="longfrictionfactor">
       <LongFrictFactor/>
     </div>
-    <div id="sidefrictionfactor" class="section">
+    <div id="sidefrictionfactor">
       <SideFrictFactor/>
     </div>
-    <div id="crossfall" class="section">
+    <div id="crossfall">
       <Crossfall/>
     </div>
-    <div id="cornerradius" class="section">
+    <div id="cornerradius">
       <CornerRadius/>
     </div>
-    <div id="mergingangle" class="section">
+    <div id="mergingangle">
       <MergingAngle/>
     </div>
-    <div id="lanewidth" class="section">
+    <div id="lanewidth">
       <LaneWidth/>
     </div>
-    <div id="signs" style="margin-bottom: 5%;"  class="section">
+    <div id="signs" style="margin-bottom: 5%;">
       <Signs/>
     </div>
     </div>
     <div class="pages">
-        <PageCircle2 num="1" v-bind:isActive="true"/>
-        <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
-        <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
-        <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
+      <PageCircle2 num="1" v-bind:isActive="true"/>
+      <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
+      <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
+      <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="back">
     <i class="bi bi-arrow-left"></i><span>Back to Search</span>
@@ -63,51 +63,76 @@ import Signs from "./Signs.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
-name: "Results2",
-components: {
-  "RoadCSElem": RoadCSElem,
-  "Grade": Grade,
-  "LongFrictFactor": LongFrictFactor,
-  "SideFrictFactor": SideFrictFactor,
-  "Crossfall": Crossfall,
-  "CornerRadius": CornerRadius,
-  "MergingAngle": MergingAngle,
-  "LaneWidth": LaneWidth,
-  "Signs" : Signs,
-  "PageCircle2": PageCircle2,
-},
-methods: {
-  level3() {
-    this.$router.push({path: "/results/page2"})
+  name: "Results2",
+  components: {
+    "RoadCSElem": RoadCSElem,
+    "Grade": Grade,
+    "LongFrictFactor": LongFrictFactor,
+    "SideFrictFactor": SideFrictFactor,
+    "Crossfall": Crossfall,
+    "CornerRadius": CornerRadius,
+    "MergingAngle": MergingAngle,
+    "LaneWidth": LaneWidth,
+    "Signs" : Signs,
+    "PageCircle2": PageCircle2,
   },
-  level4() {
-    this.$router.push({path: "/results/page3"})
+  methods: {
+    level3() {
+      this.$router.push({path: "/results/page2"})
+    },
+    level4() {
+      this.$router.push({path: "/results/page3"})
+    },
+    level5() {
+      this.$router.push({path: "/results/page4"})
+    },
+    openStorage(){
+      return JSON.parse(localStorage.getItem('choice'))
+    },
+    back(){
+      return this.$router.push({path:"/search5"})
+    },
+    observeSections() {
+      try {
+        this.headerObserver.disconnect()
+      } catch (e) {console.log(e)}
+      this.headerObserver = new IntersectionObserver(this.headerObserverHandler, {
+        rootMargin: "-20.4% 0% -72.4%"
+      })
+      const sections = document.querySelectorAll('.sectionHeader')
+      sections.forEach(section => {
+        this.headerObserver.observe(section)
+      })
+    },
+    headerObserverHandler (entries) {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          console.log(sectionId)
+          //update state
+        }
+      }
+    }
   },
-  level5() {
-    this.$router.push({path: "/results/page4"})
-  },
-  openStorage(){
-        return JSON.parse(localStorage.getItem('choice'))
-  },
-  back(){
-    return this.$router.push({path:"/search5"})
-  }
-},
-created(){
+  created(){
     const storedChoice = this.openStorage()
     if (storedChoice){
-    this.choice = {
+      this.choice = {
         ...this.choice,
         ...storedChoice
+      }
     }
-    }
-},
-data() {
-  return {
-    road: require("../assets/road.png"),
-    mascot: require("../assets/mascot.png")
+  },
+  data() {
+    return {
+      headerObserver: null,
+      road: require("../assets/road.png"),
+      mascot: require("../assets/mascot.png")
     };
   },
+  mounted() {
+    this.observeSections()
+  }
 };
 </script>
 

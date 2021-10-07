@@ -2,16 +2,16 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
-    <div id="combinedalignment" style="margin-bottom: 5%;" class="section">
+    <div id="combinedalignment" style="margin-bottom: 5%;">
       <Combine/>
     </div>
     </div>
     <div class="bottom">
     <div class="pages">
-        <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
-        <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
-        <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
-        <PageCircle2 num="4" v-bind:isActive="true"/>
+      <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
+      <PageCircle2 num="2" v-bind:isActive="false" @click="level3"/>
+      <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
+      <PageCircle2 num="4" v-bind:isActive="true"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="back">
     <i class="bi bi-arrow-left"></i><span>Back to Search</span>
@@ -33,32 +33,56 @@ import Combine from "./Combine.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
-    name: "Level5Results",
-    props: ['id'],
-    components: {
-        "Combine" : Combine,
-        "PageCircle2": PageCircle2,
+  name: "Results5",
+  components: {
+    "Combine" : Combine,
+    "PageCircle2": PageCircle2,
+  },
+  methods: {
+    level2() {
+      this.$router.push({path: "/results/page1"})
     },
-    methods: {
-        level2() {
-            this.$router.push({path: "/results/page1"})
-        },
-        level3() {
-            this.$router.push({path: "/results/page2"})
-        },
-        level4() {
-            this.$router.push({path: "/results/page3"})
-        },
-        back() {
-            this.$router.push({path: "/search5"})
+    level3() {
+      this.$router.push({path: "/results/page2"})
+    },
+    level4() {
+      this.$router.push({path: "/results/page3"})
+    },
+    back() {
+      this.$router.push({path: "/search5"})
+    },
+    observeSections() {
+      try {
+        this.headerObserver.disconnect()
+      } catch (e) {console.log(e)}
+      this.headerObserver = new IntersectionObserver(this.headerObserverHandler, {
+        rootMargin: "-20.4% 0% -72.4%"
+      })
+      const sections = document.querySelectorAll('.sectionHeader')
+      sections.forEach(section => {
+        this.headerObserver.observe(section)
+      })
+    },
+    headerObserverHandler (entries) {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          console.log(sectionId)
+          //update state
         }
-    },
-    data() {
-        return {
-            road: require("../assets/road.png"),
-            mascot: require("../assets/mascot.png"),
-        };
-    },
+      }
+    }
+  },
+  data() {
+    return {
+      headerObserver: null,
+      road: require("../assets/road.png"),
+      mascot: require("../assets/mascot.png"),
+    };
+  },
+  mounted() {
+    this.observeSections()
+  },
 };
 </script>
 

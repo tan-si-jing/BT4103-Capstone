@@ -1,10 +1,11 @@
 <template>
-  <button type="button" class="btn btn-light" :abled=!isActive v-bind:style="[isActive ? active : inactive]">
+  <button type="button" class="btn btn-light" v-bind:style="[isActive ? active : null ]">
     {{name}}
   </button>
 </template>
 
 <script>
+//check state, and only buttons that == state will be active
 export default {
   name: 'SidebarButton',
   props: {
@@ -15,12 +16,6 @@ export default {
     return {
       active: {
         backgroundColor: 'none',
-        color:'black',
-        cursor: 'default'
-      },
-      inactive: {
-        backgroundColor: 'none',
-        color:'black'
       },
     };
   }
@@ -34,7 +29,7 @@ button {
   display: inline;
   font-style: normal;
   font-weight: normal;
-  color: #FFFFFF;
+  color: black;
   font-size:1.15rem;
   text-align:left;
   background:none;

@@ -2,24 +2,24 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
-    <div id="lateralclearance" class="section">
+    <div id="lateralclearance">
       <LateralClearance/>
     </div>
-    <div id="superelevation" class="section">
+    <div id="superelevation">
       <SuperElevation/>
     </div>
-    <div id="sightdistance" class="section">
+    <div id="sightdistance">
       <SightDistance/>
     </div>
-    <div id="curvelength" style="margin-bottom: 5%;" class="section">
+    <div id="curvelength" style="margin-bottom: 5%;">
       <CurveLength/>
     </div>
     </div>
     <div class="pages">
-        <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
-        <PageCircle2 num="2" v-bind:isActive="true"/>
-        <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
-        <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
+      <PageCircle2 num="1" v-bind:isActive="false" @click="level2"/>
+      <PageCircle2 num="2" v-bind:isActive="true"/>
+      <PageCircle2 num="3" v-bind:isActive="false" @click="level4"/>
+      <PageCircle2 num="4" v-bind:isActive="false" @click="level5"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="back">
     <i class="bi bi-arrow-left"></i><span>Back to Search</span>
@@ -43,50 +43,71 @@ import CurveLength from "./CurveLength.vue"
 import PageCircle2 from '../components/PageCircle2.vue'
 
 export default {
-name: "Results3",
-props: {
-  id : String
-},
-components: {
-  "LateralClearance" : LateralClearance,
-  "SuperElevation" : SuperElevation,
-  "SightDistance" : SightDistance,
-  "CurveLength" : CurveLength,
-  "PageCircle2": PageCircle2,
-},
-
-methods: {
-  level2() {
-    this.$router.push({path: "/results/page1"})
+  name: "Results3",
+  components: {
+    "LateralClearance" : LateralClearance,
+    "SuperElevation" : SuperElevation,
+    "SightDistance" : SightDistance,
+    "CurveLength" : CurveLength,
+    "PageCircle2": PageCircle2,
   },
-  level4() {
-    this.$router.push({path: "/results/page3"})
-  },
-  level5() {
-    this.$router.push({path: "/results/page4"})
-  },
-  back() {
-    this.$router.push({path: "/search5"})
-  },
-  openStorage(){
-        return JSON.parse(localStorage.getItem('choice'))
-  },
-},
-created(){
-  const storedChoice = this.openStorage()
-  if (storedChoice){
-    this.choice = {
-      ...this.choice,
-      ...storedChoice
+  methods: {
+    level2() {
+      this.$router.push({path: "/results/page1"})
+    },
+    level4() {
+      this.$router.push({path: "/results/page3"})
+    },
+    level5() {
+      this.$router.push({path: "/results/page4"})
+    },
+    back() {
+      this.$router.push({path: "/search5"})
+    },
+    openStorage(){
+          return JSON.parse(localStorage.getItem('choice'))
+    },
+    observeSections() {
+      try {
+        this.headerObserver.disconnect()
+      } catch (e) {console.log(e)}
+      this.headerObserver = new IntersectionObserver(this.headerObserverHandler, {
+        rootMargin: "-20.4% 0% -72.4%"
+      })
+      const sections = document.querySelectorAll('.sectionHeader')
+      sections.forEach(section => {
+        this.headerObserver.observe(section)
+      })
+    },
+    headerObserverHandler (entries) {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id
+          console.log(sectionId)
+          //update state
+        }
+      }
     }
-  }
-},
-data() {
-  return {
-    road: require("../assets/road.png"),
-    mascot: require("../assets/mascot.png"),
-  };
-},
+  },
+  created(){
+    const storedChoice = this.openStorage()
+    if (storedChoice){
+      this.choice = {
+        ...this.choice,
+        ...storedChoice
+      }
+    }
+  },
+  data() {
+    return {
+      headerObserver: null,
+      road: require("../assets/road.png"),
+      mascot: require("../assets/mascot.png"),
+    };
+  },
+  mounted() {
+    this.observeSections()
+  },
 };
 </script>
 

@@ -2,10 +2,10 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="header">&nbsp;&nbsp; 12 &nbsp; Sight Distance
+      <td id="sightdistance" class="sectionHeader">&nbsp;&nbsp; 12 &nbsp; Sight Distance
       <span class="title-icon" @click=levelCollapse()>
-        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;<i class="bi bi-caret-down-fill"></i></span>
-        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;<i class="bi bi-caret-up-fill"></i></span>
+        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span>
+        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>
       </span>
       </td>
       </tr>
@@ -157,7 +157,7 @@ tbody tr:last-child td{
   border-bottom-left-radius: 15px; 
   padding-bottom: 2%;
 }
-#header {
+.sectionHeader {
   display: flex;
   width: auto;
   justify-content: space-between;
@@ -167,6 +167,8 @@ tbody tr:last-child td{
   font-size:0.95rem;
   color:lavender;
   cursor:pointer;
-  margin-right:1rem
+  padding: 0 1rem 0 1.5rem;
+  border-left: inset;
+  border-color: lightblue
 }
 </style>
