@@ -3,9 +3,9 @@
     <thead class="table">
       <tr>
       <td id="header">&nbsp;&nbsp; 14 &nbsp; Horizontal Alignmen
-      <span class="title-icon" @click=levelCollapse() style="cursor:pointer;">
-        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-down" id="arrow"/>&nbsp;&nbsp;</span>
-        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<font-awesome-icon icon="angle-up" id="arrow"/>&nbsp;&nbsp;</span>
+      <span class="title-icon" @click=levelCollapse()>
+        <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;<i class="bi bi-caret-down-fill"></i></span>
+        <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;<i class="bi bi-caret-up-fill"></i></span>
       </span>
       </td>
       </tr>
@@ -200,6 +200,8 @@ tbody tr:last-child td{
 }
 .title-icon {
   font-size:0.95rem;
-  color:lavender
+  color:lavender;
+  cursor:pointer;
+  margin-right:1rem
 }
 </style>

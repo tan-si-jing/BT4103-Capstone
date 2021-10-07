@@ -15,9 +15,15 @@
         <div id = "specific-results">
           <table>
             <tbody>
+              <tr class="expand">
+              <span @click=levelCollapse() style="cursor:pointer;">
+                <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;<i class="bi bi-caret-down-fill"></i></span>
+                <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<i class="bi bi-caret-up-fill"></i></span>
+              </span>
+              </tr>
               <tr>
               <td scope="row">
-              <Collapsible chapt="1.1" title="General">
+              <Collapsible chapt="1.1" title="General" :levelDisplay="levelDisplay">
                 <p>The details of the cross-section elements such as lane width, centre median width, paved shoulder, services verge, 
                   footpath, drain and landscaping, etc. shall be in accordance with the Authority’s Drawings and the Standard Details 
                   of Road Elements.</p>
@@ -27,7 +33,7 @@
                 </p>
               </Collapsible>
 
-              <Collapsible chapt="1.2" title="Lane Width">
+              <Collapsible chapt="1.2" title="Lane Width" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%"><b class="tab3">1.2.1</b><b>Lane Width Without Cycling Path</b></p>
                   
                 <p style="padding-top:3%"><b class="tab4">1.2.1.1</b><b>Typical Acceleration Lane At Expressway</b></p>
@@ -169,7 +175,7 @@
                   SDRE Chapter 21 - 12 (page 13)</a></p>
               </Collapsible>
 
-              <Collapsible chapt="1.3" title="Service Verge">
+              <Collapsible chapt="1.3" title="Service Verge" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%"><b class="tab3">1.3.1</b><b>Pavement of Roads</b></p>
 
                 <p style="padding-top:3%"><b class="tab4">1.3.1.1</b><b>Flexible Pavement, Recambering & Widening of Carriageway</b></p>
@@ -287,7 +293,7 @@
                   SDRE Chapter 4 - 9 (page 10)</a></p>
               </Collapsible>
 
-              <Collapsible chapt="1.4" title="Drains & Culverts">
+              <Collapsible chapt="1.4" title="Drains & Culverts" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%"><b class="tab3">1.4.1</b><b>Precast Concrete Channel and Drain</b></p>
                   <div class="img-container">
                     <img src="../assets/SDRE-Chap2-DRA1.png">
@@ -353,7 +359,7 @@
                   SDRE Chapter 2 - 8 (page 9)</a></p>
               </Collapsible>
 
-              <Collapsible chapt="1.5" title="Sidetable, Drain, Footpath and Divider">
+              <Collapsible chapt="1.5" title="Sidetable, Drain, Footpath and Divider" :levelDisplay="levelDisplay">
                 <p>a) Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
                   other categories of road. The services verge and landscaping shall be turfed and sloped as shown in the Standard 
                   Details of Road Elements.</p>
@@ -372,7 +378,7 @@
                   CDC 10.5.6 - Sidetable, Train, Footpath and Divider (page 215)</a></p>
               </Collapsible>
 
-              <Collapsible chapt="1.6" title="Kerbs and Footpaths">
+              <Collapsible chapt="1.6" title="Kerbs and Footpaths" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%"><b class="tab3">1.6.1</b><b>Kerbs</b></p>
                   <div class="img-container">
                     <img src="../assets/SDRE-Chap3-KER1.png">
@@ -510,33 +516,35 @@ export default {
   components: {
     Collapsible
   },
-    data() {
-        return {
-            specific_param:"",
-            road: require("../assets/road.png"),
-            mascot: require("../assets/mascot.png")
-        } 
+  data() {
+    return {
+      specific_param:"",
+      road: require("../assets/road.png"),
+      mascot: require("../assets/mascot.png"),
+      levelDisplay: false
+    } 
+  },
+  methods : {
+    openStorage(){
+      return JSON.parse(localStorage.getItem('choice'))
     },
-
-    methods : {
-        openStorage(){
-            return JSON.parse(localStorage.getItem('choice'))
-        },
-        saveStorage(form){
-            localStorage.setItem('choice',JSON.stringify(form))
-        },
-        goBack() {
-            let storedChoice = this.openStorage();
-            if (storedChoice.specific_param.length > 1) {
-                storedChoice.specific_param.pop();
-                this.saveStorage(storedChoice);
-            } 
-            this.$router.go(-1);
-        }
-    }
+    saveStorage(form){
+      localStorage.setItem('choice',JSON.stringify(form))
+    },
+    goBack() {
+      let storedChoice = this.openStorage();
+      if (storedChoice.specific_param.length > 1) {
+        storedChoice.specific_param.pop();
+        this.saveStorage(storedChoice);
+      } 
+      this.$router.go(-1);
+    },
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
+  }
 }
 </script>
-
 
 <style scoped>
 @import url(https://fonts.googleapis.com/css?family=Roboto);
@@ -590,70 +598,68 @@ export default {
 }
 
 table {
-    height: auto;
-    padding: 40px;
-    border-radius: 15px;
-    z-index: 999;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
+  height: auto;
+  padding: 40px;
+  border-radius: 15px;
+  z-index: 999;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
 
 
 #entire-content {
-    display: flex;
-    align-items: left;
-    flex-direction: row;
+  display: flex;
+  align-items: left;
+  flex-direction: row;
 }
 
 #buttons {
-    position:sticky;
-    top: 30px;
-    height: 20vh;
-    width: 20%;
+  position:sticky;
+  top: 30px;
+  height: 20vh;
+  width: 20%;
 }
 
 #specific-results {
-    width: 100%;
-    align-items: left;    
-    background-color: #ffffff;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    padding: 4% 10%;
-    font-size:20px;
-    margin-bottom:12%;
-    justify-content:center;
+  width: 100%;
+  align-items: left;    
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 4% 10%;
+  font-size:20px;
+  margin-bottom:12%;
+  justify-content:center;
 }
 
 #back {
-    width:fit-content;
-    height:fit-content;
-    font-size: 1.5rem;
-    box-shadow:none;
-    border:none;
+  width:fit-content;
+  height:fit-content;
+  font-size: 1.5rem;
+  box-shadow:none;
+  border:none;
 }
 
 .arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #273B8C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #273B8C;
 }
 
 ul {
-    list-style-type: none;
-    padding:0;
-    margin:0;
+  list-style-type: none;
+  padding:0;
+  margin:0;
 }
 
 .image {
-    display: flex;
-    justify-content:center;
-    width:80%;
-    margin-left: 3em; 
-   /* margin-top: 5%;
-    margin-bottom: 5%; */
+  display: flex;
+  justify-content:center;
+  width:80%;
+  margin-left: 3em; 
 }
 
 img {
@@ -667,13 +673,12 @@ img {
 }
 
 .action_btn {
-    width: 100%;
-    display: flex;
-/*    gap: 60px; */
-    margin-bottom:15px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  margin-bottom:15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #manual{
@@ -711,6 +716,15 @@ td {
   flex: 1;
   font-size: 20px;
 }
-
-
+.tab3 {
+  margin-right: 1em
+}
+.tab4 {
+  margin-right:0.2em;
+}
+.expand {
+  text-align: right;
+  font-size: 1rem;
+  color: navy;
+}
 </style>

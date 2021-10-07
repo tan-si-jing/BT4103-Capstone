@@ -15,9 +15,15 @@
         <div id = "specific-results">
           <table>
             <tbody>
+              <tr class="expand">
+              <span @click=levelCollapse() style="cursor:pointer;">
+                <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;<i class="bi bi-caret-down-fill"></i></span>
+                <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;<i class="bi bi-caret-up-fill"></i></span>
+              </span>
+              </tr>
               <tr>
               <td scope="row">
-              <Collapsible title="Directional Sign" chapt="9.1">
+              <Collapsible title="Directional Sign" chapt="9.1" :levelDisplay="levelDisplay">
                 <p style="padding-top:2%; padding-bottom:1%;"><b class="tab3">9.1.1</b><b>Letters for Directional Signs - Upper Case (Sheet 1 of 2)</b></p>
                 <div class="img-container">
                   <img src="../assets/SDRE-Chap7-DIR1.png">
@@ -91,7 +97,7 @@
                   SDRE Chapter 7 - 8 (page 9)</a>
                 </p>
               </Collapsible>
-              <Collapsible chapt="9.2" title="Traffic Mandatory Signs">
+              <Collapsible chapt="9.2" title="Traffic Mandatory Signs" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.2.1</b><b>Traffic Mandatory Signs (Sheet 1 of 2)</b></p>
                 <div class="img-container">
                   <img src="../assets/SDRE-Chap15-TFM1.png">
@@ -110,7 +116,7 @@
                   SDRE Chapter 15 - 2 (page 3)</a>
                 </p>
               </Collapsible>
-              <Collapsible chapt="9.3" title="Traffic Prohibitory Signs">
+              <Collapsible chapt="9.3" title="Traffic Prohibitory Signs" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.3.1</b><b>Traffic Prohibitory Signs (Sheet 1 of 6)</b></p>
                 <div class="img-container">
                   <img src="../assets/SDRE-Chap16-TFP1.png">
@@ -165,7 +171,7 @@
                   SDRE Chapter 16 - 6 (page 7)</a>
                 </p>
               </Collapsible>
-              <Collapsible chapt="9.4" title="Traffic Warning Signs">
+              <Collapsible chapt="9.4" title="Traffic Warning Signs" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.4.1</b><b>Traffic Warning Signs (Sheet 1 of 9)</b></p>
                 <div class="img-container">
                   <img src="../assets/SDRE-Chap17-TFW1.png">
@@ -247,7 +253,7 @@
                     SDRE Chapter 17 - 9 (page 10)</a>
                 </p>
               </Collapsible>
-              <Collapsible chapt="9.5" title="Traffic Informatory Signs">
+              <Collapsible chapt="9.5" title="Traffic Informatory Signs" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.5.1</b><b>Traffic Informatory Signs (Sheet 1 of 17)</b></p>
                 <div class="img-container">
                   <img src="../assets/SDRE-Chap18-TFI1.png">
@@ -419,7 +425,7 @@
                   SDRE Chapter 19 - 2 (page 3)</a>
                 </p>
               </Collapsible>
-              <Collapsible chapt="9.6" title="Street Name Board">
+              <Collapsible chapt="9.6" title="Street Name Board" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.6.1</b><b>Street Name Sign - General Configuration Layout (Sheet 1 of 3)</b></p>
                 <div class="img-container">
                   <img src="../assets/SDRE-Chap20-SNB1.png">
@@ -528,7 +534,7 @@
                   SDRE Chapter 20 - 12 (page 13)</a>
                 </p>
               </Collapsible>
-              <Collapsible chapt="9.7" title="Signs – Cycling Path">
+              <Collapsible chapt="9.7" title="Signs – Cycling Path" :levelDisplay="levelDisplay">
                 <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.7.1</b><b>Treatment at Major Junction</b></p>
                 <div class="img-container">
                   <img src="../assets/SDRE-Chap21-CYC1.png">
@@ -650,30 +656,33 @@ export default {
   components: {
     Collapsible
   },
-    data() {
-        return {
-            specific_param:"",
-            road: require("../assets/road.png"),
-            mascot: require("../assets/mascot.png")
-        } 
+  data() {
+    return {
+      specific_param:"",
+      road: require("../assets/road.png"),
+      mascot: require("../assets/mascot.png"),
+      levelDisplay: false
+    } 
+  },
+  methods : {
+    openStorage(){
+        return JSON.parse(localStorage.getItem('choice'))
     },
-
-    methods : {
-        openStorage(){
-            return JSON.parse(localStorage.getItem('choice'))
-        },
-        saveStorage(form){
-            localStorage.setItem('choice',JSON.stringify(form))
-        },
-        goBack() {
-            let storedChoice = this.openStorage();
-            if (storedChoice.specific_param.length > 1) {
-                storedChoice.specific_param.pop();
-                this.saveStorage(storedChoice);
-            } 
-            this.$router.go(-1);
-        }
-    }
+    saveStorage(form){
+        localStorage.setItem('choice',JSON.stringify(form))
+    },
+    goBack() {
+        let storedChoice = this.openStorage();
+        if (storedChoice.specific_param.length > 1) {
+            storedChoice.specific_param.pop();
+            this.saveStorage(storedChoice);
+        } 
+        this.$router.go(-1);
+    },
+    levelCollapse: function() {
+      this.levelDisplay = !this.levelDisplay;
+    },
+  }
 }
 </script>
 
@@ -706,7 +715,6 @@ export default {
   text-align:center
 }
 
-
 .imageStack{
   display: grid;
   position: relative;
@@ -731,74 +739,65 @@ export default {
 }
 
 table {
-    height: auto;
-    padding: 40px;
-    border-radius: 15px;
-    z-index: 999;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: auto;
+  height: auto;
+  padding: 40px;
+  border-radius: 15px;
+  z-index: 999;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
 
-
 #entire-content {
-    display: flex;
-    align-items: left;
-    flex-direction: row;
+  display: flex;
+  align-items: left;
+  flex-direction: row;
 }
 
 #buttons {
-    position:sticky;
-    top: 30px;
-    height: 20vh;
-    width: 20%;
+  position:sticky;
+  top: 30px;
+  height: 20vh;
+  width: 20%;
 }
 
 #specific-results {
-    width: 80%;
-    align-items: left;    
-    background-color: #ffffff;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    padding: 4% 10%;
-    font-size:20px;
-    margin-bottom:12%;
-    justify-content:center;
+  width: 80%;
+  align-items: left;    
+  background-color: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 4% 10%;
+  font-size:20px;
+  margin-bottom:12%;
+  justify-content:center;
 }
 
 #back {
-    width:fit-content;
-    height:fit-content;
-    font-size: 1.5rem;
-    box-shadow:none;
-    border:none;
-}
-
-.arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: #273B8C;
+  width:fit-content;
+  height:fit-content;
+  font-size: 1.5rem;
+  box-shadow:none;
+  border:none;
 }
 
 ul {
-    list-style-type: none;
-    padding:0;
-    margin:0;
+  list-style-type: none;
+  padding:0;
+  margin:0;
 }
 
 .image {
-    display: flex;
-    justify-content:center;
-    width:80%;
-    margin-left: 3em; 
-   /* margin-top: 5%;
-    margin-bottom: 5%; */
+  display: flex;
+  justify-content:center;
+  width:80%;
+  margin-left: 3em; 
+  /* margin-top: 5%;
+  margin-bottom: 5%; */
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 #current_btn {
@@ -808,13 +807,12 @@ img {
 }
 
 .action_btn {
-    width: 100%;
-    display: flex;
-/*    gap: 60px; */
-    margin-bottom:15px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  margin-bottom:15px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #manual{
@@ -823,8 +821,8 @@ img {
   table-layout:fixed;
 }
 td {
-    width: 15%;
-    text-align: left;
+  width: 15%;
+  text-align: left;
 }
 
 #chapter{
@@ -836,7 +834,7 @@ td {
 }
 
 .tab2 {
- margin-right: 1.7em
+  margin-right: 1.7em
 }
 
 .title {
@@ -852,6 +850,12 @@ td {
   flex: 1;
   font-size: 20px;
 }
-
-
+.tab3 {
+  margin-right: 1em
+}
+.expand {
+  text-align: right;
+  font-size: 1rem;
+  color: navy;
+}
 </style>

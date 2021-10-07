@@ -36,9 +36,15 @@
             </div>
         </div>
         <div id = "specific-results">
+            <div class="expand">
+              <span @click=levelCollapse() style="cursor:pointer;">
+                <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;<i class="bi bi-caret-down-fill"></i></span>
+                <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<i class="bi bi-caret-up-fill"></i></span>
+              </span>
+            </div>
             <ul>
                 <li v-for="cdc in final_array" :key="cdc.chapterID">
-                    <Collapsible :title="cdc.Content" :chapt="cdc.Number">
+                    <Collapsible :title="cdc.Content" :chapt="cdc.Number" :levelDisplay="levelDisplay">
                         <p v-html="cdc.Text"></p>
                         
                         <div class = 'formula' v-show="cdc.Formula">
@@ -116,7 +122,7 @@ export default {
             level_4_parameter : [],
             choice2 : '',
             specific_param:"",
-            displayInfo: false
+            levelDisplay: false
         } 
     },
 
@@ -156,11 +162,9 @@ export default {
                 res;
             });
         },
-
         storeSpecParam(text){
             this.updateChoice('specific_param',text)
         },
-        
         goBack() {
             if (this.choice.specific_param.length > 1) {
                 this.choice.specific_param.pop();
@@ -174,11 +178,6 @@ export default {
                 this.$router.go(-1);
             }
         },
-
-        collapse() {
-            this.displayInfo = !this.displayInfo;
-        },
-
         display(parameter){
             this.choice2 = parameter;
             database.collection('data_cdc').doc(parameter).get().then(querySnapshot => {
@@ -220,13 +219,14 @@ export default {
                 })
             });
         },
-
-
+        levelCollapse() {
+            this.levelDisplay = !this.levelDisplay;
+        },
     },
     mounted() {
         this.display(this.specific_param);
     },
-    created(){
+    created() {
         const storedChoice = this.openStorage();
         if (storedChoice){
             this.choice = {
@@ -341,7 +341,6 @@ button {
 .action_btn {
     width: 100%;
     display: flex;
-/*    gap: 60px; */
     margin-bottom:15px;
     flex-direction: column;
     justify-content: center;
@@ -383,6 +382,11 @@ td {
   flex: 1;
   font-size: 20px;
 }
-
+.expand {
+  text-align: right;
+  font-size: 1rem;
+  color: navy;
+  margin: 2% 10%;
+}
 </style>
 
