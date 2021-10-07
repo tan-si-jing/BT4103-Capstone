@@ -86,6 +86,9 @@ methods: {
   level5() {
     this.$router.push({path: "/results/page4"})
   },
+    back() {
+    this.$router.push({path: "/search5"})
+  },
   openStorage(){
         return JSON.parse(localStorage.getItem('choice'))
   },
