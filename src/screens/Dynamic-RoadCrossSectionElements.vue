@@ -491,8 +491,14 @@
 
     </div>
     
+    <div class="imageStack">
+    <div id="bottomImg">
     <img :src="road" class="road" />
+    </div>
+    <div id="topImg">
     <img :src="mascot" class="mascot" />
+    </div>
+  </div>
   </div>
 
 </template>
@@ -560,10 +566,15 @@ export default {
   text-align:center
 }
 
+.imageStack{
+  display: grid;
+  position: relative;
+}
+
 /** road image */
 .road {
   max-width: 100%;
-  width:100%;
+  width:100vw;
   position: relative;
   bottom: 0;
   z-index: 1;
@@ -573,9 +584,9 @@ export default {
   max-width: 15%;
   position: absolute;
   right: 4%;
-  bottom: 2%;
   transform: rotateY(180deg);
   z-index: 2;
+  bottom:30%
 }
 
 table {
@@ -603,7 +614,7 @@ table {
 }
 
 #specific-results {
-    width: 80%;
+    width: 100%;
     align-items: left;    
     background-color: #ffffff;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
