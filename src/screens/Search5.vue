@@ -84,6 +84,7 @@ methods:{
     myparam.update({
       ['numVisits']: firebase.firestore.FieldValue.increment(1) ,
       [this.choice.role + this.choice.roadDesign]: firebase.firestore.FieldValue.increment(1) ,
+      [this.choice.role + '-' + this.choice.roadClass]: firebase.firestore.FieldValue.increment(1) ,
       [this.choice.roadClass]: firebase.firestore.FieldValue.increment(1),
       [this.choice.roadType]: firebase.firestore.FieldValue.increment(1),
       [this.choice.designSpeed]: firebase.firestore.FieldValue.increment(1),
