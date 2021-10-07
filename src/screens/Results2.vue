@@ -83,6 +83,9 @@ methods: {
   openStorage(){
         return JSON.parse(localStorage.getItem('choice'))
   },
+  back(){
+    return this.$router.push({path:"/search5"})
+  }
 },
 created(){
     const storedChoice = this.openStorage()
