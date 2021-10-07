@@ -6,8 +6,14 @@
     <div class="container">
       <DynamicTable></DynamicTable>   
     </div>
+  </div>
+  <div class="imageStack">
+    <div id="bottomImg">
     <img :src="road" class="road" />
+    </div>
+    <div id="topImg">
     <img :src="mascot" class="mascot" />
+    </div>
   </div>
 </template>
 
@@ -36,6 +42,7 @@ data() {
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
 .wrapper {
   background: #e0e0e0;
   display: flex;
@@ -46,6 +53,7 @@ data() {
   right: 0px;
   bottom: 0px;
   left: 0px;
+  min-height:80vh;
 }
 .container {
   width: 80vw;
@@ -70,9 +78,15 @@ data() {
   max-width: 15%;
   position: absolute;
   right: 4%;
-  bottom: 2%;
+  bottom: 30%;
   transform: rotateY(180deg);
   z-index: 2;
+}
+
+.imageStack{
+  display: grid;
+  position: relative;
+ 
 }
 
 </style>
