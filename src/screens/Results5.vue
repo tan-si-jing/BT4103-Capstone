@@ -16,9 +16,15 @@
     <button id="back" type="button" class="btn btn-outline-secondary" @click="back">
     <i class="bi bi-arrow-left"></i><span>Back to Search</span>
     </button>
+    <div class="imageStack">
+    <div id="bottomImg">
     <img :src="road" class="road" />
+    </div>
+    <div id="topImg">
     <img :src="mascot" class="mascot" />
     </div>
+  </div>
+  </div>
   </div>
 </template>
 
@@ -79,6 +85,11 @@ export default {
   align-items: center;
   width:15%
 }
+.imageStack{
+  display: grid;
+  position: relative;
+}
+
 /** road image */
 .road {
   max-width: 100%;
@@ -89,24 +100,31 @@ export default {
 }
 /** lta mascot */
 .mascot {
-  max-width: 15%;
+  max-width: 16%;
   position: absolute;
   right: 4%;
   transform: rotateY(180deg);
   z-index: 2;
-  bottom:15%;
+  bottom:30%
 }
 .result {
   float: right;
   width: 75%;
   background: #e0e0e0;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  position:fixed;
+  bottom:0;
+  top:0;
+  right:0;
+  overflow:auto;
+
 }
 .contents {
   margin-left:5vw;
+ min-height:78vh;
 }
 .bottom {
   position:relative;
-  bottom:0
+  bottom:0;
 }
 </style>
