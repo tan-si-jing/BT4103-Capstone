@@ -1,15 +1,15 @@
 <template>
   <div class="sidebar">
     <div style="font-size:1.5rem;padding:5%;"><b>Step-by-Step Guide:</b></div>
-      <router-link to="/results/page1#roadcselements"><SidebarButton name="1. Road Cross-Sections and Elements"/></router-link>
-      <router-link to="/results/page1#grade"><SidebarButton name="2. Grade"/></router-link>
-      <router-link to="/results/page1#longfrictionfactor"><SidebarButton name="3. Longitudinal Friction Factor"/></router-link>
-      <router-link to="/results/page1#sidefrictionfactor"><SidebarButton name="4. Side Friction Factor"/></router-link>
-      <router-link to="/results/page1#crossfall"><SidebarButton name="5. Crossfall"/></router-link>
-      <router-link to="/results/page1#cornerradius"><SidebarButton name="6. Corner Radius"/></router-link>
-      <router-link to="/results/page1#mergingangle"><SidebarButton name="7. Merging Angle"/></router-link>
-      <router-link to="/results/page1#lanewidth"><SidebarButton name="8. Lane Width"/></router-link>
-      <router-link to="/results/page1#signs"><SidebarButton name="9. Signs"/></router-link>
+      <router-link to="/results/page1#roadcselements"><SidebarButton name="1.&nbsp;&nbsp; Road Cross-Sections and Elements"/></router-link>
+      <router-link to="/results/page1#grade"><SidebarButton name="2.&nbsp;&nbsp; Grade"/></router-link>
+      <router-link to="/results/page1#longfrictionfactor"><SidebarButton name="3.&nbsp;&nbsp; Longitudinal Friction Factor"/></router-link>
+      <router-link to="/results/page1#sidefrictionfactor"><SidebarButton name="4.&nbsp;&nbsp; Side Friction Factor"/></router-link>
+      <router-link to="/results/page1#crossfall"><SidebarButton name="5.&nbsp;&nbsp; Crossfall"/></router-link>
+      <router-link to="/results/page1#cornerradius"><SidebarButton name="6.&nbsp;&nbsp; Corner Radius"/></router-link>
+      <router-link to="/results/page1#mergingangle"><SidebarButton name="7.&nbsp;&nbsp; Merging Angle"/></router-link>
+      <router-link to="/results/page1#lanewidth"><SidebarButton name="8.&nbsp;&nbsp; Lane Width"/></router-link>
+      <router-link to="/results/page1#signs"><SidebarButton name="9.&nbsp;&nbsp; Signs"/></router-link>
       <router-link to="/results/page2#lateralclearance"><SidebarButton name="10. Lateral Clearance"/></router-link>
       <router-link to="/results/page2#superelevation"><SidebarButton name="11. Super-elevation"/></router-link>
       <router-link to="/results/page2#sightdistance"><SidebarButton name="12. Sight Distance"/></router-link>
