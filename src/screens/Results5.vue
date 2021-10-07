@@ -35,13 +35,13 @@ export default {
     },
     methods: {
         level2() {
-            this.$router.push({path: "/level2results"})
+            this.$router.push({path: "/results/page1"})
         },
         level3() {
-            this.$router.push({path: "/level3results"})
+            this.$router.push({path: "/results/page2"})
         },
         level4() {
-            this.$router.push({path: "/level4results"})
+            this.$router.push({path: "/results/page3"})
         },
         back() {
             this.$router.push({path: "/search5"})

@@ -72,13 +72,13 @@ components: {
 },
 methods: {
   level3() {
-    this.$router.push({path: "/level3results"})
+    this.$router.push({path: "/results/page2"})
   },
   level4() {
-    this.$router.push({path: "/level4results"})
+    this.$router.push({path: "/results/page3"})
   },
   level5() {
-    this.$router.push({path: "/level5results"})
+    this.$router.push({path: "/results/page4"})
   },
   openStorage(){
         return JSON.parse(localStorage.getItem('choice'))
