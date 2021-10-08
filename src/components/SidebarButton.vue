@@ -1,24 +1,16 @@
 <template>
-  <button type="button" class="btn btn-light" v-bind:style="[isActive ? active : null ]">
+  <button type="button" class="btn btn-light">
     {{name}}
   </button>
 </template>
 
 <script>
-//check state, and only buttons that == state will be active
+//if element has data-isActive then set class as active
 export default {
   name: 'SidebarButton',
   props: {
-    isActive: Boolean,
     name: String,
   },
-  data() {
-    return {
-      active: {
-        backgroundColor: 'none',
-      },
-    };
-  }
 }
 </script>
 

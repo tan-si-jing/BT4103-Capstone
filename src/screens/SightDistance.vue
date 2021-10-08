@@ -38,7 +38,7 @@
         <p v-show="isUndivided">The following sight distances are to be considered in the design. If overtaking sight distance 
           for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
         <p v-show="isUndivided" >Note: Overtaking sight distance is only applicable to undivided 2-lane road.</p>
-        <div class="img-container4" v-show="displayInfo2">
+        <div class="img-container4">
           <img v-show="isUndivided" src="../assets/Table10.5.png">
         </div>  
         <p v-show="isUndivided" style="font-size: 16px;"> Referenced from:
@@ -103,7 +103,6 @@ export default {
         designSpeed: "",
         grad_curv_change:"",
         specific_param:"",
-        displayInfo: false,
       },
       isUndivided: this.$parent.choice.roadType === 'undividedRoad' ? true : false,
       levelDisplay: false

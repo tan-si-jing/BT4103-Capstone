@@ -65,12 +65,14 @@ export default {
       this.$router.push({path: "/search5"})
     },
     openStorage(){
-          return JSON.parse(localStorage.getItem('choice'))
+      return JSON.parse(localStorage.getItem('choice'))
     },
     observeSections() {
-      try {
-        this.headerObserver.disconnect()
-      } catch (e) {console.log(e)}
+      if (this.headerObserver != null) {
+        try {
+          this.headerObserver.disconnect()
+        } catch (e) {console.log(e)}
+      }
       this.headerObserver = new IntersectionObserver(this.headerObserverHandler, {
         rootMargin: "-20.4% 0% -72.4%"
       })
@@ -82,9 +84,7 @@ export default {
     headerObserverHandler (entries) {
       for (const entry of entries) {
         if (entry.isIntersecting) {
-          const sectionId = entry.target.id
-          console.log(sectionId)
-          //update state
+          this.$emit('sec-change', entry.target.id)
         }
       }
     }
