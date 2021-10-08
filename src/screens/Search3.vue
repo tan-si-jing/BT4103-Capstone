@@ -11,14 +11,16 @@
     </div>
     <div class="question">
       <h5>Are you working on <u>Undivided (x-lane) Road</u>, <u>Slip Road</u> or <u>Dual (x-lane) Road</u>? Please select below.
+      
       <span tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" 
       title="
-        <b>Undivided (x-lane) Road</b>: bi-directional road with no physical separator/ divider with x-lane in total <br> 
-        <b>Slip Road</b>: connecting road to allow vehicles to enter or exit the interconnecting carriageway and to bypass the intersection at-grade <br> 
-        <b>Dual (x-lane) Road</b>: two directional road (x-lane in each direction) with a physical separator as a central divider (or) median
+        <u><b>Undivided (x-lane) Road</b>:</u> <br>Bi-directional road with no physical separator/ divider with x-lane in total <p></p>
+        <u><b>Slip Road</b>:</u> <br>Connecting road to allow vehicles to enter or exit the interconnecting carriageway and to bypass the intersection at-grade <p></p>
+        <u><b>Dual (x-lane) Road</b>:</u> <br>Two directional road (x-lane in each direction) with a physical separator as a central divider (or) median
       ">
         <i class="bi bi-info-circle" id="info" style="font-size: 1rem; padding-left:0.25rem"></i>
       </span>
+      
       </h5>
     </div>
     </div>
@@ -162,10 +164,11 @@ export default {
     display: flex;
     margin: 3% 0
 }
-.tooltip-inner {
+.tooltip-inner{
     text-align: left;
     max-width: 500px;
     color:white;
     background-color:black;
 }
+
 </style>
