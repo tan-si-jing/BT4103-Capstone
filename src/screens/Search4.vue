@@ -12,7 +12,7 @@
     <div class="question">
       <h5>What is the <u>design speed</u> (km/h) of the road you're working on? 
       <span id="info" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" 
-      title="<b>Design speed</b>: the nominal speed fixed to determine the geometric properties of a road">
+      title="<u><b>Design speed</b>:</u> <br>The nominal speed fixed to determine the geometric properties of a road">
         <i class="bi bi-info-circle" id="info" style="font-size: 1rem; padding-left:0.25rem"></i>
       </span>
       </h5>
