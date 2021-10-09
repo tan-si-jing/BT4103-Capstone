@@ -1,6 +1,9 @@
 <template>
   <div class="sidebar">
     <HomeButton/>
+    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
+    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
+    
     <div style="font-size:1.5rem;padding:5%;border-top: ridge;"><b>Step-by-Step Guide:</b></div>
     <router-link to="/results/page1#roadcselements">
       <SidebarButton 
@@ -112,12 +115,14 @@
 <script>
 import SidebarButton from '../components/SidebarButton.vue'
 import HomeButton from '../components/HomeButton.vue'
+import ManualButton from '../components/ManualButton.vue'
 
 export default {
   name: "Results",
   components: {
     "SidebarButton": SidebarButton,
     "HomeButton": HomeButton,
+    "ManualButton": ManualButton
   },
   data() {
     return {
