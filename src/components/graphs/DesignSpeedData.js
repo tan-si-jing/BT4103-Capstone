@@ -7,7 +7,7 @@ export const designSpeedData = {
         label: "No. Searches",
         data: [0, 0, 0, 0, 0, 0],
         backgroundColor: [
-          '#1e6a59'
+          '#407fad'
         ]
       }
     ]

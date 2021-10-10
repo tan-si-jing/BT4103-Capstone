@@ -7,7 +7,7 @@ export const changeJunctionData = {
         label: "No. Searches",
         data: [0, 0],
         backgroundColor: [
-          '#6b7473'
+          '#1e6a59'
         ]
       }
     ]
