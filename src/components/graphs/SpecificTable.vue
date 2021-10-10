@@ -1,16 +1,27 @@
 <template>
   <div style="width: 100%;">
+    <div style="display: flex; justify-content: space-between;">
     <p class="heading">Frequently Searched Specific Section</p>
+    <p class="heading2" @click="this.changeSort('total')">Click Here to Load Data</p>
+    </div>
     <p class="subHeading">Top 5</p>
     <table>
       <tr>
         <th>Section</th>
-        <th>Traffic Engineers</th>
-        <th>Consultants</th>
-        <th>General Public</th>
-        <th>Total</th>
+        <th>Traffic Engineers<br>
+          <i class="bi bi-sort-down" @click="this.changeSort('engineers')" v-bind:style="[this.currSort === 'engineers' ? 'color:black; cursor: pointer;' : 'color:grey; cursor: pointer;']"></i>
+        </th>
+        <th>Consultants<br>
+          <i class="bi bi-sort-down" @click="this.changeSort('consultants')" v-bind:style="[this.currSort === 'consultants' ? 'color:black; cursor: pointer;' : 'color:grey; cursor: pointer;']"></i>
+        </th>
+        <th>General Public<br>
+          <i class="bi bi-sort-down" @click="this.changeSort('public')" v-bind:style="[this.currSort === 'public' ? 'color:black; cursor: pointer;' : 'color:grey; cursor: pointer;']"></i>
+        </th>
+        <th>Total<br>
+          <i class="bi bi-sort-down" @click="this.changeSort('total')" v-bind:style="[this.currSort === 'total' ? 'color:black; cursor: pointer;' : 'color:grey; cursor: pointer;']"></i>
+        </th>
       </tr>
-      <tr v-for="specificField in this.sortField().slice(0, 5)" :key="specificField">
+      <tr v-for="specificField in this.finalData.slice(0, 5)" :key="specificField">
         <td>{{ specificField.name }}</td> 
         <td>{{ specificField.engineers }}</td> 
         <td>{{ specificField.consultants }}</td> 
@@ -32,153 +43,84 @@ export default {
   data() {
     return {
       docID: 'H1uwnxYevFozEeNv7SiY',
+      currSort: null,
+      finalData: [],
       /** traffic engineers */
-      engineersCombHVAlignment: 0,
-      engineersCornerRad: 0,
-      engineersCrossfall: 0,
-      engineersCurveLength: 0,
-      engineersGrade: 0,
-      engineersHAlignment: 0,
-      engineersLaneWidth: 0,
-      engineersLateralClearance: 0,
-      engineersLFF: 0,
-      engineersMergingAngle: 0,
-      engineersRCSE: 0,
-      engineersSFF: 0,
-      engineersSightDistance: 0,
-      engineersSRTI: 0,
-      engineersSuperElevation: 0,
-      engineersVAlignment: 0,
+      engineersCombHVAlignment: null,
+      engineersCornerRad: null,
+      engineersCrossfall: null,
+      engineersCurveLength: null,
+      engineersGrade: null,
+      engineersHAlignment: null,
+      engineersLaneWidth: null,
+      engineersLateralClearance: null,
+      engineersLFF: null,
+      engineersMergingAngle: null,
+      engineersRCSE: null,
+      engineersSFF: null,
+      engineersSightDistance: null,
+      engineersSRTI: null,
+      engineersSuperElevation: null,
+      engineersVAlignment: null,
       /** consultants */
-      consultantsCombHVAlignment: 0,
-      consultantsCornerRad: 0,
-      consultantsCrossfall: 0,
-      consultantsCurveLength: 0,
-      consultantsGrade: 0,
-      consultantsHAlignment: 0,
-      consultantsLaneWidth: 0,
-      consultantsLateralClearance: 0,
-      consultantsLFF: 0,
-      consultantsMergingAngle: 0,
-      consultantsRCSE: 0,
-      consultantsSFF: 0,
-      consultantsSightDistance: 0,
-      consultantsSRTI: 0,
-      consultantsSuperElevation: 0,
-      consultantsVAlignment: 0,
+      consultantsCombHVAlignment: null,
+      consultantsCornerRad: null,
+      consultantsCrossfall: null,
+      consultantsCurveLength: null,
+      consultantsGrade: null,
+      consultantsHAlignment: null,
+      consultantsLaneWidth: null,
+      consultantsLateralClearance: null,
+      consultantsLFF: null,
+      consultantsMergingAngle: null,
+      consultantsRCSE: null,
+      consultantsSFF: null,
+      consultantsSightDistance: null,
+      consultantsSRTI: null,
+      consultantsSuperElevation: null,
+      consultantsVAlignment: null,
       /** general public */
-      publicCombHVAlignment: 0,
-      publicCornerRad: 0,
-      publicCrossfall: 0,
-      publicCurveLength: 0,
-      publicGrade: 0,
-      publicHAlignment: 0,
-      publicLaneWidth: 0,
-      publicLateralClearance: 0,
-      publicLFF: 0,
-      publicMergingAngle: 0,
-      publicRCSE: 0,
-      publicSFF: 0,
-      publicSightDistance: 0,
-      publicSRTI: 0,
-      publicSuperElevation: 0,
-      publicVAlignment: 0,
+      publicCombHVAlignment: null,
+      publicCornerRad: null,
+      publicCrossfall: null,
+      publicCurveLength: null,
+      publicGrade: null,
+      publicHAlignment: null,
+      publicLaneWidth: null,
+      publicLateralClearance: null,
+      publicLFF: null,
+      publicMergingAngle: null,
+      publicRCSE: null,
+      publicSFF: null,
+      publicSightDistance: null,
+      publicSRTI: null,
+      publicSuperElevation: null,
+      publicVAlignment: null,
       /** total */
-      CombHVAlignment: 0,
-      CornerRad: 0,
-      Crossfall: 0,
-      CurveLength: 0,
-      Grade: 0,
-      HAlignment: 0,
-      LaneWidth: 0,
-      LateralClearance: 0,
-      LFF: 0,
-      MergingAngle: 0,
-      RCSE: 0,
-      SFF: 0,
-      SightDistance: 0,
-      SRTI: 0,
-      SuperElevation: 0,
-      VAlignment: 0
+      CombHVAlignment: null,
+      CornerRad: null,
+      Crossfall: null,
+      CurveLength: null,
+      Grade: null,
+      HAlignment: null,
+      LaneWidth: null,
+      LateralClearance: null,
+      LFF: null,
+      MergingAngle: null,
+      RCSE: null,
+      SFF: null,
+      SightDistance: null,
+      SRTI: null,
+      SuperElevation: null,
+      VAlignment: null
     };
   },
   methods: {
-    sortField: function() {
-      // get values
-      database.collection('search_parameters')
-              .doc(this.docID)
-              .get()
-              .then(querySnapShot => {
-                // traffic engineers
-                this.engineersCombHVAlignment = querySnapShot.data()[ 'engineer-Combination of Horizontal & Vertical Alignment' ]
-                this.engineersCornerRad = querySnapShot.data()[ 'engineer-Corner Radius' ]
-                this.engineersCrossfall = querySnapShot.data()[ 'engineer-Crossfall' ]
-                this.engineersCurveLength = querySnapShot.data()[ 'engineer-Curve Length' ]
-                this.engineersGrade = querySnapShot.data()[ 'engineer-Grade' ]
-                this.engineersHAlignment = querySnapShot.data()[ 'engineer-Horizontal Alignment' ]
-                this.engineersLaneWidth = querySnapShot.data()[ 'engineer-Lane Width' ]
-                this.engineersLateralClearance = querySnapShot.data()[ 'engineer-Lateral Clearance' ]
-                this.engineersLFF = querySnapShot.data()[ 'engineer-Logitudinal Friction Factor' ]
-                this.engineersMergingAngle = querySnapShot.data()[ 'engineer-Merging Angle' ]
-                this.engineersRCSE = querySnapShot.data()[ 'engineer-Road Cross-Sections and Elements' ]
-                this.engineersSFF = querySnapShot.data()[ 'engineer-Side Friction Factor' ]
-                this.engineersSightDistance = querySnapShot.data()[ 'engineer-Sight Distance' ]
-                this.engineersSRTI = querySnapShot.data()[ 'engineer-Slip-road Traffic Island' ]
-                this.engineersSuperElevation = querySnapShot.data()[ 'engineer-Super-Elevation' ]
-                this.engineersVAlignment = querySnapShot.data()[ 'engineer-Vertical Alignment' ]
-                // consultants
-                this.consultantsCombHVAlignment = querySnapShot.data()[ 'consultant-Combination of Horizontal & Vertical Alignment' ]
-                this.consultantsCornerRad = querySnapShot.data()[ 'consultant-Corner Radius' ]
-                this.consultantsCrossfall = querySnapShot.data()[ 'consultant-Crossfall' ]
-                this.consultantsCurveLength = querySnapShot.data()[ 'consultant-Curve Length' ]
-                this.consultantsGrade = querySnapShot.data()[ 'consultant-Grade' ]
-                this.consultantsHAlignment = querySnapShot.data()[ 'consultant-Horizontal Alignment' ]
-                this.consultantsLaneWidth = querySnapShot.data()[ 'consultant-Lane Width' ]
-                this.consultantsLateralClearance = querySnapShot.data()[ 'consultant-Lateral Clearance' ]
-                this.consultantsLFF = querySnapShot.data()[ 'consultant-Logitudinal Friction Factor' ]
-                this.consultantsMergingAngle = querySnapShot.data()[ 'consultant-Merging Angle' ]
-                this.consultantsRCSE = querySnapShot.data()[ 'consultant-Road Cross-Sections and Elements' ]
-                this.consultantsSFF = querySnapShot.data()[ 'consultant-Side Friction Factor' ]
-                this.consultantsSightDistance = querySnapShot.data()[ 'consultant-Sight Distance' ]
-                this.consultantsSRTI = querySnapShot.data()[ 'consultant-Slip-road Traffic Island' ]
-                this.consultantsSuperElevation = querySnapShot.data()[ 'consultant-Super-Elevation' ]
-                this.consultantsVAlignment = querySnapShot.data()[ 'consultant-Vertical Alignment' ]
-                // general public
-                this.publicCombHVAlignment = querySnapShot.data()[ 'public-Combination of Horizontal & Vertical Alignment' ]
-                this.publicCornerRad = querySnapShot.data()[ 'public-Corner Radius' ]
-                this.publicCrossfall = querySnapShot.data()[ 'public-Crossfall' ]
-                this.publicCurveLength = querySnapShot.data()[ 'public-Curve Length' ]
-                this.publicGrade = querySnapShot.data()[ 'public-Grade' ]
-                this.publicHAlignment = querySnapShot.data()[ 'public-Horizontal Alignment' ]
-                this.publicLaneWidth = querySnapShot.data()[ 'public-Lane Width' ]
-                this.publicLateralClearance = querySnapShot.data()[ 'public-Lateral Clearance' ]
-                this.publicLFF = querySnapShot.data()[ 'public-Logitudinal Friction Factor' ]
-                this.publicMergingAngle = querySnapShot.data()[ 'public-Merging Angle' ]
-                this.publicRCSE = querySnapShot.data()[ 'public-Road Cross-Sections and Elements' ]
-                this.publicSFF = querySnapShot.data()[ 'public-Side Friction Factor' ]
-                this.publicSightDistance = querySnapShot.data()[ 'public-Sight Distance' ]
-                this.publicSRTI = querySnapShot.data()[ 'public-Slip-road Traffic Island' ]
-                this.publicSuperElevation = querySnapShot.data()[ 'public-Super-Elevation' ]
-                this.publicVAlignment = querySnapShot.data()[ 'public-Vertical Alignment' ]
-                // total
-                this.CombHVAlignment = querySnapShot.data()[ 'Combination of Horizontal & Vertical Alignment' ]
-                this.CornerRad = querySnapShot.data()[ 'Corner Radius' ]
-                this.Crossfall = querySnapShot.data()[ 'Crossfall' ]
-                this.CurveLength = querySnapShot.data()[ 'Curve Length' ]
-                this.Grade = querySnapShot.data()[ 'Grade' ]
-                this.HAlignment = querySnapShot.data()[ 'Horizontal Alignment' ]
-                this.LaneWidth = querySnapShot.data()[ 'Lane Width' ]
-                this.LateralClearance = querySnapShot.data()[ 'Lateral Clearance' ]
-                this.LFF = querySnapShot.data()[ 'Logitudinal Friction Factor' ]
-                this.MergingAngle = querySnapShot.data()[ 'Merging Angle' ]
-                this.RCSE = querySnapShot.data()[ 'Road Cross-Sections and Elements' ]
-                this.SFF = querySnapShot.data()[ 'Side Friction Factor' ]
-                this.SightDistance = querySnapShot.data()[ 'Sight Distance' ]
-                this.SRTI = querySnapShot.data()[ 'Slip-road Traffic Island' ]
-                this.SuperElevation = querySnapShot.data()[ 'Super-Elevation' ]
-                this.VAlignment = querySnapShot.data()[ 'Vertical Alignment' ]
-              })
-      // input values into array and sort
+    changeSort: function(field) {
+      this.currSort = field;
+      this.finalData = this.getData();
+    },
+    getData: function() {
       const fields = [
         {
           name: "Combination of Horizontal & Vertical Alignment", 
@@ -291,11 +233,105 @@ export default {
           public: this.publicVAlignment,
           value: this.VAlignment}
       ]
-      fields.sort(function(a, b) {
-        return b.value - a.value;
-      })
+      // sorting
+      if (this.currSort == 'total') {
+        fields.sort(function(a, b) {
+          return b.value - a.value;
+        })
+      }
+      if (this.currSort == 'engineers') {
+        fields.sort(function(a, b) {
+          return b.engineers - a.engineers;
+        })
+      }
+      if (this.currSort == 'consultants') {
+        fields.sort(function(a, b) {
+          return b.consultants - a.consultants;
+        })
+      }
+      if (this.currSort == 'public') {
+        fields.sort(function(a, b) {
+          return b.public - a.public;
+        })
+      }
       return fields;
     },
+  },
+  mounted() {
+    database.collection('search_parameters')
+              .doc(this.docID)
+              .get()
+              .then(querySnapShot => {
+                // traffic engineers
+                this.engineersCombHVAlignment = querySnapShot.data()[ 'engineer-Combination of Horizontal & Vertical Alignment' ] || 0
+                this.engineersCornerRad = querySnapShot.data()[ 'engineer-Corner Radius' ] || 0
+                this.engineersCrossfall = querySnapShot.data()[ 'engineer-Crossfall' ] || 0
+                this.engineersCurveLength = querySnapShot.data()[ 'engineer-Curve Length' ] || 0
+                this.engineersGrade = querySnapShot.data()[ 'engineer-Grade' ] || 0
+                this.engineersHAlignment = querySnapShot.data()[ 'engineer-Horizontal Alignment' ] || 0
+                this.engineersLaneWidth = querySnapShot.data()[ 'engineer-Lane Width' ] || 0
+                this.engineersLateralClearance = querySnapShot.data()[ 'engineer-Lateral Clearance' ] || 0
+                this.engineersLFF = querySnapShot.data()[ 'engineer-Logitudinal Friction Factor' ] || 0
+                this.engineersMergingAngle = querySnapShot.data()[ 'engineer-Merging Angle' ] || 0
+                this.engineersRCSE = querySnapShot.data()[ 'engineer-Road Cross-Sections and Elements' ] || 0
+                this.engineersSFF = querySnapShot.data()[ 'engineer-Side Friction Factor' ] || 0
+                this.engineersSightDistance = querySnapShot.data()[ 'engineer-Sight Distance' ] || 0
+                this.engineersSRTI = querySnapShot.data()[ 'engineer-Slip-road Traffic Island' ] || 0
+                this.engineersSuperElevation = querySnapShot.data()[ 'engineer-Super-Elevation' ] || 0
+                this.engineersVAlignment = querySnapShot.data()[ 'engineer-Vertical Alignment' ] || 0
+                // consultants
+                this.consultantsCombHVAlignment = querySnapShot.data()[ 'consultant-Combination of Horizontal & Vertical Alignment' ] || 0
+                this.consultantsCornerRad = querySnapShot.data()[ 'consultant-Corner Radius' ] || 0
+                this.consultantsCrossfall = querySnapShot.data()[ 'consultant-Crossfall' ] || 0
+                this.consultantsCurveLength = querySnapShot.data()[ 'consultant-Curve Length' ] || 0
+                this.consultantsGrade = querySnapShot.data()[ 'consultant-Grade' ] || 0
+                this.consultantsHAlignment = querySnapShot.data()[ 'consultant-Horizontal Alignment' ] || 0
+                this.consultantsLaneWidth = querySnapShot.data()[ 'consultant-Lane Width' ] || 0
+                this.consultantsLateralClearance = querySnapShot.data()[ 'consultant-Lateral Clearance' ] || 0
+                this.consultantsLFF = querySnapShot.data()[ 'consultant-Logitudinal Friction Factor' ] || 0
+                this.consultantsMergingAngle = querySnapShot.data()[ 'consultant-Merging Angle' ] || 0
+                this.consultantsRCSE = querySnapShot.data()[ 'consultant-Road Cross-Sections and Elements' ] || 0
+                this.consultantsSFF = querySnapShot.data()[ 'consultant-Side Friction Factor' ] || 0
+                this.consultantsSightDistance = querySnapShot.data()[ 'consultant-Sight Distance' ] || 0
+                this.consultantsSRTI = querySnapShot.data()[ 'consultant-Slip-road Traffic Island' ] || 0
+                this.consultantsSuperElevation = querySnapShot.data()[ 'consultant-Super-Elevation' ] || 0
+                this.consultantsVAlignment = querySnapShot.data()[ 'consultant-Vertical Alignment' ] || 0
+                // general public
+                this.publicCombHVAlignment = querySnapShot.data()[ 'public-Combination of Horizontal & Vertical Alignment' ] || 0
+                this.publicCornerRad = querySnapShot.data()[ 'public-Corner Radius' ] || 0
+                this.publicCrossfall = querySnapShot.data()[ 'public-Crossfall' ] || 0
+                this.publicCurveLength = querySnapShot.data()[ 'public-Curve Length' ] || 0
+                this.publicGrade = querySnapShot.data()[ 'public-Grade' ] || 0
+                this.publicHAlignment = querySnapShot.data()[ 'public-Horizontal Alignment' ] || 0
+                this.publicLaneWidth = querySnapShot.data()[ 'public-Lane Width' ] || 0
+                this.publicLateralClearance = querySnapShot.data()[ 'public-Lateral Clearance' ] || 0
+                this.publicLFF = querySnapShot.data()[ 'public-Logitudinal Friction Factor' ] || 0
+                this.publicMergingAngle = querySnapShot.data()[ 'public-Merging Angle' ] || 0
+                this.publicRCSE = querySnapShot.data()[ 'public-Road Cross-Sections and Elements' ] || 0
+                this.publicSFF = querySnapShot.data()[ 'public-Side Friction Factor' ] || 0
+                this.publicSightDistance = querySnapShot.data()[ 'public-Sight Distance' ] || 0
+                this.publicSRTI = querySnapShot.data()[ 'public-Slip-road Traffic Island' ] || 0
+                this.publicSuperElevation = querySnapShot.data()[ 'public-Super-Elevation' ] || 0
+                this.publicVAlignment = querySnapShot.data()[ 'public-Vertical Alignment' ] || 0
+                // total
+                this.CombHVAlignment = querySnapShot.data()[ 'Combination of Horizontal & Vertical Alignment' ] || 0
+                this.CornerRad = querySnapShot.data()[ 'Corner Radius' ] || 0
+                this.Crossfall = querySnapShot.data()[ 'Crossfall' ] || 0
+                this.CurveLength = querySnapShot.data()[ 'Curve Length' ] || 0
+                this.Grade = querySnapShot.data()[ 'Grade' ] || 0
+                this.HAlignment = querySnapShot.data()[ 'Horizontal Alignment' ] || 0
+                this.LaneWidth = querySnapShot.data()[ 'Lane Width' ] || 0
+                this.LateralClearance = querySnapShot.data()[ 'Lateral Clearance' ] || 0
+                this.LFF = querySnapShot.data()[ 'Logitudinal Friction Factor' ] || 0
+                this.MergingAngle = querySnapShot.data()[ 'Merging Angle' ] || 0
+                this.RCSE = querySnapShot.data()[ 'Road Cross-Sections and Elements' ] || 0
+                this.SFF = querySnapShot.data()[ 'Side Friction Factor' ] || 0
+                this.SightDistance = querySnapShot.data()[ 'Sight Distance' ] || 0
+                this.SRTI = querySnapShot.data()[ 'Slip-road Traffic Island' ] || 0
+                this.SuperElevation = querySnapShot.data()[ 'Super-Elevation' ] || 0
+                this.VAlignment = querySnapShot.data()[ 'Vertical Alignment' ] || 0
+              })
+    this.changeSort('');
   },
 };
 </script>
@@ -313,6 +349,13 @@ export default {
   font-size: 18px;
   margin-top: 10px;
 }
+.heading2 {
+  color: #263238;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-style: italic;
+}
 .subHeading {
   color: rgba(0, 0, 0, 0.4);
   font-size: 14px;
@@ -328,7 +371,8 @@ td {
   font-size: 20px;
 }
 th:nth-child(n+2), td:nth-child(n+2) {
+  vertical-align: top;
   text-align: center;
-  width: 2%;
+  width: 3%;
 }
 </style>
