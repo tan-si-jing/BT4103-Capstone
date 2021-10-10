@@ -5,7 +5,7 @@
       <!-- header -->
       <div class="header">
         <h1 style="font-size: 2rem; color: #4f4f4f;"> Analytics Dashboard </h1>
-        <LogoutButton/>
+        <ExtractButton/>
       </div>
 
       <div class="graphs">
@@ -57,7 +57,7 @@ import database from '../firebase.js'
 import 'firebase/firestore';
 
 import { Chart, registerables } from 'chart.js';
-import LogoutButton from '../components/LogoutButton.vue';
+import ExtractButton from '../components/ExtractButton.vue';
 import SummaryData from '../components/graphs/SummaryData.vue';
 import donutChartData from '../components/graphs/DonutChartData.js';
 import barChartData from '../components/graphs/BarChartData.js';
@@ -71,7 +71,7 @@ Chart.register(...registerables);
 export default {
   name: "Dashboard",
   components: {
-    LogoutButton,
+    ExtractButton,
     SummaryData,
     SpecificTable
   },
