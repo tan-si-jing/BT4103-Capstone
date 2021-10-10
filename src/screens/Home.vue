@@ -14,7 +14,7 @@
       <UserTypeButton label="Traffic Engineers" icon="briefcase" @click="updateChoice('role','engineer')" link="/search"/>
       <UserTypeButton label="Consultants" icon="chat-dots"  @click="updateChoice('role','consultant')" link="/search"/>
       <UserTypeButton label="General Public" icon="people"  @click="updateChoice('role','public')" link="/search"/>
-      <UserTypeButton label="Admin" icon="lock" link="/login"/>
+      <UserTypeButton label="Admin" icon="lock" link="/dashboard"/>
     </div>
   </div>
   </div>
