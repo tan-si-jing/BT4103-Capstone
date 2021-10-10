@@ -59,6 +59,7 @@ export default {
       engineersRCSE: null,
       engineersSFF: null,
       engineersSightDistance: null,
+      engineersSigns: null,
       engineersSRTI: null,
       engineersSuperElevation: null,
       engineersVAlignment: null,
@@ -76,6 +77,7 @@ export default {
       consultantsRCSE: null,
       consultantsSFF: null,
       consultantsSightDistance: null,
+      consultantsSigns: null,
       consultantsSRTI: null,
       consultantsSuperElevation: null,
       consultantsVAlignment: null,
@@ -93,6 +95,7 @@ export default {
       publicRCSE: null,
       publicSFF: null,
       publicSightDistance: null,
+      publicSigns: null,
       publicSRTI: null,
       publicSuperElevation: null,
       publicVAlignment: null,
@@ -110,6 +113,7 @@ export default {
       RCSE: null,
       SFF: null,
       SightDistance: null,
+      Signs: null,
       SRTI: null,
       SuperElevation: null,
       VAlignment: null
@@ -213,6 +217,13 @@ export default {
           value: this.SightDistance
         },
         {
+          name: "Signs", 
+          engineers: this.engineersSigns, 
+          consultants: this.consultantsSigns,
+          public: this.publicSigns,
+          value: this.Signs
+        },
+        {
           name: "Slip-road Traffic Island", 
           engineers: this.engineersSRTI, 
           consultants: this.consultantsSRTI,
@@ -271,11 +282,12 @@ export default {
                 this.engineersHAlignment = querySnapShot.data()[ 'engineer-Horizontal Alignment' ] || 0
                 this.engineersLaneWidth = querySnapShot.data()[ 'engineer-Lane Width' ] || 0
                 this.engineersLateralClearance = querySnapShot.data()[ 'engineer-Lateral Clearance' ] || 0
-                this.engineersLFF = querySnapShot.data()[ 'engineer-Logitudinal Friction Factor' ] || 0
+                this.engineersLFF = querySnapShot.data()[ 'engineer-Longitudinal Friction Factor' ] || 0
                 this.engineersMergingAngle = querySnapShot.data()[ 'engineer-Merging Angle' ] || 0
                 this.engineersRCSE = querySnapShot.data()[ 'engineer-Road Cross-Sections and Elements' ] || 0
                 this.engineersSFF = querySnapShot.data()[ 'engineer-Side Friction Factor' ] || 0
                 this.engineersSightDistance = querySnapShot.data()[ 'engineer-Sight Distance' ] || 0
+                this.engineersSigns = querySnapShot.data()[ 'engineer-Signs' ] || 0
                 this.engineersSRTI = querySnapShot.data()[ 'engineer-Slip-road Traffic Island' ] || 0
                 this.engineersSuperElevation = querySnapShot.data()[ 'engineer-Super-Elevation' ] || 0
                 this.engineersVAlignment = querySnapShot.data()[ 'engineer-Vertical Alignment' ] || 0
@@ -288,11 +300,12 @@ export default {
                 this.consultantsHAlignment = querySnapShot.data()[ 'consultant-Horizontal Alignment' ] || 0
                 this.consultantsLaneWidth = querySnapShot.data()[ 'consultant-Lane Width' ] || 0
                 this.consultantsLateralClearance = querySnapShot.data()[ 'consultant-Lateral Clearance' ] || 0
-                this.consultantsLFF = querySnapShot.data()[ 'consultant-Logitudinal Friction Factor' ] || 0
+                this.consultantsLFF = querySnapShot.data()[ 'consultant-Longitudinal Friction Factor' ] || 0
                 this.consultantsMergingAngle = querySnapShot.data()[ 'consultant-Merging Angle' ] || 0
                 this.consultantsRCSE = querySnapShot.data()[ 'consultant-Road Cross-Sections and Elements' ] || 0
                 this.consultantsSFF = querySnapShot.data()[ 'consultant-Side Friction Factor' ] || 0
                 this.consultantsSightDistance = querySnapShot.data()[ 'consultant-Sight Distance' ] || 0
+                this.consultantsSigns = querySnapShot.data()[ 'consultant-Signs' ] || 0
                 this.consultantsSRTI = querySnapShot.data()[ 'consultant-Slip-road Traffic Island' ] || 0
                 this.consultantsSuperElevation = querySnapShot.data()[ 'consultant-Super-Elevation' ] || 0
                 this.consultantsVAlignment = querySnapShot.data()[ 'consultant-Vertical Alignment' ] || 0
@@ -305,11 +318,12 @@ export default {
                 this.publicHAlignment = querySnapShot.data()[ 'public-Horizontal Alignment' ] || 0
                 this.publicLaneWidth = querySnapShot.data()[ 'public-Lane Width' ] || 0
                 this.publicLateralClearance = querySnapShot.data()[ 'public-Lateral Clearance' ] || 0
-                this.publicLFF = querySnapShot.data()[ 'public-Logitudinal Friction Factor' ] || 0
+                this.publicLFF = querySnapShot.data()[ 'public-Longitudinal Friction Factor' ] || 0
                 this.publicMergingAngle = querySnapShot.data()[ 'public-Merging Angle' ] || 0
                 this.publicRCSE = querySnapShot.data()[ 'public-Road Cross-Sections and Elements' ] || 0
                 this.publicSFF = querySnapShot.data()[ 'public-Side Friction Factor' ] || 0
                 this.publicSightDistance = querySnapShot.data()[ 'public-Sight Distance' ] || 0
+                this.publicSigns = querySnapShot.data()[ 'public-Signs' ] || 0
                 this.publicSRTI = querySnapShot.data()[ 'public-Slip-road Traffic Island' ] || 0
                 this.publicSuperElevation = querySnapShot.data()[ 'public-Super-Elevation' ] || 0
                 this.publicVAlignment = querySnapShot.data()[ 'public-Vertical Alignment' ] || 0
@@ -322,11 +336,12 @@ export default {
                 this.HAlignment = querySnapShot.data()[ 'Horizontal Alignment' ] || 0
                 this.LaneWidth = querySnapShot.data()[ 'Lane Width' ] || 0
                 this.LateralClearance = querySnapShot.data()[ 'Lateral Clearance' ] || 0
-                this.LFF = querySnapShot.data()[ 'Logitudinal Friction Factor' ] || 0
+                this.LFF = querySnapShot.data()[ 'Longitudinal Friction Factor' ] || 0
                 this.MergingAngle = querySnapShot.data()[ 'Merging Angle' ] || 0
                 this.RCSE = querySnapShot.data()[ 'Road Cross-Sections and Elements' ] || 0
                 this.SFF = querySnapShot.data()[ 'Side Friction Factor' ] || 0
                 this.SightDistance = querySnapShot.data()[ 'Sight Distance' ] || 0
+                this.Signs = querySnapShot.data()[ 'Signs' ] || 0
                 this.SRTI = querySnapShot.data()[ 'Slip-road Traffic Island' ] || 0
                 this.SuperElevation = querySnapShot.data()[ 'Super-Elevation' ] || 0
                 this.VAlignment = querySnapShot.data()[ 'Vertical Alignment' ] || 0
