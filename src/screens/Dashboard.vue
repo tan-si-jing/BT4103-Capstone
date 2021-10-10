@@ -26,13 +26,15 @@
           <div>
             <SpecificTable/>
           </div>
-          <div>
-            <canvas id="roadclass-chart"></canvas>
-          </div>
-          
         </div>
         <!-- row 3 -->
         <div class="graphThirdRow">
+          <div>
+            <canvas id="roadclass-chart"></canvas>
+          </div>
+        </div>
+        <!-- row 4 -->
+        <div class="graphFourthRow">
           <div>
             <canvas id="roadtype-chart"></canvas>
           </div>
@@ -104,12 +106,26 @@ export default {
                 barChart.data.datasets[2].data[1] = querySnapShot.data().publicGuide;
                 barChart.update();
                 // road classification
-                roadClassChart.data.datasets[0].data[0] = querySnapShot.data().expressway;
-                roadClassChart.data.datasets[0].data[1] = querySnapShot.data().semiExpressway;
-                roadClassChart.data.datasets[0].data[2] = querySnapShot.data().majorArterial;
-                roadClassChart.data.datasets[0].data[3] = querySnapShot.data().minorArterial;
-                roadClassChart.data.datasets[0].data[4] = querySnapShot.data().primaryAccess;
-                roadClassChart.data.datasets[0].data[5] = querySnapShot.data().localAccess;
+                roadClassChart.data.datasets[0].data[0] = querySnapShot.data()[ 'engineer-expressway' ]
+                roadClassChart.data.datasets[0].data[1] = querySnapShot.data()[ 'engineer-semiExpressway' ]
+                roadClassChart.data.datasets[0].data[2] = querySnapShot.data()[ 'engineer-majorArterial' ]
+                roadClassChart.data.datasets[0].data[3] = querySnapShot.data()[ 'engineer-minorArterial' ]
+                roadClassChart.data.datasets[0].data[4] = querySnapShot.data()[ 'engineer-primaryAccess' ]
+                roadClassChart.data.datasets[0].data[5] = querySnapShot.data()[ 'engineer-localAccess' ]
+
+                roadClassChart.data.datasets[1].data[0] = querySnapShot.data()[ 'consultant-expressway' ]
+                roadClassChart.data.datasets[1].data[1] = querySnapShot.data()[ 'consultant-semiExpressway' ]
+                roadClassChart.data.datasets[1].data[2] = querySnapShot.data()[ 'consultant-majorArterial' ]
+                roadClassChart.data.datasets[1].data[3] = querySnapShot.data()[ 'consultant-minorArterial' ]
+                roadClassChart.data.datasets[1].data[4] = querySnapShot.data()[ 'consultant-primaryAccess' ]
+                roadClassChart.data.datasets[1].data[5] = querySnapShot.data()[ 'consultant-localAccess' ]
+
+                roadClassChart.data.datasets[2].data[0] = querySnapShot.data()[ 'public-expressway' ]
+                roadClassChart.data.datasets[2].data[1] = querySnapShot.data()[ 'public-semiExpressway' ]
+                roadClassChart.data.datasets[2].data[2] = querySnapShot.data()[ 'public-majorArterial' ]
+                roadClassChart.data.datasets[2].data[3] = querySnapShot.data()[ 'public-minorArterial' ]
+                roadClassChart.data.datasets[2].data[4] = querySnapShot.data()[ 'public-primaryAccess' ]
+                roadClassChart.data.datasets[2].data[5] = querySnapShot.data()[ 'public-localAccess' ]
                 roadClassChart.update(); 
                 // road type
                 roadTypeChart.data.datasets[0].data[0] = querySnapShot.data().undividedRoad;
@@ -189,7 +205,7 @@ export default {
   align-items: center;
   margin-bottom: 1.5rem;
 }
-.graphFirstRow > div, .graphSecondRow > div, .graphThirdRow > div {
+.graphFirstRow > div, .graphSecondRow > div, .graphThirdRow > div, .graphFourthRow > div {
   display: flex;
   background-color: #ffffff;
   border-radius: 1rem;
@@ -207,12 +223,17 @@ export default {
 }
 .graphSecondRow {
   display: grid;
-  grid-template-columns: 49% 49%;
-  grid-gap: 2%;
+  grid-template-columns: 100%;
   margin-bottom: 2rem;
   height: 350px;
 }
 .graphThirdRow {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-bottom: 2rem;
+  height: 350px;
+}
+.graphFourthRow {
   display: grid;
   grid-template-columns: 30% 43% 23%;
   grid-gap: 2%;

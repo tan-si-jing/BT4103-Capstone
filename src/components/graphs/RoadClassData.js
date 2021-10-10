@@ -5,11 +5,17 @@ export const roadClassData = {
               "Minor Arterial", "Primary Access", "Local Access"],
     datasets: [
       {
-        label: "No. Searches",
+        label: "Traffic Engineers",
         data: [0, 0, 0, 0, 0, 0],
-        backgroundColor: [
-          '#407fad'
-        ]
+        backgroundColor: '#40aaad'
+      }, {
+        label: "Consultants",
+        data: [0, 0, 0, 0, 0, 0],
+        backgroundColor: '#f5a732'
+      }, {
+        label: "General Public",
+        data: [0, 0, 0, 0, 0, 0],
+        backgroundColor: '#9fa4a7'
       }
     ]
   },
@@ -54,7 +60,8 @@ export const roadClassData = {
         }
       },
       legend: {
-        display: false
+        position: 'bottom',
+        align: 'start'
       }
     }
   }
