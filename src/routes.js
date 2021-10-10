@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from "./screens/Home.vue";
-import Login from "./screens/AdminLogin.vue"
 import Dashboard from "./screens/Dashboard.vue"
 import Search from "./screens/Search.vue"
 import Search2 from "./screens/Search2.vue"
@@ -9,7 +8,6 @@ import Search4 from "./screens/Search4.vue"
 import Search5 from "./screens/Search5.vue"
 import SearchSpecific from "./screens/SearchSpecific.vue"
 import SpecificResults from './screens/SpecificResults.vue'
-import { auth } from './firebase.js'
 import DynamicSigns from './screens/Dynamic-Signs.vue'
 import DynamicRoadCrossSectionElements from './screens/Dynamic-RoadCrossSectionElements.vue'
 import Results from './screens/Results.vue'
@@ -38,12 +36,7 @@ const router = createRouter({
       component: Home,
     },
     {
-      path: "/login",
-      component: Login,
-    },
-    {
       path: "/dashboard",
-      meta:{ authRequired: true },
       component: Dashboard,
     },
     {
@@ -110,22 +103,5 @@ const router = createRouter({
     }
     return { top: 0 }
   },
-});
-
-/* to disable viewing of dashboard if admin is not logged in*/
-router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.authRequired)) {
-    auth.onAuthStateChanged(function (user) {
-      if (!user) {
-        next({
-          path: '/login',
-        });
-      } else {
-        next();
-      }
-    })
-  } else {
-    next();
-  }
 });
 export default router;
