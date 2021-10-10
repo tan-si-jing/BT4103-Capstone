@@ -5,7 +5,12 @@
       <!-- header -->
       <div class="header">
         <h1 style="font-size: 2rem; color: #4f4f4f;"> Analytics Dashboard </h1>
-        <ExtractButton/>
+        <div style="display: flex;">
+          <ExtractButton/>
+          <button type="button" id ="homeBtn" class="btn" @click="goToHome()">
+            <font-awesome-icon icon="home" id="home" />
+          </button>
+        </div>
       </div>
 
       <div class="graphs">
@@ -87,6 +92,9 @@ export default {
     };
   },
   methods: {
+    goToHome() {
+      this.$router.push('/'); 
+    },
     getValues: function(donutChart, barChart, roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart) {
       database.collection('search_parameters')
               .doc(this.docID)
@@ -204,6 +212,21 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
+}
+#homeBtn {
+  font-size: 1.5rem;
+  color: #1d4354;
+  background-color: none;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: none;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+#homeBtn:active {
+  opacity: 0.6;
+  transform: translateY(3px);
 }
 .graphFirstRow > div, .graphSecondRow > div, .graphThirdRow > div, .graphFourthRow > div {
   display: flex;
