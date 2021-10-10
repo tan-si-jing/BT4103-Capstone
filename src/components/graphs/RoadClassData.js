@@ -61,7 +61,7 @@ export const roadClassData = {
       },
       legend: {
         position: 'bottom',
-        align: 'start'
+        align: 'center'
       }
     }
   }
