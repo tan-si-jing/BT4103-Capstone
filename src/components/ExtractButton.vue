@@ -174,17 +174,17 @@ export default {
   methods: {
     open() {
       this.isOpened = !this.isOpened;
+      this.password = null;
     },
     extract() {
       if (this.password == this.actualPassword) {
         this.getCSV();
-        this.password = null;
         this.wrongPassword = false;
-        this.isOpened = false;
+        this.isOpened = false; // close 
       } else {
-        this.password = null;
         this.wrongPassword = true;
       }
+      this.password = null;
     },
     getCSV() {
       // populate rows
