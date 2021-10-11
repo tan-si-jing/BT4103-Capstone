@@ -282,7 +282,7 @@ export default {
         ['Horizontal Alignment', this.engineersHAlignment, this.consultantsHAlignment, this.publicHAlignment, this.HAlignment],
         ['Lane Width', this.engineersLaneWidth, this.consultantsLaneWidth, this.publicLaneWidth, this.LaneWidth],
         ['Lateral Clearance', this.engineersLateralClearance, this.consultantsLateralClearance, this.publicLateralClearance, this.LateralClearance],
-        ['Logitudinal Friction Factor', this.engineersLFF, this.consultantsLFF, this.publicLFF, this.LFF],
+        ['Longitudinal Friction Factor', this.engineersLFF, this.consultantsLFF, this.publicLFF, this.LFF],
         ['Merging Angle', this.engineersMergingAngle, this.consultantsMergingAngle, this.publicMergingAngle, this.MergingAngle],
         ['Road Cross-Sections and Elements', this.engineersRCSE, this.consultantsRCSE, this.publicRCSE, this.RCSE],
         ['Side Friction Factor', this.engineersSFF, this.consultantsSFF, this.publicSFF, this.SFF],

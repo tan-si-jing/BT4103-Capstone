@@ -182,7 +182,7 @@ export default {
           value: this.LateralClearance
         },
         {
-          name: "Logitudinal Friction Factor", 
+          name: "Longitudinal Friction Factor", 
           engineers: this.engineersLFF, 
           consultants: this.consultantsLFF,
           public: this.publicLFF,
