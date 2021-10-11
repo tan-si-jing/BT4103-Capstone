@@ -1,5 +1,21 @@
 <template>
-  <button v-on:click.prevent="extract()">Extract</button>
+  <div>
+    <button class="exportBtn" v-on:click="open()">Extract</button>
+
+    <div class="passwordBox" v-show="isOpened">
+      <div class="content">
+        <!-- input password and extract button -->
+        <div class="inputExport">
+          <input type="password" placeholder="Enter Password" v-model="password" v-on:keyup.enter="extract()">
+          <p class="pwBtn" v-on:click="extract()">Extract</p>
+        </div>
+        <p v-show="wrongPassword" style="color: #4c5257;">Wrong Password. Please Try Again.</p>
+        <!-- close button -->
+        <p class="pwBtn" v-on:click="open()">Close</p>
+      </div>
+    </div>
+
+  </div>
 </template>
 
 <script>
@@ -10,6 +26,13 @@ export default {
   name: 'ExtractButton',
   data() {
     return {
+      // actual password will be retrieved from firebase
+      actualPassword: null,
+      // passwordBox
+      isOpened: false,
+      password: null,
+      wrongPassword: false,
+      // data gathering
       docID: 'H1uwnxYevFozEeNv7SiY',
       // datetime of extraction
       ExtractedDate: null,
@@ -135,12 +158,102 @@ export default {
       changeJunctionNo: null
     }
   },
+  watch: {
+    // to prevent scrolling when passwordBox is opened
+    isOpened: function() {
+      if (this.isOpened) {
+        var x = window.scrollX;
+        var y = window.scrollY;
+        window.onscroll = function(){window.scrollTo(x, y);};
+      } else {
+        window.onscroll = function(){};
+        this.wrongPassword = false;
+      }
+    }
+  },
   methods: {
+    open() {
+      this.isOpened = !this.isOpened;
+    },
+    extract() {
+      if (this.password == this.actualPassword) {
+        this.getCSV();
+        this.password = null;
+        this.wrongPassword = false;
+        this.isOpened = false;
+      } else {
+        this.password = null;
+        this.wrongPassword = true;
+      }
+    },
+    getCSV() {
+      // populate rows
+      const rows = [
+        ['DateTime Extracted', this.ExtractedDate],
+        ['Total Number of Visits', this.numVisits],
+        [],
+        ['Search Option','Traffic Engineers','Consultants','General Public'],
+        ['Specific', this.engineerSpecific, this.consultantSpecific, this.publicSpecific],
+        ['Guide', this.engineerGuide, this.consultantGuide, this.publicGuide],
+        [],
+        ['Section','Traffic Engineers','Consultants','General Public', 'Total'],
+        ['Combination of Horizontal & Vertical Alignment', this.engineersCombHVAlignment, this.consultantsCombHVAlignment, this.publicCombHVAlignment, this.CombHVAlignment],
+        ['Corner Radius', this.engineersCornerRad, this.consultantsCornerRad, this.publicCornerRad, this.CornerRad],
+        ['Crossfall', this.engineersCrossfall, this.consultantsCrossfall, this.publicCrossfall, this.Crossfall],
+        ['Curve Length', this.engineersCurveLength, this.consultantsCurveLength, this.publicCurveLength, this.CurveLength],
+        ['Grade', this.engineersGrade, this.consultantsGrade, this.publicGrade, this.Grade],
+        ['Horizontal Alignment', this.engineersHAlignment, this.consultantsHAlignment, this.publicHAlignment, this.HAlignment],
+        ['Lane Width', this.engineersLaneWidth, this.consultantsLaneWidth, this.publicLaneWidth, this.LaneWidth],
+        ['Lateral Clearance', this.engineersLateralClearance, this.consultantsLateralClearance, this.publicLateralClearance, this.LateralClearance],
+        ['Longitudinal Friction Factor', this.engineersLFF, this.consultantsLFF, this.publicLFF, this.LFF],
+        ['Merging Angle', this.engineersMergingAngle, this.consultantsMergingAngle, this.publicMergingAngle, this.MergingAngle],
+        ['Road Cross-Sections and Elements', this.engineersRCSE, this.consultantsRCSE, this.publicRCSE, this.RCSE],
+        ['Side Friction Factor', this.engineersSFF, this.consultantsSFF, this.publicSFF, this.SFF],
+        ['Sight Distance', this.engineersSightDistance, this.consultantsSightDistance, this.publicSightDistance, this.SightDistance],
+        ['Signs', this.engineersSigns, this.consultantsSigns, this.publicSigns, this.Signs],
+        ['Slip-road Traffic Island', this.engineersSRTI, this.consultantsSRTI, this.publicSRTI, this.SRTI],
+        ['Super-Elevation', this.engineersSuperElevation, this.consultantsSuperElevation, this.publicSuperElevation, this.SuperElevation],
+        ['Vertical Alignment', this.engineersVAlignment, this.consultantsVAlignment, this.publicVAlignment, this.VAlignment],
+        [],
+        ['Road Classification','Traffic Engineers','Consultants','General Public', 'Total'],
+        ['Expressway', this.engineerExpressway, this.consultantExpressway, this.publicExpressway, this.Expressway],
+        ['Semi Expressway', this.engineersemiExpressway, this.consultantsemiExpressway, this.publicsemiExpressway, this.semiExpressway],
+        ['Major Arterial', this.engineermajorArterial, this.consultantmajorArterial, this.publicmajorArterial, this.majorArterial],
+        ['Minor Arterial', this.engineerminorArterial, this.consultantminorArterial, this.publicminorArterial, this.minorArterial],
+        ['Primary Access', this.engineerprimaryAccess, this.consultantprimaryAccess, this.publicprimaryAccess, this.primaryAccess],
+        ['Local Access', this.engineerlocalAccess, this.consultantlocalAccess, this.publiclocalAccess, this.localAccess],
+        [],
+        ['Search Parameter', 'Total'],
+        ['Undivided Road', this.undividedRoad],
+        ['Slip Road', this.slipRoad],
+        ['Dual Road', this.dualRoad],
+        ['Speed 40', this.speed40],
+        ['Speed 50', this.speed50],
+        ['Speed 60', this.speed60],
+        ['Speed 70', this.speed70],
+        ['Speed 80', this.speed80],
+        ['Speed 90', this.speed90],
+        ['Change at Junction - Yes', this.changeJunctionYes],
+        ['Change at Junction - No', this.changeJunctionNo],
+      ];
+      // export to csv
+      let csvContent = "data:text/csv;charset=utf-8," 
+        + rows.map(e => e.join(",")).join("\n");
+      var encodedUri = encodeURI(csvContent);
+      var link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "search_data.csv");
+      document.body.appendChild(link);
+      link.click();
+    },
     getData() {
       database.collection('search_parameters')
               .doc(this.docID)
               .get()
               .then(querySnapShot => {
+                // password
+                this.actualPassword = querySnapShot.data().password
+                // overview
                 this.numVisits = querySnapShot.data().numVisits || 0
                 // num visits
                 this.engineerSpecific = querySnapShot.data().engineerSpecific || 0
@@ -263,66 +376,6 @@ export default {
                 this.changeJunctionNo = querySnapShot.data().changeJunctionNo || 0
               })
     },
-    extract() {
-      // populate rows
-      const rows = [
-        ['DateTime Extracted', this.ExtractedDate],
-        ['Total Number of Visits', this.numVisits],
-        [],
-        ['Search Option','Traffic Engineers','Consultants','General Public'],
-        ['Specific', this.engineerSpecific, this.consultantSpecific, this.publicSpecific],
-        ['Guide', this.engineerGuide, this.consultantGuide, this.publicGuide],
-        [],
-        ['Section','Traffic Engineers','Consultants','General Public', 'Total'],
-        ['Combination of Horizontal & Vertical Alignment', this.engineersCombHVAlignment, this.consultantsCombHVAlignment, this.publicCombHVAlignment, this.CombHVAlignment],
-        ['Corner Radius', this.engineersCornerRad, this.consultantsCornerRad, this.publicCornerRad, this.CornerRad],
-        ['Crossfall', this.engineersCrossfall, this.consultantsCrossfall, this.publicCrossfall, this.Crossfall],
-        ['Curve Length', this.engineersCurveLength, this.consultantsCurveLength, this.publicCurveLength, this.CurveLength],
-        ['Grade', this.engineersGrade, this.consultantsGrade, this.publicGrade, this.Grade],
-        ['Horizontal Alignment', this.engineersHAlignment, this.consultantsHAlignment, this.publicHAlignment, this.HAlignment],
-        ['Lane Width', this.engineersLaneWidth, this.consultantsLaneWidth, this.publicLaneWidth, this.LaneWidth],
-        ['Lateral Clearance', this.engineersLateralClearance, this.consultantsLateralClearance, this.publicLateralClearance, this.LateralClearance],
-        ['Longitudinal Friction Factor', this.engineersLFF, this.consultantsLFF, this.publicLFF, this.LFF],
-        ['Merging Angle', this.engineersMergingAngle, this.consultantsMergingAngle, this.publicMergingAngle, this.MergingAngle],
-        ['Road Cross-Sections and Elements', this.engineersRCSE, this.consultantsRCSE, this.publicRCSE, this.RCSE],
-        ['Side Friction Factor', this.engineersSFF, this.consultantsSFF, this.publicSFF, this.SFF],
-        ['Sight Distance', this.engineersSightDistance, this.consultantsSightDistance, this.publicSightDistance, this.SightDistance],
-        ['Signs', this.engineersSigns, this.consultantsSigns, this.publicSigns, this.Signs],
-        ['Slip-road Traffic Island', this.engineersSRTI, this.consultantsSRTI, this.publicSRTI, this.SRTI],
-        ['Super-Elevation', this.engineersSuperElevation, this.consultantsSuperElevation, this.publicSuperElevation, this.SuperElevation],
-        ['Vertical Alignment', this.engineersVAlignment, this.consultantsVAlignment, this.publicVAlignment, this.VAlignment],
-        [],
-        ['Road Classification','Traffic Engineers','Consultants','General Public', 'Total'],
-        ['Expressway', this.engineerExpressway, this.consultantExpressway, this.publicExpressway, this.Expressway],
-        ['Semi Expressway', this.engineersemiExpressway, this.consultantsemiExpressway, this.publicsemiExpressway, this.semiExpressway],
-        ['Major Arterial', this.engineermajorArterial, this.consultantmajorArterial, this.publicmajorArterial, this.majorArterial],
-        ['Minor Arterial', this.engineerminorArterial, this.consultantminorArterial, this.publicminorArterial, this.minorArterial],
-        ['Primary Access', this.engineerprimaryAccess, this.consultantprimaryAccess, this.publicprimaryAccess, this.primaryAccess],
-        ['Local Access', this.engineerlocalAccess, this.consultantlocalAccess, this.publiclocalAccess, this.localAccess],
-        [],
-        ['Search Parameter', 'Total'],
-        ['Undivided Road', this.undividedRoad],
-        ['Slip Road', this.slipRoad],
-        ['Dual Road', this.dualRoad],
-        ['Speed 40', this.speed40],
-        ['Speed 50', this.speed50],
-        ['Speed 60', this.speed60],
-        ['Speed 70', this.speed70],
-        ['Speed 80', this.speed80],
-        ['Speed 90', this.speed90],
-        ['Change at Junction - Yes', this.changeJunctionYes],
-        ['Change at Junction - No', this.changeJunctionNo],
-      ];
-      // export to csv
-      let csvContent = "data:text/csv;charset=utf-8," 
-        + rows.map(e => e.join(",")).join("\n");
-      var encodedUri = encodeURI(csvContent);
-      var link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
-      link.setAttribute("download", "search_data.csv");
-      document.body.appendChild(link);
-      link.click();
-    },
   },
   created() {
     var currentdate = new Date(); 
@@ -338,7 +391,12 @@ export default {
 </script>
 
 <style scoped>
-button {
+@import url(https://fonts.googleapis.com/css?family=IBM+Plex+Sans);
+* {
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+/** export btn on dashboard */
+.exportBtn {
   font-size: 1rem;
   color: #ffffff;
   background-color: #758f9a;
@@ -348,8 +406,52 @@ button {
   width: 7rem;
   height: 3rem;
 }
-button:active {
+.exportBtn:active, .pwBtn:active {
   opacity: 0.6;
   transform: translateY(3px);
+}
+/** password alert popup */
+.passwordBox {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 20%;
+  background: rgba(0,0,0,0.95);
+  overflow: hidden;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/** input box and buttons for password */
+.inputExport {
+  display: flex; 
+  height: 50px; 
+  line-height: 50px;
+  margin-bottom: 50px;
+}
+input {
+  width: 20vw;;
+  color: white;
+  border: none;
+  background-color: transparent;
+  margin-right: 20px;
+  border-bottom: 2px solid white;
+}
+input:focus {
+  outline: none;
+}
+::placeholder {
+  color: #4c5257;
+}
+.pwBtn {
+  color: white;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 </style>
