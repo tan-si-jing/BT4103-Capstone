@@ -327,7 +327,8 @@ img {
 
 button {
     width: 200px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top:5px;
     padding:5px;
     display: inline;
     height: 50px;
