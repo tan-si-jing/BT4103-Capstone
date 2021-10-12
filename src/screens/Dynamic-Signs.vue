@@ -757,8 +757,8 @@ table {
 #buttons {
   position:sticky;
   top: 30px;
-  height: 20vh;
-  width: 20%;
+    height: 20%;
+    width: 20vw;
 }
 
 #specific-results {
@@ -779,6 +779,8 @@ table {
   font-size: 1.5rem;
   box-shadow:none;
   border:none;
+  margin-bottom:30px;
+  padding:8px 12px;
 }
 
 ul {
@@ -803,7 +805,9 @@ img {
 #current_btn {
   pointer-events: none;
   cursor: not-allowed;
-  background: gold;    
+  background:#E7AC19;
+  padding:5px;
+  border:none;
 }
 
 .action_btn {

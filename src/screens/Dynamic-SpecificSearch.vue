@@ -256,8 +256,8 @@ export default {
 #buttons {
     position:sticky;
     top: 30px;
-    height: 20vh;
-    width: 20%;
+    height: 20%;
+    width: 20vw;
 }
 
 #specific-results {
@@ -278,6 +278,7 @@ export default {
     font-size: 1.5rem;
     box-shadow:none;
     border:none;
+    margin-bottom:30px;
 }
 
 .formula {
@@ -320,14 +321,15 @@ img {
 #current_btn {
   pointer-events: none;
   cursor: not-allowed;
-  background: gold;    
+  background:#E7AC19;
+  
 }
 
 button {
     width: 200px;
-    margin: 20 auto;
+    margin-bottom: 10px;
+    padding:5px;
     display: inline;
-    padding: 30;
     height: 50px;
     background: #273B8C;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -336,6 +338,7 @@ button {
     font-weight: normal;
     color: #FFFFFF;
     font-size:15px;
+    border:none;
 }
 
 .action_btn {
