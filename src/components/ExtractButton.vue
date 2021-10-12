@@ -7,11 +7,14 @@
         <!-- input password and extract button -->
         <div class="inputExport">
           <input type="password" placeholder="Enter Password" v-model="password" v-on:keyup.enter="extract()">
-          <p class="pwBtn" v-on:click="extract()">Extract</p>
+          <font-awesome-icon icon="download" class="downloadBtn" v-on:click="extract()" />
         </div>
         <p v-show="wrongPassword" style="color: #4c5257;">Wrong Password. Please Try Again.</p>
         <!-- close button -->
-        <p class="pwBtn" v-on:click="open()">Close</p>
+        <p class="pwBtn" v-on:click="open()">
+          <font-awesome-icon icon="arrow-left" style="margin-right: 10px;"/> 
+          Go Back
+        </p>
       </div>
     </div>
 
@@ -406,7 +409,7 @@ export default {
   width: 7rem;
   height: 3rem;
 }
-.exportBtn:active, .pwBtn:active {
+.exportBtn:active, .downloadBtn:active, .pwBtn:active {
   opacity: 0.6;
   transform: translateY(3px);
 }
@@ -430,6 +433,7 @@ export default {
 /** input box and buttons for password */
 .inputExport {
   display: flex; 
+  align-items: flex-end;
   height: 50px; 
   line-height: 50px;
   margin-bottom: 50px;
@@ -439,17 +443,31 @@ input {
   color: white;
   border: none;
   background-color: transparent;
-  margin-right: 20px;
-  border-bottom: 2px solid white;
-}
-input:focus {
-  outline: none;
+  margin-right: 40px;
+  border-bottom: 2px solid #b8b8b8;
 }
 ::placeholder {
   color: #4c5257;
 }
+input:focus {
+  outline: none;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+.downloadBtn {
+  height: 90%;
+  width: auto;
+  padding: 12px;
+  border-radius: 50px;
+  background-color: #dbdbdb;
+  color: #5e5e5e;
+  cursor: pointer;
+}
 .pwBtn {
-  color: white;
+  display: flex;
+  align-items: center;
+  color: #b8b8b8;
   border: none;
   background-color: transparent;
   cursor: pointer;
