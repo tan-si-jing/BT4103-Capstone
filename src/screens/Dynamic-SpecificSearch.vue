@@ -95,7 +95,7 @@
     </div>
     
     <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
-      <i class="bi bi-arrow-left"></i>
+      <i class="bi bi-arrow-left" style="font-size: 15px;"> Go Back</i>
     </button>
 </template>
 
@@ -340,6 +340,10 @@ button {
     color: #FFFFFF;
     font-size:15px;
     border:none;
+}
+
+.btn-outline-secondary {
+    color: black;
 }
 
 .action_btn {
