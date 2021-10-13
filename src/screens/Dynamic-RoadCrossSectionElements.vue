@@ -687,7 +687,7 @@ img {
 #current_btn {
   pointer-events: none;
   cursor: not-allowed;
-  background:#E7AC19;
+  background:#8F3035;
   padding:5px;
   border:none;
 }
