@@ -18,6 +18,9 @@
         <input list="specificFields" class="form-select" @change="changeValue($event)" @input="showList()">
         <datalist id="">
           <option disabled selected value>-- Choose your section from the drop down list --</option>
+          <option value="Design Speed">Design Speed</option>
+          <option value="Classification of Road">Classification of Road</option>
+          <option value="Types of Road">Types of Road</option>
           <option value="Road Cross-Sections and Elements">Road Cross-Sections and Elements</option>
           <option value="Grade">Grade</option>
           <option value="Longitudinal Friction Factor">Longitudinal Friction Factor</option>
