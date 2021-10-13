@@ -80,22 +80,31 @@
                         </div>
 
                         <p style="font-size: 16px;"> Referenced from:
-                            <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}},</a>
-                            <a v-bind:href="cdc.Figure1Link" target="_blank" v-show="cdc.Figure1">CDC {{cdc.Figure1Chapter}}, </a>
-                            <a v-bind:href="cdc.Figure2Link" target="_blank" v-show="cdc.Figure2">CDC {{cdc.Figure2Chapter}}, </a>
-                            <a v-bind:href="cdc.Figure3Link" target="_blank" v-show="cdc.Figure3">CDC {{cdc.Figure3Chapter}}, </a>
-                            <a v-bind:href="cdc.Figure4Link" target="_blank" v-show="cdc.Figure4">SDRE {{cdc.Figure4Chapter}}, </a>
-                            <a v-bind:href="cdc.Figure5Link" target="_blank" v-show="cdc.Figure5">SDRE {{cdc.Figure5Chapter}}, </a>
-                            <a v-bind:href="cdc.Figure6Link" target="_blank" v-show="cdc.Figure6">SDRE {{cdc.Figure6Chapter}}, </a>
+                            <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
+                            <span v-show="cdc.Link && cdc.Figure1">, </span>
+                            <a v-bind:href="cdc.Figure1Link" target="_blank" v-show="cdc.Figure1">CDC {{cdc.Figure1Chapter}}</a>
+                            <span v-show="(cdc.Link || cdc.Figure1) && cdc.Figure2">, </span>
+                            <a v-bind:href="cdc.Figure2Link" target="_blank" v-show="cdc.Figure2">CDC {{cdc.Figure2Chapter}}</a>
+                            <span v-show="(cdc.Link || cdc.Figure1 || cdc.Figure2) && cdc.Figure3">, </span>
+                            <a v-bind:href="cdc.Figure3Link" target="_blank" v-show="cdc.Figure3">CDC {{cdc.Figure3Chapter}}</a>
+                            <span v-show="(cdc.Link || cdc.Figure1 || cdc.Figure2 || cdc.Figure3) && cdc.Figure4">, </span>
+                            <a v-bind:href="cdc.Figure4Link" target="_blank" v-show="cdc.Figure4">SDRE {{cdc.Figure4Chapter}}</a>
+                            <span v-show="(cdc.Link || cdc.Figure1 || cdc.Figure2 || cdc.Figure3 || cdc.Figure4) && cdc.Figure5">, </span>
+                            <a v-bind:href="cdc.Figure5Link" target="_blank" v-show="cdc.Figure5">SDRE {{cdc.Figure5Chapter}}</a>
+                            <span v-show="(cdc.Link || cdc.Figure1 || cdc.Figure2 || cdc.Figure3 || cdc.Figure4 || cdc.Figure5) && cdc.Figure6">, </span>
+                            <a v-bind:href="cdc.Figure6Link" target="_blank" v-show="cdc.Figure6">SDRE {{cdc.Figure6Chapter}}</a>
                         </p>
                     </Collapsible>
                 </li>                        
             </ul>
         </div>
     </div>
-    
+    <HomeButton id="mybut"/>
+    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
+    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
+    <br>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
-      <i class="bi bi-arrow-left"></i>
+      <i class="bi bi-arrow-left" style="font-size: 15px;"> Go Back</i>
     </button>
 </template>
 
@@ -104,10 +113,14 @@ import database from '../firebase.js'
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import Collapsible from '../components/Collapsible.vue';
+import HomeButton from '../components/HomeButton.vue'
+import ManualButton from '../components/ManualButton.vue'
 
 export default {
     components: {
-        Collapsible
+        Collapsible,
+        HomeButton,
+        ManualButton
     },
     data() {
         return {
@@ -281,6 +294,16 @@ export default {
     margin-bottom:30px;
 }
 
+#mybut {
+    width:120px;
+    height:30px;
+    display: inline;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1.2%;
+    padding-bottom: 30px;
+}
+
 .formula {
     width: 50%;
     height: auto;
@@ -340,6 +363,10 @@ button {
     color: #FFFFFF;
     font-size:15px;
     border:none;
+}
+
+.btn-outline-secondary {
+    color: black;
 }
 
 .action_btn {

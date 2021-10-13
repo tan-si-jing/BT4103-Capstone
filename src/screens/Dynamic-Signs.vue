@@ -631,9 +631,12 @@
           </table>
         </div>
       </div>
-    
+    <HomeButton id="mybut"/>
+    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
+    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
+    <br>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
-      <i class="bi bi-arrow-left"></i>
+      <i class="bi bi-arrow-left" style="font-size: 15px;"> Go Back</i>
     </button>
 
     </div>
@@ -651,10 +654,14 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import HomeButton from '../components/HomeButton.vue'
+import ManualButton from '../components/ManualButton.vue'
 
 export default {
-  components: {
-    Collapsible
+    components: {
+        Collapsible,
+        HomeButton,
+        ManualButton
   },
   data() {
     return {
@@ -781,6 +788,16 @@ table {
   border:none;
   margin-bottom:30px;
   padding:8px 12px;
+}
+
+#mybut {
+    width:120px;
+    height:30px;
+    display: inline;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1.2%;
+    padding-bottom: 30px;
 }
 
 ul {
