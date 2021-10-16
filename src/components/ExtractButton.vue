@@ -439,7 +439,7 @@ export default {
   margin-bottom: 50px;
 }
 input {
-  width: 20vw;;
+  width: 20vw;
   color: white;
   border: none;
   background-color: transparent;

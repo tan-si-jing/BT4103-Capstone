@@ -7,10 +7,10 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import router from "./routes";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faAngleDown, faAngleUp, faHome, faExternalLinkAlt, faDownload, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleUp, faHome, faExternalLinkAlt, faDownload, faArrowLeft, faUndo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faAngleDown, faAngleUp, faHome, faExternalLinkAlt, faDownload, faArrowLeft)
+library.add(faAngleDown, faAngleUp, faHome, faExternalLinkAlt, faDownload, faArrowLeft, faUndo)
 
 const app = createApp({
         render: () =>h(App)

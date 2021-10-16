@@ -53,6 +53,9 @@
       </div>
       
     </div>
+    <div class="resetBox">
+      <ResetButton/>
+    </div>
   </div>
   
 </template>
@@ -63,6 +66,7 @@ import 'firebase/firestore';
 
 import { Chart, registerables } from 'chart.js';
 import ExtractButton from '../components/ExtractButton.vue';
+import ResetButton from '../components/ResetButton.vue';
 import SummaryData from '../components/graphs/SummaryData.vue';
 import donutChartData from '../components/graphs/DonutChartData.js';
 import barChartData from '../components/graphs/BarChartData.js';
@@ -77,6 +81,7 @@ export default {
   name: "Dashboard",
   components: {
     ExtractButton,
+    ResetButton,
     SummaryData,
     SpecificTable
   },
@@ -268,5 +273,11 @@ export default {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+}
+/** reset button */
+.resetBox {
+  display: flex; 
+  justify-content: center; 
+  margin-bottom: 20px;
 }
 </style>
