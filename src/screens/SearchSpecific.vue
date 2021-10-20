@@ -15,8 +15,8 @@
     </div>
     <div class="options">
       <div class="input-group mx-auto" style="width: 55%;">
-        <input list="specificFields" class="form-select" @change="changeValue($event)" @input="showList()">
-        <datalist id="">
+        <input list="specificFields" class="form-select" @change="changeValue($event)">
+        <datalist id="specificFields">
           <option disabled selected value>-- Choose your section from the drop down list --</option>
           <option value="Design Speed">Design Speed</option>
           <option value="Classification of Road">Classification of Road</option>
@@ -69,14 +69,6 @@ export default {
     changeValue(event){
       this.specific_param = event.target.value;
       console.log(event.target.value);
-    },
-    hideList(){
-      var datalist = document.querySelector("datalist");
-      datalist.id = ""; 
-    },
-    showList(){
-      var datalist = document.querySelector("datalist");
-      datalist.id = "specificFields"
     },
     openStorage(){
       return JSON.parse(localStorage.getItem('choice'))
