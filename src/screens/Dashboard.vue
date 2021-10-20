@@ -162,12 +162,12 @@ export default {
   },
   mounted() {
     // render charts
-    const chart1 = document.getElementById('donut-chart').getContext("2d", {alpha: false});
-    const chart2 = document.getElementById('bar-chart').getContext("2d", {alpha: false});
-    const chart3 = document.getElementById('roadclass-chart').getContext("2d", {alpha: false});
-    const chart4 = document.getElementById('roadtype-chart').getContext("2d", {alpha: false});
-    const chart5 = document.getElementById('designspeed-chart').getContext("2d", {alpha: false});
-    const chart6 = document.getElementById('changejunction-chart').getContext("2d", {alpha: false});
+    const chart1 = document.getElementById('donut-chart').getContext("2d", {alpha: true});
+    const chart2 = document.getElementById('bar-chart').getContext("2d", {alpha: true});
+    const chart3 = document.getElementById('roadclass-chart').getContext("2d", {alpha: true});
+    const chart4 = document.getElementById('roadtype-chart').getContext("2d", {alpha: true});
+    const chart5 = document.getElementById('designspeed-chart').getContext("2d", {alpha: true});
+    const chart6 = document.getElementById('changejunction-chart').getContext("2d", {alpha: true});
     var donutChart = new Chart(chart1, this.donutChartData);
     var barChart = new Chart(chart2, this.barChartData);
     var roadClassChart = new Chart(chart3, this.roadClassData);
@@ -244,7 +244,7 @@ export default {
 }
 .graphFirstRow {
   display: grid;
-  grid-template-columns: 20% 20% 56%;
+  grid-template-columns: 20% 25% 51%;
   grid-gap: 2%;
   margin-bottom: 2rem;
   height: 400px;
@@ -253,13 +253,13 @@ export default {
   display: grid;
   grid-template-columns: 100%;
   margin-bottom: 2rem;
-  height: 350px;
+  height: 400px;
 }
 .graphThirdRow {
   display: grid;
   grid-template-columns: 100%;
   margin-bottom: 2rem;
-  height: 350px;
+  height: 400px;
 }
 .graphFourthRow {
   display: grid;
