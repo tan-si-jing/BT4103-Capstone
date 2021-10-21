@@ -30,14 +30,14 @@
       <td>7.0</td>
       <td>8.6</td>
     </tr>
-    <tr class="text-center">
+    <tr>
       <th scope="row">30</th>
       <td>5.5</td>
       <td>6.7</td>
       <td>7.0</td>
       <td>8.4</td>
     </tr>
-    <tr class="text-center">
+    <tr>
       <th scope="row">50</th>
       <td>5.5</td>
       <td>6.3</td>

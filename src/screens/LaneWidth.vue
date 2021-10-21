@@ -109,9 +109,7 @@
         </Collapsible>
         <Collapsible chapt="8.8" title="Width" :levelDisplay="levelDisplay">
           <p>The width of the paved shoulder shall be as shown in Table 10.14. </p>
-          <div class="img-container4">
-            <img src="../assets/Table10-14.png">
-          </div>
+          <Table1014 class="tableImg"></Table1014><br>
           <p>Notes:</p>
           <p>1 1.0m in tunnel</p>
           <p>2 Only applicable to viaduct, tunnel and associated depressed road. Paved shoulder is not required on flyover, underpass 
@@ -130,12 +128,14 @@
 <script>
 import Collapsible from '../components/Collapsible.vue';
 import Table1013 from '../components/table10.13.vue';
+import Table1014 from '../components/table10.14.vue';
 
 export default {
   name:'LaneWidth',
   components: {
     Collapsible,
-    Table1013
+    Table1013,
+    Table1014
   },
   data(){
     return{
