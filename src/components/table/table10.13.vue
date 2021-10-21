@@ -58,4 +58,9 @@ table, th, td {
     text-align: center;
     vertical-align: middle;
 }
+
+.side{
+  font-size: 14px;
+}
+
 </style>

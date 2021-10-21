@@ -24,9 +24,12 @@
         <p>Notes:</p>
         <p>1 Typical lane width for an expressway is 3.5m.</p>
         <p>2 Actual lane width to be determined in consultation with Land Transport Authority</p>
-        <div class="img-container4">
+        <!--div class="img-container4">
           <img src="../assets/Table10-12.png">
-        </div>
+        </div-->
+        
+        <Table1012 class="tableImg"></Table1012><br>
+
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
             CDC 10.5.2.1 - Main Carriageway (page 212)</a>
@@ -129,13 +132,15 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
-import Table1013 from '../components/table10.13.vue';
+import Table1013 from '../components/table/table10.13.vue';
+import Table1012 from '../components/table/table10.12.vue';
 
 export default {
   name:'LaneWidth',
   components: {
     Collapsible,
-    Table1013
+    Table1013,
+    Table1012,
   },
   data(){
     return{
