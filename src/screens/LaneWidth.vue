@@ -78,10 +78,11 @@
             (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
             the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
             roads are shown in Table 10.13:</p>
-          <div v-show="isSlip" class="img-container4">
-            <img src="../assets/Table10-13.png">
+            
+          <div v-show="isSlip">
+            <Table1013 class="tableImg"></Table1013><br>
           </div>
-          <a v-show="isSlip" ><p>Notes:</p></a>
+          <a v-show="isSlip"><p>Notes:</p></a>
           <p v-show="isSlip">Additional 0.3m lane width shall be added next to parapet/ barrier</p>
           <p v-show="isSlip" style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
@@ -106,7 +107,7 @@
               CDC Figure 10.11 (page 235)</a>
           </p>
         </Collapsible>
-        <Collapsible chapt="8.8" title="Paved Shoulder" :levelDisplay="levelDisplay">
+        <Collapsible chapt="8.8" title="Width" :levelDisplay="levelDisplay">
           <p>The width of the paved shoulder shall be as shown in Table 10.14. </p>
           <div class="img-container4">
             <img src="../assets/Table10-14.png">
@@ -128,11 +129,13 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import Table1013 from '../components/table10.13.vue';
 
 export default {
   name:'LaneWidth',
   components: {
-    Collapsible
+    Collapsible,
+    Table1013
   },
   data(){
     return{
@@ -210,6 +213,14 @@ tbody tr:last-child td{
   padding: 0 1rem 0 1.5rem;
   border-left: inset;
   border-color: lightblue
+}
+
+.tableImg {
+  width:80%;
+  box-shadow: none;
+  margin-left:auto;
+  margin-right:auto;
+
 }
 </style>
 
