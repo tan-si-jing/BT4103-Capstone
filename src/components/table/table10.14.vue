@@ -2,13 +2,14 @@
 <table class="table table-bordered">
   <thead>
       <p style="text-align:left; font-size:18px;"><b>Table 10.14</b></p>
+  </thead>
+  <tbody>
     <tr>
       <th scope="col" colspan=2 style="width: 15%">Road Type</th>
       <th scope="col">Next to slow lane/Left-hand side of carriageway</th>
       <th scope="col">Next to fast lane/Right-hand side of carriageway</th>
     </tr>
-  </thead>
-  <tbody>
+
     <tr>
       <th scope="rowgroup" rowspan=2 style="text-align:left;">Main carriageway</th>
       <th scope="row" style="text-align:left;">Expressway</th>
@@ -32,7 +33,7 @@
 
 <style scoped>
 table {
-    font-size:16px;
+    font-size:18px;
     border-color:black;
 }
 

@@ -2,11 +2,14 @@
 <table class="table table-bordered">
   <thead>
       <p style="text-align:left; font-size:18px;"><b>Table 10.13</b></p>
+  </thead>
+  <tbody>
     <tr>
       <th scope="col" rowspan="2" style="width: 25%">Radius on Inner Edge of slip road (m)</th>
       <th scope="col" colspan="2">Width of one-lane slip road next to kerb (m)</th>
       <th scope="col" colspan="2">Width of two-lane slip road next to kerb (m)</th>
     </tr>
+
     <tr>
         <td><b>Other<br> areas</b></td>
         <td><b>Industrial<br> area</b></td>
@@ -14,8 +17,7 @@
         <td><b>Industrial<br> area</b></td>       
     </tr>
 
-  </thead>
-  <tbody>
+
     <tr>
       <th scope="row">15</th>
       <td>6.0</td>
@@ -50,17 +52,13 @@
 
 <style scoped>
 table {
-    font-size:16px;
+    font-size:18px;
     border-color:black;
 }
 
 table, th, td {
     text-align: center;
     vertical-align: middle;
-}
-
-.side{
-  font-size: 14px;
 }
 
 </style>

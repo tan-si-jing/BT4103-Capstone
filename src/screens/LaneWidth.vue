@@ -28,8 +28,7 @@
           <img src="../assets/Table10-12.png">
         </div-->
         
-        <Table1012 class="tableImg"></Table1012><br>
-
+        <Table1012 class="tableImg"></Table1012>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
             CDC 10.5.2.1 - Main Carriageway (page 212)</a>
@@ -130,6 +129,7 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import Table1014 from '../components/table/table10.14.vue';
 import Table1013 from '../components/table/table10.13.vue';
 import Table1012 from '../components/table/table10.12.vue';
 
@@ -137,6 +137,7 @@ export default {
   name:'LaneWidth',
   components: {
     Collapsible,
+    Table1014,
     Table1013,
     Table1012,
   },

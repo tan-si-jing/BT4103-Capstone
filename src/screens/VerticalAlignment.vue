@@ -67,9 +67,7 @@
       <Collapsible chapt="15.4" title="Critical Length of Grade" :levelDisplay="levelDisplay">
         <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
           Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
-        <div class="img-container4">
-          <img src="../assets/Table10.11.png">
-        </div>
+        <Table1011 class="tableImg"></Table1011>
         <div class="img-container">
           <img src="../assets/Figure10.7.png">
         </div>
@@ -100,10 +98,12 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import Table1011 from '../components/table/table10.11.vue';
 
 export default {
   components: {
-    Collapsible
+    Collapsible,
+    Table1011
   },
   data() {
     return {
@@ -157,5 +157,12 @@ tbody tr:last-child td{
   padding: 0 1rem 0 1.5rem;
   border-left: inset;
   border-color: lightblue
+}
+
+.tableImg {
+  width:80%;
+  box-shadow: none;
+  margin-left:auto;
+  margin-right:auto;
 }
 </style>

@@ -16,12 +16,10 @@
       <Collapsible chapt="10.1" title="Clear Lateral" :levelDisplay="levelDisplay">
         <p>Minimum lateral clearance from the edge of road pavement (both at centre median and side table) to any adjacent 
           structure is shown in Table 10.17 unless otherwise specified in the Standard Details of Road Elements.</p>
+       <Table1017 class="tableImg"></Table1017><br>
         <p>Notes:</p>
           <p>1 If no Vehicular Impact Guardrail is installed. Applicable to both centre median and sidetable.</p>
           <p>2 Where Vehicular Impact Guardrail is installed.</p>
-        <div class="img-container4">
-          <img src="../assets/Table10-17.png">
-        </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=222" target='_blank'>
             CDC 10.7.1.1 - Lateral Clearance (page 222)</a>
@@ -54,10 +52,12 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import Table1017 from '../components/table/table10.17.vue';
 
 export default {
   components: {
-    Collapsible
+    Collapsible,
+    Table1017
   },
   data() {
     return {
@@ -112,5 +112,13 @@ tbody tr:last-child td{
   border-left: inset;
   border-color: lightblue
 }
+
+.tableImg {
+  width:80%;
+  box-shadow: none;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 </style>
 

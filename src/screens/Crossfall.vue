@@ -23,9 +23,7 @@
       <Collapsible title="Crossfall of Carriageway" chapt="5.2" :levelDisplay="levelDisplay">
         <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
             to the side drain and the design requirements shall be as shown in Table 10.6.</p>
-        <div class="img-container4">
-            <img src="../assets/Table10-6.png">
-        </div>
+        <Table1006 class="tableImg"></Table1006>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target="_blank"> 
           CDC 10.4.2.4 - Crossfall of Carriageway (page 207)</a>
@@ -39,10 +37,12 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import Table1006 from '../components/table/table10.6.vue';
 
 export default {
   components: {
-    Collapsible
+    Collapsible,
+    Table1006
   },
   data() {
     return {
@@ -97,5 +97,12 @@ tbody tr:last-child td{
   padding: 0 1rem 0 1.5rem;
   border-left: inset;
   border-color: lightblue
+}
+
+.tableImg {
+  width:80%;
+  box-shadow: none;
+  margin-left:auto;
+  margin-right:auto;
 }
 </style>

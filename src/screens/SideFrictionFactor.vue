@@ -15,11 +15,13 @@
       <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
       <Collapsible chapt="4.1" title="Side Friction Factor given Design Speed" :levelDisplay="levelDisplay">
         <table id="speedTable">
-          <thead class="table">
+          <!--thead class="table">
             <th style="text-align:center">Design Speed, V(km/h) </th>
             <th style="text-align:center">Side Friction Factor, F </th>
-          </thead>
+          </thead-->
           <tbody>
+            <th style="text-align:center">Design Speed, V(km/h) </th>
+            <th style="text-align:center">Side Friction Factor, F </th>
             <tr v-for="row in table" :key="row.id">
               <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.des_speed }} </td>
               <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.SFF }} </td>

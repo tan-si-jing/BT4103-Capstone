@@ -15,11 +15,13 @@
       <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
       <Collapsible chapt="3.1" title="Longitudinal Friction Factor given Design Speed" :levelDisplay="levelDisplay">
         <table id="speedTable">
-          <thead class="table">
+          <!--thead class="table">
             <th style="text-align:center">Design Speed, V(km/h) </th>
             <th style="text-align:center">Longitudinal Friction Factor, F </th>
-          </thead>
+          </thead-->
           <tbody>
+            <th style="text-align:center">Design Speed, V(km/h) </th>
+            <th style="text-align:center">Longitudinal Friction Factor, F </th>
             <tr v-for="row in table" :key="row.id">
               <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.des_speed }} </td>
               <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.LFF}} </td>
@@ -114,6 +116,7 @@ table {
   border-radius: 15px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  
 }
 .table thead td {
   background-color: #273B8C;
@@ -123,9 +126,11 @@ table {
   border-top-right-radius: 15px;
   font-size:22px;
   vertical-align: middle;
+  
 }
 tbody tr td{
   background-color: #ffffff;
+  
 }
 #speedTable {
   width: fit-content;
