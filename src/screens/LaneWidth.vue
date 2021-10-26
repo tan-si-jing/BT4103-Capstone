@@ -112,9 +112,7 @@
         </Collapsible>
         <Collapsible chapt="8.8" title="Width" :levelDisplay="levelDisplay">
           <p>The width of the paved shoulder shall be as shown in Table 10.14. </p>
-          <div class="img-container4">
-            <img src="../assets/Table10-14.png">
-          </div>
+          <Table1014 class="tableImg"></Table1014><br>
           <p>Notes:</p>
           <p>1 1.0m in tunnel</p>
           <p>2 Only applicable to viaduct, tunnel and associated depressed road. Paved shoulder is not required on flyover, underpass 
