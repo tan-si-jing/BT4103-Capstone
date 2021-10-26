@@ -16,9 +16,7 @@
       <Collapsible title="Corner Radius" chapt="6.1" :levelDisplay="levelDisplay">
         <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
             shall not be less than the values as shown in Table 10.8.</p>
-        <div class="img-container4">
-          <img src="../assets/Table10-8.png">
-        </div>
+      <Table1008 class="tableImg"></Table1008>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
             CDC 10.4.2.6 - Corner Radius (page 209)</a>
@@ -32,10 +30,13 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import Table1008 from '../components/table/table10.8.vue';
+
 
 export default {
   components: {
-    Collapsible
+    Collapsible, 
+    Table1008
   },
   data() {
     return {
@@ -89,5 +90,11 @@ tbody tr:last-child td{
   padding: 0 1rem 0 1.5rem;
   border-left: inset;
   border-color: lightblue
+}
+.tableImg {
+  width:80%;
+  box-shadow: none;
+  margin-left:auto;
+  margin-right:auto;
 }
 </style>

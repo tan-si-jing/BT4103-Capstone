@@ -15,23 +15,19 @@
       <td scope="row">
       <Collapsible chapt="2.1" title="Main Carriageway" :levelDisplay="levelDisplay">
         <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
+        <Table1009 class="tableImg"></Table1009><br>
         <p>Notes:</p>
         <p>1) Minimum gradient for all roads is 0.4%.</p>
         <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
         <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
         <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
-        <div class="img-container4">
-          <img src="../assets/Table10-9.png">
-        </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
           CDC 10.4.3.1.1 - Main Carriageway (page 209)</a>
         </p>
       </Collapsible>
       <Collapsible chapt="2.2" title="Interchange Ramp/Loop and Slip Road" :levelDisplay="levelDisplay">
-        <div class="img-container4">
-          <img src="../assets/Table10-10.png">
-        </div>                
+        <Table1010 class="tableImg"></Table1010><br>        
         <p style="font-size: 16px;"> Referenced from:
         <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
           CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a>
@@ -45,10 +41,14 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import Table1009 from '../components/table/table10.9.vue';
+import Table1010 from '../components/table/table1010.vue';
 
 export default {
   components: {
-    Collapsible
+    Collapsible,
+    Table1009,
+    Table1010,
   },
   data() {
     return {
@@ -102,5 +102,12 @@ tbody tr:last-child td{
   padding: 0 1rem 0 1.5rem;
   border-left: inset;
   border-color: lightblue
+}
+
+.tableImg {
+  width:80%;
+  box-shadow: none;
+  margin-left:auto;
+  margin-right:auto;
 }
 </style>
