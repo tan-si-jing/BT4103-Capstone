@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button type="button" class="btn btn-outline-dark" style="button">
+    <button type="button" class="btn btn-outline-dark" :disabled=!isActive v-bind:style="[isActive ? active : inactive]">
       {{text}}
     </button>
   </div>
@@ -10,7 +10,17 @@
 export default {
   name: 'SearchParamButton',
   props: {
-    text: String
+    text: String,
+    isActive: Boolean
+  },
+  data() {
+    return {
+      active: {},
+      inactive: {
+        backgroundColor: 'grey',
+        color:'white'
+      }
+    };
   }
 }
 </script>
@@ -35,4 +45,3 @@ h6 {
   text-align:center
 }
 </style>
-//router-link to="/search"/router-link

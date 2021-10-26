@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Specific Section" @click="this.updateChoice('roadDesign','Specific');this.displayRoad(); this.$router.push({name:'searchspecific'})"/>
-      <SearchParamButton text="Step-by-step Guide" @click="storeRoadDesign('Guide');"/>
+      <SearchParamButton text="Specific Section" v-bind:isActive="true" @click="this.updateChoice('roadDesign','Specific');this.displayRoad(); this.$router.push({name:'searchspecific'})"/>
+      <SearchParamButton text="Step-by-step Guide" v-bind:isActive="true" @click="storeRoadDesign('Guide');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('/')"><i class="bi bi-arrow-left"></i></button>
   </div>

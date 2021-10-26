@@ -18,8 +18,8 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Yes" @click="storeChange('changeJunctionYes')"/>
-      <SearchParamButton text="No" @click="storeChange('changeJunctionNo')"/>
+      <SearchParamButton text="Yes" v-bind:isActive="true" @click="storeChange('changeJunctionYes')"/>
+      <SearchParamButton text="No" v-bind:isActive="true" @click="storeChange('changeJunctionNo')"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search4')">
       <i class="bi bi-arrow-left"></i>

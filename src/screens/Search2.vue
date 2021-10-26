@@ -18,12 +18,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="1 - Expressways"  @click="storeRoadClass('expressway');"/>
-      <SearchParamButton text="1A - Semi Expressway"  @click="storeRoadClass('semiExpressway');"/>
-      <SearchParamButton text="2 - Major Arterial"  @click="storeRoadClass('majorArterial');"/>
-      <SearchParamButton text="3 - Minor Arterial"  @click="storeRoadClass('minorArterial');"/>
-      <SearchParamButton text="4 - Primary Access"  @click="storeRoadClass('primaryAccess');"/>
-      <SearchParamButton text="5 - Local Access"  @click="storeRoadClass('localAccess');"/>
+      <SearchParamButton text="1 - Expressways" v-bind:isActive="false"/>
+      <SearchParamButton text="1A - Semi Expressway" v-bind:isActive="false"/>
+      <SearchParamButton text="2 - Major Arterial" v-bind:isActive="true" @click="storeRoadClass('majorArterial');"/>
+      <SearchParamButton text="3 - Minor Arterial" v-bind:isActive="true" @click="storeRoadClass('minorArterial');"/>
+      <SearchParamButton text="4 - Primary Access" v-bind:isActive="true" @click="storeRoadClass('primaryAccess');"/>
+      <SearchParamButton text="5 - Local Access" v-bind:isActive="true" @click="storeRoadClass('localAccess');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search')">
       <i class="bi bi-arrow-left"></i>

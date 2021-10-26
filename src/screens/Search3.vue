@@ -29,9 +29,9 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="Undivided (x-lane) Road" @click="storeRoadType('undividedRoad');"/>
-      <SearchParamButton text="Slip Road" @click="storeRoadType('slipRoad');"/>
-      <SearchParamButton text="Dual (x-lane) Road" @click="storeRoadType('dualRoad');"/>
+      <SearchParamButton text="Undivided (x-lane) Road" v-bind:isActive="true" @click="storeRoadType('undividedRoad');"/>
+      <SearchParamButton text="Slip Road" v-bind:isActive="true" @click="storeRoadType('slipRoad');"/>
+      <SearchParamButton text="Dual (x-lane) Road" v-bind:isActive="true" @click="storeRoadType('dualRoad');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search2')">
       <i class="bi bi-arrow-left"></i>

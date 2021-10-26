@@ -23,12 +23,12 @@
   </div>
   <div class="options">
     <div class="button-group">
-      <SearchParamButton text="40" @click="storeDesignSpeed('speed40');"/>
-      <SearchParamButton text="50" @click="storeDesignSpeed('speed50');"/>
-      <SearchParamButton text="60" @click="storeDesignSpeed('speed60');"/>
-      <SearchParamButton text="70" @click="storeDesignSpeed('speed70');"/>
-      <SearchParamButton text="80" @click="storeDesignSpeed('speed80');"/>
-      <SearchParamButton text="90" @click="storeDesignSpeed('speed90');"/>
+      <SearchParamButton text="40" v-bind:isActive="true" @click="storeDesignSpeed('speed40');"/>
+      <SearchParamButton text="50" v-bind:isActive="true" @click="storeDesignSpeed('speed50');"/>
+      <SearchParamButton text="60" v-bind:isActive="true" @click="storeDesignSpeed('speed60');"/>
+      <SearchParamButton text="70" v-bind:isActive="true" @click="storeDesignSpeed('speed70');"/>
+      <SearchParamButton text="80" v-bind:isActive="true" @click="storeDesignSpeed('speed80');"/>
+      <SearchParamButton text="90" v-bind:isActive="true" @click="storeDesignSpeed('speed90');"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search3')">
       <i class="bi bi-arrow-left"></i>
