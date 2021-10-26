@@ -15,9 +15,11 @@
       <td scope="row">
       <Collapsible chapt="13.1" title="Crest Curve" :levelDisplay="levelDisplay">
         <p> The minimum length of a crest curve in metre shall be the greater of:</p>
-        <p>a) 0.6 times of the design speed (in km/h); or </p>
-        <p>b) curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </p>
-        <p>c) the desirable curve length can be derived from the following formulae: -</p>
+        <ol type="a">
+        <li> 0.6 times of the design speed (in km/h); or </li>
+        <li> Curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </li>
+        <li> The desirable curve length can be derived from the following formulae: </li>
+        </ol>
         <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;"> Crest Vertical Curve for Stopping Sight Distance</div>
         <div class="img-container2">
           <img src="../assets/10.4.3.2.1.png">
@@ -33,11 +35,13 @@
         </p>
       </Collapsible>
       <Collapsible chapt="13.2" title="Sag Curve" :levelDisplay="levelDisplay">
-        <p> The minimum length of a sag curve in metre shall be the greater of: - </p>
-        <p>a) 0.6 times of the design speed (in km/h); or </p>
-        <p>b) curve length needed to provide for riding comfort (refer to Figure 10.9); or </p>
-        <p>c) curve length needed to provide headlight sight distance (refer to Figure 10.10) </p>
-        <p>d) the desirable curve length can be derived from the following formulae: - </p>
+        <p> The minimum length of a sag curve in metre shall be the greater of: </p>
+        <ol type="a">
+        <li> 0.6 times of the design speed (in km/h); or </li>
+        <li> Curve length needed to provide for riding comfort (refer to Figure 10.9); or </li>
+        <li> Curve length needed to provide headlight sight distance (refer to Figure 10.10) </li>
+        <li> The desirable curve length can be derived from the following formulae: </li>
+        </ol>
        <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;">Sag Curve for Headlight Sight Distance</div>
         <div class="img-container2">
           <img src="../assets/10.4.3.2.2.png">
@@ -131,5 +135,9 @@ tbody tr:last-child td{
   padding: 0 1rem 0 1.5rem;
   border-left: inset;
   border-color: lightblue
+}
+li {
+  padding-left:0.5rem;
+  margin: 10px 0
 }
 </style>

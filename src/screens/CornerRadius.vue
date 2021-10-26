@@ -17,6 +17,7 @@
         <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
             shall not be less than the values as shown in Table 10.8.</p>
       <Table1008 class="tableImg"></Table1008>
+      <br>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
             CDC 10.4.2.6 - Corner Radius (page 209)</a>

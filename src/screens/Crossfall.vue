@@ -24,6 +24,7 @@
         <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
             to the side drain and the design requirements shall be as shown in Table 10.6.</p>
         <Table1006 class="tableImg"></Table1006>
+        <br>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target="_blank"> 
           CDC 10.4.2.4 - Crossfall of Carriageway (page 207)</a>
@@ -98,7 +99,6 @@ tbody tr:last-child td{
   border-left: inset;
   border-color: lightblue
 }
-
 .tableImg {
   width:80%;
   box-shadow: none;

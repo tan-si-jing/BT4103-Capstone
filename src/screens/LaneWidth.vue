@@ -16,18 +16,18 @@
       <Collapsible chapt="8.1" title="Lane Width - Main Carriageway" :levelDisplay="levelDisplay">
         <p>The typical lane width for a major road is 3.2m and the absolute minimum shall be 3m if there are constraints. 
           In addition,</p>
-        <p>a) For lane adjacent to kerb, an additional width of 0.3m shall be provided.</p>
-        <p>b) (a) is not applicable if shoulder width indicated in Clause 10.5.4 are provided.</p>
-        <p>c) Consideration shall also be given to widen the lane further for swept path and other safety requirements on 
-          sharp horizontal curve.</p>
-        <p>The recommended desirable lane width shall be as shown in Table 10.12.</p>
-        <p>Notes:</p>
-        <p>1 Typical lane width for an expressway is 3.5m.</p>
-        <p>2 Actual lane width to be determined in consultation with Land Transport Authority</p>
-        <!--div class="img-container4">
-          <img src="../assets/Table10-12.png">
-        </div-->
-        
+        <ol type="a">
+        <li> For lane adjacent to kerb, an additional width of 0.3m shall be provided.</li>
+        <li> (a) is not applicable if shoulder width indicated in Clause 10.5.4 are provided.</li>
+        <li> Consideration shall also be given to widen the lane further for swept path and other safety requirements on 
+          sharp horizontal curve.</li>
+        <li>The recommended desirable lane width shall be as shown in Table 10.12.</li>
+        </ol>
+        <p><u>Notes:</u></p>
+        <ol>
+        <li> Typical lane width for an expressway is 3.5m.</li>
+        <li> Actual lane width to be determined in consultation with Land Transport Authority</li>
+        </ol>       
         <Table1012 class="tableImg"></Table1012>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
@@ -80,12 +80,11 @@
             (URA) Conceptual Land Use Plan (refer to URA’s website), the slip road width shall be increased to cater for 
             the swept path of a heavy vehicle (refer to Figure 10.1). The design requirements for various radii of slip
             roads are shown in Table 10.13:</p>
-            
           <div v-show="isSlip">
             <Table1013 class="tableImg"></Table1013><br>
           </div>
-          <a v-show="isSlip"><p>Notes:</p></a>
-          <p v-show="isSlip">Additional 0.3m lane width shall be added next to parapet/ barrier</p>
+          <p v-show="isSlip"><u>Notes:</u></p>
+          <p v-show="isSlip"><ol><li>Additional 0.3m lane width shall be added next to parapet/ barrier</li></ol></p>
           <p v-show="isSlip" style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=212" target='_blank'>
               CDC 10.5.2.4.3 - Slip Road (page 214)</a>
@@ -112,9 +111,9 @@
         <Collapsible chapt="8.8" title="Width" :levelDisplay="levelDisplay">
           <p>The width of the paved shoulder shall be as shown in Table 10.14. </p>
           <Table1014 class="tableImg"></Table1014><br>
-          <p>Notes:</p>
-          <p>1 1.0m in tunnel</p>
-          <p>2 Only applicable to viaduct, tunnel and associated depressed road. Paved shoulder is not required on flyover, underpass 
+          <p><u>Notes:</u></p>
+          <p><sup>1</sup> 1.0m in tunnel</p>
+          <p><sup>2</sup> Only applicable to viaduct, tunnel and associated depressed road. Paved shoulder is not required on flyover, underpass 
             and associated depressed road.</p>
           <p style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=215" target='_blank'>
@@ -218,13 +217,15 @@ tbody tr:last-child td{
   border-left: inset;
   border-color: lightblue
 }
-
 .tableImg {
   width:80%;
   box-shadow: none;
   margin-left:auto;
   margin-right:auto;
-
+}
+li {
+  padding-left:0.5rem;
+  margin: 10px 0
 }
 </style>
 

@@ -1,9 +1,6 @@
 <template>
   <div class="sidebar">
     <HomeButton/>
-    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
-    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
-    
     <div style="font-size:1.5rem;padding:5%;border-top: ridge;"><b>Step-by-Step Guide:</b></div>
     <router-link to="/results/page1#roadcselements">
       <SidebarButton 
@@ -107,8 +104,11 @@
         data-secName="combinedalignment"
       />
     </router-link>
-  </div>
-  
+    <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%">
+    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC Manual" />
+    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE Manual" />
+    </div>
+  </div> 
   <router-view @sec-change="updateSec"></router-view>
 </template>
 
@@ -138,9 +138,13 @@ export default {
   },
   watch: {
     currSection: function(val) {
-      var oldEl = document.querySelector(".active")
-      oldEl.removeAttribute("class")
-      oldEl.setAttribute("class", "btn btn-light")
+      var oldElList = document.querySelectorAll(".active")
+      oldElList.forEach(function(currentValue) {
+        currentValue.removeAttribute("class") 
+      })
+      oldElList.forEach(function(currentValue) {
+        currentValue.setAttribute("class", "btn btn-light")
+      })
       var newEl = document.querySelector(`[data-secName="${val}"]`)
       newEl.setAttribute("class", "btn btn-light active")
     },

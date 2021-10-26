@@ -36,12 +36,14 @@
       <Collapsible chapt="14.3" title="Compound Curve" :levelDisplay="levelDisplay">
         <p>A compound curve consists of two or more curves with deflections in the same direction immediately 
             adjacent to each other. In general, the use eof compound curve is not favoured. Where it is necessary, 
-            the following guidelines shall be applied: - </p>
-        <p>a) curve shall have radii greater than 1000m. </p>
-        <p>b) where radii less than 1000m have to be used, the design speed for each curve shall 
-              desirably be within 10km/h of each other. </p>
-        <p>c) on main road, the ratio of the radius of the flatter curve to the sharper curve shall not exceed 1.5:1; and </p>
-        <p>d) at junction intersection and ramp, the ratio of the radius of the flatter curve to the sharper curve can be up to 2:1</p>
+            the following guidelines shall be applied: </p>
+        <ol type="a">
+        <li> Curve shall have radii greater than 1000m. </li>
+        <li> Where radii less than 1000m have to be used, the design speed for each curve shall 
+          desirably be within 10km/h of each other. </li>
+        <li> On main road, the ratio of the radius of the flatter curve to the sharper curve shall not exceed 1.5:1; and </li>
+        <li> At junction intersection and ramp, the ratio of the radius of the flatter curve to the sharper curve can be up to 2:1.</li>
+        </ol>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205" target='_blank'>
             CDC 10.4.2.3.2 - Compound Curve (page 205)</a>
@@ -51,11 +53,13 @@
         <p>A reverse curve consists of two curves of deflections in the opposite direction which are 
           joined by a relatively short tangent distance. Reverse curve shall not be used unless there is sufficient 
           distance between the curves to introduce full super-elevation of the two curves. In general, the use of 
-          reverse curve is not favoured. Where it is necessary, the following guidelines shall be applied. </p>
-        <p>a) the tangent distance in metre between the reverse curves shall not be less than 0.6 times the design speed in km/h. </p>
-        <p>b) up to 50% of the transition may be placed in the curve; and </p>
-        <p>c) where it is not possible to provide the minimum tangent distance in (a), the radius of each curve shall not be 
-          less than minimum radius of V&#178;/127 f, where V is the design speed in km/h and f is the side friction factor.</p>
+          reverse curve is not favoured. Where it is necessary, the following guidelines shall be applied: </p>
+        <ol type="a">
+        <li> The tangent distance in metre between the reverse curves shall not be less than 0.6 times the design speed in km/h. </li>
+        <li> Up to 50% of the transition may be placed in the curve; and </li>
+        <li> Where it is not possible to provide the minimum tangent distance in (a), the radius of each curve shall not be 
+          less than minimum radius of V&#178;/127 f, where V is the design speed in km/h and f is the side friction factor.</li>
+        </ol>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=206" target='_blank'>
               CDC 10.4.2.3.3 - Reverse Curve (page 206)</a>
@@ -77,9 +81,11 @@
         <p>Transition curve is normally used to join a straight line to a circular curve, although it may be omitted when large 
           radius curve is used. The most frequently used form of transition is the clothoid which curvature changes at a uniform 
           rate along the curve. The following design requirements shall be adopted:</p>
-        <p>a) Where the design speed is up to 60km/h, no transition curve is required. Where the design speed is more than 60km/h, 
-          transition curve is not required if the associated shift in circular arc is less than 0.20m.</p>
-        <p>b) The length of the transition curve and shift can be derived from the following: - </p>
+        <ol type="a">
+        <li> Where the design speed is up to 60km/h, no transition curve is required. Where the design speed is more than 60km/h, 
+          transition curve is not required if the associated shift in circular arc is less than 0.20m.</li>
+        <li> The length of the transition curve and shift can be derived from the following: </li>
+        </ol>
         <div class="img-container2">
           <img src="../assets/10.4.2.3.5.png">
         </div>
@@ -119,17 +125,19 @@
       </Collapsible>
       <Collapsible title="Horizontal Alignment" chapt="14.10" :levelDisplay="levelDisplay">
         <p> There are several general controls that shall be considered when designing the horizontal alignment. </p>
-        <p>a) Where it becomes necessary to introduce curve of lower standard than the design requirement, 
-          the respective design speed between the successive geometric elements shall not differ by more than 10km/h; </p>
-        <p>b) Where the radius of a curve is below the design requirement, additional lane width shall be provided to accommodate heavy 
-          vehicle (refer to Figure 10.1) off-tracking within the curve; </p>
-        <p>c) Curve shall be sufficiently long to avoid the appearance of a kink. Curve shall be at least 150m long for a central angle of 5°, 
-          and the minimum length shall be increased by 30m for each degree decrease in the central angle; </p>
-        <p>d) Opening for vehicle turning at centre median along horizontal curve shall not be provided if the intersection 
-          sight distance is not achievable; and </p>
-        <p>e) on a horizontal curve, there shall be no obstruction i.e. longitudinal barrier, tree, shrub, embankment, 
+        <ol type="a">
+        <li> Where it becomes necessary to introduce curve of lower standard than the design requirement, 
+          the respective design speed between the successive geometric elements shall not differ by more than 10km/h; </li>
+        <li> Where the radius of a curve is below the design requirement, additional lane width shall be provided to accommodate heavy 
+          vehicle (refer to Figure 10.1) off-tracking within the curve; </li>
+        <li> Curve shall be sufficiently long to avoid the appearance of a kink. Curve shall be at least 150m long for a central angle of 5°, 
+          and the minimum length shall be increased by 30m for each degree decrease in the central angle; </li>
+        <li> Opening for vehicle turning at centre median along horizontal curve shall not be provided if the intersection 
+          sight distance is not achievable; and </li>
+        <li> On a horizontal curve, there shall be no obstruction i.e. longitudinal barrier, tree, shrub, embankment, 
           other structure or building that restrict the driver’s sight distance. If the required sight distance cannot be achieved, 
-          then lane widening shall be provided. </p>
+          then lane widening shall be provided. </li>
+        </ol>
         <div class="img-container">
           <img src="../assets/Figure10.1.png">
         </div>
@@ -214,6 +222,9 @@ tbody tr:last-child td{
   box-shadow: none;
   margin-left:auto;
   margin-right:auto;
-
+}
+li {
+  padding-left:0.5rem;
+  margin: 10px 0
 }
 </style>

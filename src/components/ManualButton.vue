@@ -1,6 +1,6 @@
 <template>
   <button type="button" class="btn btn-outline-secondary" @click="goToLink()">
-    <font-awesome-icon icon="external-link-alt" id="external-link" />
+    <font-awesome-icon icon="external-link-alt" id="external-link" style="margin-right:5px;"/>
     {{name}}
   </button>
 </template>
@@ -31,7 +31,7 @@ button {
   font-size:1rem;
   border: none;
   box-shadow: none;
-  padding: 5%;
+  padding: 3%;
   text-align:left;
 }
 </style>

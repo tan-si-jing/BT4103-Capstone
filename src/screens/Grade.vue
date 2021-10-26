@@ -16,17 +16,19 @@
       <Collapsible chapt="2.1" title="Main Carriageway" :levelDisplay="levelDisplay">
         <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
         <Table1009 class="tableImg"></Table1009><br>
-        <p>Notes:</p>
-        <p>1) Minimum gradient for all roads is 0.4%.</p>
-        <p>2) A road gradient of less than 0.4% may be used for widening of expressway.</p>
-        <p>3) For tunnel, minimum road gradient of 0.2% may be used.</p>
-        <p>4) For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</p>
+        <p><u>Notes:</u></p>
+        <ol>
+        <li> Minimum gradient for all roads is 0.4%.</li>
+        <li> A road gradient of less than 0.4% may be used for widening of expressway.</li>
+        <li> For tunnel, minimum road gradient of 0.2% may be used.</li>
+        <li> For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</li>
+        </ol>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
           CDC 10.4.3.1.1 - Main Carriageway (page 209)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="2.2" title="Interchange Ramp/Loop and Slip Road" :levelDisplay="levelDisplay">
+      <Collapsible chapt="2.2" title="Interchange Ramp / Loop and Slip Road" :levelDisplay="levelDisplay">
         <Table1010 class="tableImg"></Table1010><br>        
         <p style="font-size: 16px;"> Referenced from:
         <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
@@ -103,11 +105,14 @@ tbody tr:last-child td{
   border-left: inset;
   border-color: lightblue
 }
-
 .tableImg {
   width:80%;
   box-shadow: none;
   margin-left:auto;
   margin-right:auto;
+}
+li {
+  padding-left:0.5rem;
+  margin: 10px 0
 }
 </style>
