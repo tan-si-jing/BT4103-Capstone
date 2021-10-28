@@ -419,5 +419,9 @@ td {
   color: navy;
   margin: 2% 10%;
 }
+ol > li {
+  padding-left:0.5rem;
+  margin: 10px 0
+}
 </style>
 

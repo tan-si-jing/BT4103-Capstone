@@ -95,7 +95,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="14.7" title="Main Carriageway" :levelDisplay="levelDisplay">
-        <p> The geometric design requirement of road shall be as follows: - </p>
+        <p> The geometric design requirement of road shall be as follows: </p>
         <!--div class="img-container4">
           <img src="../assets/Table10.2.png">
         </div-->

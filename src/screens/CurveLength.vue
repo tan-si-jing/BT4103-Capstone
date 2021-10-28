@@ -42,7 +42,7 @@
         <li> Curve length needed to provide headlight sight distance (refer to Figure 10.10) </li>
         <li> The desirable curve length can be derived from the following formulae: </li>
         </ol>
-       <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;">Sag Curve for Headlight Sight Distance</div>
+        <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;">Sag Curve for Headlight Sight Distance</div>
         <div class="img-container2">
           <img src="../assets/10.4.3.2.2.png">
         </div> 

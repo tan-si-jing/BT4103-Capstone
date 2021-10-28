@@ -360,19 +360,21 @@
               </Collapsible>
 
               <Collapsible chapt="1.5" title="Sidetable, Drain, Footpath and Divider" :levelDisplay="levelDisplay">
-                <p>a) Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
+                <ol type="a">
+                <li> Sidetable for drain and landscaping shall be provided outside the shoulder of the expressway or the carriageway of 
                   other categories of road. The services verge and landscaping shall be turfed and sloped as shown in the Standard 
-                  Details of Road Elements.</p>
-                <p>b) For roads other than expressway or ramp and loop, unless otherwise specified, drain shall be slabbed over to be 
+                  Details of Road Elements.</li>
+                <li> For roads other than expressway or ramp and loop, unless otherwise specified, drain shall be slabbed over to be 
                   used as footpath. Where raised kerb is provided along the edge of carriageway, UPVC pipe with drop inlet chamber at 
                   6m interval shall be provided to drain the surface water to the roadside drain. In addition, at the low point of a 
                   sag curve and at road junction, the spacing of the drop inlet chamber shall be at 3m interval for a distance of 30m 
-                  measured between the points 15m from either sides of the lowest point.</p>
-                <p>c) Split level and open drain shall not be allowed at the divider.</p>  
-                <p>d) Footpath shall be clear of any obstruction and footpath to adjoining properties shall be barrier-free in 
-                  accordance with Building and Construction Authority (BCA)’s Code of Accessibility.</p>  
-                <p>e) Footpath shall be higher than adjacent kerb as shown in the Standard Details of Road Elements. All footpaths 
-                  exposed to weather shall be designed with falls and gradient to discharge water to the drains.</p>
+                  measured between the points 15m from either sides of the lowest point.</li>
+                <li> Split level and open drain shall not be allowed at the divider.</li> 
+                <li> Footpath shall be clear of any obstruction and footpath to adjoining properties shall be barrier-free in 
+                  accordance with Building and Construction Authority (BCA)’s Code of Accessibility.</li>
+                <li> Footpath shall be higher than adjacent kerb as shown in the Standard Details of Road Elements. All footpaths 
+                  exposed to weather shall be designed with falls and gradient to discharge water to the drains.</li>
+                </ol>
                 <p style="font-size: 16px;"> Referenced from:
                   <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=215" target='_blank'>
                   CDC 10.5.6 - Sidetable, Train, Footpath and Divider (page 215)</a></p>
@@ -746,5 +748,9 @@ td {
   text-align: right;
   font-size: 1rem;
   color: navy;
+}
+ol > li {
+  padding-left:0.5rem;
+  margin: 10px 0
 }
 </style>

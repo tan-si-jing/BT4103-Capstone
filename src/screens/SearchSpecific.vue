@@ -18,26 +18,26 @@
         <input list="specificFields" class="form-select" @change="changeValue($event)">
         <datalist id="specificFields">
           <option disabled selected value>-- Choose your section from the drop down list --</option>
-          <option value="Design Speed">Design Speed</option>
           <option value="Classification of Road">Classification of Road</option>
-          <option value="Types of Road">Types of Road</option>
-          <option value="Road Cross-Sections and Elements">Road Cross-Sections and Elements</option>
-          <option value="Grade">Grade</option>
-          <option value="Longitudinal Friction Factor">Longitudinal Friction Factor</option>
-          <option value="Side Friction Factor">Side Friction Factor</option>
-          <option value="Crossfall">Crossfall</option>
-          <option value="Corner Radius">Corner Radius</option>
-          <option value="Merging Angle">Merging Angle</option>
-          <option value="Lane Width">Lane Width</option>
-          <option value="Signs">Signs</option>
-          <option value="Lateral Clearance">Lateral Clearance</option>
-          <option value="Super-Elevation">Super-Elevation</option>
-          <option value="Sight Distance">Sight Distance</option>
-          <option value="Curve Length">Curve Length</option>
-          <option value="Horizontal Alignment">Horizontal Alignment</option>
-          <option value="Vertical Alignment">Vertical Alignment</option>
-          <option value="Slip-road Traffic Island">Slip-road Traffic Island</option>
           <option value="Combination of Horizontal & Vertical Alignment">Combination of Horizontal & Vertical Alignment</option>
+          <option value="Corner Radius">Corner Radius</option>
+          <option value="Crossfall">Crossfall</option>
+          <option value="Curve Length">Curve Length</option>
+          <option value="Design Speed">Design Speed</option>
+          <option value="Grade">Grade</option>
+          <option value="Horizontal Alignment">Horizontal Alignment</option>
+          <option value="Lane Width">Lane Width</option>
+          <option value="Lateral Clearance">Lateral Clearance</option>
+          <option value="Longitudinal Friction Factor">Longitudinal Friction Factor</option>
+          <option value="Merging Angle">Merging Angle</option>
+          <option value="Road Cross-Sections and Elements">Road Cross-Sections and Elements</option>
+          <option value="Side Friction Factor">Side Friction Factor</option>
+          <option value="Sight Distance">Sight Distance</option>
+          <option value="Signs">Signs</option>
+          <option value="Slip-road Traffic Island">Slip-road Traffic Island</option>
+          <option value="Super-Elevation">Super-Elevation</option>
+          <option value="Types of Road">Types of Road</option>
+          <option value="Vertical Alignment">Vertical Alignment</option>
         </datalist>
         <button class="btn btn-outline-secondary w-25" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
       </div>
