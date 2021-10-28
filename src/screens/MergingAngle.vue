@@ -13,9 +13,8 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="7.1" title="Permitted Slip Road" :levelDisplay="levelDisplay">
-        <p>Slip road is provided to permit left-turning vehicle to bypass the intersection. The desirable merging angle for 
-          left turn slip road shall be 70&#176; and absolute minimum merging angle shall be 50&#176; as shown in Figure 10.12.</p>
+      <Collapsible chapt="7.1" title="Left Turn Slip Road" :levelDisplay="levelDisplay">
+        <p>The desirable merging angle for left turn slip road shall be 70&#176; and absolute minimum merging angle shall be 50&#176; as shown in Figure 10.12.</p>
         <div class="img-container">
           <img src="../assets/Figure10.12.png">
         </div>
