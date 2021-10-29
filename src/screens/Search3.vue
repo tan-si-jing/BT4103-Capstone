@@ -161,14 +161,13 @@ export default {
   border-radius:1.5rem
 }
 .pages {
-    display: flex;
-    margin: 3% 0
+  display: flex;
+  margin: 3% 0
 }
 .tooltip-inner{
-    text-align: left;
-    max-width: 500px;
-    color:white;
-    background-color:black;
+  text-align: left;
+  max-width: 500px;
+  color:white;
+  background-color:black;
 }
-
 </style>
