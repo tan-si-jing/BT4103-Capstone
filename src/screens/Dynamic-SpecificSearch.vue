@@ -1,8 +1,8 @@
 <template>
-    <div id = "entire-content">
-        <div id = "buttons">
+    <div id = "entire-content">   
+        <div id = "buttons">  <!-- Div Block for the side navigation buttons -->
             <p>Currently Viewing : </p> 
-            <div class="action_btn">
+            <div class="action_btn"> <!-- Currently viewing button (in red) -->
                 <button id='current_btn'>{{this.choice2}}</button>
             </div>
             <div class="arrow" v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>
@@ -10,116 +10,117 @@
             </div>
 
             <p v-show='level_4_parameter.length != 0 || level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0'>Other Relevant Results : </p>
-            <div class="action_btn" v-show='level_4_parameter.length != 0'>
+            <div class="action_btn" v-show='level_4_parameter.length != 0'> <!-- Level 4 search parameters -->
                 <button v-for='param in level_4_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
 
             <div class="arrow" v-show='level_4_parameter.length != 0 && (level_3_parameter.length != 0 || level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
-                <i class="bi bi-arrow-up"></i>
+                <i class="bi bi-arrow-up"></i> 
             </div>
-            <div class="action_btn" v-show='level_3_parameter.length != 0'>
+            <div class="action_btn" v-show='level_3_parameter.length != 0'> <!--Level 3 search parameters  -->
                 <button v-for='param in level_3_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
 
             <div class="arrow" v-show='level_3_parameter.length != 0 && (level_2_parameter.length != 0 || level_1_parameter.length != 0)'>
                 <i class="bi bi-arrow-up"></i>
             </div>
-            <div class="action_btn" v-show='level_2_parameter.length != 0'>
+            <div class="action_btn" v-show='level_2_parameter.length != 0'> <!-- Level 2 search parameters -->
                 <button v-for='param in level_2_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
 
             <div class="arrow" v-show='level_2_parameter.length != 0 && level_1_parameter.length != 0'>
                 <i class="bi bi-arrow-up"></i>
             </div>
-            <div class="action_btn" v-show='level_1_parameter.length != 0'>
+            <div class="action_btn" v-show='level_1_parameter.length != 0'> <!-- Level 1 search parameters -->
                 <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
         </div>
         <div id = "specific-results">
-            <div class="expand">
+            <div class="expand"> <!-- Expand and collapse all button -->
               <span @click=levelCollapse() style="cursor:pointer;">
                 <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;<i class="bi bi-caret-down-fill"></i></span>
                 <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;&nbsp;<i class="bi bi-caret-up-fill"></i></span>
               </span>
             </div>
             <ul>
-                <li v-for="cdc in final_array" :key="cdc.chapterID">
+                <li v-for="cdc in final_array" :key="cdc.chapterID"> <!-- each document from Firebase's chosen search parameter displayed here -->
                     <Collapsible :title="cdc.Content" :chapt="cdc.Number" :levelDisplay="levelDisplay">
-                        <p v-html="cdc.Text"></p>
-                        <div class = 'formula' v-show="cdc.Formula">
-                            <img :src="cdc.Formula">
+                        <p v-html="cdc.Text"></p> <!-- Text field shown here -->
+                        <div class = 'formula' v-show="cdc.Formula"> <!-- Conditional block: only if formula exists -->
+                            <img :src="cdc.Formula"> <!-- Image of forumla shown here -->
                         </div>
 
-                        <div class='table' v-show="cdc.Table">
-                            <img :src="cdc.Table" style='zoom: 1.2'>
+                        <div class='table' v-show="cdc.Table"> <!-- Conditional block: only if table exists -->
+                            <img :src="cdc.Table" style='zoom: 1.2'> <!-- Image of tables shown here -->
                         </div>
 
-                        <div class = 'figure' v-show="cdc.Figure1">
-                            <img :src="cdc.Figure1" @click="show(1)">
-                            <vue-easy-lightbox
+                        <div class = 'figure' v-show="cdc.Figure1"> <!-- Conditional block: only if figure1 exists -->
+                            <img :src="cdc.Figure1" @click="show(1)"> <!-- Display image of figure1 -->
+                            <vue-easy-lightbox   
                             :escDisabled="false"
                             :moveDisabled="false"
                             :visible="visible1"
                             :imgs="cdc.Figure1"
                             @hide="handleHide(1)"
-                            ></vue-easy-lightbox>
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure1 -->
                         </div>
 
-                        <div class = 'figure' v-show="cdc.Figure2">
-                            <img :src="cdc.Figure2" @click="show(2)">
+                        <div class = 'figure' v-show="cdc.Figure2"> <!-- Conditional block: only if figure2 exists -->
+                            <img :src="cdc.Figure2" @click="show(2)"> <!-- Display image of figure2 -->
                             <vue-easy-lightbox
                             :escDisabled="false"
                             :moveDisabled="false"
                             :visible="visible2"
                             :imgs="cdc.Figure2"
                             @hide="handleHide(2)"
-                            ></vue-easy-lightbox>
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure2 -->
                         </div>
 
-                        <div class = 'figure' v-show="cdc.Figure3">
-                            <img :src="cdc.Figure3" @click="show(3)">
+                        <div class = 'figure' v-show="cdc.Figure3"> <!-- Conditional block: only if figure3 exists -->
+                            <img :src="cdc.Figure3" @click="show(3)"> <!-- Display image of figure3 -->
                             <vue-easy-lightbox
                             :escDisabled="false"
                             :moveDisabled="false"
                             :visible="visible3"
                             :imgs="cdc.Figure3"
                             @hide="handleHide(3)"
-                            ></vue-easy-lightbox>
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure3 -->
                         </div>
 
-                        <div class = 'figure' v-show="cdc.Figure4">
-                            <img :src="cdc.Figure4" @click="show(4)">
+                        <div class = 'figure' v-show="cdc.Figure4"> <!-- Conditional block: only if figure4 exists -->
+                            <img :src="cdc.Figure4" @click="show(4)"> <!-- Display image of figure4 (SDRE) -->
                             <vue-easy-lightbox
                             :escDisabled="false"
                             :moveDisabled="false"
                             :visible="visible4"
                             :imgs="cdc.Figure4"
                             @hide="handleHide(4)"
-                            ></vue-easy-lightbox>
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
                         </div>
 
-                        <div class = 'figure' v-show="cdc.Figure5">
-                            <img :src="cdc.Figure5" @click="show(5)">
+                        <div class = 'figure' v-show="cdc.Figure5"> <!-- Conditional block: only if figure5 exists -->
+                            <img :src="cdc.Figure5" @click="show(5)"> <!-- Display image of figure5 (SDRE) -->
                             <vue-easy-lightbox
                             :escDisabled="false"
                             :moveDisabled="false"
                             :visible="visible5"
                             :imgs="cdc.Figure5"
                             @hide="handleHide(5)"
-                            ></vue-easy-lightbox>
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure5 -->
                         </div>
 
-                        <div class = 'figure' v-show="cdc.Figure6">
-                            <img :src="cdc.Figure6" @click="show(6)">
+                        <div class = 'figure' v-show="cdc.Figure6"> <!-- Conditional block: only if figure6 exists -->
+                            <img :src="cdc.Figure6" @click="show(6)"> <!-- Display image of figure6 (SDRE) -->
                             <vue-easy-lightbox
                             :escDisabled="false"
                             :moveDisabled="false"
                             :visible="visible6"
                             :imgs="cdc.Figure6"
                             @hide="handleHide(6)"
-                            ></vue-easy-lightbox>
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure6 -->
                         </div>
 
+                        <!-- Referenced from block, each refernce displayed only -->
                         <p style="font-size: 16px;"> Referenced from:
                             <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
                             <span v-show="cdc.Link && cdc.Figure1">, </span>
@@ -150,17 +151,20 @@
 </template>
 
 <script scoped>
-import database from '../firebase.js'
+/**  firebase to access the firebase storage system and related documents*/
+import database from '../firebase.js'; 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
+/** Collapsible to collapse all and expand all */
 import Collapsible from '../components/Collapsible.vue';
-import HomeButton from '../components/HomeButton.vue'
-import ManualButton from '../components/ManualButton.vue'
-import VueEasyLightbox from 'vue-easy-lightbox'
+import HomeButton from '../components/HomeButton.vue';
+import ManualButton from '../components/ManualButton.vue';
+/** Allows for Zooming of images */
+import VueEasyLightbox from 'vue-easy-lightbox';
 
 export default {
     components: {
-        Collapsible,
+        Collapsible, 
         HomeButton,
         ManualButton,
         VueEasyLightbox
@@ -172,6 +176,7 @@ export default {
             cdc_array : [],
             final_array : [],
             related_parameter : [],
+            /** Store related search parameters in the respectie array */
             level_1_parameter : [],
             level_2_parameter : [],
             level_3_parameter : [],
@@ -179,6 +184,7 @@ export default {
             choice2 : '',
             specific_param:"",
             levelDisplay: false,
+            /** Toggle between showing and hiding the zoomed images (Hide by default)*/
             visible1: false,
             visible2: false,
             visible3: false,
@@ -189,6 +195,7 @@ export default {
     },
 
     methods : {
+        /** Shows the zoomed images for the corresponding ID */
         show(param) {
             if(param == 1) {
                 this.visible1 = true;
@@ -209,6 +216,7 @@ export default {
                 this.visible6 = true;
             }
         },
+        /** Shows the zoomed images for the corresponding ID */
         handleHide(param) {
             if(param == 1) {
                 this.visible1 = false;
@@ -229,12 +237,15 @@ export default {
                 this.visible6 = false;
             }
         },
+        /** Local storage to access the choice of user */
         openStorage(){
             return JSON.parse(localStorage.getItem('choice'))
         },
+        /** Saves the choice of the user to local storage */
         saveStorage(form){
             localStorage.setItem('choice',JSON.stringify(form))
         },
+        /** Updates the local storage of the User and adds to the analytics database */
         updateChoice(input,value){
             this.choice[input].push(value)
             let storedChoice = this.openStorage()
@@ -249,17 +260,17 @@ export default {
             while (storedChoice.length > 5) {
                 storedChoice[input].shift()
             }
-            this.saveStorage(storedChoice)
+            this.saveStorage(storedChoice) 
             var myparam = database.collection('search_parameters').doc("H1uwnxYevFozEeNv7SiY");
             myparam.update({
-                [value]: firebase.firestore.FieldValue.increment(1)
+                [value]: firebase.firestore.FieldValue.increment(1) /** Increment on the database */
             }).then(res => {
                 this.specific_param = this.choice.specific_param.at(-1);
                 if (this.specific_param == "Signs") {
                     this.$router.push('specific-results-signs')
                 }
                 else {
-                    window.location.reload()
+                    window.location.reload()  /** Refresh the same page with the new search parameter chosen */
                 }
                 res;
             });
@@ -267,6 +278,7 @@ export default {
         storeSpecParam(text){
             this.updateChoice('specific_param',text)
         },
+        /** Return to the previous page based on the second last search parameter in local storage */
         goBack() {
             if (this.choice.specific_param.length > 1) {
                 this.choice.specific_param.pop();
