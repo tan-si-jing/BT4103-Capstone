@@ -54,6 +54,8 @@
                             <img :src="cdc.Table" style='zoom: 1.2'> <!-- Image of tables shown here -->
                         </div>
 
+                        <p v-html="cdc.Notes" v-show="cdc.Notes"></p> <!-- Notes field shown here -->
+
                         <div class = 'figure' v-show="cdc.Figure1"> <!-- Conditional block: only if figure1 exists -->
                             <img :src="cdc.Figure1" @click="show(1)"> <!-- Display image of figure1 -->
                             <vue-easy-lightbox   
