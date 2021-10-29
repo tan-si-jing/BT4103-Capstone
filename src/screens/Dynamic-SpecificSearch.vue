@@ -46,7 +46,6 @@
                 <li v-for="cdc in final_array" :key="cdc.chapterID">
                     <Collapsible :title="cdc.Content" :chapt="cdc.Number" :levelDisplay="levelDisplay">
                         <p v-html="cdc.Text"></p>
-                        
                         <div class = 'formula' v-show="cdc.Formula">
                             <img :src="cdc.Formula">
                         </div>
@@ -56,27 +55,69 @@
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure1">
-                            <img :src="cdc.Figure1" >
+                            <img :src="cdc.Figure1" @click="show(1)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible1"
+                            :imgs="cdc.Figure1"
+                            @hide="handleHide(1)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure2">
-                            <img :src="cdc.Figure2" >
+                            <img :src="cdc.Figure2" @click="show(2)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible2"
+                            :imgs="cdc.Figure2"
+                            @hide="handleHide(2)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure3">
-                            <img :src="cdc.Figure3" >
+                            <img :src="cdc.Figure3" @click="show(3)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible3"
+                            :imgs="cdc.Figure3"
+                            @hide="handleHide(3)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure4">
-                            <img :src="cdc.Figure4" >
+                            <img :src="cdc.Figure4" @click="show(4)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible4"
+                            :imgs="cdc.Figure4"
+                            @hide="handleHide(4)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure5">
-                            <img :src="cdc.Figure5" >
+                            <img :src="cdc.Figure5" @click="show(5)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible5"
+                            :imgs="cdc.Figure5"
+                            @hide="handleHide(5)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure6">
-                            <img :src="cdc.Figure6" >
+                            <img :src="cdc.Figure6" @click="show(6)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible6"
+                            :imgs="cdc.Figure6"
+                            @hide="handleHide(6)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <p style="font-size: 16px;"> Referenced from:
@@ -115,12 +156,14 @@ import 'firebase/firestore';
 import Collapsible from '../components/Collapsible.vue';
 import HomeButton from '../components/HomeButton.vue'
 import ManualButton from '../components/ManualButton.vue'
+import VueEasyLightbox from 'vue-easy-lightbox'
 
 export default {
     components: {
         Collapsible,
         HomeButton,
-        ManualButton
+        ManualButton,
+        VueEasyLightbox
     },
     data() {
         return {
@@ -135,11 +178,57 @@ export default {
             level_4_parameter : [],
             choice2 : '',
             specific_param:"",
-            levelDisplay: false
+            levelDisplay: false,
+            visible1: false,
+            visible2: false,
+            visible3: false,
+            visible4: false,
+            visible5: false,
+            visible6: false
         } 
     },
 
     methods : {
+        show(param) {
+            if(param == 1) {
+                this.visible1 = true;
+            }
+            else if (param == 2) {
+                this.visible2 = true;
+            }
+            else if (param == 3) {
+                this.visible3 = true;
+            }
+            else if (param == 4) {
+                this.visible4 = true;
+            }
+            else if (param == 5) {
+                this.visible5 = true;
+            }
+            else if (param == 6) {
+                this.visible6 = true;
+            }
+        },
+        handleHide(param) {
+            if(param == 1) {
+                this.visible1 = false;
+            }
+            else if (param == 2) {
+                this.visible2 = false;
+            }
+            else if (param == 3) {
+                this.visible3 = false;
+            }
+            else if (param == 4) {
+                this.visible4 = false;
+            }
+            else if (param == 5) {
+                this.visible5 = false;
+            }
+            else if (param == 6) {
+                this.visible6 = false;
+            }
+        },
         openStorage(){
             return JSON.parse(localStorage.getItem('choice'))
         },
