@@ -66,23 +66,58 @@
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure2">
-                            <img :src="cdc.Figure2" >
+                            <img :src="cdc.Figure2" @click="show(2)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible2"
+                            :imgs="cdc.Figure2"
+                            @hide="handleHide(2)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure3">
-                            <img :src="cdc.Figure3" >
+                            <img :src="cdc.Figure3" @click="show(3)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible3"
+                            :imgs="cdc.Figure3"
+                            @hide="handleHide(3)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure4">
-                            <img :src="cdc.Figure4" >
+                            <img :src="cdc.Figure4" @click="show(4)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible4"
+                            :imgs="cdc.Figure4"
+                            @hide="handleHide(4)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure5">
-                            <img :src="cdc.Figure5" >
+                            <img :src="cdc.Figure5" @click="show(5)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible5"
+                            :imgs="cdc.Figure5"
+                            @hide="handleHide(5)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure6">
-                            <img :src="cdc.Figure6" >
+                            <img :src="cdc.Figure6" @click="show(6)">
+                            <vue-easy-lightbox
+                            :escDisabled="false"
+                            :moveDisabled="false"
+                            :visible="visible6"
+                            :imgs="cdc.Figure6"
+                            @hide="handleHide(6)"
+                            ></vue-easy-lightbox>
                         </div>
 
                         <p style="font-size: 16px;"> Referenced from:
