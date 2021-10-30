@@ -7,6 +7,7 @@
   <tbody>
     <tr>
       <th scope="col" style="width:50%">Types of Structure</th>
+      <th scope="col">Elevated Road Structure</th>
       <th scope="col">Expressway</th>
       <th scope="col">Other Road</th>
     </tr>
@@ -16,18 +17,21 @@
           column of covered linkway, lift shaft, underpass entrance/exit), flyover/viaduct column, 
           other above ground structures (such as MRT station entrance, vent shaft, exit staircase, emergency escape staircase, etc.) 
           and support of overhead gantry.</td>
+      <td>3.0 m</td>
       <td>2.0 m</td>
       <td>1.2 m</td>
     </tr>
 
     <tr>
       <td scope = "row" style="text-align:left;">Abutment walls of Flyover</td>
+      <td>-</td>
       <td>3.0 m</td>
       <td>3.0 m</td>
     </tr>
 
     <tr>
       <td scope = "row" style="text-align:left;">Over ground boxes, lamp post, controller box, traffic sign post</td>
+      <td>-</td>
       <td>1.8 m</td>
       <td>0.6 m<sup>1</sup><br>1.2 m<sup>2</sup></td>
     </tr>
