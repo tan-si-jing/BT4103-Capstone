@@ -22,15 +22,32 @@
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target='_blank'>
           CDC 10.4.2.5.1 - Super-elevation (page 207)</a>
         </p>
+
+        <table102 class="tableImg"></table102><br>
+
+        <p>The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
+          the Figure 10.6. </p>
+        <div class="img-container">
+          <img src="../assets/Figure10.6.png">
+        </div>
+        <p style="font-size: 16px;"> Referenced from:
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+          CDC 10.4.2.5.5 - Super-elevation (page 208)</a>,
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=230" target='_blank'>
+          CDC Figure 10.6 (page 230)</a>,
+        </p>
+
       </Collapsible>
-      <Collapsible chapt="11.2" title="Negative or Positive Super-elevation" :levelDisplay="levelDisplay">
+
+      <Collapsible chapt="11.2" title="If super-elevation < desirable crossfall" :levelDisplay="levelDisplay">
         <p>In cases where the negative or positive super-elevation derived is lower than the desirable crossfall, the desirable super-elevation shall be 
-          pegged at the crossfall as shown in Table 10.6 to slope towards the inner radius of the carriageway.</p>
+          pegged at the crossfall to slope towards the inner radius of the carriageway.</p>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
           CDC 10.4.2.5.2 - Super-elevation (page 208)</a>
         </p>
       </Collapsible>
+
       <Collapsible chapt="11.3" title="Rotation of Pavement" :levelDisplay="levelDisplay">
         <p>For rotation of pavement to attain super-elevation, the length required to develop the 
           super-elevation shall satisfy the larger value obtained from the following two formulae:</p>
@@ -41,8 +58,7 @@
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
           CDC 10.4.2.5.3 - Super-elevation (page 208)</a>
         </p>
-      </Collapsible>
-      <Collapsible chapt="11.4" title="Effected Distance" :levelDisplay="levelDisplay">
+
         <p>Where transition curve is provided, super-elevation shall be effected along the 
           length of the curve. For simple circular curve, about two-third of the super-elevation 
           development length shall be introduced on the tangent approach and one third on the curve.</p>
@@ -50,21 +66,11 @@
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
           CDC 10.4.2.5.4 - Super-elevation (page 208)</a>
         </p>
-      </Collapsible>
-      <Collapsible chapt="11.5" title="Percentage of Super-elevation" :levelDisplay="levelDisplay">
-        <p>The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
-          the Figure 10.6. </p>
-        <div class="img-container">
-          <img src="../assets/Figure10.6.png">
-        </div>
+
         <div class="img-container">
           <img src="../assets/Figure10.5.png">
         </div>
         <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
-          CDC 10.4.2.5.5 - Super-elevation (page 208)</a>,
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=230" target='_blank'>
-          CDC Figure 10.6 (page 230)</a>,
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229" target='_blank'>
           CDC Figure 10.5 (page 229)</a>
         </p>
@@ -77,10 +83,11 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
-
+import table102 from '../components/table/table10.2 -superelevation.vue'
 export default {
   components: {
-    Collapsible
+    Collapsible,
+    table102
   },
   data() {
     return {
@@ -134,5 +141,11 @@ tbody tr:last-child td{
   padding: 0 1rem 0 1.5rem;
   border-left: inset;
   border-color: lightblue
+}
+.tableImg {
+  width:80%;
+  box-shadow: none;
+  margin-left:auto;
+  margin-right:auto;
 }
 </style>
