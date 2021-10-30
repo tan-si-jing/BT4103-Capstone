@@ -51,6 +51,13 @@
           CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a>
         </p>
       </Collapsible>
+      <Collapsible chapt="2.3" title="Critical Length of Grade" :levelDisplay="levelDisplay">
+        <p>The length of grade shall be less than the critical values as shown in Table 10.11. Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
+        <Table1011 class="tableImg"></Table1011>
+        <div class="img-container">
+            <img src="../assets/Figure10.7.png">
+        </div>
+      </Collapsible>
       </td>
       </tr>
     </tbody>
@@ -60,11 +67,13 @@
 <script>
 import Collapsible from '../components/Collapsible.vue';
 import Table1010 from '../components/table/table1010.vue';
+import Table1011 from '../components/table/table10.11.vue';
 
 export default {
   components: {
     Collapsible,
     Table1010,
+    Table1011
   },
   data() {
     return {
