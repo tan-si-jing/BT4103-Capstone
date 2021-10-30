@@ -44,7 +44,7 @@
           CDC 10.4.3.1.1 - Main Carriageway (page 209)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="2.2" title="Interchange Ramp / Loop and Slip Road" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isEorS" chapt="2.2" title="Interchange Ramp / Loop and Slip Road" :levelDisplay="levelDisplay">
         <Table1010 class="tableImg"></Table1010><br>        
         <p style="font-size: 16px;"> Referenced from:
         <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
@@ -71,6 +71,7 @@ export default {
       levelDisplay: false,
       table1:[],
       roadcat:this.$parent.choice.roadClass,
+      isEorS: this.$parent.choice.roadType === 'slipRoad' ? true : this.$parent.choice.roadClass === 'Expressways' ?true : false  ,
     }
   },
   methods: {
@@ -78,16 +79,19 @@ export default {
       var categ = String(cat)
       if(categ == 'Expressways'){
         console.log(categ)
+        console.log("EorS:" + this.isEorS)
         this.table1 = [
           {roadcat:'1-Expressways' + categ,MGD : 4,MGA : 5},
         ]
       }else if(categ == 'Semi Expressway'){
         console.log(categ)
+        console.log("EorS:" + this.isEorS)
         this.table1 = [
           {roadcat:'1A-Semi Expressway' + categ,MGD : 5,MGA : 6},
         ]
       }else if(categ == 'majorArterial'){
         console.log(categ)
+        console.log("EorS:" + this.isEorS)
         this.table1 = [
           {roadcat:'2-Major Arterial',MGD : 5,MGA : 6},
         ]
@@ -114,6 +118,7 @@ export default {
   },
   created(){
     this.filltable(this.roadcat)
+    console.log("EorS:" + this.isEorS)
   }
 }
 </script>
