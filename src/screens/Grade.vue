@@ -15,7 +15,23 @@
       <td scope="row">
       <Collapsible chapt="2.1" title="Main Carriageway" :levelDisplay="levelDisplay">
         <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
-        <Table1009 class="tableImg"></Table1009><br>
+        <table id="gradeTable">
+          <!--thead class="table">
+            <th style="text-align:center">Design Speed, V(km/h) </th>
+            <th style="text-align:center">Longitudinal Friction Factor, F </th>
+          </thead-->
+          <tbody>
+            <th style="text-align:center">Road Category </th>
+            <th style="text-align:center">Maximum Grade (%), Desirable </th>
+            <th style="text-align:center">Maximum Grade (%), Absolute </th>
+            <tr v-for="row in table1" :key="row.id">
+              <td style="text-align:center"> {{ row.roadcat }} </td>
+              <td style="text-align:center"> {{ row.MGD}} </td>
+              <td style="text-align:center">  {{ row.MGA}} </td>
+            </tr>
+          </tbody>
+        </table>
+
         <p><u>Notes:</u></p>
         <ol>
         <li> Minimum gradient for all roads is 0.4%.</li>
@@ -43,24 +59,61 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
-import Table1009 from '../components/table/table10.9.vue';
 import Table1010 from '../components/table/table1010.vue';
 
 export default {
   components: {
     Collapsible,
-    Table1009,
     Table1010,
   },
   data() {
     return {
-      levelDisplay: false
+      levelDisplay: false,
+      table1:[],
+      roadcat:this.$parent.choice.roadClass,
     }
   },
   methods: {
+    filltable(cat){
+      var categ = String(cat)
+      if(categ == 'Expressways'){
+        console.log(categ)
+        this.table1 = [
+          {roadcat:'1-Expressways' + categ,MGD : 4,MGA : 5},
+        ]
+      }else if(categ == 'Semi Expressway'){
+        console.log(categ)
+        this.table1 = [
+          {roadcat:'1A-Semi Expressway' + categ,MGD : 5,MGA : 6},
+        ]
+      }else if(categ == 'majorArterial'){
+        console.log(categ)
+        this.table1 = [
+          {roadcat:'2-Major Arterial',MGD : 5,MGA : 6},
+        ]
+      }else if(categ == 'minorArterial'){
+        console.log(categ)
+        this.table1 = [
+          {roadcat:'3-Minor Arterial',MGD : 6,MGA : 8},
+        ]
+      }else if(categ == 'primaryAccess'){
+        console.log(categ)
+        this.table1 = [
+          {roadcat:'4-Primary Access',MGD : 6,MGA : 8},
+        ]
+      }else{
+        console.log(categ)
+        this.table1 = [
+          {roadcat:'5-Local Access',MGD : 6,MGA : 8},
+        ]
+      }
+    },
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },
+  },
+  created(){
+    this.filltable(this.roadcat)
   }
 }
 </script>
@@ -114,5 +167,10 @@ tbody tr:last-child td{
 li {
   padding-left:0.5rem;
   margin: 10px 0
+}
+#gradeTable {
+  width: fit-content;
+  box-shadow: none;
+  margin-bottom: 1.5rem;
 }
 </style>
