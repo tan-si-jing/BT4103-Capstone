@@ -13,7 +13,7 @@
     <tbody>
       <tr>
       <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
-      <Collapsible chapt="3.1" title="Longitudinal Friction Factor given Design Speed" :levelDisplay="levelDisplay">
+      <Collapsible chapt="3.1" title="Longitudinal Friction Factor" :levelDisplay="levelDisplay">
         <table id="speedTable">
           <!--thead class="table">
             <th style="text-align:center">Design Speed, V(km/h) </th>
