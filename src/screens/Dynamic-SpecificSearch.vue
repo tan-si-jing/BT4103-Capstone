@@ -143,6 +143,9 @@
             </ul>
         </div>
     </div>
+    <div id="COP">
+        You may also be interested in: <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf" name="COP" />
+    </div>
     <HomeButton id="mybut"/>
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
@@ -405,6 +408,13 @@ export default {
     font-size: 0.8rem;
     padding: 1.2%;
     padding-bottom: 30px;
+}
+
+#COP {
+    display: inline;
+    float: right;
+    font-style: italic;
+    color: #273B8C;
 }
 
 .formula {

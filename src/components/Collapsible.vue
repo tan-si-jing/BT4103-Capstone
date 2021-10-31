@@ -79,6 +79,10 @@ p {
 .tab2 {
  margin-right: 1.7em
 }
+
+.tab2a {
+  margin-right:1.25em
+}
 .tab3 {
   margin-right: 1em
 }
