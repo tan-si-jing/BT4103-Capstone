@@ -34,6 +34,9 @@
             <div class="action_btn" v-show='level_1_parameter.length != 0'> <!-- Level 1 search parameters -->
                 <button v-for='param in level_1_parameter' :key='param.Name' @click="storeSpecParam(param.Name)">{{param.Name}}</button>
             </div>
+            <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
+                <i class="bi bi-arrow-left" style="font-size: 15px;"> Previous </i>
+            </button>
         </div>
         <div id = "specific-results">
             <div class="expand"> <!-- Expand and collapse all button -->
@@ -150,9 +153,7 @@
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
     <br>
-    <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
-      <i class="bi bi-arrow-left" style="font-size: 15px;"> Go Back</i>
-    </button>
+    
 </template>
 
 <script scoped>
@@ -164,15 +165,12 @@ import 'firebase/firestore';
 import Collapsible from '../components/Collapsible.vue';
 import HomeButton from '../components/HomeButton.vue';
 import ManualButton from '../components/ManualButton.vue';
-/** Allows for Zooming of images */
-import VueEasyLightbox from 'vue-easy-lightbox';
 
 export default {
     components: {
         Collapsible, 
         HomeButton,
-        ManualButton,
-        VueEasyLightbox
+        ManualButton
     },
     data() {
         return {
@@ -535,6 +533,10 @@ td {
 ol > li {
   padding-left:0.5rem;
   margin: 10px 0
+}
+img:hover {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 </style>
 
