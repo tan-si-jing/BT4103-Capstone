@@ -50,7 +50,12 @@
                     <Collapsible :title="cdc.Content" :chapt="cdc.Number" :levelDisplay="levelDisplay">
                         <p v-html="cdc.Text"></p> <!-- Text field shown here -->
                         <div class = 'formula' v-show="cdc.Formula"> <!-- Conditional block: only if formula exists -->
-                            <img :src="cdc.Formula"> <!-- Image of forumla shown here -->
+                            <img :src="cdc.Formula" @click="show(7)"> <!-- Display image of formula -->
+                            <vue-easy-lightbox
+                            :visible="visible7"
+                            :imgs="cdc.Formula"
+                            @hide="handleHide(7)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure1 -->
                         </div>
 
                         <div class='table' v-show="cdc.Table"> <!-- Conditional block: only if table exists -->
@@ -60,27 +65,57 @@
                         <p v-html="cdc.Notes" v-show="cdc.Notes"></p> <!-- Notes field shown here -->
 
                         <div class = 'figure' v-show="cdc.Figure1"> <!-- Conditional block: only if figure1 exists -->
-                            <ZoomImage :imgSrc="cdc.Figure1"/> <!-- Display image of figure1 -->
+                            <img :src="cdc.Figure1" @click="show(1)"> <!-- Display image of figure1 -->
+                            <vue-easy-lightbox
+                            :visible="visible1"
+                            :imgs="cdc.Figure1"
+                            @hide="handleHide(1)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure1 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure2"> <!-- Conditional block: only if figure2 exists -->
-                            <ZoomImage :imgSrc="cdc.Figure2"/> <!-- Display image of figure2 -->
+                            <img :src="cdc.Figure2" @click="show(2)"> <!-- Display image of figure2 -->
+                            <vue-easy-lightbox
+                            :visible="visible2"
+                            :imgs="cdc.Figure2"
+                            @hide="handleHide(2)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure2 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure3"> <!-- Conditional block: only if figure3 exists -->
-                            <ZoomImage :imgSrc="cdc.Figure3"/> <!-- Display image of figure3 -->
+                            <img :src="cdc.Figure3" @click="show(3)"> <!-- Display image of figure3 -->
+                            <vue-easy-lightbox
+                            :visible="visible3"
+                            :imgs="cdc.Figure3"
+                            @hide="handleHide(3)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure3 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure4"> <!-- Conditional block: only if figure4 exists -->
-                            <ZoomImage :imgSrc="cdc.Figure4"/> <!-- Display image of figure4 (SDRE) -->
+                            <img :src="cdc.Figure4" @click="show(4)"> <!-- Display image of figure4 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible4"
+                            :imgs="cdc.Figure4"
+                            @hide="handleHide(4)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure5"> <!-- Conditional block: only if figure5 exists -->
-                            <ZoomImage :imgSrc="cdc.Figure5"/> <!-- Display image of figure5 (SDRE) -->
+                            <img :src="cdc.Figure5" @click="show(5)"> <!-- Display image of figure5 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible5"
+                            :imgs="cdc.Figure5"
+                            @hide="handleHide(5)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure5 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure6"> <!-- Conditional block: only if figure6 exists -->
-                            <ZoomImage :imgSrc="cdc.Figure6"/> <!-- Display image of figure6 (SDRE) -->
+                            <img :src="cdc.Figure6" @click="show(6)"> <!-- Display image of figure6 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible6"
+                            :imgs="cdc.Figure6"
+                            @hide="handleHide(6)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure6 -->
                         </div>
 
                         <!-- Referenced from block, each refernce displayed only -->
@@ -123,14 +158,11 @@ import 'firebase/firestore';
 import Collapsible from '../components/Collapsible.vue';
 import HomeButton from '../components/HomeButton.vue';
 import ManualButton from '../components/ManualButton.vue';
-import ZoomImage from '../components/ZoomImageSpecific.vue'
-
 export default {
     components: {
         Collapsible, 
         HomeButton,
-        ManualButton,
-        ZoomImage
+        ManualButton
     },
     data() {
         return {
@@ -147,10 +179,65 @@ export default {
             choice2 : '',
             specific_param:"",
             levelDisplay: false,
+            /** Toggle between showing and hiding the zoomed images (Hide by default)*/
+            visible1: false,
+            visible2: false,
+            visible3: false,
+            visible4: false,
+            visible5: false,
+            visible6: false,
+            visible7: false
         } 
     },
-
     methods : {
+        /** Shows the zoomed images for the corresponding ID */
+        show(param) {
+            if(param == 1) {
+                this.visible1 = true;
+            }
+            else if (param == 2) {
+                this.visible2 = true;
+            }
+            else if (param == 3) {
+                this.visible3 = true;
+            }
+            else if (param == 4) {
+                this.visible4 = true;
+            }
+            else if (param == 5) {
+                this.visible5 = true;
+            }
+            else if (param == 6) {
+                this.visible6 = true;
+            }
+            else if (param == 7) {
+                this.visible7 = true;
+            }
+        },
+        /** Shows the zoomed images for the corresponding ID */
+        handleHide(param) {
+            if(param == 1) {
+                this.visible1 = false;
+            }
+            else if (param == 2) {
+                this.visible2 = false;
+            }
+            else if (param == 3) {
+                this.visible3 = false;
+            }
+            else if (param == 4) {
+                this.visible4 = false;
+            }
+            else if (param == 5) {
+                this.visible5 = false;
+            }
+            else if (param == 6) {
+                this.visible6 = false;
+            }
+            else if (param == 7) {
+                this.visible7 = false;
+            }
+        },
         /** Local storage to access the choice of user */
         openStorage(){
             return JSON.parse(localStorage.getItem('choice'))
@@ -274,20 +361,17 @@ export default {
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
-
 #entire-content {
     display: flex;
     align-items: left;
     flex-direction: row;
 }
-
 #buttons {
     position:sticky;
     top: 30px;
     height: 20%;
     width: 20vw;
 }
-
 #specific-results {
     width: 80%;
     align-items: left;    
@@ -299,7 +383,6 @@ export default {
     margin-bottom:12%;
     justify-content:center;
 }
-
 #back {
     width:fit-content;
     height:fit-content;
@@ -308,7 +391,6 @@ export default {
     border:none;
     margin-bottom:30px;
 }
-
 #mybut {
     width:120px;
     height:30px;
@@ -318,14 +400,12 @@ export default {
     padding: 1.2%;
     padding-bottom: 30px;
 }
-
 #COP {
     display: inline;
     float: right;
     font-style: italic;
     color: #273B8C;
 }
-
 .formula {
     width: 50%;
     height: auto;
@@ -333,18 +413,15 @@ export default {
     margin-top: 3%;
     margin-bottom: 3%;
 }
-
 .table {
     width: 80%;
     height: auto;
     margin-left: 3em;
 }
-
 .figure {
     width: 100%;
     height: auto;
 }
-
 .arrow {
     display: flex;
     align-items: center;
@@ -352,24 +429,20 @@ export default {
     font-size: 1.5rem;
     color: #273B8C;
 }
-
 ul {
     list-style-type: none;
     padding:0;
     margin:0;
 }
-
 img {
     width: 100%;
 }
-
 #current_btn {
   pointer-events: none;
   cursor: not-allowed;
   background:#8F3035;
   
 }
-
 button {
     width: 200px;
     margin-bottom: 5px;
@@ -386,11 +459,9 @@ button {
     font-size:15px;
     border:none;
 }
-
 .btn-outline-secondary {
     color: black;
 }
-
 .action_btn {
     width: 100%;
     display: flex;
@@ -399,7 +470,6 @@ button {
     justify-content: center;
     align-items: center;
 }
-
 #manual{
   font-weight:bold;
   width: 100%;
@@ -409,19 +479,15 @@ td {
     width: 15%;
     text-align: left;
 }
-
 #chapter{
   font-weight:bold;
 }
-
 #link{
   font-weight:bold;
 }
-
 .tab2 {
  margin-right: 1.7em
 }
-
 .title {
   cursor: pointer;
   display: flex;
@@ -445,9 +511,10 @@ ol > li {
   padding-left:0.5rem;
   margin: 10px 0
 }
+</style>
+<style scoped>
 img:hover {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
 </style>
-
