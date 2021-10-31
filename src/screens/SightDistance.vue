@@ -64,7 +64,7 @@
             CDC Figure 10.2 (page 226)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="12.5" title="Sight Distance on Horizontal Curve" :levelDisplay="levelDisplay">
+      <Collapsible chapt="12.5" title="Offset Distance" :levelDisplay="levelDisplay">
         <p>On a horizontal curve where the obstruction on the inside of the curve cannot be removed, 
           offset distance to the obstruction shall be provided. 
           The offset distance can be derived from the following formula and shall be read in conjunction with Figure 10.3.</p>
