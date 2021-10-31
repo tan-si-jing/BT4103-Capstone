@@ -13,7 +13,7 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Corner Radius" chapt="6.1" :levelDisplay="levelDisplay">
+      <Collapsible title="Minimum Corner Radius" chapt="6.1" :levelDisplay="levelDisplay">
         <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
             shall not be less than the values as shown in Table 10.8.</p>
       <Table1008 class="tableImg"></Table1008>
