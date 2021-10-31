@@ -107,6 +107,10 @@
     <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%">
     <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC Manual" />
     <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE Manual" />
+    <div id="COP">
+        You may also be interested in: 
+    </div>
+    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf" name="COP" />
     </div>
   </div> 
   <router-view @sec-change="updateSec"></router-view>
@@ -168,6 +172,12 @@ export default {
   position:fixed;
   height:100vh;
   overflow-y:scroll;
+}
+#COP {
+  display: inline;
+  float: left;
+  font-size: 16px;
+  padding-top: 15px;
 }
 a {
   color:transparent;
