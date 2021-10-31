@@ -60,69 +60,27 @@
                         <p v-html="cdc.Notes" v-show="cdc.Notes"></p> <!-- Notes field shown here -->
 
                         <div class = 'figure' v-show="cdc.Figure1"> <!-- Conditional block: only if figure1 exists -->
-                            <img :src="cdc.Figure1" @click="show(1)"> <!-- Display image of figure1 -->
-                            <vue-easy-lightbox   
-                            :escDisabled="false"
-                            :moveDisabled="false"
-                            :visible="visible1"
-                            :imgs="cdc.Figure1"
-                            @hide="handleHide(1)"
-                            ></vue-easy-lightbox> <!-- Display zoomed image of figure1 -->
+                            <ZoomImage :imgSrc="cdc.Figure1"/> <!-- Display image of figure1 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure2"> <!-- Conditional block: only if figure2 exists -->
-                            <img :src="cdc.Figure2" @click="show(2)"> <!-- Display image of figure2 -->
-                            <vue-easy-lightbox
-                            :escDisabled="false"
-                            :moveDisabled="false"
-                            :visible="visible2"
-                            :imgs="cdc.Figure2"
-                            @hide="handleHide(2)"
-                            ></vue-easy-lightbox> <!-- Display zoomed image of figure2 -->
+                            <ZoomImage :imgSrc="cdc.Figure2"/> <!-- Display image of figure2 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure3"> <!-- Conditional block: only if figure3 exists -->
-                            <img :src="cdc.Figure3" @click="show(3)"> <!-- Display image of figure3 -->
-                            <vue-easy-lightbox
-                            :escDisabled="false"
-                            :moveDisabled="false"
-                            :visible="visible3"
-                            :imgs="cdc.Figure3"
-                            @hide="handleHide(3)"
-                            ></vue-easy-lightbox> <!-- Display zoomed image of figure3 -->
+                            <ZoomImage :imgSrc="cdc.Figure3"/> <!-- Display image of figure3 -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure4"> <!-- Conditional block: only if figure4 exists -->
-                            <img :src="cdc.Figure4" @click="show(4)"> <!-- Display image of figure4 (SDRE) -->
-                            <vue-easy-lightbox
-                            :escDisabled="false"
-                            :moveDisabled="false"
-                            :visible="visible4"
-                            :imgs="cdc.Figure4"
-                            @hide="handleHide(4)"
-                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
+                            <ZoomImage :imgSrc="cdc.Figure4"/> <!-- Display image of figure4 (SDRE) -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure5"> <!-- Conditional block: only if figure5 exists -->
-                            <img :src="cdc.Figure5" @click="show(5)"> <!-- Display image of figure5 (SDRE) -->
-                            <vue-easy-lightbox
-                            :escDisabled="false"
-                            :moveDisabled="false"
-                            :visible="visible5"
-                            :imgs="cdc.Figure5"
-                            @hide="handleHide(5)"
-                            ></vue-easy-lightbox> <!-- Display zoomed image of figure5 -->
+                            <ZoomImage :imgSrc="cdc.Figure5"/> <!-- Display image of figure5 (SDRE) -->
                         </div>
 
                         <div class = 'figure' v-show="cdc.Figure6"> <!-- Conditional block: only if figure6 exists -->
-                            <img :src="cdc.Figure6" @click="show(6)"> <!-- Display image of figure6 (SDRE) -->
-                            <vue-easy-lightbox
-                            :escDisabled="false"
-                            :moveDisabled="false"
-                            :visible="visible6"
-                            :imgs="cdc.Figure6"
-                            @hide="handleHide(6)"
-                            ></vue-easy-lightbox> <!-- Display zoomed image of figure6 -->
+                            <ZoomImage :imgSrc="cdc.Figure6"/> <!-- Display image of figure6 (SDRE) -->
                         </div>
 
                         <!-- Referenced from block, each refernce displayed only -->
@@ -165,12 +123,14 @@ import 'firebase/firestore';
 import Collapsible from '../components/Collapsible.vue';
 import HomeButton from '../components/HomeButton.vue';
 import ManualButton from '../components/ManualButton.vue';
+import ZoomImage from '../components/ZoomImageSpecific.vue'
 
 export default {
     components: {
         Collapsible, 
         HomeButton,
-        ManualButton
+        ManualButton,
+        ZoomImage
     },
     data() {
         return {
@@ -187,59 +147,10 @@ export default {
             choice2 : '',
             specific_param:"",
             levelDisplay: false,
-            /** Toggle between showing and hiding the zoomed images (Hide by default)*/
-            visible1: false,
-            visible2: false,
-            visible3: false,
-            visible4: false,
-            visible5: false,
-            visible6: false
         } 
     },
 
     methods : {
-        /** Shows the zoomed images for the corresponding ID */
-        show(param) {
-            if(param == 1) {
-                this.visible1 = true;
-            }
-            else if (param == 2) {
-                this.visible2 = true;
-            }
-            else if (param == 3) {
-                this.visible3 = true;
-            }
-            else if (param == 4) {
-                this.visible4 = true;
-            }
-            else if (param == 5) {
-                this.visible5 = true;
-            }
-            else if (param == 6) {
-                this.visible6 = true;
-            }
-        },
-        /** Shows the zoomed images for the corresponding ID */
-        handleHide(param) {
-            if(param == 1) {
-                this.visible1 = false;
-            }
-            else if (param == 2) {
-                this.visible2 = false;
-            }
-            else if (param == 3) {
-                this.visible3 = false;
-            }
-            else if (param == 4) {
-                this.visible4 = false;
-            }
-            else if (param == 5) {
-                this.visible5 = false;
-            }
-            else if (param == 6) {
-                this.visible6 = false;
-            }
-        },
         /** Local storage to access the choice of user */
         openStorage(){
             return JSON.parse(localStorage.getItem('choice'))
