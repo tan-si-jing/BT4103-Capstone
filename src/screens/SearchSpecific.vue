@@ -15,7 +15,7 @@
     </div>
     <div class="options">
       <div class="input-group mx-auto" style="width: 55%;">
-        <input list="specificFields" class="form-select" @change="changeValue($event)">
+        <input list="specificFields" class="form-select" @change="changeValue($event)"  v-on:keyup.enter="storeSpecParam(this.specific_param)">
         <datalist id="specificFields">
           <option disabled selected value>-- Choose your section from the drop down list --</option>
           <option value="Classification of Road">Classification of Road</option>
