@@ -6,7 +6,9 @@
       <div class="header">
         <h1 style="font-size: 2rem; color: #4f4f4f;"> Analytics Dashboard </h1>
         <div style="display: flex;">
+          <!-- extract button -->
           <ExtractButton/>
+          <!-- home button -->
           <button type="button" id ="homeBtn" class="btn" @click="goToHome()">
             <font-awesome-icon icon="home" id="home" />
           </button>
@@ -16,18 +18,22 @@
       <div class="graphs">
         <!-- row 1 -->
         <div class="graphFirstRow">
+          <!-- row 1: num visits in total graph -->
           <div class="summary">
             <SummaryData/>
           </div>
+          <!-- row 1: user type breakdown graph -->
           <div>
             <canvas id="donut-chart"></canvas>
           </div>
+          <!-- row 1: comparison of search options graph -->
           <div>
             <canvas id="bar-chart"></canvas>
           </div>
         </div>
         <!-- row 2 -->
         <div class="graphSecondRow">
+          <!-- row 2: frequently searched specific section graph -->
           <div>
             <SpecificTable/>
           </div>
@@ -97,9 +103,11 @@ export default {
     };
   },
   methods: {
+    // function for home button
     goToHome() {
       this.$router.push('/'); 
     },
+    // to get values from firebase and use them for the charts 
     getValues: function(donutChart, barChart, roadClassChart, roadTypeChart, designSpeedChart, changeJunctionChart) {
       database.collection('search_parameters')
               .doc(this.docID)
