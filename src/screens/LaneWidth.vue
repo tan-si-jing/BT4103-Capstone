@@ -39,7 +39,7 @@
             paved shoulder width specified in Clause 10.5.4. However, consideration shall be given to widen the lane width 
             for the swept path of a heavy vehicle (refer to Figure 10.1).</p>
           <div class="img-container">
-            <img src="../assets/Figure10-1.png">
+            <ZoomImage imgSrc="Figure10-1.png"/>
           </div>
           <p style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=213" target='_blank'>
@@ -50,7 +50,7 @@
         </Collapsible>
       <Collapsible chapt="8.3" title="Road Signs & Markings At Intersections" :levelDisplay="levelDisplay">
         <div class="img-container">
-          <img src="../assets/SDRE-Chap8-RMS9.png">
+          <ZoomImage imgSrc="SDRE-Chap8-RMS9.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=10" target="_blank">
@@ -59,7 +59,7 @@
         </Collapsible>
         <Collapsible chapt="8.4" title="Typical Acceleration Lane At Expressway" :levelDisplay="levelDisplay">
           <div class="img-container">
-            <img src="../assets/SDRE-Chap8-RMS6.png">
+            <ZoomImage imgSrc="SDRE-Chap8-RMS6.png"/>
           </div>
           <p style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=7" target="_blank">
@@ -68,7 +68,7 @@
         </Collapsible>
         <Collapsible chapt="8.5" title="Typical Deceleration Lane At Expressway" :levelDisplay="levelDisplay">
           <div class="img-container">
-            <img src="../assets/SDRE-Chap8-RMS7.png">
+            <ZoomImage imgSrc="SDRE-Chap8-RMS7.png"/>
           </div>
           <p style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=8" target="_blank">
@@ -99,7 +99,7 @@
           <p>To accommodate traffic lights, the desirable minimum and absolute minimum width of the centre divider at a junction 
             separating the right turning lane from the opposing traffic flow shall be 1.3m and 1.0m respectively.</p>
           <div class="img-container">
-            <img src="../assets/Figure10-11.png">
+            <ZoomImage imgSrc="Figure10-11.png"/>
           </div>
           <p style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=213" target='_blank'>
@@ -131,6 +131,7 @@ import Collapsible from '../components/Collapsible.vue';
 import Table1014 from '../components/table/table10.14.vue';
 import Table1013 from '../components/table/table10.13.vue';
 import Table1012 from '../components/table/table10.12.vue';
+import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
   name:'LaneWidth',
@@ -139,6 +140,7 @@ export default {
     Table1014,
     Table1013,
     Table1012,
+    ZoomImage
   },
   data(){
     return{

@@ -16,7 +16,7 @@
       <Collapsible title="Desirable Super-Elevation Formula" chapt="11.1" :levelDisplay="levelDisplay">
         <p> The desirable super-elevation can be derived from the following equation:</p>
         <div class="img-container2">
-          <img src="../assets/10.4.2.5.1.png">
+          <ZoomImage imgSrc="10.4.2.5.1.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target='_blank'>
@@ -28,7 +28,7 @@
         <p>The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
           the Figure 10.6. </p>
         <div class="img-container">
-          <img src="../assets/Figure10.6.png">
+          <ZoomImage imgSrc="Figure10.6.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
@@ -52,7 +52,7 @@
         <p>For rotation of pavement to attain super-elevation, the length required to develop the 
           super-elevation shall satisfy the larger value obtained from the following two formulae:</p>
         <div class="img-container2">
-          <img src="../assets/10.4.2.5.3.png">
+          <ZoomImage imgSrc="10.4.2.5.3.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
@@ -68,7 +68,7 @@
         </p>
 
         <div class="img-container">
-          <img src="../assets/Figure10.5.png">
+          <ZoomImage imgSrc="Figure10.5.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229" target='_blank'>
@@ -84,10 +84,13 @@
 <script>
 import Collapsible from '../components/Collapsible.vue';
 import table102 from '../components/table/table10.2 -superelevation.vue'
+import ZoomImage from '../components/ZoomImage.vue'
+
 export default {
   components: {
     Collapsible,
-    table102
+    table102,
+    ZoomImage
   },
   data() {
     return {

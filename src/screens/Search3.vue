@@ -12,7 +12,7 @@
     <div class="question">
       <h5>Are you working on <u>Undivided (x-lane) Road</u>, <u>Slip Road</u> or <u>Dual (x-lane) Road</u>? Please select below.
       
-      <span tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true" 
+      <span tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
       title="
         <u><b>Undivided (x-lane) Road</b>:</u> <br>Bi-directional road with no physical separator/ divider with x-lane in total <p></p>
         <u><b>Slip Road</b>:</u> <br>Connecting road to allow vehicles to enter or exit the interconnecting carriageway and to bypass the intersection at-grade <p></p>
@@ -163,11 +163,5 @@ export default {
 .pages {
   display: flex;
   margin: 3% 0
-}
-.tooltip-inner{
-  text-align: left;
-  max-width: 500px;
-  color:white;
-  background-color:black;
 }
 </style>

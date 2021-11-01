@@ -16,7 +16,7 @@
       <Collapsible chapt="12.1" title="Stopping Sight Distance" :levelDisplay="levelDisplay">
         <p> The minimum stopping sight distance for various road gradient shall be determined by the following formula:</p>
           <div class="img-container2">
-            <img src="../assets/10.4.2.2.1.png">
+            <ZoomImage imgSrc="10.4.2.2.1.png"/>
           </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
@@ -41,7 +41,7 @@
           for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
         <p v-show="isUndivided"><u>Note:</u> Overtaking sight distance is only applicable to undivided 2-lane road.</p>
         <div class="img-container4">
-          <img v-show="isUndivided" src="../assets/Table10.5.png">
+          <img v-show="isUndivided" src="Table10.5.png"/>
         </div>  <br>
         <p v-show="isUndivided" style="font-size: 16px;"> Referenced from:
           <a v-show="isUndivided" href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
@@ -52,10 +52,10 @@
         <p>The desirable intersection sight distance at unsignalised junction can be derived 
           from the following formula and to be read in conjunction with Figure 10.2.</p>
         <div class="img-container2">
-          <img src="../assets/10.4.2.2.4.png">
+          <ZoomImage imgSrc="10.4.2.2.4.png"/>
         </div>
         <div class="img-container">
-          <img src="../assets/Figure10.2.png">
+          <ZoomImage imgSrc="Figure10.2.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=204" target='_blank'>
@@ -64,15 +64,15 @@
             CDC Figure 10.2 (page 226)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="12.5" title="Sight Distance on Horizontal Curve" :levelDisplay="levelDisplay">
+      <Collapsible chapt="12.5" title="Offset Distance" :levelDisplay="levelDisplay">
         <p>On a horizontal curve where the obstruction on the inside of the curve cannot be removed, 
           offset distance to the obstruction shall be provided. 
           The offset distance can be derived from the following formula and shall be read in conjunction with Figure 10.3.</p>
         <div class="img-container2">
-          <img src="../assets/10.4.2.2.5.png">
+          <ZoomImage imgSrc="10.4.2.2.5.png"/>
         </div>
         <div class="img-container">
-          <img src="../assets/Figure10.3.png">
+          <ZoomImage imgSrc="Figure10.3.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205" target='_blank'>
@@ -89,11 +89,13 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
   name:'SightDistance',
   components: {
-    Collapsible
+    Collapsible,
+    ZoomImage
   },
   data(){
     return{
