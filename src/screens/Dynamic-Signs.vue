@@ -6,11 +6,16 @@
     <div class="container">    
       <div id = "entire-content">
         <div id = "buttons">
+            <HomeButton id="mybutt"/>
             <p>Currently Viewing : </p>
             <br>
             <div class="action_btn">
                 <button id='current_btn'>Signs</button>
             </div>
+            <br>
+            <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
+              <i class="bi bi-arrow-left" style="font-size: 15px;">Previous</i>
+            </button>
         </div>
         <div id = "specific-results">
           <table>
@@ -631,13 +636,14 @@
           </table>
         </div>
       </div>
-    <HomeButton id="mybut"/>
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
+    <br><br>
+    <div id="COP">
+        You may also be interested in:
+    </div>
     <br>
-    <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
-      <i class="bi bi-arrow-left" style="font-size: 15px;"> Go Back</i>
-    </button>
+    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf" name="COP" />
 
     </div>
     <div class="imageStack">
