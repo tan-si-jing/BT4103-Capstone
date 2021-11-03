@@ -1,7 +1,6 @@
 <template>
   <button type="button" class="btn btn-outline-secondary" @click="goToHome()">
-    <font-awesome-icon icon="home" id="home" />
-    Home
+    <font-awesome-icon icon="home" id="home" />Home
   </button>
 </template>
 

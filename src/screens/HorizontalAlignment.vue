@@ -16,7 +16,7 @@
       <Collapsible chapt="14.1" title="Types of Horizontal Curve" :levelDisplay="levelDisplay">
         <p> The various types of horizontal curve used are as shown in Figure 10.4</p>
         <div class="img-container">
-          <img src="../assets/Figure10.4.png">
+          <ZoomImage imgSrc="Figure10.4.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
         <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205" target='_blank'>
@@ -140,7 +140,7 @@
         <li> The length of the transition curve and shift can be derived from the following: </li>
         </ol>
         <div class="img-container2">
-          <img src="../assets/10.4.2.3.5.png">
+          <ZoomImage imgSrc="10.4.2.3.5.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=206" target='_blank'>
@@ -150,7 +150,7 @@
       <Collapsible chapt="14.3" title="Minimum Radius" :levelDisplay="levelDisplay">
         <p> The geometric design requirement of road shall be as follows: </p>
         <!--div class="img-container4">
-          <img src="../assets/Table10.2.png">
+          <ZoomImage imgSrc="Table10.2.png"/>
         </div-->
         <Table102 class="tableImg"></Table102><br> 
         <p style="font-size: 16px;"> Referenced from:
@@ -175,7 +175,7 @@
           then lane widening shall be provided. </li>
         </ol>
         <div class="img-container">
-          <img src="../assets/Figure10.1.png">
+          <ZoomImage imgSrc="Figure10.1.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=200" target='_blank'>
@@ -189,7 +189,7 @@
       <Collapsible chapt="14.5" title="Enhancement Measures for Horizontal Alignment" :levelDisplay="levelDisplay">
        <p style="padding-top:3%"><b class="tab2a">14.5.1</b><b>Pavement Markers</b></p>
         <div class="img-container">
-          <img src="../assets/SDRE-Chap8-RMS12.png">
+          <ZoomImage imgSrc="SDRE-Chap8-RMS12.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=13" target="_blank">
@@ -198,7 +198,7 @@
 
       <p style="padding-top:3%"><b class="tab2a">14.5.2</b><b>Curve Alignment Markers (CAM)</b></p>
         <div class="img-container">
-          <img src="../assets/SDRE-Chap8-RMS13.png">
+          <ZoomImage imgSrc="SDRE-Chap8-RMS13.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=14" target="_blank">
@@ -216,11 +216,13 @@
 <script>
 import Collapsible from '../components/Collapsible.vue';
 import Table102 from '../components/table/table10.2.vue';
+import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
   components: {
     Collapsible,
-    Table102
+    Table102,
+    ZoomImage
   },
   data() {
     return {

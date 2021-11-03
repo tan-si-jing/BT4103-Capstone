@@ -1,5 +1,5 @@
 <template>
-  <div :data-bs-toggle="isActive?'':'tooltip'">
+  <div :data-bs-toggle="isActive?'':'tooltip'" class="wip">
     <button type="button" class="btn btn-outline-dark" :disabled=!isActive v-bind:style="[isActive ? active : inactive]">
       {{text}}
     </button>
@@ -27,11 +27,13 @@ export default {
   mounted() {
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     tooltipTriggerList.map(function (tooltipEl) {
-      tooltipEl.setAttribute("data-bs-placement","top")
-      tooltipEl.setAttribute("data-bs-html","true")
-      tooltipEl.setAttribute("title","Work in Progress! <i class='bi bi-cone-striped'></i>")
-      tooltipEl.setAttribute("tabindex","0")
-      return new Tooltip(tooltipEl)
+      if (tooltipEl.getAttribute("class") == "wip") {
+        tooltipEl.setAttribute("data-bs-placement","top")
+        tooltipEl.setAttribute("data-bs-html","true")
+        tooltipEl.setAttribute("title","Work in Progress! <i class='bi bi-cone-striped'></i>")
+        tooltipEl.setAttribute("tabindex","0")
+        return new Tooltip(tooltipEl)
+      }
     })
   }
 }
