@@ -16,7 +16,7 @@
       <Collapsible title="Desirable Minimum Traffic Island" chapt="16.1" :levelDisplay="levelDisplay">
         <p> The desirable minimum dimension and the approach nose of the traffic island shall be as shown in the Figure 10.12. </p>
         <div class="img-container">
-          <img src="../assets/Figure10.12.png">
+          <ZoomImage imgSrc="Figure10.12.png"/>
         </div> 
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214" target='_blank'>
@@ -45,7 +45,7 @@
       </Collapsible-->
       <Collapsible chapt="16.2" title="Signs & Markings at Slip-road/ Traffic Island" :levelDisplay="levelDisplay">
         <div class="img-container">
-          <img src="../assets/SDRE-Chap8-RMS9.png">
+          <ZoomImage imgSrc="SDRE-Chap8-RMS9.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=10" target="_blank">
@@ -60,10 +60,12 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
   components: {
-    Collapsible
+    Collapsible,
+    ZoomImage
   },
   data() {
     return {

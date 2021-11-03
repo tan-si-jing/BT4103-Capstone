@@ -5,7 +5,7 @@
     <h2>Road Design Guide</h2>
     <h5>CDC & SDRE Manuals</h5>
     </div>
-    <img src="../assets/mascot.png" class="mascot"/>
+    <img src="../assets/mascot-gif.gif" class="mascot"/>
     <img src="../assets/road.png" class="road"/>
   </div>
   <div class="userType">
@@ -110,7 +110,6 @@ h6 {
 .mascot {
   height: 30vh;
   width: auto;
-  transform: scaleX(-1);
   position: absolute;
   top:10vh;
   left: 70vw;

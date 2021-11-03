@@ -1,30 +1,37 @@
 <template>
   <div>
+    <!-- button on dashboard -->
     <button class="resetBtn" v-on:click="open()">Reset</button>
 
+    <!-- display for when the reset button is clicked -->
     <div class="passwordBox" v-show="isOpened">
       <div class="content">
+
         <div v-show="!refreshPrompt">
         <p style="color: white; margin-bottom: 2px;">Are you sure you would like to <a style="color: #e33232;">RESET</a> the data?</p>
         <p style="color: #bdbdbd;">Do note that this action is irreversible.</p>
-        <!-- input password -->
+        <!-- for user to enter password -->
         <input type="password" placeholder="Enter Password" v-model="password" v-on:keyup.enter="reset()">
 
+        <!-- to display error message for when password is incorrect -->
         <p v-show="wrongPassword" style="color: #4c5257; margin-bottom: 30px;">Wrong Password. Please Try Again.</p>
 
-        <!-- confirmation -->
+        <!-- confirmation buttons -->
         <div class="confirmation">
-          <!-- close button -->
+          <!--  go back button -->
           <p class="cfmBtn" v-on:click="open()" style="background-color: #707070; margin-right: 20px;">
             <font-awesome-icon icon="arrow-left" style="margin-right: 4px;"/> 
             Go Back
           </p>
+          <!-- reset button -->
           <p class="cfmBtn" v-on:click="reset()" style="background-color: #9c1717;">
-            <font-awesome-icon icon="undo" style="margin-right: 4px;"/> Reset
+            <font-awesome-icon icon="undo" style="margin-right: 4px;"/> 
+            Reset
           </p>
         </div>
         </div>
 
+        <!-- display for when password is correct and data has been reset. display refresh message. -->
         <p v-show="refreshPrompt" style="color: white;">Data has been reset. <br>Please refresh the page to view the changes.</p>
 
       </div>
@@ -65,10 +72,12 @@ export default {
     }
   },
   methods: {
+    // to control the popup display of reset button
     open() {
       this.isOpened = !this.isOpened;
       this.password = null;
     },
+    // reset data if password entered is correct
     reset() {
       if (this.password == this.actualPassword) {
         this.refreshPrompt = true; 
@@ -80,6 +89,7 @@ export default {
       }
       this.password = null;
     },
+    // function to reset the data
     resetFields() {
       var myparam = database.collection('search_parameters').doc(this.docID);
       myparam.update({
@@ -207,6 +217,7 @@ export default {
     }
   },
   created() {
+    // get actual password from firebase
     database.collection('search_parameters')
               .doc(this.docID)
               .get()

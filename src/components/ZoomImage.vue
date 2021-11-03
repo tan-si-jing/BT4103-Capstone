@@ -1,22 +1,17 @@
 <template>
   <div>
-    <img @click="show" :src="require(`${imgSrc}`)">
-
+    <img @click="show" :src="require(`@/assets/${imgSrc}`)">
     <vue-easy-lightbox
       :visible="visible"
-      :imgs="imgSrc"
+      :imgs="require(`@/assets/${imgSrc}`)"
       @hide="handleHide"
     ></vue-easy-lightbox>
   </div>
 </template>
 
 <script>
-//import VueEasyLightbox from 'vue-easy-lightbox'
 
 export default {
-  components: {
-    VueEasyLightbox
-  },
   props:{
     imgSrc: String
   },
@@ -35,3 +30,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+img:hover{
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+</style>
