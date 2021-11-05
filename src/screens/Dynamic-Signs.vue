@@ -20,7 +20,7 @@
         <div id = "specific-results">
           <table>
             <tbody>
-              <tr class="expand">
+              <tr class="expand"> <!-- Expand and collapse all button -->
               <span @click=levelCollapse() style="cursor:pointer;">
                 <span v-if="!levelDisplay"><u>Expand All</u> &nbsp;<i class="bi bi-caret-down-fill"></i></span>
                 <span v-if="levelDisplay"><u>Collapse All</u> &nbsp;<i class="bi bi-caret-up-fill"></i></span>
