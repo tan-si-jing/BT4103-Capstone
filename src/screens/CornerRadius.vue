@@ -2,10 +2,10 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="cornerradius" class="sectionHeader">&nbsp;&nbsp; 6 &nbsp; Corner Radius
+      <td id="cornerradius" class="sectionHeader">&nbsp;&nbsp; 6 &nbsp; Corner Radius <!-- Section 6 -->
       <span class="title-icon" @click=levelCollapse()>
-        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span>
-        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>
+        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span> <!-- Expand all button -->
+        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span> <!-- Collapse all button -->
       </span>
       </td>
       </tr>
@@ -13,11 +13,13 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Minimum Corner Radius" chapt="6.1" :levelDisplay="levelDisplay">
+      <Collapsible title="Minimum Corner Radius" chapt="6.1" :levelDisplay="levelDisplay"> <!-- Sub section 6.1 -->
+       <!-- Display content of sub section 6.1 -->
         <p>The corner radius at an intersection affect the operation and safety of the intersection. The minimum radius 
             shall not be less than the values as shown in Table 10.8.</p>
-      <Table1008 class="tableImg"></Table1008>
+      <Table1008 class="tableImg"></Table1008>  <!-- Table 10.8 -->
       <br>
+      <!-- References for 6.1 -->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
             CDC 10.4.2.6 - Corner Radius (page 209)</a>
@@ -30,7 +32,9 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** Import respective table image */
 import Table1008 from '../components/table/table10.8.vue';
 
 
@@ -45,6 +49,7 @@ export default {
     }
   },
   methods: {
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },

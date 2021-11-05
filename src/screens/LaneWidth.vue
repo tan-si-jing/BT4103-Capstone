@@ -34,7 +34,7 @@
             CDC 10.5.2.1 - Main Carriageway (page 212)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="8.2" title="Lane Width - Ramp or Loop" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isEorS" chapt="8.2" title="Lane Width - Ramp or Loop" :levelDisplay="levelDisplay">
           <p>The minimum lane width for ramp or loop is 3.7m per lane. The total width of the ramp or loop shall include the 
             paved shoulder width specified in Clause 10.5.4. However, consideration shall be given to widen the lane width 
             for the swept path of a heavy vehicle (refer to Figure 10.1).</p>
@@ -154,6 +154,7 @@ export default {
         specific_param:"",
       },
       isSlip: this.$parent.choice.roadType === 'slipRoad' ? true : false,
+      isEorS: this.$parent.choice.roadType === 'slipRoad' ? true : this.$parent.choice.roadClass === 'Expressways'? true : this.$parent.choice.roadClass === 'Semi Expressway'? true : false ,
       levelDisplay: false
     }
   },

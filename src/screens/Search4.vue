@@ -27,8 +27,8 @@
       <SearchParamButton text="50" v-bind:isActive="true" @click="storeDesignSpeed('speed50');"/>
       <SearchParamButton text="60" v-bind:isActive="true" @click="storeDesignSpeed('speed60');"/>
       <SearchParamButton text="70" v-bind:isActive="true" @click="storeDesignSpeed('speed70');"/>
-      <SearchParamButton text="80" v-bind:isActive="false" @click="storeDesignSpeed('speed80');"/>
-      <SearchParamButton text="90" v-bind:isActive="false" @click="storeDesignSpeed('speed90');"/>
+      <SearchParamButton text="80" v-bind:isActive="false"/>
+      <SearchParamButton text="90" v-bind:isActive="false"/>
     </div>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search3')">
       <i class="bi bi-arrow-left"></i>
