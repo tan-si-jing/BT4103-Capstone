@@ -2,7 +2,7 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="roadcselements" class="sectionHeader">&nbsp;&nbsp; 1 &nbsp; Road Cross-Sections and Elements
+      <td id="roadcselements" class="sectionHeader">&nbsp;&nbsp; 1 &nbsp; Road Cross-Sections and Elements <!-- Section 1 -->
       <span class="title-icon" @click=levelCollapse()>
         <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span>  <!-- Expand all button -->
         <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>  <!-- Collapse all button -->
