@@ -1,7 +1,8 @@
 <template>
     <div id = "entire-content">   
         <div id = "buttons">  <!-- Div Block for the side navigation buttons -->
-            <HomeButton id="mybutt"/>
+        <HomeButton id="homebut"/>
+        <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%"></div>
             <p>Currently Viewing : </p> 
             <div class="action_btn"> <!-- Currently viewing button (in red) -->
                 <button id='current_btn'>{{this.choice2}}</button>
@@ -145,8 +146,8 @@
                     </Collapsible>
                 </li>                        
             </ul>
-        </div>
     </div>
+</div>
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
     <br><br>
