@@ -2,10 +2,10 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="crossfall" class="sectionHeader">&nbsp;&nbsp; 5 &nbsp; Crossfall
+      <td id="crossfall" class="sectionHeader">&nbsp;&nbsp; 5 &nbsp; Crossfall <!-- Section 5 -->
       <span class="title-icon" @click=levelCollapse()>
-        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span>
-        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>
+        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span> <!-- Expand all button -->
+        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span> <!-- Collapse all button -->
       </span>
       </td>
       </tr>
@@ -13,18 +13,22 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Definition" chapt="5.1" :levelDisplay="levelDisplay">
+      <Collapsible title="Definition" chapt="5.1" :levelDisplay="levelDisplay"> <!-- Sub section 5.1 -->
+      <!-- Display content of sub section 5.1 -->
         <p>Crossfall is the slope, measured at the right angle to the alignment of the carriageway.</p>
+        <!-- References for 5.1 -->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=199" target="_blank">
           CDC 10.2.2 - Definition: Crossfall (page 199)</a>
         </p>
       </Collapsible>
-      <Collapsible title="Crossfall of Carriageway" chapt="5.2" :levelDisplay="levelDisplay">
+      <Collapsible title="Crossfall of Carriageway" chapt="5.2" :levelDisplay="levelDisplay"> <!-- Sub section 5.2 -->
+       <!-- Display content of sub section 5.2 -->
         <p>The crossfall of traffic lane and shoulder of straight section is provided to facilitate surface water drainage 
             to the side drain and the design requirements shall be as shown in Table 10.6.</p>
-        <Table1006 class="tableImg"></Table1006>
+        <Table1006 class="tableImg"></Table1006> <!-- Table 10.6 -->
         <br>
+         <!-- References for 5.2 -->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target="_blank"> 
           CDC 10.4.2.4 - Crossfall of Carriageway (page 207)</a>
@@ -37,7 +41,9 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** Import respective table image */
 import Table1006 from '../components/table/table10.6.vue';
 
 export default {
@@ -51,6 +57,7 @@ export default {
     }
   },
   methods: {
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },
