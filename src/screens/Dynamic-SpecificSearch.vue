@@ -1,6 +1,8 @@
 <template>
     <div id = "entire-content">   
         <div id = "buttons">  <!-- Div Block for the side navigation buttons -->
+        <HomeButton id="homebut"/>
+        <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%"></div>
             <p>Currently Viewing : </p> 
             <div class="action_btn"> <!-- Currently viewing button (in red) -->
                 <button id='current_btn'>{{this.choice2}}</button>
@@ -141,14 +143,17 @@
                     </Collapsible>
                 </li>                        
             </ul>
-        </div>
     </div>
-    <div id="COP">
-        You may also be interested in: <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf" name="COP" />
-    </div>
-    <HomeButton id="mybut"/>
+</div>
+
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC" />
     <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE" />
+    <br><br>
+    <div id="COP">
+        You may also be interested in:
+    </div>
+    <br>
+    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf" name="COP" />    
     <br>
     <button id="back" type="button" class="btn btn-outline-secondary" @click="goBack()">
       <i class="bi bi-arrow-left" style="font-size: 15px;"> Go Back</i>
@@ -412,7 +417,7 @@ export default {
 
 #COP {
     display: inline;
-    float: right;
+    float: left;
     font-style: italic;
     color: #273B8C;
 }
