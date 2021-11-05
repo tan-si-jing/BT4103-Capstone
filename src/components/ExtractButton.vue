@@ -1,15 +1,22 @@
 <template>
   <div>
+    <!-- button on dashboard -->
     <button class="exportBtn" v-on:click="open()">Extract</button>
 
+    <!-- display for when the export button is clicked -->
     <div class="passwordBox" v-show="isOpened">
       <div class="content">
-        <!-- input password and extract button -->
+
         <div class="inputExport">
+          <!-- for user to enter password -->
           <input type="password" placeholder="Enter Password" v-model="password" v-on:keyup.enter="extract()">
+          <!-- extract button -->
           <font-awesome-icon icon="download" class="downloadBtn" v-on:click="extract()" />
         </div>
+
+        <!-- to display error message for when password is incorrect -->
         <p v-show="wrongPassword" style="color: #4c5257;">Wrong Password. Please Try Again.</p>
+
         <!-- close button -->
         <p class="pwBtn" v-on:click="open()">
           <font-awesome-icon icon="arrow-left" style="margin-right: 10px;"/> 
@@ -175,10 +182,12 @@ export default {
     }
   },
   methods: {
+    // to control the popup display of extract button
     open() {
       this.isOpened = !this.isOpened;
       this.password = null;
     },
+    // extract data if password entered is correct
     extract() {
       if (this.password == this.actualPassword) {
         this.getCSV();
@@ -189,6 +198,7 @@ export default {
       }
       this.password = null;
     },
+    // function to extract data and export to csv file
     getCSV() {
       // populate rows
       const rows = [
@@ -249,6 +259,7 @@ export default {
       document.body.appendChild(link);
       link.click();
     },
+    // get values from firebase
     getData() {
       database.collection('search_parameters')
               .doc(this.docID)
@@ -381,6 +392,7 @@ export default {
     },
   },
   created() {
+    // get current date when page is loaded and get data from firebase
     var currentdate = new Date(); 
     this.ExtractedDate = currentdate.getDate() + "/"
                     + (currentdate.getMonth()+1)  + "/" 

@@ -22,10 +22,10 @@
         </ol>
         <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;"> Crest Vertical Curve for Stopping Sight Distance</div>
         <div class="img-container2">
-          <img src="../assets/10.4.3.2.1.png">
+          <ZoomImage imgSrc="10.4.3.2.1.png"/>
         </div>
         <div class="img-container">
-          <img src="../assets/Figure10.8.png">
+          <ZoomImage imgSrc="Figure10.8.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
@@ -44,13 +44,13 @@
         </ol>
         <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;">Sag Curve for Headlight Sight Distance</div>
         <div class="img-container2">
-          <img src="../assets/10.4.3.2.2.png">
+          <ZoomImage imgSrc="10.4.3.2.2.png"/>
         </div> 
         <div class="img-container">
-          <img src="../assets/Figure10.9.png">
+          <ZoomImage imgSrc="Figure10.9.png"/>
         </div>
         <div class="img-container">
-          <img src="../assets/Figure10.10.png">
+          <ZoomImage imgSrc="Figure10.10.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=211" target="_blank">
@@ -69,10 +69,12 @@
 
 <script>
 import Collapsible from '../components/Collapsible.vue';
+import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
   components: {
-    Collapsible
+    Collapsible,
+    ZoomImage
   },
   data() {
     return {

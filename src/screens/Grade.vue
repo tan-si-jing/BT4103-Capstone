@@ -2,10 +2,10 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="grade" class="sectionHeader">&nbsp;&nbsp; 2 &nbsp; Grade
+      <td id="grade" class="sectionHeader">&nbsp;&nbsp; 2 &nbsp; Grade <!-- Section 2 -->
       <span class="title-icon" @click=levelCollapse()>
-        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span>
-        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>
+        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span> <!-- Expand all button -->
+        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span> <!-- Collapse all button -->
       </span>
       </td>
       </tr>
@@ -13,21 +13,19 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="2.1" title="Main Carriageway" :levelDisplay="levelDisplay">
+      <Collapsible chapt="2.1" title="Main Carriageway" :levelDisplay="levelDisplay"> <!-- Sub section 2.1 -->
+      <!-- Display content of sub section 2.1 -->
         <p>The geometric design requirements of road shall be as shown in Table 10.9</p>
+        <!-- Table 10.9 according to search parameters -->
         <table id="gradeTable">
-          <!--thead class="table">
-            <th style="text-align:center">Design Speed, V(km/h) </th>
-            <th style="text-align:center">Longitudinal Friction Factor, F </th>
-          </thead-->
           <tbody>
             <th style="text-align:center">Road Category </th>
             <th style="text-align:center">Maximum Grade (%), Desirable </th>
             <th style="text-align:center">Maximum Grade (%), Absolute </th>
             <tr v-for="row in table1" :key="row.id">
-              <td style="text-align:center"> {{ row.roadcat }} </td>
-              <td style="text-align:center"> {{ row.MGD}} </td>
-              <td style="text-align:center">  {{ row.MGA}} </td>
+              <td style="text-align:center"> {{ row.roadcat }} </td> <!-- Road Cateogry selected -->
+              <td style="text-align:center"> {{ row.MGD}} </td> <!-- Corresponding Maximum Grade Desirable -->
+              <td style="text-align:center">  {{ row.MGA}} </td> <!--  Corresponding Maximum Grade Absolute -->
             </tr>
           </tbody>
         </table>
@@ -39,23 +37,27 @@
         <li> For tunnel, minimum road gradient of 0.2% may be used.</li>
         <li> For built-up area, a road gradient of less than 0.4% may be used to tie in with existing access.</li>
         </ol>
+        <!-- References for 2.1 -->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=209" target="_blank">
           CDC 10.4.3.1.1 - Main Carriageway (page 209)</a>
         </p>
       </Collapsible>
-      <Collapsible v-show="isEorS" chapt="2.2" title="Interchange Ramp / Loop and Slip Road" :levelDisplay="levelDisplay">
-        <Table1010 class="tableImg"></Table1010><br>        
+
+      <Collapsible v-show="isEorS" chapt="2.2" title="Interchange Ramp / Loop and Slip Road" :levelDisplay="levelDisplay"> <!-- Sub section 2.2 -->
+        <Table1010 class="tableImg"></Table1010><br> <!-- Table 10.10 -->
+        <!-- References for 2.2 -->
         <p style="font-size: 16px;"> Referenced from:
         <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
           CDC 10.4.3.1.2 - Interchange Ramp/Loop and Slip Road (page 210)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="2.3" title="Critical Length of Grade" :levelDisplay="levelDisplay">
+
+      <Collapsible chapt="2.3" title="Critical Length of Grade" :levelDisplay="levelDisplay"> <!-- Sub section 2.3 -->
         <p>The length of grade shall be less than the critical values as shown in Table 10.11. Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
-        <Table1011 class="tableImg"></Table1011>
+        <Table1011 class="tableImg"></Table1011> <!-- Table 10.11 -->
         <div class="img-container">
-            <img src="../assets/Figure10.7.png">
+            <ZoomImage imgSrc="Figure10.7.png"/> <!-- Display zoomed image of CDC Figure -->
         </div>
       </Collapsible>
       </td>
@@ -65,15 +67,20 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** Import respective table images */
 import Table1010 from '../components/table/table1010.vue';
 import Table1011 from '../components/table/table10.11.vue';
+/** ZoomImage to zoom onto the image */
+import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
   components: {
     Collapsible,
     Table1010,
-    Table1011
+    Table1011,
+    ZoomImage
   },
   data() {
     return {
@@ -121,6 +128,7 @@ export default {
         ]
       }
     },
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },

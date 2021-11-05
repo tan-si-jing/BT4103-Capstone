@@ -2,10 +2,10 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="sidefrictionfactor" class="sectionHeader">&nbsp;&nbsp; 4 &nbsp; Side Friction Factor
+      <td id="sidefrictionfactor" class="sectionHeader">&nbsp;&nbsp; 4 &nbsp; Side Friction Factor <!-- Section 4 -->
       <span class="title-icon" @click=levelCollapse()>
-        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span>
-        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>
+        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span> <!-- Expand all button -->
+        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>  <!-- Collapse all button -->
       </span>
       </td>
       </tr>
@@ -13,24 +13,23 @@
     <tbody>
       <tr>
       <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
-      <Collapsible chapt="4.1" title="Side Friction Factor given Design Speed" :levelDisplay="levelDisplay">
+      <Collapsible chapt="4.1" title="Side Friction Factor" :levelDisplay="levelDisplay"> <!-- Sub section 4.1 -->
+      <!-- Display content of sub section 4.1 -->
+      <!-- Table 10.7 according to search parameters -->
         <table id="speedTable">
-          <!--thead class="table">
-            <th style="text-align:center">Design Speed, V(km/h) </th>
-            <th style="text-align:center">Side Friction Factor, F </th>
-          </thead-->
           <tbody>
             <th style="text-align:center">Design Speed, V(km/h) </th>
             <th style="text-align:center">Side Friction Factor, F </th>
             <tr v-for="row in table" :key="row.id">
-              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.des_speed }} </td>
-              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.SFF }} </td>
+              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.des_speed }} </td> <!-- Design speed selected -->
+              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.SFF }} </td> <!-- Corresponding Side Friction Factor -->
             </tr>
           </tbody>
         </table>
+        <!-- References for 4.1 -->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
-            CDC 10.4.2.5.1 - Side Friction Factor given Design Speed (page 208)</a>
+            CDC 10.4.2.5.1 - Table 10.7 </a>
         </p>
       </Collapsible>
       </td>
@@ -40,6 +39,7 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
 
 export default {
@@ -98,6 +98,7 @@ export default {
         ]
       }
     },
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },

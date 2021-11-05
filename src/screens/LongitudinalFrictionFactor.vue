@@ -2,32 +2,32 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="longfrictionfactor" class="sectionHeader">&nbsp;&nbsp; 3 &nbsp; Longitudinal Friction Factor
+      <td id="longfrictionfactor" class="sectionHeader">&nbsp;&nbsp; 3 &nbsp; Longitudinal Friction Factor <!-- Section 3 -->
       <span class="title-icon" @click=levelCollapse()>
-        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span>
-        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span>
+        <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span> <!-- Expand all button -->
+        <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span> <!-- Collapse all button -->
       </span>
       </td>
       </tr>
     </thead>
     <tbody>
       <tr>
-      <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;">
-      <Collapsible chapt="3.1" title="Longitudinal Friction Factor given Design Speed" :levelDisplay="levelDisplay">
+      <td scope="row" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; padding-bottom: 2%;"> 
+      
+      <Collapsible chapt="3.1" title="Longitudinal Friction Factor" :levelDisplay="levelDisplay"> <!-- Sub section 3.1 -->
+      <!-- Display content of sub section 3.1 -->
+      <!-- Table 10.4 according to search parameters -->
         <table id="speedTable">
-          <!--thead class="table">
-            <th style="text-align:center">Design Speed, V(km/h) </th>
-            <th style="text-align:center">Longitudinal Friction Factor, F </th>
-          </thead-->
           <tbody>
             <th style="text-align:center">Design Speed, V(km/h) </th>
             <th style="text-align:center">Longitudinal Friction Factor, F </th>
             <tr v-for="row in table" :key="row.id">
-              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.des_speed }} </td>
-              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.LFF}} </td>
+              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.des_speed }} </td> <!-- Design speed selected -->
+              <td style="text-align:center" v-bind:style="[row.des_speed === Number(this.designSpeed.substr(5,6)) ? 'font-weight: bold; color:black' : 'font-weight: normal; color:grey']"> {{ row.LFF}} </td> <!-- Corresponding Longtidutinal Friction Factor -->
             </tr>
           </tbody>
         </table>
+        <!-- References for 3.1 -->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=203" target='_blank'>
             CDC 10.4.2.2.1 - Table 10.4 (page 203)</a>
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
 
 export default {
@@ -98,6 +99,7 @@ export default {
         ]
       }
     },
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },
