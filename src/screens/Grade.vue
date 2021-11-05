@@ -2,7 +2,7 @@
   <table class="table table-borderless">
     <thead class="table">
       <tr>
-      <td id="grade" class="sectionHeader">&nbsp;&nbsp; 2 &nbsp; Grade
+      <td id="grade" class="sectionHeader">&nbsp;&nbsp; 2 &nbsp; Grade <!-- Section 2 -->
       <span class="title-icon" @click=levelCollapse()>
         <span v-if="!levelDisplay">Expand All &nbsp;<i class="bi bi-caret-down-fill"></i></span> <!-- Expand all button -->
         <span v-if="levelDisplay">Collapse All &nbsp;<i class="bi bi-caret-up-fill"></i></span> <!-- Collapse all button -->
@@ -24,8 +24,8 @@
             <th style="text-align:center">Maximum Grade (%), Absolute </th>
             <tr v-for="row in table1" :key="row.id">
               <td style="text-align:center"> {{ row.roadcat }} </td> <!-- Road Cateogry selected -->
-              <td style="text-align:center"> {{ row.MGD}} </td> <!-- Maximum Grade Desirable -->
-              <td style="text-align:center">  {{ row.MGA}} </td> <!--  Maximum Grade Absolute -->
+              <td style="text-align:center"> {{ row.MGD}} </td> <!-- Corresponding Maximum Grade Desirable -->
+              <td style="text-align:center">  {{ row.MGA}} </td> <!--  Corresponding Maximum Grade Absolute -->
             </tr>
           </tbody>
         </table>
