@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--button disabled if isActive is false-->
     <button type="button" class="btn btn-outline-dark" :disabled=!isActive v-bind:style="[isActive ? active : inactive]">
       {{num}}
     </button>

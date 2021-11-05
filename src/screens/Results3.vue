@@ -74,16 +74,19 @@ export default {
         } catch (e) {console.log(e)}
       }
       this.headerObserver = new IntersectionObserver(this.headerObserverHandler, {
+        //observe this area of the webpage
         rootMargin: "-20.4% 0% -72.4%"
       })
       const sections = document.querySelectorAll('.sectionHeader')
       sections.forEach(section => {
+        //add "marker" to each section
         this.headerObserver.observe(section)
       })
     },
     headerObserverHandler (entries) {
       for (const entry of entries) {
         if (entry.isIntersecting) {
+          //if "marker" intersects the area that is observed, update the current section to be highlighted
           this.$emit('sec-change', entry.target.id)
         }
       }

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- button in homepage to indicate user type-->
     <router-link :to=link>
     <button type="button" class="btn btn-outline-dark" style="button">
       <i :class="['bi-' + icon]" style="font-size: 4rem"></i>

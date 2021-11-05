@@ -1,6 +1,6 @@
 <template>
   <button type="button" class="btn btn-outline-secondary" @click="goToHome()">
-    <font-awesome-icon icon="home" id="home" />Home
+    <font-awesome-icon icon="home" id="home" style="margin-right:1rem;"/>Home
   </button>
 </template>
 
@@ -9,6 +9,7 @@ export default {
   name: 'HomeButton',
   methods:{
     goToHome(){
+      //navigate to homepage
       this.$router.push('/'); 
     }
   }
