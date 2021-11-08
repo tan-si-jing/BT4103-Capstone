@@ -142,6 +142,7 @@ export default {
   },
   watch: {
     currSection: function(val) {
+      //find previous elements that is highlighted (class="active") and remove it to remove highlight
       var oldElList = document.querySelectorAll(".active")
       oldElList.forEach(function(currentValue) {
         currentValue.removeAttribute("class") 
@@ -149,6 +150,7 @@ export default {
       oldElList.forEach(function(currentValue) {
         currentValue.setAttribute("class", "btn btn-light")
       })
+      //find current element to highlight and add active class
       var newEl = document.querySelector(`[data-secName="${val}"]`)
       newEl.setAttribute("class", "btn btn-light active")
     },

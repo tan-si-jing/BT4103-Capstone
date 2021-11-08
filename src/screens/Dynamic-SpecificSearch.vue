@@ -128,7 +128,8 @@
                         </div>
 
                         <!-- Referenced from block, each refernce displayed only -->
-                        <p style="font-size: 16px;"> Referenced from:
+                        <p style="font-size: 16px;" v-show="(cdc.Link || cdc.Figure1 || cdc.Figure2 || cdc.Figure3 || cdc.Figure4 || cdc.Figure5 || cdc.Figure6)"> 
+                            Referenced from:
                             <a v-bind:href="cdc.Link" target="_blank" v-show="cdc.Link">CDC {{cdc.chapterID}} - {{cdc.Chapter}}</a>
                             <span v-show="cdc.Link && cdc.Figure1">, </span>
                             <a v-bind:href="cdc.Figure1Link" target="_blank" v-show="cdc.Figure1">CDC {{cdc.Figure1Chapter}}</a>
@@ -143,6 +144,114 @@
                             <span v-show="(cdc.Link || cdc.Figure1 || cdc.Figure2 || cdc.Figure3 || cdc.Figure4 || cdc.Figure5) && cdc.Figure6">, </span>
                             <a v-bind:href="cdc.Figure6Link" target="_blank" v-show="cdc.Figure6">SDRE {{cdc.Figure6Chapter}}</a>
                         </p>
+                        <p class="collapseTitle-text"  v-show="cdc.Number2">
+                            <b style="grid-column:1; grid-row:1;">{{cdc.Number2}}</b><b style="grid-column:2; grid-row:1;">{{cdc.Content2}}</b>
+                        </p>
+                            <p v-html="cdc.Text2" v-show="cdc.Text2"></p>
+                        <div class = 'formula' v-show="cdc.Formula2"> <!-- Conditional block: only if formula exists -->
+                            <img :src="cdc.Formula2" @click="show(11)"> <!-- Display image of formula -->
+                            <vue-easy-lightbox
+                            :visible="visible11"
+                            :imgs="cdc.Formula2"
+                            @hide="handleHide(11)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of formula -->
+                        </div>
+                        <div class = 'figure' v-show="cdc.Figurenum3"> <!-- Conditional block: only if figure4 exists -->
+                            <img :src="cdc.Figurenum3" @click="show(12)"> <!-- Display image of figure4 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible12"
+                            :imgs="cdc.Figurenum3"
+                            @hide="handleHide(12)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
+                        </div>
+                        <p style="font-size: 16px;" v-show="cdc.Linknum2"> Referenced from:
+                            <a v-bind:href="cdc.Linknum2" target="_blank" v-show="cdc.Linknum2">CDC {{cdc.Id2}} - {{cdc.Chapternum2}}</a>
+                            <a v-bind:href="cdc.Linknumfig3" target="_blank" v-show="cdc.Linknumfig3">, CDC {{cdc.Idfig3}}</a>
+                        </p>
+
+                        <p class="collapseTitle-text" v-show="cdc.Number3">
+                            <b style="grid-column:1; grid-row:1;">{{cdc.Number3}}</b><b style="grid-column:2; grid-row:1;">{{cdc.Content3}}</b>
+                        </p>
+                            <p v-html="cdc.Text3" v-show="cdc.Text3"></p>
+                        <div class = 'formula' v-show="cdc.Formula3"> <!-- Conditional block: only if formula exists -->
+                            <img :src="cdc.Formula3" @click="show(15)"> <!-- Display image of formula -->
+                            <vue-easy-lightbox
+                            :visible="visible15"
+                            :imgs="cdc.Formula3"
+                            @hide="handleHide(15)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of formula -->
+                        </div>
+                        <div class = 'figure' v-show="cdc.Figurenum4"> <!-- Conditional block: only if figure4 exists -->
+                            <img :src="cdc.Figurenum4" @click="show(13)"> <!-- Display image of figure4 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible13"
+                            :imgs="cdc.Figurenum4"
+                            @hide="handleHide(13)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
+                        </div>
+                        <div class = 'figure' v-show="cdc.Figurenum5"> <!-- Conditional block: only if figure4 exists -->
+                            <img :src="cdc.Figurenum5" @click="show(14)"> <!-- Display image of figure4 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible14"
+                            :imgs="cdc.Figurenum5"
+                            @hide="handleHide(14)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
+                        </div>
+                        
+                        <p style="font-size: 16px;" v-show="cdc.Linknum3"> Referenced from:
+                            <a v-bind:href="cdc.Linknum3" target="_blank" v-show="cdc.Linknum3">CDC {{cdc.Id3}} - {{cdc.Chapternum3}}</a>
+                            <a v-bind:href="cdc.Linknumfig4" target="_blank" v-show="cdc.Linknumfig4">, CDC {{cdc.Idfig4}}</a>
+                            <a v-bind:href="cdc.Linknumfig5" target="_blank" v-show="cdc.Linknumfig5">, CDC {{cdc.Idfig5}}</a>
+                        </p>
+
+                        <p class="collapseTitle-text" v-show="cdc.Number4">
+                            <b style="grid-column:1; grid-row:1;">{{cdc.Number4}}</b><b style="grid-column:2; grid-row:1;">{{cdc.Content4}}</b>
+                        </p>
+                            <p v-html="cdc.Text4" v-show="cdc.Text4"></p>
+                        <p style="font-size: 16px;" v-show="cdc.Linknum4"> Referenced from:
+                            <a v-bind:href="cdc.Linknum4" target="_blank" v-show="cdc.Linknum4">CDC {{cdc.Id4}} - {{cdc.Chapternum4}}</a>
+                        </p>
+
+                        <p class="collapseTitle-text" v-show="cdc.Number5">
+                            <b style="grid-column:1; grid-row:1;">{{cdc.Number5}}</b><b style="grid-column:2; grid-row:1;">{{cdc.Content5}}</b>
+                        </p>
+                            <p v-html="cdc.Text5" v-show="cdc.Text5"></p>
+                        <p style="font-size: 16px;" v-show="cdc.Linknum5"> Referenced from:
+                            <a v-bind:href="cdc.Linknum5" target="_blank" v-show="cdc.Linknum5">CDC {{cdc.Id5}} - {{cdc.Chapternum5}}</a>
+                        </p>
+
+                        <p class="collapseTitle-text" v-show="cdc.Number6">
+                            <b style="grid-column:1; grid-row:1;">{{cdc.Number6}}</b><b style="grid-column:2; grid-row:1;">{{cdc.Content6}}</b>
+                        </p>
+                            <p v-html="cdc.Text6" v-show="cdc.Text6"></p>
+                        <div class = 'figure' v-show="cdc.Figurenum6"> <!-- Conditional block: only if figure4 exists -->
+                            <img :src="cdc.Figurenum6" @click="show(9)"> <!-- Display image of figure4 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible9"
+                            :imgs="cdc.Figurenum6"
+                            @hide="handleHide(9)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
+                        </div>
+                        <p style="font-size: 16px;" v-show="cdc.Linknum6"> Referenced from:
+                            <a v-bind:href="cdc.Linknum6" target="_blank" v-show="cdc.Linknum6">SDRE {{cdc.Id6}} </a>
+                        </p>
+
+                        <p class="collapseTitle-text" v-show="cdc.Number7">
+                            <b style="grid-column:1; grid-row:1;">{{cdc.Number7}}</b><b style="grid-column:2; grid-row:1;">{{cdc.Content7}}</b>
+                        </p>
+                            <p v-html="cdc.Text7" v-show="cdc.Text7"></p>
+                        <div class = 'figure' v-show="cdc.Figurenum7"> <!-- Conditional block: only if figure4 exists -->
+                            <img :src="cdc.Figurenum7" @click="show(10)"> <!-- Display image of figure4 (SDRE) -->
+                            <vue-easy-lightbox
+                            :visible="visible10"
+                            :imgs="cdc.Figurenum7"
+                            @hide="handleHide(10)"
+                            ></vue-easy-lightbox> <!-- Display zoomed image of figure4 -->
+                        </div>
+                        <p style="font-size: 16px;" v-show="cdc.Linknum7"> Referenced from:
+                            <a v-bind:href="cdc.Linknum7" target="_blank" v-show="cdc.Linknum7">SDRE {{cdc.Id7}}</a>
+                        </p>
+
                     </Collapsible>
                 </li>                        
             </ul>
@@ -196,7 +305,14 @@ export default {
             visible5: false,
             visible6: false,
             visible7: false,
-            visible8: false
+            visible8: false,
+            visible9: false,
+            visible10: false,
+            visible11: false,
+            visible12: false,
+            visible13: false,
+            visible14: false,
+            visible15: false
         } 
     },
     methods : {
@@ -226,6 +342,27 @@ export default {
             else if (param == 8) {
                 this.visible8 = true;
             }
+            else if (param == 9) {
+                this.visible9 = true;
+            }
+            else if (param == 10) {
+                this.visible10 = true;
+            }
+            else if (param == 11) {
+                this.visible11 = true;
+            }
+            else if (param == 12) {
+                this.visible12 = true;
+            }
+            else if (param == 13) {
+                this.visible13 = true;
+            }
+            else if (param == 14) {
+                this.visible14 = true;
+            }
+            else if (param == 15) {
+                this.visible15 = true;
+            }
         },
         /** Shows the zoomed images for the corresponding ID */
         handleHide(param) {
@@ -252,6 +389,27 @@ export default {
             }
             else if (param == 8) {
                 this.visible8 = false;
+            }
+            else if (param == 9) {
+                this.visible9 = false;
+            }
+            else if (param == 10) {
+                this.visible10 = false;
+            }
+            else if (param == 11) {
+                this.visible11 = false;
+            }
+            else if (param == 12) {
+                this.visible12 = false;
+            }
+            else if (param == 13) {
+                this.visible13 = false;
+            }
+            else if (param == 14) {
+                this.visible14 = false;
+            }
+            else if (param == 15) {
+                this.visible15 = false;
             }
         },
         /** Local storage to access the choice of user */
@@ -537,6 +695,14 @@ ol > li {
   padding-left:0.5rem;
   margin: 10px 0
 }
+
+.collapseTitle-text {
+  display: grid;
+  align-items: center;
+  font-size: 20px;
+  grid-template-columns: 5rem auto;
+}
+
 </style>
 <style scoped>
 img:hover {

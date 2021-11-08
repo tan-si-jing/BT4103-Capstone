@@ -10,6 +10,7 @@
         </div>
       </div>
       <div class="information" v-show="displayInfo" style="font-size: 20px; margin-top: 1%;">
+        <!-- content encased in this component will be slotted here -->
         <slot/>
       </div>
     </div>
@@ -29,6 +30,7 @@ export default {
   },
   methods:{
     collapse: function() {
+      //click to toggle between v-if = true or false
       this.displayInfo = !this.displayInfo;
     },
   },
@@ -61,10 +63,10 @@ export default {
   grid-template-columns: 5rem auto;
 }
 .image {
-    display: flex;
-    justify-content:center;
-    width:80%;
-    margin-left: 3em; 
+  display: flex;
+  justify-content:center;
+  width:80%;
+  margin-left: 3em; 
 }
 img {
     width: 100%;
@@ -93,25 +95,24 @@ p {
   margin-right: 1.2em
 }
 .img-container2{
-    width: 50%;
-    height: auto;
-    /*margin-left: 3em; */
-    margin-left: auto;
+  width: 50%;
+  height: auto;
+  margin-left: auto;
   margin-right: auto;
-    margin-top: 3%;
-    margin-bottom:3%;
+  margin-top: 3%;
+  margin-bottom:3%;
 }
 .img-container2 img{
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 .img-container4{
-    width: 80%;
-    height: auto;
-    margin-left: 3em; 
+  width: 80%;
+  height: auto;
+  margin-left: 3em; 
 }
 .img-container4 img{
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 </style>

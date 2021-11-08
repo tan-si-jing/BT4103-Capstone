@@ -25,6 +25,7 @@ export default {
     };
   },
   mounted() {
+    //tooltip to indicate work in progress if isActive is false
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     tooltipTriggerList.map(function (tooltipEl) {
       if (tooltipEl.getAttribute("class") == "wip") {

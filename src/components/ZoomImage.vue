@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- component to zoom upon clicking on images -->
     <img @click="show" :src="require(`@/assets/${imgSrc}`)">
     <vue-easy-lightbox
       :visible="visible"

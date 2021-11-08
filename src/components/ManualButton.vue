@@ -14,6 +14,7 @@ export default {
   },
   methods:{
     goToLink(){
+      //navigate to link
       window.open(this.link); 
     }
   }
