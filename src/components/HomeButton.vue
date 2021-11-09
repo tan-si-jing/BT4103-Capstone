@@ -8,6 +8,7 @@
 export default {
   name: 'HomeButton',
   methods:{
+    // redirects to home page
     goToHome(){
       //navigate to homepage
       this.$router.push('/'); 

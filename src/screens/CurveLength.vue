@@ -14,19 +14,21 @@
       <tr>
       <td scope="row">
       <Collapsible chapt="13.1" title="Crest Curve" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 13.1 -->
         <p> The minimum length of a crest curve in metre shall be the greater of:</p>
-        <ol type="a">
+        <ol type="a"><!-- Ordered list -->
         <li> 0.6 times of the design speed (in km/h); or </li>
         <li> Curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </li>
         <li> The desirable curve length can be derived from the following formulae: </li>
         </ol>
         <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;"> Crest Vertical Curve for Stopping Sight Distance</div>
         <div class="img-container2">
-          <ZoomImage imgSrc="10.4.3.2.1.png"/>
+          <ZoomImage imgSrc="10.4.3.2.1.png"/> <!-- Display zoomed image of CDC Figure -->
         </div>
         <div class="img-container">
-          <ZoomImage imgSrc="Figure10.8.png"/>
+          <ZoomImage imgSrc="Figure10.8.png"/> <!-- Display zoomed image of CDC Figure -->
         </div>
+        <!-- References of sub section 13.1-->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
           CDC 10.4.3.2.1 - Crest Curve (page 210)</a>,
@@ -35,8 +37,9 @@
         </p>
       </Collapsible>
       <Collapsible chapt="13.2" title="Sag Curve" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 13.2 -->
         <p> The minimum length of a sag curve in metre shall be the greater of: </p>
-        <ol type="a">
+        <ol type="a"><!-- Ordered list -->
         <li> 0.6 times of the design speed (in km/h); or </li>
         <li> Curve length needed to provide for riding comfort (refer to Figure 10.9); or </li>
         <li> Curve length needed to provide headlight sight distance (refer to Figure 10.10) </li>
@@ -44,14 +47,15 @@
         </ol>
         <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;">Sag Curve for Headlight Sight Distance</div>
         <div class="img-container2">
-          <ZoomImage imgSrc="10.4.3.2.2.png"/>
+          <ZoomImage imgSrc="10.4.3.2.2.png"/> <!-- Display zoomed image of CDC Figure -->
         </div> 
         <div class="img-container">
-          <ZoomImage imgSrc="Figure10.9.png"/>
+          <ZoomImage imgSrc="Figure10.9.png"/> <!-- Display zoomed image of CDC Figure -->
         </div>
         <div class="img-container">
-          <ZoomImage imgSrc="Figure10.10.png"/>
+          <ZoomImage imgSrc="Figure10.10.png"/> <!-- Display zoomed image of CDC Figure -->
         </div>
+        <!-- References of sub section 13.2-->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=211" target="_blank">
           CDC 10.4.3.2.2 - Sag Curve (page 211)</a>,
@@ -68,7 +72,9 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** ZoomImage to zoom onto the image */
 import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
@@ -82,6 +88,7 @@ export default {
     }
   },
   methods: {
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },
