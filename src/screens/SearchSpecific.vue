@@ -15,7 +15,8 @@
     </div>
     <div class="options">
       <div class="input-group mx-auto" style="width: 55%;">
-        <input list="specificFields" class="form-select" @change="changeValue($event)"  v-on:keyup.enter="storeSpecParam(this.specific_param)">
+        <input list="specificFields" class="form-select" @change="changeValue($event)"  
+          v-on:keyup.enter="storeSpecParam(this.specific_param)" style="height:50px;">
         <datalist id="specificFields">
           <option disabled selected value>-- Choose your section from the drop down list --</option>
           <option value="Classification of Road">Classification of Road</option>
@@ -101,7 +102,7 @@
           <option value="Vertical Alignment">Types of Vertical Curve</option>
       
         </datalist>
-        <button class="btn btn-outline-secondary w-25" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
+        <button class="btn btn-outline-secondary w-25" style="margin:0" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
       </div>
       <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
         <i class="bi bi-arrow-left"></i>
