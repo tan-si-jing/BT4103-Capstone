@@ -14,6 +14,7 @@
       <tr>
       <td scope="row">
       <Collapsible title="Desirable Super-Elevation Formula" chapt="11.1" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 11.1 --> 
         <p> The desirable super-elevation can be derived from the following equation:</p>
         <div class="img-container2">
           <ZoomImage imgSrc="10.4.2.5.1.png"/>
@@ -23,6 +24,7 @@
           CDC 10.4.2.5.1 - Super-elevation (page 207)</a>
         </p>
 
+        <!-- Display table 10.2,created by code-->
         <table102 class="tableImg"></table102><br>
 
         <p>The various percentages of super-elevation and the corresponding design speeds and radii are as shown in 
@@ -40,6 +42,7 @@
       </Collapsible>
 
       <Collapsible chapt="11.2" title="If super-elevation < desirable crossfall" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 11.2 --> 
         <p>In cases where the negative or positive super-elevation derived is lower than the desirable crossfall, the desirable super-elevation shall be 
           pegged at the crossfall to slope towards the inner radius of the carriageway.</p>
         <p style="font-size: 16px;"> Referenced from:
@@ -49,6 +52,7 @@
       </Collapsible>
 
       <Collapsible chapt="11.3" title="Rotation of Pavement" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 11.3 --> 
         <p>For rotation of pavement to attain super-elevation, the length required to develop the 
           super-elevation shall satisfy the larger value obtained from the following two formulae:</p>
         <div class="img-container2">
@@ -82,8 +86,11 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** Import table from components/table sub folder */
 import table102 from '../components/table/table10.2 -superelevation.vue'
+/** ZoomImage to zoom onto the image */
 import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
