@@ -14,6 +14,7 @@
       <tr>
       <td scope="row">
       <Collapsible title="Directional Sign" chapt="9.1" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 9.1 -->
         <p style="padding-top:2%; padding-bottom:1%;"><b class="tab3">9.1.1</b><b>Letters for Directional Signs - Upper Case (Sheet 1 of 2)</b></p>
         <div class="img-container">
           <ZoomImage imgSrc="SDRE-Chap7-DIR1.png"/>
@@ -88,6 +89,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="9.2" title="Traffic Mandatory Signs" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 9.2 -->
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.2.1</b><b>Traffic Mandatory Signs (Sheet 1 of 2)</b></p>
         <div class="img-container">
           <ZoomImage imgSrc="SDRE-Chap15-TFM1.png"/>
@@ -107,6 +109,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="9.3" title="Traffic Prohibitory Signs" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 9.3 -->
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.3.1</b><b>Traffic Prohibitory Signs (Sheet 1 of 6)</b></p>
         <div class="img-container">
           <ZoomImage imgSrc="SDRE-Chap16-TFP1.png"/>
@@ -162,6 +165,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="9.4" title="Traffic Warning Signs" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 9.4 -->
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.4.1</b><b>Traffic Warning Signs (Sheet 1 of 9)</b></p>
         <div class="img-container">
           <ZoomImage imgSrc="SDRE-Chap17-TFW1.png"/>
@@ -244,6 +248,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="9.5" title="Traffic Informatory Signs" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 9.5 -->
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.5.1</b><b>Traffic Informatory Signs (Sheet 1 of 17)</b></p>
         <div class="img-container">
           <ZoomImage imgSrc="SDRE-Chap18-TFI1.png"/>
@@ -416,6 +421,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="9.6" title="Street Name Board" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 9.6 -->
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.6.1</b><b>Street Name Sign - General Configuration Layout (Sheet 1 of 3)</b></p>
         <div class="img-container">
           <ZoomImage imgSrc="SDRE-Chap20-SNB1.png"/>
@@ -525,6 +531,7 @@
         </p>
       </Collapsible>
       <Collapsible chapt="9.7" title="Signs – Cycling Path" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 9.7 -->
         <p style="padding-top:3%; padding-bottom:1%;"><b class="tab3">9.7.1</b><b>Treatment at Major Junction</b></p>
         <div class="img-container">
           <ZoomImage imgSrc="SDRE-Chap21-CYC1.png"/>
@@ -622,7 +629,9 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** ZoomImage to zoom onto the image */ 
 import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
