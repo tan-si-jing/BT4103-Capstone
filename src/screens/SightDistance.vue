@@ -14,6 +14,7 @@
       <tr>
       <td scope="row">
       <Collapsible chapt="12.1" title="Stopping Sight Distance" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 12.1 -->
         <p> The minimum stopping sight distance for various road gradient shall be determined by the following formula:</p>
           <div class="img-container2">
             <ZoomImage imgSrc="10.4.2.2.1.png"/>
@@ -23,7 +24,9 @@
             CDC 10.4.2.2.1 - Stopping Sight Distance (page 203)</a>
         </p>
       </Collapsible>
+
       <Collapsible v-show="isUndivided" title="Intermediate Sight Distance" chapt="12.2" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 12.2, v-show on top filters the content here, displaying it only if user chose undivided road -->
         <ol v-show="isUndivided" type="a">
         <li v-show="isUndivided"> Intermediate sight distance is equal to 2 times stopping sight distance. </li>
         <li v-show="isUndivided"> Intermediate sight distance is only applicable to undivided 2-lane road. </li>
@@ -36,7 +39,9 @@
           CDC 10.4.2.2.2 - Intermediate Sight Distance (page 203)</a>
         </p>
       </Collapsible>
+
       <Collapsible v-show="isUndivided" chapt="12.3" title="Overtaking Sight Distance" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 12.3 -->
         <p v-show="isUndivided">The following sight distances are to be considered in the design. If overtaking sight distance 
           for an undivided road cannot be achieved, the intermediate sight distance shall be adopted.</p>
         <p v-show="isUndivided"><u>Note:</u> Overtaking sight distance is only applicable to undivided 2-lane road.</p>
@@ -48,7 +53,9 @@
             CDC 10.4.2.2.3 - Overtaking Sight Distance (page 204)</a>
         </p>
       </Collapsible>
+
       <Collapsible chapt="12.4" title="Intersection Sight Distance" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 12.4 -->
         <p>The desirable intersection sight distance at unsignalised junction can be derived 
           from the following formula and to be read in conjunction with Figure 10.2.</p>
         <div class="img-container2">
@@ -64,7 +71,9 @@
             CDC Figure 10.2 (page 226)</a>
         </p>
       </Collapsible>
+
       <Collapsible chapt="12.5" title="Offset Distance" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 12.5 -->
         <p>On a horizontal curve where the obstruction on the inside of the curve cannot be removed, 
           offset distance to the obstruction shall be provided. 
           The offset distance can be derived from the following formula and shall be read in conjunction with Figure 10.3.</p>
@@ -88,7 +97,9 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** ZoomImage to zoom onto the image */
 import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
@@ -108,6 +119,7 @@ export default {
         grad_curv_change:"",
         specific_param:"",
       },
+      /*isUndivided checks if the exisitng user's road Type selected is undivided Road or not, and returns True or False respectively*/
       isUndivided: this.$parent.choice.roadType === 'undividedRoad' ? true : false,
       levelDisplay: false
     }
