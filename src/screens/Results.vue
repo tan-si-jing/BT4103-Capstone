@@ -1,7 +1,9 @@
 <template>
-  <div class="sidebar">
-    <HomeButton/>
+  <!-- Navigation Sidebar -->
+  <div class="sidebar"> 
+    <HomeButton/> <!-- Home Button -->
     <div style="font-size:1.5rem;padding:5%;border-top: ridge;"><b>Step-by-Step Guide:</b></div>
+    <!-- Section Buttons that route to specific sections -->
     <router-link to="/results/page1#roadcselements">
       <SidebarButton 
         name="1.&nbsp Road Cross-Sections and Elements" @click="updateSec('roadcselements')"
@@ -104,7 +106,8 @@
         data-secName="combinedalignment"
       />
     </router-link>
-    <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%">
+    <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%"> <!-- Separating Line -->
+    <!-- Manual Buttons that open manuals in new window -->
     <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf" name="CDC Manual" />
     <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/Content_Page_JULY_2020.pdf" name="SDRE Manual" />
     <div id="COP">
@@ -117,8 +120,11 @@
 </template>
 
 <script>
+/** Sidebar Button component to display section name and click to route to selected section */
 import SidebarButton from '../components/SidebarButton.vue'
+/** Home Button to navigate to Home Page */
 import HomeButton from '../components/HomeButton.vue'
+/** Manual Button component to display manual name and click to open manual document in new window */
 import ManualButton from '../components/ManualButton.vue'
 
 export default {
@@ -136,11 +142,13 @@ export default {
     }
   },
   methods: {
+    /** Update section */
     updateSec(sec) {
       this.currSection = sec
     },
   },
   watch: {
+    /** Method to highlight current section (on the sidebar) which the user is currently viewing  */
     currSection: function(val) {
       var oldElList = document.querySelectorAll(".active")
       oldElList.forEach(function(currentValue) {

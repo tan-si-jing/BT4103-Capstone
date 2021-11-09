@@ -14,8 +14,9 @@
       <tr>
         <td scope="row">
         <Collapsible title="Combination of Horizontal & Vertical Alignment" chapt="17.1" :levelDisplay="levelDisplay">
+        <!-- Display content of sub section 17.1 -->
           <p>To avoid undesirable effect of poor combination of vertical and horizontal curve, the following principles shall be observed: </p>
-          <ol type="a">
+          <ol type="a"><!-- Ordered List -->
           <li> The tangent point for both vertical and horizontal curve shall coincide; </li>
           <li> When condition (a) cannot be met, the vertical curve shall be completely within the horizontal curve and have common mid-point. 
             If the mid-point is unable to coincide, the distance between the midpoint of both curves shall be less than 0.25 times the length of the horizontal curve; </li>
@@ -24,6 +25,7 @@
           <li> Both horizontal and vertical curves shall be kept as long as possible and where both are present, they shall not be 
             considered separately.</li>
           </ol>
+          <!-- References of sub section 17.1-->
           <p style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=201" target="_blank">
               CDC 10.4.1.3 - Combination of Horizontal & Vertical Alignment (page 201)
@@ -37,6 +39,7 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
 
 export default {
@@ -49,6 +52,7 @@ export default {
     }
   },
   methods: {
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },

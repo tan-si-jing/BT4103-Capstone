@@ -14,10 +14,12 @@
       <tr>
       <td scope="row">
       <Collapsible title="Desirable Minimum Traffic Island" chapt="16.1" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 16.1 -->
         <p> The desirable minimum dimension and the approach nose of the traffic island shall be as shown in the Figure 10.12. </p>
         <div class="img-container">
-          <ZoomImage imgSrc="Figure10.12.png"/>
+          <ZoomImage imgSrc="Figure10.12.png"/> <!-- Display zoomed image of CDC Figure -->
         </div> 
+        <!-- References of Figures in sub section 16.1-->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214" target='_blank'>
           CDC 10.5.3.1 - Traffic Island (page 214)</a>,
@@ -29,6 +31,7 @@
         <p>Where there is a high concentration of pedestrian at the road intersection adjacent to school, shopping centre, hospital, food centre, the dimension 
           of the traffic island shall be increased based on 0.3m&#178; standing place per person. The number of pedestrians shall include those who are waiting 
           to cross the road at the island before the start of the pedestrian crossing signal.</p>
+        <!-- References of Notes in sub section 16.1-->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=214" target='_blank'>
           CDC 10.5.3.2 - Traffic Island (page 214)</a>
@@ -44,9 +47,11 @@
         </p>
       </Collapsible-->
       <Collapsible chapt="16.2" title="Signs & Markings at Slip-road/ Traffic Island" :levelDisplay="levelDisplay">
+      <!-- Display content of sub section 16.2 -->
         <div class="img-container">
-          <ZoomImage imgSrc="SDRE-Chap8-RMS9.png"/>
+          <ZoomImage imgSrc="SDRE-Chap8-RMS9.png"/> <!-- Display zoomed image of SDRE Figure -->
         </div>
+        <!-- References of sub section 16.2-->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/Standards_and_Specifications/SDRE/SDRE14-8_RMS_1-14-JULY_2020.pdf#page=10" target="_blank">
           SDRE Chapter 8 - 9 (page 10)</a>
@@ -59,7 +64,9 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** ZoomImage to zoom onto the image */
 import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
@@ -73,6 +80,7 @@ export default {
     }
   },
   methods: {
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },
