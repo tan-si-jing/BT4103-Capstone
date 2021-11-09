@@ -14,6 +14,7 @@
       <tr>
       <td scope="row">
       <Collapsible chapt="7.1" title="Left Turn Slip Road" :levelDisplay="levelDisplay">
+        <!-- Display content of sub section 7.1 -->
         <p>The desirable merging angle for left turn slip road shall be 70&#176; and absolute minimum merging angle shall be 50&#176; as shown in Figure 10.12.</p>
         <div class="img-container">
           <ZoomImage imgSrc="Figure10.12.png"/>
@@ -32,7 +33,9 @@
 </template>
 
 <script>
+/** Collapsible to expand and collapse the sub-sections */
 import Collapsible from '../components/Collapsible.vue';
+/** ZoomImage to zoom onto the image */
 import ZoomImage from '../components/ZoomImage.vue'
 
 export default {
@@ -46,6 +49,7 @@ export default {
     }
   },
   methods: {
+    /** to expand to collapse all in the Section */
     levelCollapse: function() {
       this.levelDisplay = !this.levelDisplay;
     },
