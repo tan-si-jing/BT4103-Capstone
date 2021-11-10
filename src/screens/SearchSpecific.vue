@@ -2,20 +2,20 @@
   <div style="height:100vh; overflow: hidden; position:relative">
     <div class="header">
       <div class="center">
-      <div class="pages">
+      <div class="pages"> <!-- Top row circle buttons for each page  -->
           <PageCircle num="1" v-bind:isActive="true" @click="$router.go(-1)"/>
           <PageCircle num="2" v-bind:isActive="true"/>
       </div>
-      <div class="question">
+      <div class="question"><!-- Main question of page -->
         <h5 style="text-align:center">Which section are you looking for? </h5>
       </div>
-      </div>
+      </div><!-- Mascot and Road template for the page -->
       <img src="../assets/mascot.png" class="mascot"/>
       <img src="../assets/road.png" class="road"/>
     </div>
-    <div class="options">
+    <div class="options"><!-- Options for the page  -->
       <div class="input-group mx-auto" style="width: 55%;">
-        <input list="specificFields" class="form-select" @change="changeValue($event)"  
+        <input list="specificFields" id="words" class="form-select" @change="changeValue($event)"  
           v-on:keyup.enter="storeSpecParam(this.specific_param)" style="height:50px;">
         <datalist id="specificFields">
           <option disabled selected value>-- Choose your section from the drop down list --</option>
@@ -100,13 +100,14 @@
           <option value="Vertical Alignment">General Controls for Vertical Alignment</option>
           <option value="Vertical Alignment">Sag Curve</option>
           <option value="Vertical Alignment">Types of Vertical Curve</option>
-      
         </datalist>
         <button class="btn btn-outline-secondary w-25" style="margin:0" type="button" @click="storeSpecParam(this.specific_param)" >Search</button>
-      </div>
-      <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)">
+      </div> <!-- Shows the wrong choice entered -->
+      <p id='command' v-show='this.show'>The choice you've entered: {{this.stated}} is invalid. Select an option from the list again!</p>
+      <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.go(-1)"><!-- Button to navigate backwards -->
         <i class="bi bi-arrow-left"></i>
       </button>
+      
     </div>
   </div>
 </template>
@@ -126,6 +127,12 @@ export default {
   data() {
     return{
       specific_param:"",
+      show:false,
+      stated:"",
+      array_possibilities: ["Classification of Road", "Combination of Horizontal & Vertical Alignment", "Corner Radius",
+      "Crossfall", "Curve Length", "Design Speed", "Grade", "Horizontal Alignment", "Lane Width", "Lateral Clearance",
+      "Longitudinal Friction Factor", "Merging Angle","Road Cross-Sections and Elements", "Side Friction Factor",
+      "Sight Distance", "Signs", "Slip-road Traffic Island", "Super-Elevation", "Types of Road", "Vertical Alignment"]
     }
   },
   methods:{
@@ -133,12 +140,15 @@ export default {
       this.specific_param = event.target.value;
       console.log(event.target.value);
     },
+  /** Local storage to access the choice of user */
     openStorage(){
       return JSON.parse(localStorage.getItem('choice'))
     },
+  /** Saves the choice of the user to local storage */
     saveStorage(form){
       localStorage.setItem('choice',JSON.stringify(form))
     },
+  /** Updates the local storage of the User and adds to the analytics database */
     updateChoice(input,value){
       this.choice[input] = []
       this.choice[input].push(value)
@@ -162,16 +172,22 @@ export default {
           res;
       });
     },
-
+    /** Stores the user specified search parameter */
     storeSpecParam(text){
-      this.updateChoice('specific_param',text);
-      this.displayParam();
-      if (text == 'Road Cross-Sections and Elements') {
-        this.$router.push({name:'dynamic_road'})
-      } else if (text == 'Signs') {
-        this.$router.push({name:'dynamic_signs'})
+      if (this.array_possibilities.includes(text)) {
+        this.updateChoice('specific_param',text);
+        this.displayParam();
+        if (text == 'Road Cross-Sections and Elements') {
+          this.$router.push({name:'dynamic_road'})
+        } else if (text == 'Signs') {
+          this.$router.push({name:'dynamic_signs'})
+        } else {
+          this.$router.push({name:'specific_results'})
+        }
       } else {
-        this.$router.push({name:'specific_results'})
+        this.show = true;
+        this.stated = text;
+        document.getElementById('words').value='';
       }
     },
     displayParam(){
@@ -202,6 +218,16 @@ export default {
   box-shadow:none;
   border:none;
 }
+
+#command{
+  position:absolute;
+  width:fit-content;
+  height:fit-content;
+  top:65%;
+  left:30%;
+  color: red;
+}
+
 .options {
   background-color: #FAFAFA;
   height: 55%;
