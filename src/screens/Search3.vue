@@ -2,14 +2,14 @@
   <div style="height:100vh; overflow: hidden; position:relative">
   <div class="header">
     <div class="center">
-    <div class="pages">
+    <div class="pages"><!-- Top row circle buttons for each page  -->
         <PageCircle num="1" v-bind:isActive="true" @click="$router.push('search')"/>
         <PageCircle num="2" v-bind:isActive="true" @click="$router.push('search2')"/>
         <PageCircle num="3" v-bind:isActive="true"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
-    <div class="question">
+    <div class="question"><!-- Main question of page -->
       <h5>Are you working on <u>Undivided (x-lane) Road</u>, <u>Slip Road</u> or <u>Dual (x-lane) Road</u>? Please select below.
       
       <span tabindex="0" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
@@ -24,15 +24,16 @@
       </h5>
     </div>
     </div>
+    <!-- Mascot and Road template for the page -->
     <img src="../assets/mascot.png" class="mascot"/>
     <img src="../assets/road.png" class="road"/>
   </div>
   <div class="options">
-    <div class="button-group">
+    <div class="button-group"> <!-- Options for the page (undivided road, slip road, dual road) -->
       <SearchParamButton text="Undivided (x-lane) Road" v-bind:isActive="true" @click="storeRoadType('undividedRoad');"/>
       <SearchParamButton text="Slip Road" v-bind:isActive="true" @click="storeRoadType('slipRoad');"/>
       <SearchParamButton text="Dual (x-lane) Road" v-bind:isActive="true" @click="storeRoadType('dualRoad');"/>
-    </div>
+    </div> <!-- Button to navigate backwards -->
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search2')">
       <i class="bi bi-arrow-left"></i>
     </button>
@@ -58,12 +59,15 @@ export default {
     }
   },
   methods:{
+    /** Local storage to access the choice of user */
     openStorage() {
       return JSON.parse(localStorage.getItem('choice'))
     },
+    /** Saves the choice of the user to local storage */
     saveStorage(form) {
       localStorage.setItem('choice',JSON.stringify(form))
     },
+    /** Updates the local storage of the User and adds to the analytics database */
     updateChoice(input,value) {
       this.choice[input] = value
 
@@ -73,17 +77,11 @@ export default {
       storedChoice[input] = value
       this.saveStorage(storedChoice)
     },
+    /** Stores the user specified road type */
     storeRoadType(text) {
       this.updateChoice('roadType',text)
-      this.displayRoadType();
       this.$router.push({name:'search4'})
-    },
-    displayRoadType() {
-      console.log(this.choice.role)
-      console.log(this.choice.roadDesign)
-      console.log(this.choice.roadClass)
-      console.log(this.choice.roadType)
-    },
+    }
   },
   created() {
     const storedChoice = this.openStorage()

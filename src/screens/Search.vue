@@ -2,25 +2,26 @@
   <div style="height:100vh; overflow: hidden; position:relative">
   <div class="header">
     <div class="center">
-    <div class="pages">
+    <div class="pages"> <!-- Top row circle buttons for each page  -->
         <PageCircle num="1" v-bind:isActive="true"/>
         <PageCircle num="2" v-bind:isActive="false"/>
         <PageCircle num="3" v-bind:isActive="false"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
-    <div class="question">
+    <div class="question"> <!-- Main question of page -->
       <h5>Are you looking for a <u>specific section</u> or a <u>step-by-step</u> guide to road designing </h5>
     </div>
-    </div>
+    </div> 
+    <!-- Mascot and Road template for the page -->
     <img src="../assets/mascot.png" class="mascot"/>
     <img src="../assets/road.png" class="road"/>
   </div>
   <div class="options">
-    <div class="button-group">
-      <SearchParamButton text="Specific Section" v-bind:isActive="true" @click="this.updateChoice('roadDesign','Specific');this.displayRoad(); this.$router.push({name:'searchspecific'})"/>
+    <div class="button-group"> <!-- Options for the page (Step by step vs Specific page) -->
+      <SearchParamButton text="Specific Section" v-bind:isActive="true" @click="this.updateChoice('roadDesign','Specific'); this.$router.push({name:'searchspecific'})"/>
       <SearchParamButton text="Step-by-step Guide" v-bind:isActive="true" @click="storeRoadDesign('Guide');"/>
-    </div>
+    </div> <!-- Button to navigate backwards -->
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('/')"><i class="bi bi-arrow-left"></i></button>
   </div>
   </div>
@@ -50,12 +51,15 @@ export default {
     }
   },
 methods:{
+  /** Local storage to access the choice of user */
   openStorage(){
     return JSON.parse(localStorage.getItem('choice'))
   },
+  /** Saves the choice of the user to local storage */
   saveStorage(form){
     localStorage.setItem('choice',JSON.stringify(form))
   },
+  /** Updates the local storage of the User and adds to the analytics database */
   updateChoice(input,value){
     this.choice[input] = value
 
@@ -65,15 +69,10 @@ methods:{
     storedChoice[input] = value
     this.saveStorage(storedChoice)
   },
-  
+  /** Stores the user specified road design */
   storeRoadDesign(text){
     this.updateChoice('roadDesign',text);
-    this.displayRoad();
     this.$router.push({name:'search2'})
-  },
-  displayRoad(){
-    console.log(this.choice.role)
-    console.log(this.choice.roadDesign)
   }
 },
 created(){
