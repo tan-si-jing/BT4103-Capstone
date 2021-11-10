@@ -74,54 +74,7 @@
           CDC Figure 10.10 (page 234)</a>
         </p>
       </Collapsible>
-      <!--Collapsible chapt="15.2" title="Crest Curve" :levelDisplay="levelDisplay">
-        <p> The minimum length of a crest curve in metre shall be the greater of:</p>
-        <ol type="a">
-        <li> 0.6 times of the design speed (in km/h); or </li>
-        <li> Curve length needed to provide the minimum stopping sight distance (refer to Figure 10.8) </li>
-        <li> The desirable curve length can be derived from the following formulae: </li>
-        </ol>
-        <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;"> Crest Vertical Curve for Stopping Sight Distance</div>
-        <div class="img-container2">
-          <ZoomImage imgSrc="10.4.3.2.1.png"/>
-        </div>
-        <div class="img-container">
-          <ZoomImage imgSrc="Figure10.8.png"/>
-        </div>
-        <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target='_blank'>
-          CDC 10.4.3.2.1 - Crest Curve (page 210)</a>,
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=232" target='_blank'>
-          CDC Figure 10.8 (page 232)</a>
-        </p>
-      </Collapsible>
-      <Collapsible chapt="15.3" title="Sag Curve" :levelDisplay="levelDisplay">
-        <p> The minimum length of a sag curve in metre shall be the greater of: </p>
-        <ol type="a">
-        <li> 0.6 times of the design speed (in km/h); or </li>
-        <li> Curve length needed to provide for riding comfort (refer to Figure 10.9); or </li>
-        <li> Curve length needed to provide headlight sight distance (refer to Figure 10.10) </li>
-        <li> The desirable curve length can be derived from the following formulae: </li>
-        </ol>
-        <div style="font-size:16px;margin-right:auto;margin-left:auto; width:50%;">Sag Curve for Headlight Sight Distance</div>
-        <div class="img-container2">
-          <ZoomImage imgSrc="10.4.3.2.2.png"/>
-        </div> 
-        <div class="img-container">
-          <ZoomImage imgSrc="Figure10.9.png"/>
-        </div>
-        <div class="img-container">
-          <ZoomImage imgSrc="Figure10.10.png"/>
-        </div>
-        <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=211" target='_blank'>
-          CDC 10.4.3.2.2 - Sag Curve (page 211)</a>,
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=233" target='_blank'>
-          CDC Figure 10.9 (page 233)</a>,
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=234" target='_blank'>
-          CDC Figure 10.10 (page 234)</a>
-        </p>
-      </Collapsible-->
+      
       <Collapsible chapt="15.2" title="Critical Length of Grade" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 15.2 -->
         <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
