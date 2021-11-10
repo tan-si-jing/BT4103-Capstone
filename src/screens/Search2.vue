@@ -2,29 +2,30 @@
   <div style="height:100vh; overflow: hidden; position:relative">
   <div class="header">
     <div class="center">
-    <div class="pages">
+    <div class="pages"><!-- Top row circle buttons for each page  -->
         <PageCircle num="1" v-bind:isActive="true" @click="$router.push('search')"/>
         <PageCircle num="2" v-bind:isActive="true"/>
         <PageCircle num="3" v-bind:isActive="false"/>
         <PageCircle num="4" v-bind:isActive="false"/>
         <PageCircle num="5" v-bind:isActive="false"/>
     </div>
-    <div class="question">
+    <div class="question"><!-- Main question of page -->
       <h5>What <u>class of road</u> are you working on?</h5>
     </div>
     </div>
+    <!-- Mascot and Road template for the page -->
     <img src="../assets/mascot.png" class="mascot"/>
     <img src="../assets/road.png" class="road"/>
   </div>
   <div class="options">
-    <div class="button-group">
+    <div class="button-group"><!-- Options for the page (1, 1A ... 5) -->
       <SearchParamButton text="1 - Expressways" v-bind:isActive="false"/>
       <SearchParamButton text="1A - Semi Expressway" v-bind:isActive="false"/>
       <SearchParamButton text="2 - Major Arterial" v-bind:isActive="true" @click="storeRoadClass('majorArterial');"/>
       <SearchParamButton text="3 - Minor Arterial" v-bind:isActive="true" @click="storeRoadClass('minorArterial');"/>
       <SearchParamButton text="4 - Primary Access" v-bind:isActive="true" @click="storeRoadClass('primaryAccess');"/>
       <SearchParamButton text="5 - Local Access" v-bind:isActive="true" @click="storeRoadClass('localAccess');"/>
-    </div>
+    </div> <!-- Button to navigate backwards -->
     <button id="back" type="button" class="btn btn-outline-secondary" @click="$router.push('search')">
       <i class="bi bi-arrow-left"></i>
     </button>
@@ -57,12 +58,15 @@ export default {
     }
   },
   methods:{
+    /** Local storage to access the choice of user */
     openStorage(){
       return JSON.parse(localStorage.getItem('choice'))
     },
+    /** Saves the choice of the user to local storage */
     saveStorage(form){
       localStorage.setItem('choice',JSON.stringify(form))
     },
+    /** Updates the local storage of the User and adds to the analytics database */
     updateChoice(input,value){
       this.choice[input] = value
 
@@ -72,17 +76,11 @@ export default {
       storedChoice[input] = value
       this.saveStorage(storedChoice)
     },
-
+    /** Stores the user specified road class */
     storeRoadClass(text){
       this.updateChoice('roadClass',text);
-      this.displayRoadClass();
       this.$router.push({name: 'search3'})
-    },
-    displayRoadClass(){
-      console.log(this.choice.role)
-      console.log(this.choice.roadDesign)
-      console.log(this.choice.roadClass)
-    },
+    }
   },
   created(){
     const storedChoice = this.openStorage()
