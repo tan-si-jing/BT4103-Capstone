@@ -88,58 +88,6 @@
         </p>
       </Collapsible>
       
-      <!--Collapsible title="Simple Curve" chapt="14.2" :levelDisplay="levelDisplay">
-        <p>This is an arc of constant radius which achieves the desirable deflection without using a transition curve. 
-            This type of curve shall be used whenever possible.</p>
-        <p style="font-size: 16px;"> Referenced from:
-        <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205" target='_blank'>
-          CDC 10.4.2.3.1 - Simple Curve (page 205)</a>
-        </p>
-      </Collapsible>
-      <Collapsible chapt="14.3" title="Compound Curve" :levelDisplay="levelDisplay">
-        <p>A compound curve consists of two or more curves with deflections in the same direction immediately 
-            adjacent to each other. In general, the use eof compound curve is not favoured. Where it is necessary, 
-            the following guidelines shall be applied: </p>
-        <ol type="a">
-        <li> Curve shall have radii greater than 1000m. </li>
-        <li> Where radii less than 1000m have to be used, the design speed for each curve shall 
-          desirably be within 10km/h of each other. </li>
-        <li> On main road, the ratio of the radius of the flatter curve to the sharper curve shall not exceed 1.5:1; and </li>
-        <li> At junction intersection and ramp, the ratio of the radius of the flatter curve to the sharper curve can be up to 2:1.</li>
-        </ol>
-        <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=205" target='_blank'>
-            CDC 10.4.2.3.2 - Compound Curve (page 205)</a>
-        </p>
-      </Collapsible>
-      <Collapsible title="Reverse Curve" chapt="14.4" :levelDisplay="levelDisplay">
-        <p>A reverse curve consists of two curves of deflections in the opposite direction which are 
-          joined by a relatively short tangent distance. Reverse curve shall not be used unless there is sufficient 
-          distance between the curves to introduce full super-elevation of the two curves. In general, the use of 
-          reverse curve is not favoured. Where it is necessary, the following guidelines shall be applied: </p>
-        <ol type="a">
-        <li> The tangent distance in metre between the reverse curves shall not be less than 0.6 times the design speed in km/h. </li>
-        <li> Up to 50% of the transition may be placed in the curve; and </li>
-        <li> Where it is not possible to provide the minimum tangent distance in (a), the radius of each curve shall not be 
-          less than minimum radius of V&#178;/127 f, where V is the design speed in km/h and f is the side friction factor.</li>
-        </ol>
-        <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=206" target='_blank'>
-              CDC 10.4.2.3.3 - Reverse Curve (page 206)</a>
-        </p>
-      </Collapsible>
-      <Collapsible title="Broken-back Curve" chapt="14.5" :levelDisplay="levelDisplay">
-        <p>Broken-back curve consists of two curves with deflections in the same direction that is joined by a short tangent 
-          distance. In general, the use of broken-back curve is not favoured. Where it is necessary, the length of tangent 
-          in metre shall not be less than 3 times the design speed in km/h. Where such a minimum length of tangent cannot be obtained, 
-          the alignment shall be changed, either to increase the straight section, or eliminate it entirely by the use of a compound curve, 
-          or transition curve between the two curves.
-        </p>
-        <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=206" target='_blank'>
-            CDC 10.4.2.3.4 - Broken-back Curve (page 206)</a>
-        </p>
-      </Collapsible-->
       <Collapsible chapt="14.2" title="Transition Curve" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 14.2 -->
         <p>Transition curve is normally used to join a straight line to a circular curve, although it may be omitted when large 
