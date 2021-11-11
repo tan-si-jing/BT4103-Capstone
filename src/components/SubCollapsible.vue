@@ -10,6 +10,7 @@
         </div>
       </div>
       <div class="information" v-show="displayInfo">
+        <!-- content encased in this component will be slotted here -->
         <slot/>
       </div>
     </div>
@@ -29,6 +30,7 @@ export default {
   },
   methods:{
     collapse: function() {
+      //click to toggle between v-if = true or false
       this.displayInfo = !this.displayInfo;
     },
   },
