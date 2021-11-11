@@ -2,6 +2,7 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
+    <!-- Add Level 5 sections -->
     <div id="combinedalignment" style="margin-bottom: 5%;">
       <Combine/>
     </div>
