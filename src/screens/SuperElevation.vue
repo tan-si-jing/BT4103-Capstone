@@ -13,7 +13,10 @@
     <tbody>
       <tr>
       <td scope="row">
+      <!-- if no curvature change selected, we inform that no relevant information has to be shown -->   
       <p style="font-size:20px;text-align:center" v-show="!isCurved">--No relevant information since no gradient change or curvature change selected--</p>
+      
+      <!--Else, we display the following below-->
       <Collapsible v-show="isCurved" title="Desirable Super-Elevation Formula" chapt="11.1" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 11.1 --> 
         <p> The desirable super-elevation can be derived from the following equation:</p>
