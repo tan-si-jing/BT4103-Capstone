@@ -13,7 +13,11 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="15.1" title="Types of Vertical Curve" :levelDisplay="levelDisplay">
+      <!-- if no curvature change selected, we inform that no relevant information has to be shown -->   
+      <p style="font-size:20px;text-align:center" v-show="!isCurved">--No relevant information since no gradient change or curvature change selected--</p>
+      
+      <!--Else, we display the following below-->
+      <Collapsible v-show="isCurved" chapt="15.1" title="Types of Vertical Curve" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 15.1 -->
         <p> A vertical curve shall be provided when there is a change in road gradient by using symmetrical simple parabolic curve.</p>
         <!-- References of sub section 15.1-->
@@ -75,7 +79,7 @@
         </p>
       </Collapsible>
       
-      <Collapsible chapt="15.2" title="Critical Length of Grade" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="15.2" title="Critical Length of Grade" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 15.2 -->
         <p>The length of grade shall be less than the critical values as shown in Table 10.11. 
           Figure 10.7 illustrates the measurement of critical length of grade of a vertical curve.</p>
@@ -91,7 +95,7 @@
           CDC Figure 10.7 (page 231)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="15.3" title="General Controls for Vertical Alignment" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="15.3" title="General Controls for Vertical Alignment" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 15.3 -->
         <p>There are several general controls that shall be considered when designing the vertical alignment: </p>
         <ol type="a"><!-- Ordered List -->
@@ -129,7 +133,8 @@ export default {
   },
   data() {
     return {
-      levelDisplay: false
+      levelDisplay: false,
+      isCurved: this.$parent.choice.gradcurvchange === 'changeJunctionYes' ? true : false,
     }
   },
   methods: {

@@ -13,7 +13,11 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="14.1" title="Types of Horizontal Curve" :levelDisplay="levelDisplay">
+      <!-- if no curvature change selected, we inform that no relevant information has to be shown -->   
+      <p style="font-size:20px;text-align:center" v-show="!isCurved">--No relevant information since no gradient change or curvature change selected--</p>
+      
+      <!--Else, we display the following below-->
+      <Collapsible v-show="isCurved" chapt="14.1" title="Types of Horizontal Curve" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 14.1 -->
         <p> The various types of horizontal curve used are as shown in Figure 10.4</p>
         <div class="img-container">
@@ -88,7 +92,7 @@
         </p>
       </Collapsible>
       
-      <Collapsible chapt="14.2" title="Transition Curve" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="14.2" title="Transition Curve" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 14.2 -->
         <p>Transition curve is normally used to join a straight line to a circular curve, although it may be omitted when large 
           radius curve is used. The most frequently used form of transition is the clothoid which curvature changes at a uniform 
@@ -107,7 +111,7 @@
             CDC 10.4.2.3.5 - Transition Curve (page 206)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="14.3" title="Minimum Radius" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="14.3" title="Minimum Radius" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 14.3 -->
         <p> The geometric design requirement of road shall be as follows: </p>
         <!--div class="img-container4">
@@ -121,7 +125,7 @@
         </p>
       </Collapsible>
 
-      <Collapsible title="General Controls for Horizontal Alignment" chapt="14.4" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="14.4" title="General Controls for Horizontal Alignment" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 14.4 -->
         <p> There are several general controls that shall be considered when designing the horizontal alignment. </p>
         <ol type="a"><!-- Ordered List -->
@@ -150,7 +154,7 @@
         </Collapsible>
 
 
-      <Collapsible chapt="14.5" title="Enhancement Measures for Horizontal Alignment" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="14.5" title="Enhancement Measures for Horizontal Alignment" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 14.5 -->
        <p style="padding-top:3%"><b class="tab2a">14.5.1</b><b>Pavement Markers</b></p>
         <div class="img-container">
@@ -195,7 +199,8 @@ export default {
   },
   data() {
     return {
-      levelDisplay: false
+      levelDisplay: false,
+      isCurved: this.$parent.choice.gradcurvchange === 'changeJunctionYes' ? true : false,
     }
   },
   methods: {

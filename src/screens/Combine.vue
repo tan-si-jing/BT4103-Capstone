@@ -13,7 +13,11 @@
     <tbody>
       <tr>
         <td scope="row">
-        <Collapsible title="Combination of Horizontal & Vertical Alignment" chapt="17.1" :levelDisplay="levelDisplay">
+        <!-- if no curvature change selected, we inform that no relevant information has to be shown -->   
+        <p style="font-size:20px;text-align:center" v-show="!isCurved">--No relevant information since no gradient change or curvature change selected--</p>
+      
+        <!--Else, we display the following below-->
+        <Collapsible v-show="isCurved" title="Combination of Horizontal & Vertical Alignment" chapt="17.1" :levelDisplay="levelDisplay">
         <!-- Display content of sub section 17.1 -->
           <p>To avoid undesirable effect of poor combination of vertical and horizontal curve, the following principles shall be observed: </p>
           <ol type="a"><!-- Ordered List -->
@@ -48,7 +52,8 @@ export default {
   },
   data() {
     return {
-      levelDisplay: false
+      levelDisplay: false,
+      isCurved: this.$parent.choice.gradcurvchange === 'changeJunctionYes' ? true : false,
     }
   },
   methods: {
