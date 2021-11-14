@@ -13,7 +13,8 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible title="Desirable Super-Elevation Formula" chapt="11.1" :levelDisplay="levelDisplay">
+      <p style="font-size:20px;text-align:center" v-show="!isCurved">--No relevant information since no gradient change or curvature change selected--</p>
+      <Collapsible v-show="isCurved" title="Desirable Super-Elevation Formula" chapt="11.1" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 11.1 --> 
         <p> The desirable super-elevation can be derived from the following equation:</p>
         <div class="img-container2">
@@ -41,7 +42,7 @@
 
       </Collapsible>
 
-      <Collapsible chapt="11.2" title="If super-elevation < desirable crossfall" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="11.2" title="If super-elevation < desirable crossfall" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 11.2 --> 
         <p>In cases where the negative or positive super-elevation derived is lower than the desirable crossfall, the desirable super-elevation shall be 
           pegged at the crossfall to slope towards the inner radius of the carriageway.</p>
@@ -51,7 +52,7 @@
         </p>
       </Collapsible>
 
-      <Collapsible chapt="11.3" title="Rotation of Pavement" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="11.3" title="Rotation of Pavement" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 11.3 --> 
         <p>For rotation of pavement to attain super-elevation, the length required to develop the 
           super-elevation shall satisfy the larger value obtained from the following two formulae:</p>
@@ -101,7 +102,8 @@ export default {
   },
   data() {
     return {
-      levelDisplay: false
+      levelDisplay: false,
+      isCurved: this.$parent.choice.gradcurvchange === 'changeJunctionYes' ? true : false,
     }
   },
   methods: {
