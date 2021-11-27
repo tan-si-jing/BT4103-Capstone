@@ -125,7 +125,7 @@
             and associated depressed road.</p>
           <p style="font-size: 16px;"> Referenced from:
             <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=215" target='_blank'>
-              CDC 10.5.4.1 (page 215)</a>
+              CDC 10.5.4.1 - Paved Shoulder (page 215)</a>
           </p>
         </Collapsible>
       </td>
