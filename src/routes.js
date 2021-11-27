@@ -15,7 +15,7 @@ import Results2 from './screens/Results2.vue'
 import Results3 from './screens/Results3.vue'
 import Results4 from './screens/Results4.vue'
 import Results5 from './screens/Results5.vue'
-
+ 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
