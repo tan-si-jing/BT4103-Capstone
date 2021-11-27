@@ -23,10 +23,10 @@
         <div class="img-container2">
           <ZoomImage imgSrc="10.4.2.5.1.png"/>
         </div>
-        <p style="font-size: 16px;"> Referenced from:
+        <!--p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target='_blank'>
           CDC 10.4.2.5.1 - Super-elevation (page 207)</a>
-        </p>
+        </p-->
 
         <!-- Display table 10.2,created by code-->
         <table102 class="tableImg"></table102><br>
@@ -37,8 +37,8 @@
           <ZoomImage imgSrc="Figure10.6.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
-          CDC 10.4.2.5.5 - Super-elevation (page 208)</a>,
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=207" target='_blank'>
+          CDC 10.4.2.5.1 - Super-elevation (page 207)</a>,
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=230" target='_blank'>
           CDC Figure 10.6 (page 230)</a>,
         </p>
@@ -62,23 +62,20 @@
         <div class="img-container2">
           <ZoomImage imgSrc="10.4.2.5.3.png"/>
         </div>
-        <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
-          CDC 10.4.2.5.3 - Super-elevation (page 208)</a>
-        </p>
 
         <p>Where transition curve is provided, super-elevation shall be effected along the 
           length of the curve. For simple circular curve, about two-third of the super-elevation 
           development length shall be introduced on the tangent approach and one third on the curve.</p>
-        <p style="font-size: 16px;"> Referenced from:
-          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
-          CDC 10.4.2.5.4 - Super-elevation (page 208)</a>
-        </p>
 
         <div class="img-container">
           <ZoomImage imgSrc="Figure10.5.png"/>
         </div>
         <p style="font-size: 16px;"> Referenced from:
+
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+          CDC 10.4.2.5.3 - Super-elevation (page 208)</a>, 
+          <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
+          CDC 10.4.2.5.4 - Super-elevation (page 208)</a>, 
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=229" target='_blank'>
           CDC Figure 10.5 (page 229)</a>
         </p>

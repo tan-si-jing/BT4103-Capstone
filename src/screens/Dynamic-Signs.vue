@@ -6,7 +6,8 @@
     <div class="container">    
       <div id = "entire-content">
         <div id = "buttons">
-            <HomeButton id="mybutt"/>
+            <HomeButton id="homebut"/>
+            <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%"></div>
             <p>Currently Viewing : </p>
             <br>
             <div class="action_btn">
