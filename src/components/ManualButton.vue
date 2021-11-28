@@ -1,7 +1,9 @@
 <template>
   <button type="button" class="btn btn-outline-secondary" @click="goToLink()">
     <font-awesome-icon icon="external-link-alt" id="external-link" style="margin-right:5px;"/>
-    {{name}}
+    <span>
+      {{name}}
+    </span>
   </button>
 </template>
 
@@ -34,5 +36,7 @@ button {
   box-shadow: none;
   padding: 3%;
   text-align:left;
+  display: flex;
+  align-items: left;
 }
 </style>

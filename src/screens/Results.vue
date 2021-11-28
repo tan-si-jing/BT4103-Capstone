@@ -113,7 +113,7 @@
     <div id="COP">
         You may also be interested in: 
     </div>
-    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf" name="COP" />
+    <ManualButton link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/COP_Traffic_Control_at_Work_Zone_July_2019_Edition.pdf" name="COP: Traffic Control at Work Zone" />
     </div>
   </div> 
   <router-view @sec-change="updateSec"></router-view>
