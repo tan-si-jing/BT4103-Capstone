@@ -29,7 +29,7 @@
         <!-- References for 4.1 -->
         <p style="font-size: 16px;"> Referenced from:
           <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=208" target='_blank'>
-            CDC 10.4.2.5.1 - Table 10.7 </a>
+            CDC Table 10.7 - (page 208) </a>
         </p>
       </Collapsible>
       </td>

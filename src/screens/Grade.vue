@@ -59,6 +59,13 @@
         <div class="img-container">
             <ZoomImage imgSrc="Figure10.7.png"/> <!-- Display zoomed image of CDC Figure -->
         </div>
+        <!-- References for 2.3 -->
+        <p style="font-size: 16px;"> Referenced from:
+        <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=210" target="_blank">
+          CDC 10.4.3.1.3 - Critical Length of Grade (page 210)</a>,
+        <a href="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/civil_standards/pdf/EGD09106A2_Overall.pdf#page=231" target="_blank">
+          CDC Figure 10.7 (page 231)</a>
+        </p>
       </Collapsible>
       </td>
       </tr>

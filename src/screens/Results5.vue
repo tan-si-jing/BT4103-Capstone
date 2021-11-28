@@ -2,6 +2,7 @@
   <div class="result">
     <div class="contents">
     <h2 style="padding-top:2rem; width:65vw">Results</h2>
+    <!-- Add Level 5 sections -->
     <div id="combinedalignment" style="margin-bottom: 5%;">
       <Combine/>
     </div>
@@ -39,6 +40,9 @@ export default {
     "PageCircle2": PageCircle2,
   },
   methods: {
+    openStorage(){
+      return JSON.parse(localStorage.getItem('choice'))
+    },
     level2() {
       this.$router.push({path: "/results/page1"})
     },
@@ -73,6 +77,15 @@ export default {
           //if "marker" intersects the area that is observed, update the current section to be highlighted
           this.$emit('sec-change', entry.target.id)
         }
+      }
+    }
+  },
+  created(){
+    const storedChoice = this.openStorage()
+    if (storedChoice){
+      this.choice = {
+        ...this.choice,
+        ...storedChoice
       }
     }
   },

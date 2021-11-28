@@ -6,7 +6,8 @@
     <div class="container">    
       <div id = "entire-content">
         <div id = "buttons">
-            <HomeButton id="mybutt"/>
+            <HomeButton id="homebut"/>
+            <div style="font-size:1.5rem;padding:5%;border-top: ridge; margin-top:5%"></div>
             <p>Currently Viewing : </p>
             <br>
             <div class="action_btn">
@@ -643,7 +644,7 @@
         You may also be interested in:
     </div>
     <br>
-    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/RT-COP_V2.0_April_2019.pdf" name="COP" />
+    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/COP_Traffic_Control_at_Work_Zone_July_2019_Edition.pdf" name="COP" />
 
     </div>
     <div class="imageStack">

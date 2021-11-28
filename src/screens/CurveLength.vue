@@ -13,7 +13,12 @@
     <tbody>
       <tr>
       <td scope="row">
-      <Collapsible chapt="13.1" title="Crest Curve" :levelDisplay="levelDisplay">
+      <!-- if no curvature change selected, we inform that no relevant information has to be shown -->   
+      <p style="font-size:20px;text-align:center" v-show="!isCurved">--No relevant information since no gradient change or curvature change selected--</p>
+      
+      <!--Else, we display the following below-->
+      
+      <Collapsible v-show="isCurved" chapt="13.1" title="Crest Curve" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 13.1 -->
         <p> The minimum length of a crest curve in metre shall be the greater of:</p>
         <ol type="a"><!-- Ordered list -->
@@ -36,7 +41,7 @@
           CDC Figure 10.8 (page 232)</a>
         </p>
       </Collapsible>
-      <Collapsible chapt="13.2" title="Sag Curve" :levelDisplay="levelDisplay">
+      <Collapsible v-show="isCurved" chapt="13.2" title="Sag Curve" :levelDisplay="levelDisplay">
       <!-- Display content of sub section 13.2 -->
         <p> The minimum length of a sag curve in metre shall be the greater of: </p>
         <ol type="a"><!-- Ordered list -->
@@ -84,7 +89,8 @@ export default {
   },
   data() {
     return {
-      levelDisplay: false
+      levelDisplay: false,
+      isCurved: this.$parent.choice.gradcurvchange === 'changeJunctionYes' ? true : false,
     }
   },
   methods: {
