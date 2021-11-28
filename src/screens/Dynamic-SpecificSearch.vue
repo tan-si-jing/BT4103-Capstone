@@ -264,7 +264,7 @@
         You may also be interested in:
     </div>
     <br>
-    <ManualButton id="mybut" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/COP_Traffic_Control_at_Work_Zone_July_2019_Edition.pdf" name="COP" />
+    <ManualButton id="mybutt" link="https://www.lta.gov.sg/content/dam/ltagov/industry_innovations/industry_matters/development_construction_resources/Street_Work_Proposals/codes_of_practice/COP_Traffic_Control_at_Work_Zone_July_2019_Edition.pdf" name="COP: Traffic Control at Work Zone" />
 </template>
 
 <script scoped>
@@ -577,11 +577,11 @@ export default {
     padding-bottom: 30px;
 }
 #mybutt {
-    width:90%;
+    width:22%;
     display: inline;
     text-align: center;
     font-size: 0.9rem;
-    padding: 2%;
+    padding: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
